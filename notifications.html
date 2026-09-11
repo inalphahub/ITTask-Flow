@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications – Task Flow</title>
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✓</span>
+                Task Flow
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Features <span>⌄</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="task-management.html">Task Management</a>
+                        <a href="project-management.html">Project Management</a>
+                        <a href="team-collaboration.html">Team Collaboration</a>
+                        <a href="task-board.html">Task Board</a>
+                        <a href="calendar.html">Calendar</a>
+                        <a href="reports-analytics.html">Reports &amp; Analytics</a>
+                        <a href="notifications.html">Notifications</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Solutions <span>⌄</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="index.html#solutions">For Employees</a>
+                        <a href="index.html#solutions">For Team Leads</a>
+                        <a href="index.html#solutions">For Managers</a>
+                        <a href="index.html#solutions">For Organizations</a>
+                    </div>
+                </div>
+                <!-- <a href="index.html#how-it-works" class="nav-link">How It Works</a> -->
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Resources <span>⌄</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="index.html#faq">Documentation</a>
+                        <a href="index.html#faq">User Guide</a>
+                        <a href="index.html#faq">FAQs</a>
+                        <a href="index.html#faq">Help Center</a>
+                        <a href="index.html#cta">Contact Support</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="notifications.html" class="nav-link active">Notifications</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-get-started">Get Started</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <div class="mobile-dropdown">
+            <button class="mobile-link mobile-dropdown-toggle" type="button" aria-expanded="false">Features <span>⌄</span></button>
+            <div class="mobile-dropdown-menu">
+                <a href="task-management.html" class="mobile-link">Task Management</a>
+                <a href="project-management.html" class="mobile-link">Project Management</a>
+                <a href="team-collaboration.html" class="mobile-link">Team Collaboration</a>
+                <a href="task-board.html" class="mobile-link">Task Board</a>
+                <a href="calendar.html" class="mobile-link">Calendar</a>
+                <a href="reports-analytics.html" class="mobile-link">Reports &amp; Analytics</a>
+                <a href="notifications.html" class="mobile-link">Notifications</a>
+            </div>
+        </div>
+        <div class="mobile-dropdown">
+            <button class="mobile-link mobile-dropdown-toggle" type="button" aria-expanded="false">Solutions <span>⌄</span></button>
+            <div class="mobile-dropdown-menu">
+                <a href="index.html#solutions" class="mobile-link">For Employees</a>
+                <a href="index.html#solutions" class="mobile-link">For Team Leads</a>
+                <a href="index.html#solutions" class="mobile-link">For Managers</a>
+                <a href="index.html#solutions" class="mobile-link">For Organizations</a>
+            </div>
+        </div>
+        <a href="index.html#how-it-works" class="mobile-link">How It Works</a>
+        <div class="mobile-dropdown">
+            <button class="mobile-link mobile-dropdown-toggle" type="button" aria-expanded="false">Resources <span>⌄</span></button>
+            <div class="mobile-dropdown-menu">
+                <a href="index.html#faq" class="mobile-link">Documentation</a>
+                <a href="index.html#faq" class="mobile-link">User Guide</a>
+                <a href="index.html#faq" class="mobile-link">FAQs</a>
+                <a href="index.html#faq" class="mobile-link">Help Center</a>
+                <a href="index.html#cta" class="mobile-link">Contact Support</a>
+            </div>
+        </div>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="notifications.html" class="mobile-link active">Notifications</a>
+        <div class="mobile-actions">
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="signup.html" class="btn-get-started">Get Started</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- 1. Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Stay in the loop</div>
+                <h1>Never Miss an Important Update</h1>
+                <p class="hero-subtitle">Task Flow’s notification center keeps employees and managers informed in real time — so nothing falls through the cracks.</p>
+                <div class="hero-actions">
+                    <a href="signup.html" class="btn-primary">Get Started Free</a>
+                    <a href="#notification-center" class="btn-secondary">Explore Notifications</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="notif-preview">
+                    <div class="notif-header">
+                        <span class="bell-icon">🔔</span>
+                        <span>Notifications</span>
+                        <span class="badge-count">5</span>
+                    </div>
+                    <div class="notif-list">
+                        <div class="notif-item unread">
+                            <div class="notif-dot"></div>
+                            <div class="notif-body">
+                                <strong>New task assigned</strong>
+                                <p>Design homepage mockups — due tomorrow</p>
+                                <span class="notif-time">2 min ago</span>
+                            </div>
+                        </div>
+                        <div class="notif-item unread">
+                            <div class="notif-dot"></div>
+                            <div class="notif-body">
+                                <strong>Mentioned in a comment</strong>
+                                <p>@you in Project Alpha discussion</p>
+                                <span class="notif-time">15 min ago</span>
+                            </div>
+                        </div>
+                        <div class="notif-item">
+                            <div class="notif-dot"></div>
+                            <div class="notif-body">
+                                <strong>Deadline approaching</strong>
+                                <p>Q3 Report — 2 days left</p>
+                                <span class="notif-time">1 hour ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Notification Center -->
+        <section class="section" id="notification-center">
+            <div class="section-header">
+                <h2>Notification Center</h2>
+                <p>Everything important, organized in one place. Filter by category to focus on what matters most.</p>
+            </div>
+            <div class="categories">
+                <button class="cat-btn active" data-cat="all">All</button>
+                <button class="cat-btn" data-cat="tasks">Tasks</button>
+                <button class="cat-btn" data-cat="projects">Projects</button>
+                <button class="cat-btn" data-cat="team">Team</button>
+                <button class="cat-btn" data-cat="mentions">Mentions</button>
+                <button class="cat-btn" data-cat="system">System</button>
+            </div>
+            <div class="center-preview">
+                <div class="center-card">
+                    <div class="center-tabs">
+                        <span class="tab active">All</span>
+                        <span class="tab">Unread (3)</span>
+                    </div>
+                    <div class="center-items">
+                        <div class="center-item">
+                            <span class="item-icon tasks">📋</span>
+                            <div class="item-content">
+                                <strong>New task assigned</strong>
+                                <p>You have been assigned “Update product roadmap”</p>
+                            </div>
+                            <span class="item-time">Just now</span>
+                        </div>
+                        <div class="center-item">
+                            <span class="item-icon projects">📁</span>
+                            <div class="item-content">
+                                <strong>Milestone completed</strong>
+                                <p>Design phase finished in Project Nova</p>
+                            </div>
+                            <span class="item-time">12 min</span>
+                        </div>
+                        <div class="center-item">
+                            <span class="item-icon team">👥</span>
+                            <div class="item-content">
+                                <strong>Team member joined</strong>
+                                <p>Sarah Chen joined Marketing Team</p>
+                            </div>
+                            <span class="item-time">1 hr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Task Notifications -->
+        <section class="section alt">
+            <div class="section-header">
+                <h2>Task Notifications</h2>
+                <p>Stay on top of every assignment, update, and deadline.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="card-icon">➕</div>
+                    <h3>New task assigned</h3>
+                    <p>Instantly know when a new task lands on your plate with clear ownership and due dates.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">✏️</div>
+                    <h3>Task updated</h3>
+                    <p>Get notified when details, priorities, or assignees change so you always work with the latest info.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">✅</div>
+                    <h3>Task completed</h3>
+                    <p>Celebrate progress — managers and teammates are alerted the moment work is marked done.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">⏰</div>
+                    <h3>Deadline approaching</h3>
+                    <p>Smart reminders help you prioritize before the clock runs out.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Task overdue</h3>
+                    <p>Clear alerts when work slips past its due date so nothing is left behind.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Project Notifications -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Project Notifications</h2>
+                <p>Keep the whole team aligned on milestones, updates, and timelines.</p>
+            </div>
+            <div class="cards-grid four">
+                <div class="info-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Added to project</h3>
+                    <p>Welcome emails and in-app alerts when you’re invited to a new project.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🏁</div>
+                    <h3>Milestone completed</h3>
+                    <p>Celebrate wins and keep stakeholders informed of major progress.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📢</div>
+                    <h3>Project update</h3>
+                    <p>Important status changes and announcements reach everyone who needs them.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📅</div>
+                    <h3>Project deadline</h3>
+                    <p>Proactive reminders before key project dates arrive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Team Notifications -->
+        <section class="section alt">
+            <div class="section-header">
+                <h2>Team Notifications</h2>
+                <p>Collaboration stays smooth when everyone knows what’s happening.</p>
+            </div>
+            <div class="cards-grid four">
+                <div class="info-card">
+                    <div class="card-icon">👋</div>
+                    <h3>Team member joined</h3>
+                    <p>New teammates are introduced so the whole group can welcome them.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📣</div>
+                    <h3>Team update</h3>
+                    <p>Announcements, schedule changes, and important team-wide news.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">💬</div>
+                    <h3>Comment</h3>
+                    <p>Stay in the conversation with alerts for new comments on tasks and projects.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">@</div>
+                    <h3>Mention</h3>
+                    <p>Never miss a direct @mention — jump straight into the discussion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Notification Detail -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Notification Detail</h2>
+                <p>Every alert gives you full context and a clear next step.</p>
+            </div>
+            <div class="detail-preview">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">📋</span>
+                        <div>
+                            <h3>New task assigned</h3>
+                            <span class="detail-meta">Tasks · 2 minutes ago</span>
+                        </div>
+                    </div>
+                    <p class="detail-desc">You have been assigned the task “Finalize Q3 marketing deck”. Review the brief and update the status when ready.</p>
+                    <div class="detail-related">
+                        <span class="related-label">Related</span>
+                        <a href="#" class="related-link">Finalize Q3 marketing deck →</a>
+                    </div>
+                    <div class="detail-actions">
+                        <button class="btn-primary small">View Task</button>
+                        <button class="btn-secondary small">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Read / Unread Management -->
+        <section class="section alt">
+            <div class="section-header">
+                <h2>Read / Unread Management</h2>
+                <p>Stay organized with simple controls for your notification inbox.</p>
+            </div>
+            <div class="manage-grid">
+                <div class="manage-item">
+                    <div class="manage-icon">✓</div>
+                    <h3>Mark as read</h3>
+                    <p>Clear individual notifications once you’ve handled them.</p>
+                </div>
+                <div class="manage-item">
+                    <div class="manage-icon">✓✓</div>
+                    <h3>Mark all as read</h3>
+                    <p>Wipe the slate clean in one click when you’re caught up.</p>
+                </div>
+                <div class="manage-item">
+                    <div class="manage-icon">🗑</div>
+                    <h3>Delete</h3>
+                    <p>Remove notifications you no longer need.</p>
+                </div>
+                <div class="manage-item">
+                    <div class="manage-icon">🔍</div>
+                    <h3>Filter unread</h3>
+                    <p>Focus only on what still requires your attention.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Notification Preferences -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Notification Preferences</h2>
+                <p>You’re in control. Choose exactly what you want to hear about.</p>
+            </div>
+            <div class="prefs-container">
+                <div class="prefs-list">
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Task assignments</strong>
+                            <span>New tasks assigned to you</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Comments</strong>
+                            <span>New comments on your tasks & projects</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Mentions</strong>
+                            <span>When someone @mentions you</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Deadlines</strong>
+                            <span>Approaching and overdue reminders</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Projects</strong>
+                            <span>Project updates, milestones & deadlines</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="pref-row">
+                        <div class="pref-info">
+                            <strong>Team activity</strong>
+                            <span>Team joins, updates & announcements</span>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Notification Badge -->
+        <section class="section alt">
+            <div class="section-header">
+                <h2>Notification Badge</h2>
+                <p>The dashboard bell keeps the unread count visible at a glance.</p>
+            </div>
+            <div class="badge-demo">
+                <div class="bell-demo">
+                    <div class="bell-wrapper">
+                        <span class="big-bell">🔔</span>
+                        <span class="pulse-badge">5</span>
+                    </div>
+                    <p>Click the bell to open the notification center. Unread items appear with a live count badge that updates in real time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Real-Time Updates -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Real-Time Updates</h2>
+                <p>Notifications appear the moment something happens — no refresh required.</p>
+            </div>
+            <div class="realtime-content">
+                <div class="realtime-card">
+                    <div class="realtime-icon">⚡</div>
+                    <h3>Instant delivery</h3>
+                    <p>Task Flow uses live connections so new assignments, comments, and mentions show up immediately across devices.</p>
+                </div>
+                <div class="realtime-card">
+                    <div class="realtime-icon">🔄</div>
+                    <h3>Always in sync</h3>
+                    <p>Whether you’re on desktop or mobile, your notification state stays consistent and up to date.</p>
+                </div>
+                <div class="realtime-card">
+                    <div class="realtime-icon">📡</div>
+                    <h3>Reliable delivery</h3>
+                    <p>Even if you were offline, missed alerts catch up the moment you reconnect.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Benefits -->
+        <section class="section alt">
+            <div class="section-header">
+                <h2>Why Notifications Matter</h2>
+                <p>Keep teams productive, informed, and accountable.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Zero missed work</h3>
+                    <p>Assignments and deadlines reach the right people the moment they’re created.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Faster collaboration</h3>
+                    <p>Mentions and comments surface instantly so conversations move forward.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Manager visibility</h3>
+                    <p>Leaders stay informed of progress, blockers, and completed work without chasing updates.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Reduced noise</h3>
+                    <p>Granular preferences let every user control exactly what they receive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. CTA -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to stay in the loop?</h2>
+                <p>Join teams that never miss an update. Start using Task Flow today — free to get started.</p>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn-primary large">Get Started Free</a>
+                    <a href="login.html" class="btn-secondary large">Log In</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✓</span>
+                    Task Flow
+                </a>
+                <p>Modern task management for productive teams.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="notifications.html">Notifications</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Task Flow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/notifications.js"></script>
+</body>
+</html>

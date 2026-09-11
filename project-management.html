@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management | IT TaskFlow</title>
+  <link rel="stylesheet" href="css/project-management.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="it-taskflow-mark"><img class="it-taskflow-logo" src="it-taskflow-logo.svg" alt="IT TaskFlow logo"></span>
+        <span>IT TaskFlow</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="project-management.html" class="nav-link active">Projects</a></li>
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#benefits" class="nav-link">Benefits</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-secondary btn-sm" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#cta" class="btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <span class="badge">Project Management</span>
+        <h1>Manage Projects From<br><span class="gradient-text">Planning to Completion</span></h1>
+        <p>Organize complex initiatives, track milestones, assign teams, and deliver results on time with a complete project lifecycle toolkit.</p>
+        <div class="hero-cta">
+          <a href="#create-project" class="btn-primary">
+            <i class="fas fa-plus"></i> Create Project
+          </a>
+          <a href="#dashboard" class="btn-secondary">
+            <i class="fas fa-chart-line"></i> View Dashboard
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="2500">0</span>
+            <span class="stat-label">Projects Managed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="98">0</span>
+            <span class="stat-label">On-Time Delivery %</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="45">0</span>
+            <span class="stat-label">Teams Powered</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-preview fade-in-delay">
+        <div class="dashboard-preview">
+          <div class="preview-header">
+            <div class="preview-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="preview-title">Project Dashboard</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-card">
+              <div class="preview-progress">
+                <div class="progress-ring">
+                  <svg viewBox="0 0 36 36">
+                    <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="ring-fill" stroke-dasharray="72, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="ring-text">72%</span>
+                </div>
+                <div class="preview-info">
+                  <h4>Website Redesign</h4>
+                  <p>12 of 17 tasks complete</p>
+                </div>
+              </div>
+            </div>
+            <div class="preview-metrics">
+              <div class="metric">
+                <i class="fas fa-tasks"></i>
+                <div>
+                  <span class="metric-value">17</span>
+                  <span class="metric-label">Total Tasks</span>
+                </div>
+              </div>
+              <div class="metric">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <span class="metric-value">12</span>
+                  <span class="metric-label">Completed</span>
+                </div>
+              </div>
+              <div class="metric">
+                <i class="fas fa-users"></i>
+                <div>
+                  <span class="metric-value">8</span>
+                  <span class="metric-label">Members</span>
+                </div>
+              </div>
+            </div>
+            <div class="preview-timeline-mini">
+              <div class="mini-step active">Plan</div>
+              <div class="mini-step active">Dev</div>
+              <div class="mini-step current">Test</div>
+              <div class="mini-step">Review</div>
+              <div class="mini-step">Deliver</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="overview section" id="overview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">How It Works</span>
+        <h2>Complete Project Lifecycle</h2>
+        <p>From initial setup to final delivery — every step is covered with clarity and control.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card fade-in" data-delay="0">
+          <div class="card-icon"><i class="fas fa-folder-plus"></i></div>
+          <h3>Create Projects</h3>
+          <p>Spin up new projects in seconds with clear names, codes, descriptions, and timelines.</p>
+        </div>
+        <div class="overview-card fade-in" data-delay="100">
+          <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Assign Project Managers</h3>
+          <p>Designate owners who drive accountability and keep the initiative on track.</p>
+        </div>
+        <div class="overview-card fade-in" data-delay="200">
+          <div class="card-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Add Team Members</h3>
+          <p>Bring the right people on board and define roles for seamless collaboration.</p>
+        </div>
+        <div class="overview-card fade-in" data-delay="300">
+          <div class="card-icon"><i class="fas fa-flag"></i></div>
+          <h3>Create Milestones</h3>
+          <p>Break the journey into meaningful checkpoints with deadlines and owners.</p>
+        </div>
+        <div class="overview-card fade-in" data-delay="400">
+          <div class="card-icon"><i class="fas fa-list-check"></i></div>
+          <h3>Add Tasks</h3>
+          <p>Link actionable work items to milestones and keep everyone aligned.</p>
+        </div>
+        <div class="overview-card fade-in" data-delay="500">
+          <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Monitor Progress</h3>
+          <p>Track health, completion rates, and blockers in real time from one dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Project -->
+  <section class="create-project section" id="create-project">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Get Started</span>
+        <h2>Create a New Project</h2>
+        <p>Fill in the details below to launch your next initiative.</p>
+      </div>
+      <form class="project-form fade-in" id="project-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="project-name">Project Name <span class="required">*</span></label>
+            <input type="text" id="project-name" name="projectName" placeholder="e.g. Website Redesign" required>
+          </div>
+          <div class="form-group">
+            <label for="project-code">Project Code</label>
+            <input type="text" id="project-code" name="projectCode" placeholder="e.g. WEB-2026">
+          </div>
+          <div class="form-group full-width">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="3" placeholder="Brief overview of the project goals and scope..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="project-manager">Project Manager <span class="required">*</span></label>
+            <select id="project-manager" name="projectManager" required>
+              <option value="">Select manager</option>
+              <option value="alex">Alex Rivera</option>
+              <option value="jordan">Jordan Lee</option>
+              <option value="sam">Sam Patel</option>
+              <option value="taylor">Taylor Kim</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="team-members">Team Members</label>
+            <select id="team-members" name="teamMembers" multiple>
+              <option value="chris">Chris Morgan</option>
+              <option value="dana">Dana Brooks</option>
+              <option value="eli">Eli Vargas</option>
+              <option value="finley">Finley Shaw</option>
+              <option value="gray">Gray Nguyen</option>
+              <option value="harper">Harper Quinn</option>
+            </select>
+            <small class="form-hint">Hold Ctrl/Cmd to select multiple</small>
+          </div>
+          <div class="form-group">
+            <label for="start-date">Start Date <span class="required">*</span></label>
+            <input type="date" id="start-date" name="startDate" required>
+          </div>
+          <div class="form-group">
+            <label for="end-date">End Date <span class="required">*</span></label>
+            <input type="date" id="end-date" name="endDate" required>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+              <option value="critical">Critical</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="planning" selected>Planning</option>
+              <option value="active">Active</option>
+              <option value="on-hold">On Hold</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="reset" class="btn-secondary">Reset</button>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-rocket"></i> Create Project
+          </button>
+        </div>
+      </form>
+      <div class="form-success" id="form-success" hidden>
+        <i class="fas fa-check-circle"></i>
+        <h3>Project Created Successfully!</h3>
+        <p>Your project has been set up and is ready for team collaboration.</p>
+        <button class="btn-primary" id="create-another">Create Another</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Dashboard -->
+  <section class="dashboard section" id="dashboard">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Live Insights</span>
+        <h2>Project Dashboard</h2>
+        <p>At-a-glance visibility into progress, health, and team capacity.</p>
+      </div>
+      <div class="dashboard-grid fade-in">
+        <div class="dash-card main-progress">
+          <h3>Project Progress</h3>
+          <div class="large-progress">
+            <div class="progress-circle" data-progress="68">
+              <svg viewBox="0 0 120 120">
+                <circle class="bg" cx="60" cy="60" r="54"/>
+                <circle class="progress" cx="60" cy="60" r="54"/>
+              </svg>
+              <div class="progress-value">
+                <span class="percent">68%</span>
+                <span class="label">Complete</span>
+              </div>
+            </div>
+          </div>
+          <div class="health-indicator healthy">
+            <i class="fas fa-heartbeat"></i>
+            <span>Project Health: Healthy</span>
+          </div>
+        </div>
+        <div class="dash-card stats-card">
+          <h3>Task Overview</h3>
+          <div class="stat-rows">
+            <div class="stat-row">
+              <div class="stat-icon total"><i class="fas fa-layer-group"></i></div>
+              <div class="stat-content">
+                <span class="stat-num">42</span>
+                <span class="stat-desc">Total Tasks</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon completed"><i class="fas fa-check"></i></div>
+              <div class="stat-content">
+                <span class="stat-num">28</span>
+                <span class="stat-desc">Completed</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon pending"><i class="fas fa-clock"></i></div>
+              <div class="stat-content">
+                <span class="stat-num">14</span>
+                <span class="stat-desc">Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card team-card">
+          <h3>Team Members</h3>
+          <div class="team-avatars">
+            <div class="avatar" title="Alex Rivera">AR</div>
+            <div class="avatar" title="Jordan Lee">JL</div>
+            <div class="avatar" title="Sam Patel">SP</div>
+            <div class="avatar" title="Taylor Kim">TK</div>
+            <div class="avatar" title="Chris Morgan">CM</div>
+            <div class="avatar more">+3</div>
+          </div>
+          <p class="team-count">8 active members</p>
+        </div>
+        <div class="dash-card deadline-card">
+          <h3>Deadline</h3>
+          <div class="deadline-display">
+            <i class="fas fa-calendar-alt"></i>
+            <div>
+              <span class="deadline-date">Oct 15, 2026</span>
+              <span class="deadline-days">33 days remaining</span>
+            </div>
+          </div>
+          <div class="deadline-bar">
+            <div class="deadline-fill" style="width: 62%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Timeline -->
+  <section class="timeline-section section" id="timeline">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Roadmap</span>
+        <h2>Project Timeline</h2>
+        <p>Visual journey from planning through final delivery.</p>
+      </div>
+      <div class="timeline fade-in">
+        <div class="timeline-track">
+          <div class="timeline-progress" id="timeline-progress"></div>
+        </div>
+        <div class="timeline-steps">
+          <div class="timeline-step completed" data-step="1">
+            <div class="step-dot"><i class="fas fa-check"></i></div>
+            <div class="step-content">
+              <h4>Planning</h4>
+              <p>Requirements & scope</p>
+              <span class="step-date">Sep 1 – Sep 10</span>
+            </div>
+          </div>
+          <div class="timeline-step completed" data-step="2">
+            <div class="step-dot"><i class="fas fa-check"></i></div>
+            <div class="step-content">
+              <h4>Development</h4>
+              <p>Build & implement</p>
+              <span class="step-date">Sep 11 – Sep 28</span>
+            </div>
+          </div>
+          <div class="timeline-step active" data-step="3">
+            <div class="step-dot"><i class="fas fa-spinner"></i></div>
+            <div class="step-content">
+              <h4>Testing</h4>
+              <p>QA & validation</p>
+              <span class="step-date">Sep 29 – Oct 5</span>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="4">
+            <div class="step-dot">4</div>
+            <div class="step-content">
+              <h4>Review</h4>
+              <p>Stakeholder feedback</p>
+              <span class="step-date">Oct 6 – Oct 10</span>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="5">
+            <div class="step-dot">5</div>
+            <div class="step-content">
+              <h4>Delivery</h4>
+              <p>Launch & handoff</p>
+              <span class="step-date">Oct 11 – Oct 15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestone Management -->
+  <section class="milestones section" id="milestones">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Checkpoints</span>
+        <h2>Milestone Management</h2>
+        <p>Define, assign, and track key project milestones.</p>
+      </div>
+      <div class="milestones-grid fade-in">
+        <div class="milestone-card completed">
+          <div class="milestone-header">
+            <span class="milestone-status"><i class="fas fa-check-circle"></i> Completed</span>
+            <span class="milestone-progress">100%</span>
+          </div>
+          <h3>Requirements Gathering</h3>
+          <p>Collect and document all stakeholder needs and acceptance criteria.</p>
+          <div class="milestone-meta">
+            <span><i class="fas fa-user"></i> Alex Rivera</span>
+            <span><i class="fas fa-calendar"></i> Sep 10</span>
+          </div>
+          <div class="milestone-bar"><div class="fill" style="width:100%"></div></div>
+        </div>
+        <div class="milestone-card active">
+          <div class="milestone-header">
+            <span class="milestone-status"><i class="fas fa-play-circle"></i> In Progress</span>
+            <span class="milestone-progress">65%</span>
+          </div>
+          <h3>Core Feature Development</h3>
+          <p>Build primary modules and integrate with existing systems.</p>
+          <div class="milestone-meta">
+            <span><i class="fas fa-user"></i> Jordan Lee</span>
+            <span><i class="fas fa-calendar"></i> Sep 28</span>
+          </div>
+          <div class="milestone-bar"><div class="fill" style="width:65%"></div></div>
+        </div>
+        <div class="milestone-card">
+          <div class="milestone-header">
+            <span class="milestone-status"><i class="fas fa-hourglass-half"></i> Upcoming</span>
+            <span class="milestone-progress">0%</span>
+          </div>
+          <h3>User Acceptance Testing</h3>
+          <p>Validate features with end users and collect feedback.</p>
+          <div class="milestone-meta">
+            <span><i class="fas fa-user"></i> Sam Patel</span>
+            <span><i class="fas fa-calendar"></i> Oct 5</span>
+          </div>
+          <div class="milestone-bar"><div class="fill" style="width:0%"></div></div>
+        </div>
+        <div class="milestone-card">
+          <div class="milestone-header">
+            <span class="milestone-status"><i class="fas fa-hourglass-half"></i> Upcoming</span>
+            <span class="milestone-progress">0%</span>
+          </div>
+          <h3>Final Delivery</h3>
+          <p>Deploy to production and complete project handoff.</p>
+          <div class="milestone-meta">
+            <span><i class="fas fa-user"></i> Taylor Kim</span>
+            <span><i class="fas fa-calendar"></i> Oct 15</span>
+          </div>
+          <div class="milestone-bar"><div class="fill" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div class="milestone-actions fade-in">
+        <button class="btn-primary" id="add-milestone-btn">
+          <i class="fas fa-plus"></i> Create Milestone
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Task Management Hierarchy -->
+  <section class="task-hierarchy section" id="tasks">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Structure</span>
+        <h2>Project Task Management</h2>
+        <p>Clear hierarchy keeps work organized and accountable.</p>
+      </div>
+      <div class="hierarchy-visual fade-in">
+        <div class="hierarchy-tree">
+          <div class="tree-node project-node">
+            <div class="node-card">
+              <i class="fas fa-project-diagram"></i>
+              <span>Project: Website Redesign</span>
+            </div>
+            <div class="tree-children">
+              <div class="tree-node milestone-node">
+                <div class="node-card">
+                  <i class="fas fa-flag"></i>
+                  <span>Milestone: Core Features</span>
+                </div>
+                <div class="tree-children">
+                  <div class="tree-node task-node">
+                    <div class="node-card">
+                      <i class="fas fa-check-square"></i>
+                      <span>Task: Design System</span>
+                    </div>
+                  </div>
+                  <div class="tree-node task-node">
+                    <div class="node-card">
+                      <i class="fas fa-check-square"></i>
+                      <span>Task: Homepage Build</span>
+                    </div>
+                  </div>
+                  <div class="tree-node task-node">
+                    <div class="node-card">
+                      <i class="fas fa-square"></i>
+                      <span>Task: Auth Module</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tree-node milestone-node">
+                <div class="node-card">
+                  <i class="fas fa-flag"></i>
+                  <span>Milestone: Testing & QA</span>
+                </div>
+                <div class="tree-children">
+                  <div class="tree-node task-node">
+                    <div class="node-card">
+                      <i class="fas fa-square"></i>
+                      <span>Task: Unit Tests</span>
+                    </div>
+                  </div>
+                  <div class="tree-node task-node">
+                    <div class="node-card">
+                      <i class="fas fa-square"></i>
+                      <span>Task: UAT Sessions</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Team -->
+  <section class="team-section section" id="team">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">People</span>
+        <h2>Project Team</h2>
+        <p>Roles, responsibilities, and workload at a glance.</p>
+      </div>
+      <div class="team-grid fade-in">
+        <div class="team-member-card">
+          <div class="member-avatar">AR</div>
+          <h4>Alex Rivera</h4>
+          <span class="role">Project Manager</span>
+          <p class="responsibility">Owns timeline, stakeholder communication, and risk management.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:75%"></div></div>
+            <span class="workload-pct">75%</span>
+          </div>
+        </div>
+        <div class="team-member-card">
+          <div class="member-avatar">JL</div>
+          <h4>Jordan Lee</h4>
+          <span class="role">Tech Lead</span>
+          <p class="responsibility">Architecture decisions, code reviews, and technical guidance.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:90%"></div></div>
+            <span class="workload-pct">90%</span>
+          </div>
+        </div>
+        <div class="team-member-card">
+          <div class="member-avatar">SP</div>
+          <h4>Sam Patel</h4>
+          <span class="role">QA Lead</span>
+          <p class="responsibility">Test strategy, quality gates, and release readiness.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:60%"></div></div>
+            <span class="workload-pct">60%</span>
+          </div>
+        </div>
+        <div class="team-member-card">
+          <div class="member-avatar">TK</div>
+          <h4>Taylor Kim</h4>
+          <span class="role">Designer</span>
+          <p class="responsibility">UI/UX design, design system, and user research.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:55%"></div></div>
+            <span class="workload-pct">55%</span>
+          </div>
+        </div>
+        <div class="team-member-card">
+          <div class="member-avatar">CM</div>
+          <h4>Chris Morgan</h4>
+          <span class="role">Frontend Dev</span>
+          <p class="responsibility">Component implementation and responsive interfaces.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:80%"></div></div>
+            <span class="workload-pct">80%</span>
+          </div>
+        </div>
+        <div class="team-member-card">
+          <div class="member-avatar">DB</div>
+          <h4>Dana Brooks</h4>
+          <span class="role">Backend Dev</span>
+          <p class="responsibility">API development, data models, and integrations.</p>
+          <div class="workload">
+            <span>Workload</span>
+            <div class="workload-bar"><div class="fill" style="width:70%"></div></div>
+            <span class="workload-pct">70%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Progress Visualization -->
+  <section class="progress-viz section" id="progress">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Analytics</span>
+        <h2>Project Progress</h2>
+        <p>Interactive view of completion across phases and workstreams.</p>
+      </div>
+      <div class="progress-charts fade-in">
+        <div class="chart-card">
+          <h3>Phase Completion</h3>
+          <div class="bar-chart">
+            <div class="bar-item">
+              <span class="bar-label">Planning</span>
+              <div class="bar-track"><div class="bar-fill" data-width="100" style="width:0%"></div></div>
+              <span class="bar-value">100%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">Development</span>
+              <div class="bar-track"><div class="bar-fill" data-width="85" style="width:0%"></div></div>
+              <span class="bar-value">85%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">Testing</span>
+              <div class="bar-track"><div class="bar-fill" data-width="40" style="width:0%"></div></div>
+              <span class="bar-value">40%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">Review</span>
+              <div class="bar-track"><div class="bar-fill" data-width="10" style="width:0%"></div></div>
+              <span class="bar-value">10%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">Delivery</span>
+              <div class="bar-track"><div class="bar-fill" data-width="0" style="width:0%"></div></div>
+              <span class="bar-value">0%</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Weekly Velocity</h3>
+          <div class="velocity-chart">
+            <div class="velocity-bars">
+              <div class="v-bar" data-height="40"><span>W1</span></div>
+              <div class="v-bar" data-height="65"><span>W2</span></div>
+              <div class="v-bar" data-height="55"><span>W3</span></div>
+              <div class="v-bar" data-height="80"><span>W4</span></div>
+              <div class="v-bar" data-height="70"><span>W5</span></div>
+              <div class="v-bar current" data-height="45"><span>W6</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Activity -->
+  <section class="activity section" id="activity">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Feed</span>
+        <h2>Project Activity</h2>
+        <p>Stay up to date with every meaningful change.</p>
+      </div>
+      <div class="activity-feed fade-in">
+        <div class="activity-item">
+          <div class="activity-icon completed"><i class="fas fa-check"></i></div>
+          <div class="activity-content">
+            <p><strong>Task completed</strong> — “Design System tokens” by Taylor Kim</p>
+            <span class="activity-time">2 hours ago</span>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon created"><i class="fas fa-plus"></i></div>
+          <div class="activity-content">
+            <p><strong>Task created</strong> — “Implement dark mode toggle” assigned to Chris Morgan</p>
+            <span class="activity-time">5 hours ago</span>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon member"><i class="fas fa-user-plus"></i></div>
+          <div class="activity-content">
+            <p><strong>Member added</strong> — Dana Brooks joined as Backend Dev</p>
+            <span class="activity-time">Yesterday</span>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon milestone"><i class="fas fa-flag"></i></div>
+          <div class="activity-content">
+            <p><strong>Milestone completed</strong> — Requirements Gathering reached 100%</p>
+            <span class="activity-time">2 days ago</span>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon status"><i class="fas fa-exchange-alt"></i></div>
+          <div class="activity-content">
+            <p><strong>Status changed</strong> — Project moved from Planning → Active</p>
+            <span class="activity-time">3 days ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits section" id="benefits">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Why TaskFlow</span>
+        <h2>Benefits of Structured Project Management</h2>
+        <p>Deliver better outcomes with less chaos and more clarity.</p>
+      </div>
+      <div class="benefits-grid fade-in">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Clear Ownership</h3>
+          <p>Every project, milestone, and task has a clear owner — no more dropped balls.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+          <h3>Full Visibility</h3>
+          <p>Dashboards and timelines give leadership and teams the same source of truth.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3>Faster Delivery</h3>
+          <p>Reduce waste and blockers by keeping work flowing through well-defined stages.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Balanced Workload</h3>
+          <p>See capacity across the team and rebalance before burnout or delays hit.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-history"></i></div>
+          <h3>Audit Trail</h3>
+          <p>Activity feed and history make it easy to understand what changed and why.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+          <h3>Scales With You</h3>
+          <p>From small initiatives to multi-team programs — the same structure grows with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section" id="cta">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Ready to Run Projects That Actually Deliver?</h2>
+        <p>Start managing milestones, teams, and progress in one place today.</p>
+        <div class="cta-buttons">
+          <a href="#create-project" class="btn-primary btn-lg">
+            <i class="fas fa-rocket"></i> Create Your First Project
+          </a>
+          <a href="index.html" class="btn-secondary btn-lg">
+            <i class="fas fa-home"></i> Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="it-taskflow-mark"><img class="it-taskflow-logo" src="it-taskflow-logo.svg" alt="IT TaskFlow logo"></span>
+            <span>IT TaskFlow</span>
+          </a>
+          <p>Modern project & task management for high-performing teams.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="index.html">Home</a>
+            <a href="project-management.html">Projects</a>
+            <a href="#overview">Features</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#timeline">Timeline</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#benefits">Benefits</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TaskFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Milestone Modal -->
+  <div class="modal" id="milestone-modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <h3>Create Milestone</h3>
+      <form id="milestone-form">
+        <div class="form-group">
+          <label for="ms-name">Milestone Name</label>
+          <input type="text" id="ms-name" required placeholder="e.g. Beta Release">
+        </div>
+        <div class="form-group">
+          <label for="ms-owner">Assign To</label>
+          <select id="ms-owner">
+            <option value="alex">Alex Rivera</option>
+            <option value="jordan">Jordan Lee</option>
+            <option value="sam">Sam Patel</option>
+            <option value="taylor">Taylor Kim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ms-deadline">Deadline</label>
+          <input type="date" id="ms-deadline" required>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="modal-cancel">Cancel</button>
+          <button type="submit" class="btn-primary">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/project-management.js"></script>
+</body>
+</html>

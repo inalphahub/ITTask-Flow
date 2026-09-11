@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta
+        name="description"
+        content="TaskFlow Employee Task Management - Manage, assign, track and complete employee tasks."
+    >
+
+    <title>Tasks | TaskFlow</title>
+
+    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/brand.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         APP SHELL
+    ========================================================== -->
+
+    <div class="app-shell">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+
+                <!-- Logo -->
+                <a href="dashboard.html" class="brand">
+                    <span class="brand-logo">T</span>
+
+                    <span class="brand-text">
+                        <strong>TaskFlow</strong>
+                        <small>Employee Workspace</small>
+                    </span>
+                </a>
+
+                <!-- Close sidebar on mobile -->
+                <button
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    aria-label="Close navigation"
+                >
+                    ×
+                </button>
+
+                <!-- Navigation -->
+                <nav class="main-navigation" aria-label="Main navigation">
+
+                    <p class="nav-section-title">Workspace</p>
+
+                    <a href="dashboard.html" class="nav-item">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                            </svg>
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="task.html" class="nav-item active">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <path d="M8 9h8"></path>
+                                <path d="M8 13h5"></path>
+                                <path d="M8 17h7"></path>
+                            </svg>
+                        </span>
+
+                        <span>Tasks</span>
+
+                        <span class="nav-badge" id="sidebarTaskCount" hidden>0</span>
+                    </a>
+
+                    <a href="dashboard.html#calendar" class="nav-item">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <path d="M3 9h18"></path>
+                            </svg>
+                        </span>
+                        <span>Calendar</span>
+                    </a>
+
+                    <a href="dashboard.html#bug-lifecycle" class="nav-item">
+                        <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M8 8h8M8 12h5M8 16h8"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span>
+                        <span>Bug Life Cycle</span>
+                    </a>
+
+                    <a href="dashboard.html#reports" class="nav-item">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 19V9"></path>
+                                <path d="M10 19V5"></path>
+                                <path d="M16 19v-8"></path>
+                                <path d="M22 19H2"></path>
+                            </svg>
+                        </span>
+                        <span>Reports</span>
+                    </a>
+
+                    <a href="dashboard.html#notifications" class="nav-item">
+                        <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg></span>
+                        <span>Notifications</span>
+                    </a>
+
+                    <a href="dashboard.html#settings" class="nav-item">
+                        <span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 15l2 1-2 3-2-1a7 7 0 0 1-2 1l-.3 2h-3.4l-.3-2a7 7 0 0 1-2-1l-2 1-2-3 2-1a7 7 0 0 1 0-2l-2-1 2-3 2 1a7 7 0 0 1 2-1l.3-2h3.4l.3 2a7 7 0 0 1 2 1l2-1 2 3-2 1a7 7 0 0 1 0 2z"/></svg></span>
+                        <span>Settings</span>
+                    </a>
+
+                    <p class="nav-section-title">Management</p>
+
+                    <a href="dashboard.html#team" class="nav-item">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </span>
+                        <span>Employees</span>
+                    </a>
+
+                    <a href="dashboard.html#projects" class="nav-item">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 7h18"></path>
+                                <path d="M5 7v12h14V7"></path>
+                                <path d="M8 7V4h8v3"></path>
+                                <path d="M9 11h6"></path>
+                                <path d="M9 15h6"></path>
+                            </svg>
+                        </span>
+                        <span>Projects</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <!-- Sidebar bottom -->
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="help-card" id="helpButton">
+                    <span class="help-icon">?</span>
+
+                    <span>
+                        <strong>Need Help?</strong>
+                        <small>Visit Help Center</small>
+                    </span>
+                </a>
+
+                <button class="logout-button" id="logoutButton">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M10 17l5-5-5-5"></path>
+                            <path d="M15 12H3"></path>
+                            <path d="M21 19V5a2 2 0 0 0-2-2h-6"></path>
+                        </svg>
+                    </span>
+
+                    <span>Logout</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="main-content">
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="breadcrumb">
+                        <a href="dashboard.html">Dashboard</a>
+                        <span>/</span>
+                        <strong>Tasks</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <!-- Search -->
+                    <button
+                        class="header-icon-button"
+                        id="headerSearchButton"
+                        aria-label="Search tasks"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="M20 20l-4-4"></path>
+                        </svg>
+                    </button>
+
+
+                    <!-- Notification -->
+                    <button
+                        class="header-icon-button notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                            <path d="M10 21h4"></path>
+                        </svg>
+
+                        <span class="notification-dot"></span>
+                    </button>
+
+
+                    <!-- Profile -->
+                    <button class="profile-button" id="profileButton">
+
+                        <span class="profile-avatar" id="taskProfileAvatar">JD</span>
+
+                        <span class="profile-info">
+                            <strong id="taskProfileName">TaskFlow User</strong>
+                            <small id="taskProfileRole">Employee</small>
+                        </span>
+
+                        <span class="profile-arrow">⌄</span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+
+            <section class="page-content">
+
+                <!-- Page heading -->
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">WORKSPACE</p>
+
+                        <h1>Tasks</h1>
+
+                        <p class="page-description">
+                            Create, assign, track and manage all your team's work from one place.
+                        </p>
+                    </div>
+
+                    <button class="primary-button" id="createTaskButton">
+
+                        <span class="button-icon">+</span>
+
+                        Create Task
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     TASK STATISTICS
+                ================================================== -->
+
+                <section class="task-statistics">
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon total-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <path d="M8 9h8"></path>
+                                <path d="M8 13h6"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <span>Total Tasks</span>
+                            <strong id="totalTasks">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon progress-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 12a8 8 0 1 0 8-8"></path>
+                                <path d="M12 4v8l5 3"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <span>In Progress</span>
+                            <strong id="inProgressTasks">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon completed-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8"></circle>
+                                <path d="M8 12l2.5 2.5L16 9"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <span>Completed</span>
+                            <strong id="completedTasks">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon overdue-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3l9 17H3z"></path>
+                                <path d="M12 9v5"></path>
+                                <circle cx="12" cy="17" r=".8"></circle>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <span>Overdue</span>
+                            <strong id="overdueTasks">0</strong>
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     TASK TOOLBAR
+                ================================================== -->
+
+                <section class="task-workspace">
+
+                    <div class="task-toolbar">
+
+                        <!-- Search -->
+
+                        <div class="task-search">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7"></circle>
+                                <path d="M20 20l-4-4"></path>
+                            </svg>
+
+                            <input
+                                type="search"
+                                id="taskSearch"
+                                placeholder="Search tasks..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <!-- Filters -->
+
+                        <div class="filter-group">
+
+                            <select id="statusFilter" aria-label="Filter by status">
+                                <option value="all">All Status</option>
+                                <option value="todo">To Do</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="review">Review</option>
+                                <option value="completed">Completed</option>
+                            </select>
+
+
+                            <select id="priorityFilter" aria-label="Filter by priority">
+                                <option value="all">All Priority</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+
+
+                            <select id="assigneeFilter" aria-label="Filter by assignee">
+                                <option value="all">All Assignees</option>
+                            </select>
+
+
+                            <select id="sortTasks" aria-label="Sort tasks">
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="priority">Priority</option>
+                                <option value="due-date">Due Date</option>
+                                <option value="alphabetical">Alphabetical</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Active filters -->
+
+                    <div class="active-filters" id="activeFilters"></div>
+
+
+                    <!-- =================================================
+                         TASK TABLE
+                    ================================================== -->
+
+                    <div class="task-table-wrapper">
+
+                        <table class="task-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Task</th>
+                                    <th>Project</th>
+                                    <th>Assignee</th>
+                                    <th>Priority</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th class="action-heading">Actions</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="taskTableBody">
+
+                                <!-- JavaScript renders tasks here -->
+
+                            </tbody>
+
+                        </table>
+
+
+                        <!-- Empty state -->
+
+                        <div class="empty-state" id="emptyState">
+
+                            <div class="empty-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                    <path d="M8 9h8"></path>
+                                    <path d="M8 13h6"></path>
+                                </svg>
+                            </div>
+
+                            <h3>No tasks found</h3>
+
+                            <p>
+                                Try changing your search or filters,
+                                or create a new task.
+                            </p>
+
+                            <button
+                                class="secondary-button"
+                                id="emptyCreateTask"
+                            >
+                                Create Task
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PAGINATION
+                    ================================================== -->
+
+                    <div class="table-footer">
+
+                        <div class="results-info" id="resultsInfo">
+                            Showing 0 tasks
+                        </div>
+
+                        <div class="pagination" id="pagination"></div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         OVERLAY
+    ========================================================== -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- =========================================================
+         CREATE / EDIT TASK MODAL
+    ========================================================== -->
+
+    <div
+        class="modal"
+        id="taskModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="taskModalTitle"
+    >
+
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div>
+                    <p class="modal-eyebrow">TASK MANAGEMENT</p>
+
+                    <h2 id="taskModalTitle">Create Task</h2>
+
+                    <p id="taskModalDescription">
+                        Add a new task to your workspace.
+                    </p>
+                </div>
+
+                <button
+                    class="modal-close"
+                    id="closeTaskModal"
+                    aria-label="Close modal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="taskForm" novalidate>
+
+                <input type="hidden" id="taskId">
+
+
+                <div class="form-grid">
+
+                    <!-- Task title -->
+
+                    <div class="form-group full-width">
+
+                        <label for="taskTitle">
+                            Task Title <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="Enter task title"
+                            maxlength="100"
+                            required
+                        >
+
+                        <small class="field-error" id="taskTitleError"></small>
+
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <div class="form-group full-width">
+
+                        <label for="taskDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="taskDescription"
+                            rows="4"
+                            maxlength="500"
+                            placeholder="Describe the task..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Project -->
+
+                    <div class="form-group">
+
+                        <label for="taskProject">
+                            Project <span>*</span>
+                        </label>
+
+                        <select id="taskProject" required>
+                            <option value="">Select project</option>
+                            <option value="Employee Portal">Employee Portal</option>
+                            <option value="TaskFlow Dashboard">TaskFlow Dashboard</option>
+                            <option value="Website Redesign">Website Redesign</option>
+                            <option value="Mobile Application">Mobile Application</option>
+                            <option value="QA Automation">QA Automation</option>
+                        </select>
+
+                        <small class="field-error" id="taskProjectError"></small>
+
+                    </div>
+
+
+                    <!-- Assignee -->
+
+                    <div class="form-group">
+
+                        <label for="taskAssignee">
+                            Assignee <span>*</span>
+                        </label>
+
+                        <select id="taskAssignee" required>
+                            <option value="">Select employee</option>
+                            <option value="John Doe">John Doe</option>
+                            <option value="Sarah Wilson">Sarah Wilson</option>
+                            <option value="Mike Johnson">Mike Johnson</option>
+                            <option value="Alex Brown">Alex Brown</option>
+                            <option value="Emily Davis">Emily Davis</option>
+                            <option value="Robert Smith">Robert Smith</option>
+                        </select>
+
+                        <small class="field-error" id="taskAssigneeError"></small>
+
+                    </div>
+
+
+                    <!-- Priority -->
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority <span>*</span>
+                        </label>
+
+                        <select id="taskPriority" required>
+                            <option value="">Select priority</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="taskStatus">
+                            Status <span>*</span>
+                        </label>
+
+                        <select id="taskStatus" required>
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Due date -->
+
+                    <div class="form-group">
+
+                        <label for="taskDueDate">
+                            Due Date <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="taskDueDate"
+                            required
+                        >
+
+                        <small class="field-error" id="taskDueDateError"></small>
+
+                    </div>
+
+
+                    <!-- Estimated hours -->
+
+                    <div class="form-group">
+
+                        <label for="taskHours">
+                            Estimated Hours
+                        </label>
+
+                        <input
+                            type="number"
+                            id="taskHours"
+                            min="0"
+                            max="999"
+                            step="0.5"
+                            placeholder="e.g. 8"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Form actions -->
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="cancelTaskButton"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                        id="saveTaskButton"
+                    >
+                        Create Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TASK DETAILS MODAL
+    ========================================================== -->
+
+    <div
+        class="modal"
+        id="detailsModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="detailsTitle"
+    >
+
+        <div class="modal-container details-container">
+
+            <div class="modal-header">
+
+                <div>
+                    <p class="modal-eyebrow">TASK DETAILS</p>
+
+                    <h2 id="detailsTitle">Task Details</h2>
+                </div>
+
+                <button
+                    class="modal-close"
+                    id="closeDetailsModal"
+                    aria-label="Close details"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="details-content">
+
+                <div class="details-title-row">
+
+                    <div>
+                        <h3 id="detailsTaskTitle"></h3>
+
+                        <p id="detailsTaskDescription"></p>
+                    </div>
+
+                    <span id="detailsPriority" class="priority-badge"></span>
+
+                </div>
+
+
+                <div class="details-grid">
+
+                    <div class="details-item">
+                        <span>Project</span>
+                        <strong id="detailsProject"></strong>
+                    </div>
+
+                    <div class="details-item">
+                        <span>Assignee</span>
+                        <strong id="detailsAssignee"></strong>
+                    </div>
+
+                    <div class="details-item">
+                        <span>Due Date</span>
+                        <strong id="detailsDueDate"></strong>
+                    </div>
+
+                    <div class="details-item">
+                        <span>Status</span>
+                        <strong id="detailsStatus"></strong>
+                    </div>
+
+                    <div class="details-item">
+                        <span>Estimated Hours</span>
+                        <strong id="detailsHours"></strong>
+                    </div>
+
+                    <div class="details-item">
+                        <span>Created</span>
+                        <strong id="detailsCreated"></strong>
+                    </div>
+
+                </div>
+
+
+                <div class="details-status-section">
+
+                    <label for="detailsStatusSelect">
+                        Update Status
+                    </label>
+
+                    <div class="status-update-row">
+
+                        <select id="detailsStatusSelect">
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                        <button
+                            class="primary-button"
+                            id="updateDetailsStatus"
+                        >
+                            Update Status
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         DELETE CONFIRMATION MODAL
+    ========================================================== -->
+
+    <div
+        class="modal"
+        id="deleteModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="deleteTitle"
+    >
+
+        <div class="modal-container small-modal">
+
+            <div class="delete-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 7h16"></path>
+                    <path d="M10 11v6"></path>
+                    <path d="M14 11v6"></path>
+                    <path d="M6 7l1 14h10l1-14"></path>
+                    <path d="M9 7V4h6v3"></path>
+                </svg>
+            </div>
+
+            <h2 id="deleteTitle">Delete Task?</h2>
+
+            <p>
+                Are you sure you want to delete
+                <strong id="deleteTaskName"></strong>?
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelDelete"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="danger-button"
+                    id="confirmDelete"
+                >
+                    Delete Task
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PROFILE DROPDOWN
+    ========================================================== -->
+
+    <div class="profile-dropdown" id="profileDropdown">
+
+        <div class="profile-dropdown-header">
+
+            <span class="profile-avatar large" id="dropdownProfileAvatar">JD</span>
+
+            <div>
+                <strong id="dropdownProfileName">TaskFlow User</strong>
+                <span id="dropdownProfileEmail">user@taskflow.com</span>
+            </div>
+
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <a href="dashboard.html#profile" class="profile-menu-item">
+            My Profile
+        </a>
+
+        <a href="dashboard.html#account-settings" class="profile-menu-item">
+            Account Settings
+        </a>
+
+        <div class="dropdown-divider"></div>
+
+        <button class="profile-menu-item logout-profile">
+            Logout
+        </button>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOAST CONTAINER
+    ========================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- JavaScript -->
+    <script src="js/task.js"></script>
+
+</body>
+</html>

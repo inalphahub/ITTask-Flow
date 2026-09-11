@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <title>TaskFlow | Dashboard</title>
+    <meta name="description" content="TaskFlow Employee Task Management Dashboard">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/brand.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         APP CONTAINER
+    ========================== -->
+    <div class="app-container">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+                <a href="#" class="brand">
+                    <span class="brand-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 12.5L9.5 17L19 7"/>
+                        </svg>
+                    </span>
+                    <span>TaskFlow</span>
+                </a>
+
+                <button
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    aria-label="Close sidebar">
+                    &times;
+                </button>
+            </div>
+
+            <!-- Workspace -->
+            <div class="workspace-selector">
+                <div class="workspace-avatar">TF</div>
+
+                <div class="workspace-info">
+                    <span class="workspace-label">Workspace</span>
+                    <strong>My Organization</strong>
+                </div>
+
+                <button
+                    class="workspace-arrow"
+                    id="workspaceButton"
+                    aria-label="Open workspace menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Workspace dropdown -->
+            <div class="workspace-menu" id="workspaceMenu">
+                <button>
+                    <span class="workspace-avatar small">TF</span>
+                    My Organization
+                    <span class="check-mark">✓</span>
+                </button>
+
+                <button>
+                    <span class="workspace-avatar small purple">AC</span>
+                    Acme Corporation
+                </button>
+
+                <button class="create-workspace">
+                    + Create Workspace
+                </button>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="sidebar-nav">
+
+                <p class="nav-section-title">Workspace</p>
+
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                        </svg>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="#my-tasks" class="nav-item" data-section="my-tasks">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 11l3 3L21 5"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </span>
+                    My Tasks
+                    <span class="nav-count" id="myTasksCount" hidden>0</span>
+                    <span class="nav-chevron">+</span>
+                </a>
+                <div class="nav-submenu" data-submenu="my-tasks">
+                    <button type="button" class="nav-subitem" data-section="my-tasks" data-task-filter="assigned">Assigned to me</button>
+                    <button type="button" class="nav-subitem" data-section="my-tasks" data-task-filter="review">In Review</button>
+                </div>
+
+                <a href="#projects" class="nav-item" data-section="projects">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <path d="M3 7V5a2 2 0 0 1 2-2h5l2 2"/>
+                        </svg>
+                    </span>
+                    Projects
+                    <span class="nav-chevron">+</span>
+                </a>
+                <div class="nav-submenu" data-submenu="projects">
+                    <button type="button" class="nav-subitem" data-section="projects" data-project-filter="active">Active projects</button>
+                    <button type="button" class="nav-subitem" data-section="projects" data-project-filter="archived">Project archive</button>
+                </div>
+
+                <a href="#task-board" class="nav-item" data-section="task-board">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="4" width="5" height="16"/>
+                            <rect x="10" y="4" width="5" height="10"/>
+                            <rect x="17" y="4" width="4" height="7"/>
+                        </svg>
+                    </span>
+                    Task Board
+                </a>
+
+                <a href="#bug-lifecycle" class="nav-item" data-section="bug-lifecycle">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 8h8M8 12h5M8 16h8"/>
+                            <rect x="4" y="3" width="16" height="18" rx="2"/>
+                        </svg>
+                    </span>
+                    Bug Life Cycle
+                    <span class="nav-count" id="bugCount" hidden>0</span>
+                </a>
+
+                <a href="#calendar" class="nav-item" data-section="calendar">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="16" rx="2"/>
+                            <path d="M16 3v4M8 3v4M3 10h18"/>
+                        </svg>
+                    </span>
+                    Calendar
+                </a>
+
+                <a href="#time-tracking" class="nav-item" data-section="time-tracking">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v5l3 2"/>
+                        </svg>
+                    </span>
+                    Time Tracking
+                </a>
+
+                <p class="nav-section-title">Management</p>
+
+                <a href="#team" class="nav-item" data-section="team">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="8" r="3"/>
+                            <circle cx="17" cy="9" r="2.5"/>
+                            <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+                            <path d="M15 14c3.3 0 6 2.2 6 6"/>
+                        </svg>
+                    </span>
+                    Team
+                </a>
+
+                <a href="#reports" class="nav-item" data-section="reports">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19V5"/>
+                            <path d="M4 19h17"/>
+                            <rect x="7" y="12" width="3" height="5"/>
+                            <rect x="12" y="9" width="3" height="8"/>
+                            <rect x="17" y="6" width="3" height="11"/>
+                        </svg>
+                    </span>
+                    Reports & Analytics
+                </a>
+
+                <a href="#notifications" class="nav-item" data-section="notifications">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                            <path d="M10 21h4"/>
+                        </svg>
+                    </span>
+                    Notifications
+                    <span class="nav-count notification-count" id="notificationCount" hidden>0</span>
+                </a>
+
+                <a href="#activity" class="nav-item" data-section="activity">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 12h4l2-7 4 14 2-7h4"/>
+                        </svg>
+                    </span>
+                    Activity
+                </a>
+
+                <p class="nav-section-title">Account</p>
+
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2 2-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2H12v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1-2-2 .1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H5v-2.8h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2-2 .1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V4h2.8v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1 2 2-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v2.8h-.2a1.7 1.7 0 0 0-1.6 1z"/>
+                        </svg>
+                    </span>
+                    Settings
+                </a>
+
+            </nav>
+
+            <!-- Sidebar bottom -->
+            <div class="sidebar-bottom">
+
+                <div class="help-card">
+                    <div class="help-icon">?</div>
+
+                    <div>
+                        <strong>Need help?</strong>
+                        <span>Visit our Help Center</span>
+                    </div>
+                </div>
+
+                <button class="logout-button" id="logoutButton">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M10 17l5-5-5-5"/>
+                            <path d="M15 12H3"/>
+                            <path d="M20 4v16"/>
+                        </svg>
+                    </span>
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- Sidebar overlay mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+        <!-- =========================
+             MAIN AREA
+        ========================== -->
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="page-title">
+                        <span class="breadcrumb">Workspace /</span>
+                        <h1>Dashboard</h1>
+                    </div>
+
+                </div>
+
+                <div class="topbar-actions">
+
+                    <!-- Search -->
+                    <button class="header-icon-button" id="searchButton" aria-label="Search">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="7"/>
+                            <path d="M20 20l-4-4"/>
+                        </svg>
+                    </button>
+
+                    <!-- Notification -->
+                    <button
+                        class="header-icon-button notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                            <path d="M10 21h4"/>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <!-- User -->
+                    <div class="user-menu-wrapper">
+
+                        <button class="user-profile-button" id="userProfileButton">
+
+                            <span class="user-avatar" id="userAvatar">
+                                AS
+                            </span>
+
+                            <span class="user-details">
+                                <strong id="userName">Admin User</strong>
+                                <small id="userRole">Administrator</small>
+                            </span>
+
+                            <svg class="profile-arrow" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+
+                        </button>
+
+                        <div class="profile-menu" id="profileMenu">
+
+                            <div class="profile-menu-header">
+                                <span class="user-avatar large" id="profileAvatar">AS</span>
+
+                                <div>
+                                    <strong id="profileName">Admin User</strong>
+                                    <span id="profileEmail">admin@taskflow.com</span>
+                                    <span id="profileDesignation">Project Manager</span>
+                                    <small id="profileUserId">ID: TF-ADMIN01</small>
+                                </div>
+                            </div>
+
+                            <div class="profile-menu-divider"></div>
+
+                            <button type="button" id="openProfileButton">
+                                <span>👤</span>
+                                My Profile
+                            </button>
+
+                            <button type="button" id="openAccountSettingsButton">
+                                <span>⚙</span>
+                                Account Settings
+                            </button>
+
+                            <button>
+                                <span>?</span>
+                                Help Center
+                            </button>
+
+                            <div class="profile-menu-divider"></div>
+
+                            <button class="profile-logout" id="profileLogout">
+                                <span>↪</span>
+                                Logout
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 DASHBOARD CONTENT
+            ========================== -->
+            <div class="dashboard-content" id="dashboardOverview">
+
+                <!-- Welcome -->
+                <section class="welcome-section">
+
+                    <div>
+                        <p class="welcome-label" id="currentDate">
+                            Saturday, August 22, 2026
+                        </p>
+
+                        <h2>
+                            Good morning, <span id="welcomeName">Admin</span>! <span>👋</span>
+                        </h2>
+
+                        <p>
+                            Here's what's happening with your team today.
+                        </p>
+                    </div>
+
+                    <button class="primary-button manager-only" id="createTaskButton">
+                        <span>+</span>
+                        Create New Task
+                    </button>
+
+                </section>
+
+
+                <!-- =========================
+                     KPI CARDS
+                ========================== -->
+                <section class="stats-grid">
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+                            <div class="stat-icon blue">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 11l3 3L21 5"/>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                </svg>
+                            </div>
+
+                            <span class="stat-change positive">Live</span>
+                        </div>
+
+                        <span class="stat-label">Total Tasks</span>
+                        <strong class="stat-number" id="totalTasks" data-target="0">0</strong>
+
+                        <div class="stat-footer">
+                            <span>Current workspace</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+                            <div class="stat-icon green">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12l4 4L19 6"/>
+                                </svg>
+                            </div>
+
+                            <span class="stat-change positive">Live</span>
+                        </div>
+
+                        <span class="stat-label">Completed Tasks</span>
+                        <strong class="stat-number" id="completedTasks" data-target="0">0</strong>
+
+                        <div class="stat-footer">
+                            <span>Based on current tasks</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+                            <div class="stat-icon orange">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M12 7v5l3 2"/>
+                                </svg>
+                            </div>
+
+                            <span class="stat-change positive">Live</span>
+                        </div>
+
+                        <span class="stat-label">In Progress</span>
+                        <strong class="stat-number" id="progressTasks" data-target="0">0</strong>
+
+                        <div class="stat-footer">
+                            <span>Based on current tasks</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+                            <div class="stat-icon red">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M12 7v5"/>
+                                    <circle cx="12" cy="16" r=".5"/>
+                                </svg>
+                            </div>
+
+                            <span class="stat-change negative">Live</span>
+                        </div>
+
+                        <span class="stat-label">Overdue Tasks</span>
+                        <strong class="stat-number" id="overdueTasks" data-target="0">0</strong>
+
+                        <div class="stat-footer">
+                            <span>Needs attention</span>
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =========================
+                     MAIN DASHBOARD GRID
+                ========================== -->
+                <section class="dashboard-grid">
+
+                    <!-- Task Overview -->
+                    <article class="dashboard-card task-overview-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Task Overview</h3>
+                                <p>Track your team's task completion.</p>
+                            </div>
+
+                            <select class="period-select" id="taskPeriod">
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="year">This Year</option>
+                            </select>
+
+                        </div>
+
+                        <div class="chart-container">
+
+                            <div class="chart-y-axis">
+                                <span>40</span>
+                                <span>30</span>
+                                <span>20</span>
+                                <span>10</span>
+                                <span>0</span>
+                            </div>
+
+                            <div class="chart-area">
+
+                                <div class="chart-grid-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="bar-chart" id="dashboardBarChart"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="chart-legend">
+
+                            <span>
+                                <i class="legend-dot completed"></i>
+                                Completed
+                            </span>
+
+                            <span>
+                                <i class="legend-dot progress"></i>
+                                In Progress
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Task Distribution -->
+                    <article class="dashboard-card distribution-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Task Distribution</h3>
+                                <p>Current task status.</p>
+                            </div>
+
+                            <button class="card-menu-button">•••</button>
+
+                        </div>
+
+                        <div class="donut-wrapper">
+
+                            <div class="donut-chart">
+                                <div class="donut-inner">
+                                    <strong id="distributionTotal">0</strong>
+                                    <span>Total</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="distribution-list" id="dashboardDistribution"></div>
+
+                    </article>
+
+
+                    <!-- Recent Tasks -->
+                    <article class="dashboard-card recent-task-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Recent Tasks</h3>
+                                <p>Latest tasks assigned to your team.</p>
+                            </div>
+
+                            <a href="#my-tasks" class="view-all">
+                                View all →
+                            </a>
+
+                        </div>
+
+                        <div class="task-table-wrapper">
+
+                            <table class="task-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Assignee</th>
+                                        <th>Priority</th>
+                                        <th>Status</th>
+                                        <th>Due Date</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="dashboardRecentTasks"></tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Team Workload -->
+                    <article class="dashboard-card workload-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Team Workload</h3>
+                                <p>Current workload by employee.</p>
+                            </div>
+
+                            <button class="card-menu-button">•••</button>
+
+                        </div>
+
+                        <div class="workload-list" id="dashboardWorkload"></div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =========================
+                     BOTTOM GRID
+                ========================== -->
+                <section class="bottom-grid">
+
+                    <!-- Project Progress -->
+                    <article class="dashboard-card project-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Project Progress</h3>
+                                <p>Overview of active projects.</p>
+                            </div>
+
+                            <a href="#projects" class="view-all">
+                                View all →
+                            </a>
+
+                        </div>
+
+                        <div class="project-list" id="dashboardProjects"></div>
+
+                    </article>
+
+
+                    <!-- Activity -->
+                    <article class="dashboard-card activity-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Recent Activity</h3>
+                                <p>Latest workspace activity.</p>
+                            </div>
+
+                            <button class="card-menu-button">•••</button>
+
+                        </div>
+
+                        <div class="activity-list" id="dashboardActivity"></div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- Footer -->
+                <footer class="dashboard-footer">
+                    <span>© 2026 TaskFlow. All Rights Reserved.</span>
+
+                    <div>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Help Center</a>
+                    </div>
+                </footer>
+
+            </div>
+
+            <!-- My Tasks Module -->
+            <section class="task-module" id="taskModule">
+
+                <div class="task-module-header">
+                    <div>
+                        <p class="breadcrumb">Workspace /</p>
+                        <h2>My Tasks</h2>
+                        <p>Stay on top of the work assigned to you.</p>
+                    </div>
+
+                    <button class="primary-button manager-only" id="taskModuleCreateButton">
+                        <span>+</span>
+                        Create New Task
+                    </button>
+                </div>
+
+                <div class="task-module-toolbar">
+                    <p>Review your assigned work and upcoming deadlines.</p>
+                    <select id="taskSort" aria-label="Sort tasks">
+                        <option value="recent">Recently updated</option>
+                        <option value="priority">Priority</option>
+                        <option value="due">Due date</option>
+                    </select>
+                </div>
+
+                <div class="my-task-list" id="myTaskList"></div>
+
+            </section>
+
+            <!-- Task Board Module -->
+            <section class="task-module" id="taskBoardModule">
+                <div class="task-module-header">
+                    <div>
+                        <p class="breadcrumb">Workspace /</p>
+                        <h2>Task Board</h2>
+                        <p>Move work through each delivery stage.</p>
+                    </div>
+                </div>
+
+                <div class="task-module-toolbar">
+                    <p>Drag a task between columns to update its progress.</p>
+                    <select id="boardSort" aria-label="Sort board tasks">
+                        <option value="recent">Recently updated</option>
+                        <option value="priority">Priority</option>
+                        <option value="due">Due date</option>
+                    </select>
+                </div>
+
+                <div class="task-board" id="taskBoard">
+                    <section class="task-column" data-column-status="todo">
+                        <header><span class="column-dot todo-dot"></span><h3>To Do</h3><strong class="column-count">0</strong></header>
+                        <div class="task-column-list" data-drop-status="todo"></div>
+                    </section>
+                    <section class="task-column" data-column-status="progress">
+                        <header><span class="column-dot progress-dot"></span><h3>In Progress</h3><strong class="column-count">0</strong></header>
+                        <div class="task-column-list" data-drop-status="progress"></div>
+                    </section>
+                    <section class="task-column" data-column-status="review">
+                        <header><span class="column-dot review-dot"></span><h3>In Review</h3><strong class="column-count">0</strong></header>
+                        <div class="task-column-list" data-drop-status="review"></div>
+                    </section>
+                    <section class="task-column" data-column-status="completed">
+                        <header><span class="column-dot completed-dot"></span><h3>Done</h3><strong class="column-count">0</strong></header>
+                        <div class="task-column-list" data-drop-status="completed"></div>
+                    </section>
+                </div>
+
+            </section>
+
+            <!-- Projects Module -->
+            <section class="task-module" id="projectsModule">
+                <div class="task-module-header">
+                    <div>
+                        <p class="breadcrumb">Workspace /</p>
+                        <h2>Projects</h2>
+                        <p>See project workload, ownership, and delivery progress.</p>
+                    </div>
+                    <button class="primary-button manager-only" type="button" id="createProjectButton"><span>+</span> New Project</button>
+                </div>
+                <div class="project-summary-grid" id="projectSummaryGrid"></div>
+            </section>
+
+            <section class="task-module" id="bugModule">
+                <div class="task-module-header">
+                    <div>
+                        <p class="breadcrumb">Quality /</p>
+                        <h2>Bug Life Cycle</h2>
+                        <p>Raise, triage, and move issues through verification.</p>
+                    </div>
+                    <button class="primary-button" id="reportBugButton"><span>+</span> Report Bug</button>
+                </div>
+                <div class="task-module-toolbar bug-toolbar">
+                    <p id="bugSummary">Track issues from discovery to closure.</p>
+                    <select id="bugPriorityFilter" aria-label="Filter bugs by priority">
+                        <option value="all">All priorities</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="bug-board" id="bugBoard">
+                    <section class="bug-column" data-bug-status="open"><header><span class="column-dot todo-dot"></span><h3>Open</h3><strong class="bug-column-count">0</strong></header><div class="bug-column-list"></div></section>
+                    <section class="bug-column" data-bug-status="triaged"><header><span class="column-dot review-dot"></span><h3>Triaged</h3><strong class="bug-column-count">0</strong></header><div class="bug-column-list"></div></section>
+                    <section class="bug-column" data-bug-status="in-progress"><header><span class="column-dot progress-dot"></span><h3>In Progress</h3><strong class="bug-column-count">0</strong></header><div class="bug-column-list"></div></section>
+                    <section class="bug-column" data-bug-status="resolved"><header><span class="column-dot completed-dot"></span><h3>Resolved</h3><strong class="bug-column-count">0</strong></header><div class="bug-column-list"></div></section>
+                    <section class="bug-column" data-bug-status="closed"><header><span class="column-dot completed-dot"></span><h3>Closed</h3><strong class="bug-column-count">0</strong></header><div class="bug-column-list"></div></section>
+                </div>
+            </section>
+
+            <section class="task-module" id="teamModule">
+
+                <div class="task-module-header">
+                    <div>
+                        <p class="breadcrumb">Management /</p>
+                        <h2>Team</h2>
+                        <p>Create employees and manage their workspace access.</p>
+                    </div>
+
+                    <button class="primary-button manager-only" id="createEmployeeButton">
+                        <span>+</span>
+                        Add Employee
+                    </button>
+                </div>
+
+                <div class="dashboard-card team-directory-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Team Directory</h3>
+                            <p>Employees created here appear in the task assignee list.</p>
+                        </div>
+                    </div>
+                    <div class="team-directory">
+                        <table class="team-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Department</th>
+                                    <th>IT Role</th>
+                                    <th>Email</th>
+                                    <th>Project</th>
+                                    <th>Employee Code</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="teamDirectory"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="task-module" id="workspaceModule">
+                <div class="task-module-header">
+                    <div><p class="breadcrumb" id="workspaceModuleBreadcrumb">Workspace /</p><h2 id="workspaceModuleTitle">Calendar</h2><p id="workspaceModuleDescription">Plan deadlines and see what is coming next.</p></div>
+                    <button class="secondary-button" type="button" id="workspaceModuleAction">Refresh</button>
+                </div>
+
+                <div class="module-panel" id="calendarPanel">
+                    <div class="calendar-toolbar"><button class="secondary-button" type="button" id="calendarPrevious">Previous</button><strong id="calendarMonth"></strong><button class="secondary-button" type="button" id="calendarNext">Next</button></div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+
+                <div class="module-panel hidden-panel" id="reportsPanel">
+                    <div class="report-summary-grid"><article><span>Total tasks</span><strong id="reportTotalTasks">0</strong></article><article><span>Completion rate</span><strong id="reportCompletionRate">0%</strong></article><article><span>Open bugs</span><strong id="reportOpenBugs">0</strong></article><article><span>Overdue</span><strong id="reportOverdueTasks">0</strong></article></div>
+                    <div class="report-list" id="reportList"></div>
+                </div>
+
+                <div class="module-panel hidden-panel" id="notificationsPanel">
+                    <div class="module-panel-heading"><div><h3>Notification Center</h3><p>Stay current with assigned work and bug activity.</p></div><button class="secondary-button" type="button" id="moduleMarkAllRead">Mark all read</button></div>
+                    <div class="notification-center-list" id="notificationCenterList"></div>
+                </div>
+
+                <div class="module-panel hidden-panel" id="timeTrackingPanel">
+                    <div class="module-panel-heading"><div><h3>Time Tracking</h3><p>Log focused work against your active tasks.</p></div><button class="primary-button" type="button" id="timeToggleButton">Start timer</button></div>
+                    <div class="time-tracker-card"><strong id="timeTrackerValue">00:00:00</strong><span id="timeTrackerTask">No task selected</span><select id="timeTrackerTaskSelect"><option value="">Select a task to track</option></select></div>
+                    <div class="time-log-list" id="timeLogList"></div>
+                </div>
+
+                <div class="module-panel hidden-panel" id="activityPanel">
+                    <div class="module-panel-heading"><div><h3>Activity</h3><p>A chronological view of recent workspace changes.</p></div></div>
+                    <div class="activity-feed" id="activityFeed"></div>
+                </div>
+
+                <div class="module-panel hidden-panel" id="settingsPanel">
+                    <form class="settings-form" id="settingsForm"><div class="form-group"><label for="settingTheme">Workspace theme</label><select id="settingTheme"><option value="light">Light</option><option value="soft">Soft contrast</option></select></div><div class="form-row"><div class="form-group"><label for="settingLanguage">Language</label><select id="settingLanguage"><option>English</option><option>Spanish</option><option>French</option></select></div><div class="form-group"><label for="settingDateFormat">Date format</label><select id="settingDateFormat"><option value="short">MMM D, YYYY</option><option value="numeric">DD/MM/YYYY</option></select></div></div><label class="setting-toggle"><input type="checkbox" id="settingEmailUpdates"> Receive email updates</label><label class="setting-toggle"><input type="checkbox" id="settingCompactMode"> Compact task cards</label><label class="setting-toggle"><input type="checkbox" id="settingWeeklyDigest"> Send weekly progress digest</label><div class="modal-actions"><button class="primary-button" type="submit">Save settings</button></div></form>
+                </div>
+
+                <div class="module-panel hidden-panel" id="profilePanel">
+                    <div class="module-panel-heading"><div><h3>Edit Profile</h3><p>Keep your team profile details current.</p></div></div>
+                    <form class="profile-form" id="profileForm"><div class="form-row"><div class="form-group"><label for="profileFirstName">First name</label><input id="profileFirstName" required></div><div class="form-group"><label for="profileLastName">Last name</label><input id="profileLastName" required></div></div><div class="form-row"><div class="form-group"><label for="profileJobTitle">Job title</label><input id="profileJobTitle" placeholder="e.g. Product Designer"></div><div class="form-group"><label for="profilePhone">Phone</label><input id="profilePhone" type="tel"></div></div><div class="form-row"><div class="form-group"><label for="profileDepartmentEdit">Department</label><input id="profileDepartmentEdit"></div><div class="form-group"><label for="profileLocation">Location</label><input id="profileLocation" placeholder="City, country"></div></div><div class="form-group"><label for="profileSkills">Skills</label><input id="profileSkills" placeholder="Design, QA, project planning"></div><div class="form-group"><label for="profileBio">Bio</label><textarea id="profileBio" rows="4" placeholder="A short introduction for your workspace profile."></textarea></div><div class="modal-actions"><button class="primary-button" type="submit">Save profile</button></div></form>
+                </div>
+
+                <div class="module-panel hidden-panel" id="accountSettingsPanel">
+                    <div class="module-panel-heading"><div><h3>Account Settings</h3><p>Manage your sign-in and account preferences.</p></div></div>
+                    <form class="profile-form" id="accountSettingsForm"><div class="form-group"><label for="accountEmailEdit">Email address</label><input id="accountEmailEdit" type="email" required></div><div class="form-row"><div class="form-group"><label for="accountUsernameEdit">Username</label><input id="accountUsernameEdit" autocomplete="username"></div><div class="form-group"><label for="accountTimezone">Time zone</label><select id="accountTimezone"><option>UTC</option><option>UTC+05:30</option><option>UTC-05:00</option><option>UTC+01:00</option></select></div></div><div class="form-group"><label for="accountPasswordEdit">New password</label><input id="accountPasswordEdit" type="password" placeholder="Leave blank to keep current password" minlength="8"></div><label class="setting-toggle"><input type="checkbox" id="accountAlerts"> Show desktop notifications</label><label class="setting-toggle"><input type="checkbox" id="accountTwoFactor"> Require two-factor authentication</label><div class="modal-actions"><button class="primary-button" type="submit">Save account settings</button></div></form>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         SEARCH MODAL
+    ========================== -->
+    <div class="modal-overlay" id="searchModal">
+
+        <div class="search-modal">
+
+            <div class="search-modal-header">
+
+                <h3>Search TaskFlow</h3>
+
+                <button class="modal-close" data-close="searchModal">
+                    &times;
+                </button>
+
+            </div>
+
+            <div class="search-input-wrapper">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="M20 20l-4-4"/>
+                </svg>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search tasks, projects, employees..."
+                    autocomplete="off">
+
+            </div>
+
+            <div class="search-results" id="searchResults">
+                <p class="search-placeholder">
+                    Start typing to search.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CREATE TASK MODAL
+    ========================== -->
+    <div class="modal-overlay" id="taskModal">
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+
+                <div>
+                    <h3>Create New Task</h3>
+                    <p>Add a new task to your workspace.</p>
+                </div>
+
+                <button class="modal-close" data-close="taskModal">
+                    &times;
+                </button>
+
+            </div>
+
+            <form id="createTaskForm">
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter task title"
+                        required>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="taskAssignee">
+                            Assignee
+                        </label>
+
+                        <select id="taskAssignee" required>
+                            <option value="">Select employee</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="taskProject">Project</label>
+                        <input id="taskProject" placeholder="Project name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDepartment">Department</label>
+                        <select id="taskDepartment" required>
+                            <option value="">Select department</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskRole">IT role</label>
+                        <select id="taskRole" required>
+                            <option value="">Select IT role</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskDueDate">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDueDate"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        rows="4"
+                        placeholder="Describe the task..."></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        data-close="taskModal">
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                        id="createTaskSubmitButton">
+                        Create Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="modal-overlay" id="bugModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div><h3>Report a Bug</h3><p>Capture enough detail for a quick triage.</p></div>
+                <button class="modal-close" data-close="bugModal">&times;</button>
+            </div>
+            <form id="bugForm">
+                <div class="form-group"><label for="bugTitle">Issue title</label><input id="bugTitle" placeholder="What went wrong?" required></div>
+                <div class="form-row">
+                    <div class="form-group"><label for="bugPriority">Priority</label><select id="bugPriority"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option><option value="critical">Critical</option></select></div>
+                    <div class="form-group"><label for="bugProject">Project</label><input id="bugProject" placeholder="Project name" required></div>
+                </div>
+                <div class="form-group"><label for="bugDescription">Description</label><textarea id="bugDescription" rows="4" placeholder="Steps to reproduce, expected result, and actual result..." required></textarea></div>
+                <div class="modal-actions"><button type="button" class="secondary-button" data-close="bugModal">Cancel</button><button type="submit" class="primary-button">Create Bug</button></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="employeeModal">
+
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3>Create Employee</h3>
+                    <p>Create login access for a team member.</p>
+                </div>
+                <button class="modal-close" data-close="employeeModal">&times;</button>
+            </div>
+
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="employeeFirstName">First name</label>
+                        <input id="employeeFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeeLastName">Last name</label>
+                        <input id="employeeLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="employeeEmail">Email address</label>
+                    <input type="email" id="employeeEmail" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="employeeDepartment">Department</label>
+                        <select id="employeeDepartment" required>
+                            <option value="">Select department</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeeRole">IT role</label>
+                        <select id="employeeRole" required>
+                            <option value="">Select IT role</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="employeeProject">Project</label>
+                    <input id="employeeProject" placeholder="Project name" required>
+                </div>
+                <div class="form-group">
+                    <label for="employeePassword">Temporary password</label>
+                    <input type="text" id="employeePassword" minlength="6" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="secondary-button" data-close="employeeModal">Cancel</button>
+                    <button type="submit" class="primary-button" id="saveEmployeeButton">Create Employee</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay" id="employeeViewModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3>Employee Details</h3>
+                    <p>Team member information</p>
+                </div>
+                <button class="modal-close" data-close="employeeViewModal">&times;</button>
+            </div>
+            <div class="employee-details-grid">
+                <div><small>Name</small><strong id="viewEmployeeName"></strong></div>
+                <div><small>Employee Code</small><strong id="viewEmployeeCode"></strong></div>
+                <div><small>Email</small><strong id="viewEmployeeEmail"></strong></div>
+                <div><small>Department</small><strong id="viewEmployeeDepartment"></strong></div>
+                <div><small>IT Role</small><strong id="viewEmployeeRole"></strong></div>
+                <div><small>Project</small><strong id="viewEmployeeProject"></strong></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         NOTIFICATION PANEL
+    ========================== -->
+    <div class="notification-panel" id="notificationPanel">
+
+        <div class="notification-header">
+
+            <div>
+                <h3>Notifications</h3>
+                <span id="notificationSummary">0 unread notifications</span>
+            </div>
+
+            <button id="markAllRead">
+                Mark all as read
+            </button>
+
+        </div>
+
+        <div class="notification-list"></div>
+
+    </div>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+    <div class="toast" id="toast">
+
+        <span class="toast-icon">✓</span>
+
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+
+        <button id="toastClose">&times;</button>
+
+    </div>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

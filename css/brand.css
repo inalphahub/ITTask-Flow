@@ -1,0 +1,39 @@
+.it-taskflow-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.it-taskflow-mark img,
+.it-taskflow-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.brand .it-taskflow-mark img {
+    width: 40px;
+    height: 40px;
+}
+
+.mini-brand .it-taskflow-mark img {
+    width: 28px;
+    height: 28px;
+}
+
+.brand-text .it-taskflow-mark img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 700px) {
+    .it-taskflow-mark img,
+    .it-taskflow-logo {
+        width: 38px;
+        height: 38px;
+    }
+}

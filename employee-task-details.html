@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Task Details | TaskFlow</title>
+    <link rel="stylesheet" href="css/employee-task-details.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <script src="js/brand.js" defer></script>
+</head>
+<body>
+    <div class="employee-page">
+        <aside class="employee-sidebar">
+            <a class="brand" href="dashboard.html"><span>✓</span><strong>TaskFlow</strong></a>
+            <nav aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a class="active" href="dashboard.html#my-tasks">My Tasks</a>
+                <a href="dashboard.html#projects">Projects</a>
+                <a href="dashboard.html#task-board">Task Board</a>
+                <a href="dashboard.html#calendar">Calendar</a>
+                <a href="dashboard.html#bug-lifecycle">Bug Life Cycle</a>
+                <a href="dashboard.html#reports">Reports &amp; Analytics</a>
+                <a href="dashboard.html#notifications">Notifications</a>
+                <a href="dashboard.html#settings">Settings</a>
+            </nav>
+            <a class="sidebar-profile" href="dashboard.html#profile" aria-label="Open profile">
+                <div class="avatar" id="profileAvatar"></div>
+                <div><strong id="profileName"></strong><small id="profileRole"></small></div>
+            </a>
+        </aside>
+
+        <main class="employee-main">
+            <header class="topbar">
+                <div><a href="dashboard.html#my-tasks">My Tasks</a><span>/</span><strong id="breadcrumbTitle">Task Details</strong></div>
+                <a class="topbar-profile" href="dashboard.html#profile"><span class="avatar" id="topbarAvatar"></span><span id="topbarName"></span></a>
+            </header>
+
+            <section class="details-page">
+                <a class="back-link" href="dashboard.html#my-tasks">← Back to My Tasks</a>
+                <div class="title-row"><span class="status-dot" id="statusDot"></span><h1 id="taskTitle">Task Details</h1></div>
+                <p class="task-id" id="taskId"></p>
+
+                <div class="summary-grid">
+                    <div><small>Status</small><strong id="taskStatusLabel"></strong></div>
+                    <div><small>Priority</small><strong id="taskPriority"></strong></div>
+                    <div><small>Project</small><strong id="taskProject"></strong></div>
+                    <div><small>Due date</small><strong id="taskDueDate"></strong></div>
+                </div>
+
+                <section class="content-section">
+                    <h2>Description</h2>
+                    <p id="taskDescription"></p>
+                </section>
+
+                <section class="content-section assignment-section">
+                    <div><h2>Assigned to you</h2><p id="assignedEmployee"></p></div>
+                    <label for="statusSelect">Update status
+                        <select id="statusSelect">
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </label>
+                    <button id="saveStatus" type="button">Save Status</button>
+                </section>
+
+                <p class="empty-message" id="notFound" hidden>This task is no longer available.</p>
+            </section>
+        </main>
+    </div>
+    <script src="js/employee-task-details.js?v=1"></script>
+</body>
+</html>

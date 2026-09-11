@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Management | Task Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/task-management.css" />
+  <link rel="stylesheet" href="css/brand.css" />
+  <script src="js/brand.js" defer></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        Task Flow
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#create">Create</a></li>
+        <li><a href="#lifecycle">Lifecycle</a></li>
+        <li><a href="#priority">Priority</a></li>
+        <li><a href="#status">Status</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#create">Create</a>
+      <a href="#lifecycle">Lifecycle</a>
+      <a href="#priority">Priority</a>
+      <a href="#status">Status</a>
+      <a href="#details">Details</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content fade-up">
+      <div class="badge">📋 Task Management</div>
+      <h1>Plan, Assign & Track Every Task With Ease</h1>
+      <p>
+        From creation to completion — manage individual work, set priorities,
+        assign teammates, and stay on top of deadlines in one beautiful workspace.
+      </p>
+      <div class="hero-ctas">
+        <a href="#cta" class="btn btn-primary btn-lg">Get Started →</a>
+        <a href="#dashboard" class="btn btn-ghost btn-lg">Explore Dashboard</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up">
+      <div class="task-preview card-1">
+        <div class="task-preview-header">
+          <span class="priority-pill priority-high">High</span>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Due tomorrow</span>
+        </div>
+        <h4>Redesign landing page</h4>
+        <p>Update hero section and improve conversion rate</p>
+        <div class="task-meta">
+          <div class="avatar-group">
+            <div class="avatar">AK</div>
+            <div class="avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">SR</div>
+          </div>
+          <span>In Progress</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>
+      </div>
+      <div class="task-preview card-2">
+        <div class="task-preview-header">
+          <span class="priority-pill priority-urgent">Urgent</span>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Today</span>
+        </div>
+        <h4>Fix production bug</h4>
+        <p>Critical payment flow issue</p>
+        <div class="task-meta">
+          <div class="avatar-group">
+            <div class="avatar" style="background:linear-gradient(135deg,#d97706,#b45309)">MJ</div>
+          </div>
+          <span>Review</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+      </div>
+      <div class="task-preview card-3">
+        <div class="task-preview-header">
+          <span class="priority-pill priority-medium">Medium</span>
+          <span style="font-size:0.75rem;color:var(--text-dim)">3 days left</span>
+        </div>
+        <h4>Write API documentation</h4>
+        <p>Cover auth endpoints and webhooks</p>
+        <div class="task-meta">
+          <div class="avatar-group">
+            <div class="avatar" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">LP</div>
+          </div>
+          <span>Not Started</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="section-header fade-up">
+      <div class="badge">Everything in one place</div>
+      <h2>Task Management Overview</h2>
+      <p>Create, assign, prioritize and track work without switching tools. Full visibility from start to finish.</p>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-card fade-up">
+        <div class="overview-icon">✨</div>
+        <h3>Create Tasks</h3>
+        <p>Quickly spin up tasks with titles, descriptions, attachments and checklists in seconds.</p>
+      </div>
+      <div class="overview-card fade-up">
+        <div class="overview-icon">👥</div>
+        <h3>Assign Employees</h3>
+        <p>Delegate work to the right people with clear ownership and accountability.</p>
+      </div>
+      <div class="overview-card fade-up">
+        <div class="overview-icon">🚩</div>
+        <h3>Set Priorities</h3>
+        <p>Mark tasks as Low, Medium, High or Urgent so the team always knows what matters most.</p>
+      </div>
+      <div class="overview-card fade-up">
+        <div class="overview-icon">📅</div>
+        <h3>Set Deadlines</h3>
+        <p>Define start and due dates. Get reminders before anything slips through the cracks.</p>
+      </div>
+      <div class="overview-card fade-up">
+        <div class="overview-icon">📈</div>
+        <h3>Track Progress</h3>
+        <p>Visual progress bars and status updates keep everyone aligned in real time.</p>
+      </div>
+      <div class="overview-card fade-up">
+        <div class="overview-icon">🔍</div>
+        <h3>Monitor Status</h3>
+        <p>From Not Started to Completed — always know exactly where every task stands.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATE & ASSIGN -->
+  <section id="create">
+    <div class="section-header fade-up">
+      <div class="badge">Interactive Demo</div>
+      <h2>Create & Assign Tasks</h2>
+      <p>A full-featured task form with everything you need — title, assignee, priority, dates, checklist and more.</p>
+    </div>
+    <div class="create-section">
+      <div class="form-card fade-up">
+        <h3>➕ New Task</h3>
+        <div class="form-group">
+          <label>Task Title</label>
+          <input type="text" placeholder="e.g. Redesign onboarding flow" value="Launch marketing campaign" />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea placeholder="Describe the task...">Plan and execute Q3 product launch campaign across email, social and paid channels.</textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Assignee</label>
+            <select>
+              <option>Alex Kim</option>
+              <option>Sarah Rivera</option>
+              <option>Marcus Johnson</option>
+              <option>Lisa Park</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Project</label>
+            <select>
+              <option>Product Launch</option>
+              <option>Website Redesign</option>
+              <option>Mobile App</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Priority</label>
+            <select>
+              <option>High</option>
+              <option>Urgent</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select>
+              <option>Not Started</option>
+              <option>In Progress</option>
+              <option>On Hold</option>
+              <option>Under Review</option>
+              <option>Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Start Date</label>
+            <input type="date" value="2026-09-15" />
+          </div>
+          <div class="form-group">
+            <label>Due Date</label>
+            <input type="date" value="2026-09-30" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Checklist</label>
+          <div class="checklist-item">
+            <input type="checkbox" checked /> Draft campaign brief
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" checked /> Design creative assets
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> Schedule social posts
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> Review analytics dashboard
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Attachments</label>
+          <input type="text" placeholder="Drop files or click to upload..." disabled style="opacity:0.6;cursor:not-allowed" />
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary">Create Task</button>
+          <button class="btn btn-ghost">Cancel</button>
+        </div>
+      </div>
+      <div class="create-info fade-up">
+        <h3>Everything you need to ship work faster</h3>
+        <p>Task Flow gives you a complete set of fields so nothing falls through the cracks — from assignment to final review.</p>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> Rich task titles and descriptions</li>
+          <li><span class="check">✓</span> Assign to any team member</li>
+          <li><span class="check">✓</span> Link tasks to projects</li>
+          <li><span class="check">✓</span> Four levels of priority</li>
+          <li><span class="check">✓</span> Start & due date tracking</li>
+          <li><span class="check">✓</span> Built-in checklists & attachments</li>
+          <li><span class="check">✓</span> Status workflow out of the box</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFECYCLE -->
+  <section id="lifecycle">
+    <div class="section-header fade-up">
+      <div class="badge">End-to-end flow</div>
+      <h2>Task Lifecycle</h2>
+      <p>Every task follows a clear, visual path from creation to completion.</p>
+    </div>
+    <div class="lifecycle fade-up">
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">📝</div>
+        <span>Create</span>
+      </div>
+      <div class="lifecycle-arrow">→</div>
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">👤</div>
+        <span>Assign</span>
+      </div>
+      <div class="lifecycle-arrow">→</div>
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">▶️</div>
+        <span>Start</span>
+      </div>
+      <div class="lifecycle-arrow">→</div>
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">⚙️</div>
+        <span>In Progress</span>
+      </div>
+      <div class="lifecycle-arrow">→</div>
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">🔎</div>
+        <span>Review</span>
+      </div>
+      <div class="lifecycle-arrow">→</div>
+      <div class="lifecycle-step">
+        <div class="lifecycle-circle">✅</div>
+        <span>Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIORITY -->
+  <section id="priority">
+    <div class="section-header fade-up">
+      <div class="badge">Focus on what matters</div>
+      <h2>Task Priority Management</h2>
+      <p>Four clear priority levels so your team always knows what to tackle first.</p>
+    </div>
+    <div class="priority-grid">
+      <div class="priority-card low fade-up">
+        <div class="icon">🟢</div>
+        <h3>Low</h3>
+        <p>Nice-to-have items that can wait until higher priority work is done.</p>
+      </div>
+      <div class="priority-card medium fade-up">
+        <div class="icon">🟡</div>
+        <h3>Medium</h3>
+        <p>Standard work that should be completed within the normal sprint cycle.</p>
+      </div>
+      <div class="priority-card high fade-up">
+        <div class="icon">🟠</div>
+        <h3>High</h3>
+        <p>Important tasks that need attention soon and impact key goals.</p>
+      </div>
+      <div class="priority-card urgent fade-up">
+        <div class="icon">🔴</div>
+        <h3>Urgent</h3>
+        <p>Critical issues that require immediate action — drop everything else.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section id="status">
+    <div class="section-header fade-up">
+      <div class="badge">Always know the state</div>
+      <h2>Task Status Tracking</h2>
+      <p>Six statuses that cover the full spectrum of work — from idea to done (or cancelled).</p>
+    </div>
+    <div class="status-grid">
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#94a3b8"></div>
+        <div>
+          <h4>Not Started</h4>
+          <span>Waiting to begin</span>
+        </div>
+      </div>
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#2563eb"></div>
+        <div>
+          <h4>In Progress</h4>
+          <span>Actively being worked on</span>
+        </div>
+      </div>
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#d97706"></div>
+        <div>
+          <h4>On Hold</h4>
+          <span>Paused temporarily</span>
+        </div>
+      </div>
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#9333ea"></div>
+        <div>
+          <h4>Under Review</h4>
+          <span>Awaiting feedback or approval</span>
+        </div>
+      </div>
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#16a34a"></div>
+        <div>
+          <h4>Completed</h4>
+          <span>Finished and delivered</span>
+        </div>
+      </div>
+      <div class="status-item fade-up">
+        <div class="status-dot" style="background:#dc2626"></div>
+        <div>
+          <h4>Cancelled</h4>
+          <span>No longer needed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK DETAILS -->
+  <section id="details">
+    <div class="section-header fade-up">
+      <div class="badge">Deep dive</div>
+      <h2>Task Details</h2>
+      <p>A rich task view with information, activity, comments, attachments, checklist and full history.</p>
+    </div>
+    <div class="details-layout fade-up">
+      <div class="details-main">
+        <div class="details-header">
+          <div>
+            <h3>Launch marketing campaign</h3>
+            <div class="meta">Created by Alex Kim · Sep 10, 2026 · Project: Product Launch</div>
+          </div>
+          <span class="priority-pill priority-high">High</span>
+        </div>
+        <div class="details-tabs">
+          <button class="details-tab active" data-tab="info">Task Info</button>
+          <button class="details-tab" data-tab="activity">Activity</button>
+          <button class="details-tab" data-tab="comments">Comments</button>
+          <button class="details-tab" data-tab="files">Attachments</button>
+        </div>
+        <div class="details-body" id="tab-content">
+          <p>
+            Plan and execute the Q3 product launch campaign across email, social and paid channels.
+            Coordinate with design for creative assets and with analytics for performance tracking.
+          </p>
+          <div class="comment">
+            <div class="comment-avatar">AK</div>
+            <div class="comment-content">
+              <div class="name">Alex Kim <span class="time">2 hours ago</span></div>
+              <p>Assets are ready for review. Please check the Figma file and leave comments.</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="comment-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d)">SR</div>
+            <div class="comment-content">
+              <div class="name">Sarah Rivera <span class="time">45 min ago</span></div>
+              <p>Looks great! Small tweak on the CTA color — otherwise good to go.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details-sidebar">
+        <div class="side-card">
+          <h4>Details</h4>
+          <div class="side-row">
+            <span class="label">Assignee</span>
+            <span>Alex Kim</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Status</span>
+            <span style="color:#2563eb">In Progress</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Priority</span>
+            <span style="color:#dc2626">High</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Start</span>
+            <span>Sep 15</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Due</span>
+            <span>Sep 30</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <h4>Checklist</h4>
+          <div class="checklist-side">
+            <div class="checklist-item"><input type="checkbox" checked /> Draft campaign brief</div>
+            <div class="checklist-item"><input type="checkbox" checked /> Design creative assets</div>
+            <div class="checklist-item"><input type="checkbox" /> Schedule social posts</div>
+            <div class="checklist-item"><input type="checkbox" /> Review analytics</div>
+          </div>
+        </div>
+        <div class="side-card">
+          <h4>Timeline</h4>
+          <div class="side-row">
+            <span class="label">Created</span>
+            <span>Sep 10</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Started</span>
+            <span>Sep 15</span>
+          </div>
+          <div class="side-row">
+            <span class="label">Last update</span>
+            <span>2h ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION -->
+  <section id="collab">
+    <div class="section-header fade-up">
+      <div class="badge">Work together</div>
+      <h2>Task Collaboration</h2>
+      <p>Comments, mentions, files and activity history keep the whole team in sync.</p>
+    </div>
+    <div class="collab-grid">
+      <div class="collab-card fade-up">
+        <div class="icon">💬</div>
+        <h4>Comments</h4>
+        <p>Discuss work right on the task</p>
+      </div>
+      <div class="collab-card fade-up">
+        <div class="icon">@</div>
+        <h4>Mentions</h4>
+        <p>Notify teammates instantly</p>
+      </div>
+      <div class="collab-card fade-up">
+        <div class="icon">📎</div>
+        <h4>Attachments</h4>
+        <p>Share files and links</p>
+      </div>
+      <div class="collab-card fade-up">
+        <div class="icon">📜</div>
+        <h4>Activity History</h4>
+        <p>Full audit trail of changes</p>
+      </div>
+      <div class="collab-card fade-up">
+        <div class="icon">🗣️</div>
+        <h4>Communication</h4>
+        <p>Keep conversations in context</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard">
+    <div class="section-header fade-up">
+      <div class="badge">At a glance</div>
+      <h2>Smart Task Dashboard</h2>
+      <p>Instant visibility into total tasks, pending work, progress, completions and anything overdue.</p>
+    </div>
+    <div class="dash-stats fade-up">
+      <div class="stat-card">
+        <div class="number">128</div>
+        <div class="label">Total Tasks</div>
+      </div>
+      <div class="stat-card pending">
+        <div class="number">24</div>
+        <div class="label">Pending</div>
+      </div>
+      <div class="stat-card progress">
+        <div class="number">41</div>
+        <div class="label">In Progress</div>
+      </div>
+      <div class="stat-card completed">
+        <div class="number">58</div>
+        <div class="label">Completed</div>
+      </div>
+      <div class="stat-card overdue">
+        <div class="number">5</div>
+        <div class="label">Overdue</div>
+      </div>
+    </div>
+    <div class="dash-preview fade-up">
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Assignee</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Due</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Redesign landing page</td>
+            <td>Alex Kim</td>
+            <td><span class="priority-pill priority-high">High</span></td>
+            <td style="color:#2563eb">In Progress</td>
+            <td>Sep 12</td>
+          </tr>
+          <tr>
+            <td>Fix production bug</td>
+            <td>Marcus Johnson</td>
+            <td><span class="priority-pill priority-urgent">Urgent</span></td>
+            <td style="color:#9333ea">Under Review</td>
+            <td>Today</td>
+          </tr>
+          <tr>
+            <td>Write API documentation</td>
+            <td>Lisa Park</td>
+            <td><span class="priority-pill priority-medium">Medium</span></td>
+            <td style="color:#94a3b8">Not Started</td>
+            <td>Sep 18</td>
+          </tr>
+          <tr>
+            <td>Q3 campaign assets</td>
+            <td>Sarah Rivera</td>
+            <td><span class="priority-pill priority-high">High</span></td>
+            <td style="color:#16a34a">Completed</td>
+            <td>Sep 8</td>
+          </tr>
+          <tr>
+            <td>Update billing portal</td>
+            <td>Alex Kim</td>
+            <td><span class="priority-pill priority-low">Low</span></td>
+            <td style="color:#d97706">On Hold</td>
+            <td>Sep 25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="section-header fade-up">
+      <div class="badge">Why teams love it</div>
+      <h2>Benefits</h2>
+      <p>Real outcomes for teams that adopt Task Flow for individual and team work.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-up">
+        <div class="icon">🎯</div>
+        <h4>Better Accountability</h4>
+        <p>Clear ownership on every task so nothing gets lost.</p>
+      </div>
+      <div class="benefit-card fade-up">
+        <div class="icon">🗂️</div>
+        <h4>Centralized Tracking</h4>
+        <p>One source of truth for all individual work.</p>
+      </div>
+      <div class="benefit-card fade-up">
+        <div class="icon">⏰</div>
+        <h4>Fewer Missed Deadlines</h4>
+        <p>Reminders and visibility keep dates on track.</p>
+      </div>
+      <div class="benefit-card fade-up">
+        <div class="icon">👁️</div>
+        <h4>Better Visibility</h4>
+        <p>Managers and teammates always know the status.</p>
+      </div>
+      <div class="benefit-card fade-up">
+        <div class="icon">🚀</div>
+        <h4>Improved Productivity</h4>
+        <p>Less context switching, more focused execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section" id="cta">
+    <div class="cta-box fade-up">
+      <h2>Take Control of Your Tasks</h2>
+      <p>Start planning, assigning and tracking work the modern way. Free to get started.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary btn-lg">Get Started Free →</a>
+        <a href="#dashboard" class="btn btn-ghost btn-lg">View Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Task Flow · Built for modern teams · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
+  <script src="js/task-management.js"></script>
+</body>
+</html>

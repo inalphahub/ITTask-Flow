@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "Kalyan",
+    "lastName": "Krishna",
+    "email": "kk@gmail.com",
+    "phone": "8745963321",
+    "password": "Kk@12345",
+    "userId": "TF-ZC6FY6",
+    "role": "Manager",
+    "department": "Software Engineering",
+    "designation": "Manager",
+    "accountType": "manager"
+  },
+  {
+    "firstName": "Kalyan",
+    "lastName": "Rama",
+    "email": "kalyan@gmail.com",
+    "phone": "9875585520",
+    "password": "Kr@12345",
+    "userId": "TF-26FN22",
+    "role": "Program Manager",
+    "department": "Software Engineering",
+    "designation": "Program Manager",
+    "accountType": "manager"
+  }
+]

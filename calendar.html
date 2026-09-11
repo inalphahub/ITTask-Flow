@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar – Task Flow | Scheduling & Deadline Management</title>
+  <meta name="description" content="See your work, deadlines & meetings in one powerful calendar. Manage tasks, projects, and team schedules with Task Flow.">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </span>
+        <span class="logo-text">Task Flow</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#views" class="nav-link">Views</a>
+        <a href="#scheduling" class="nav-link">Scheduling</a>
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="login.html" class="nav-link nav-login">Login</a>
+        <a href="signup.html" class="btn btn-primary nav-cta">Get Started</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        Smart Scheduling
+      </div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        See Your Work, Deadlines & Meetings<br>
+        <span class="gradient-text">in One Calendar</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-2">
+        Task Flow brings tasks, project milestones, team schedules, and meetings into a single intelligent calendar. Never miss a deadline again.
+      </p>
+      <div class="hero-actions animate-fade-up delay-3">
+        <a href="signup.html" class="btn btn-primary btn-lg">
+          Start Free
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#overview" class="btn btn-outline btn-lg">Explore Features</a>
+      </div>
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Calendar Views</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Tasks & Events</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">Real-time</span>
+          <span class="stat-label">Reminders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Overview -->
+  <section class="section overview" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">Your entire workload in one place</h2>
+        <p class="section-desc">Task Flow Calendar unifies tasks, deadlines, meetings, and project milestones so you and your team always know what’s coming next.</p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card animate-on-scroll">
+          <div class="card-icon blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Unified Timeline</h3>
+          <p>Tasks, meetings, and milestones share the same calendar so nothing falls through the cracks.</p>
+        </div>
+        <div class="overview-card animate-on-scroll">
+          <div class="card-icon purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Team Visibility</h3>
+          <p>See who’s working on what and when. Filter by employee, department, or project instantly.</p>
+        </div>
+        <div class="overview-card animate-on-scroll">
+          <div class="card-icon teal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Deadline Intelligence</h3>
+          <p>Color-coded status for upcoming, due today, overdue, and completed work keeps priorities clear.</p>
+        </div>
+        <div class="overview-card animate-on-scroll">
+          <div class="card-icon orange">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <h3>Smart Reminders</h3>
+          <p>Get notified before deadlines, meetings, and task starts so your team stays ahead of schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Views -->
+  <section class="section views" id="views">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Views</span>
+        <h2 class="section-title">Four powerful ways to see your schedule</h2>
+        <p class="section-desc">Switch between Month, Week, Day, and Agenda views to match how you work.</p>
+      </div>
+
+      <div class="views-tabs animate-on-scroll">
+        <button class="view-tab active" data-view="month">Month</button>
+        <button class="view-tab" data-view="week">Week</button>
+        <button class="view-tab" data-view="day">Day</button>
+        <button class="view-tab" data-view="agenda">Agenda</button>
+      </div>
+
+      <div class="calendar-preview animate-on-scroll">
+        <!-- Month View -->
+        <div class="view-panel active" id="view-month">
+          <div class="cal-header">
+            <button class="cal-nav prev" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <h3 class="cal-title">September 2026</h3>
+            <button class="cal-nav next" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="cal-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="cal-grid month-grid">
+            <div class="cal-day muted"><span>30</span></div>
+            <div class="cal-day muted"><span>31</span></div>
+            <div class="cal-day"><span>1</span></div>
+            <div class="cal-day"><span>2</span><div class="event-dot blue"></div></div>
+            <div class="cal-day"><span>3</span></div>
+            <div class="cal-day"><span>4</span><div class="event-dot purple"></div></div>
+            <div class="cal-day"><span>5</span></div>
+            <div class="cal-day"><span>6</span></div>
+            <div class="cal-day"><span>7</span><div class="event-dot teal"></div></div>
+            <div class="cal-day"><span>8</span></div>
+            <div class="cal-day"><span>9</span><div class="event-dot orange"></div><div class="event-dot blue"></div></div>
+            <div class="cal-day"><span>10</span></div>
+            <div class="cal-day"><span>11</span></div>
+            <div class="cal-day today"><span>12</span><div class="event-dot red"></div></div>
+            <div class="cal-day"><span>13</span></div>
+            <div class="cal-day"><span>14</span><div class="event-dot purple"></div></div>
+            <div class="cal-day"><span>15</span></div>
+            <div class="cal-day"><span>16</span></div>
+            <div class="cal-day"><span>17</span><div class="event-dot blue"></div></div>
+            <div class="cal-day"><span>18</span></div>
+            <div class="cal-day"><span>19</span></div>
+            <div class="cal-day"><span>20</span><div class="event-dot teal"></div></div>
+            <div class="cal-day"><span>21</span></div>
+            <div class="cal-day"><span>22</span></div>
+            <div class="cal-day"><span>23</span><div class="event-dot orange"></div></div>
+            <div class="cal-day"><span>24</span></div>
+            <div class="cal-day"><span>25</span></div>
+            <div class="cal-day"><span>26</span></div>
+            <div class="cal-day"><span>27</span></div>
+            <div class="cal-day"><span>28</span><div class="event-dot blue"></div></div>
+            <div class="cal-day"><span>29</span></div>
+            <div class="cal-day"><span>30</span></div>
+            <div class="cal-day muted"><span>1</span></div>
+            <div class="cal-day muted"><span>2</span></div>
+            <div class="cal-day muted"><span>3</span></div>
+          </div>
+        </div>
+
+        <!-- Week View -->
+        <div class="view-panel" id="view-week">
+          <div class="cal-header">
+            <button class="cal-nav prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <h3 class="cal-title">Sep 7 – 13, 2026</h3>
+            <button class="cal-nav next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+          <div class="week-grid">
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Sun</span><span class="day-num">7</span></div>
+              <div class="week-events">
+                <div class="week-event teal">Sprint Planning</div>
+              </div>
+            </div>
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Mon</span><span class="day-num">8</span></div>
+              <div class="week-events"></div>
+            </div>
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Tue</span><span class="day-num">9</span></div>
+              <div class="week-events">
+                <div class="week-event blue">Design Review</div>
+                <div class="week-event purple">API Task</div>
+              </div>
+            </div>
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Wed</span><span class="day-num">10</span></div>
+              <div class="week-events"></div>
+            </div>
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Thu</span><span class="day-num">11</span></div>
+              <div class="week-events"></div>
+            </div>
+            <div class="week-day today">
+              <div class="week-day-header"><span class="day-name">Fri</span><span class="day-num">12</span></div>
+              <div class="week-events">
+                <div class="week-event red">Deadline: Q3 Report</div>
+              </div>
+            </div>
+            <div class="week-day">
+              <div class="week-day-header"><span class="day-name">Sat</span><span class="day-num">13</span></div>
+              <div class="week-events"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day View -->
+        <div class="view-panel" id="view-day">
+          <div class="cal-header">
+            <button class="cal-nav prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <h3 class="cal-title">Friday, September 12, 2026</h3>
+            <button class="cal-nav next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+          <div class="day-timeline">
+            <div class="time-slot">
+              <span class="time-label">09:00</span>
+              <div class="time-content"><div class="day-event blue">Team Standup · 30 min</div></div>
+            </div>
+            <div class="time-slot">
+              <span class="time-label">10:00</span>
+              <div class="time-content"></div>
+            </div>
+            <div class="time-slot">
+              <span class="time-label">11:00</span>
+              <div class="time-content"><div class="day-event purple">Deep Work: Feature Spec</div></div>
+            </div>
+            <div class="time-slot">
+              <span class="time-label">12:00</span>
+              <div class="time-content"></div>
+            </div>
+            <div class="time-slot">
+              <span class="time-label">14:00</span>
+              <div class="time-content"><div class="day-event orange">Client Call</div></div>
+            </div>
+            <div class="time-slot">
+              <span class="time-label">16:00</span>
+              <div class="time-content"><div class="day-event red">Q3 Report Due</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agenda View -->
+        <div class="view-panel" id="view-agenda">
+          <div class="cal-header">
+            <h3 class="cal-title">Upcoming Agenda</h3>
+          </div>
+          <div class="agenda-list">
+            <div class="agenda-item">
+              <div class="agenda-date">
+                <span class="agenda-day">12</span>
+                <span class="agenda-month">Sep</span>
+              </div>
+              <div class="agenda-content">
+                <div class="agenda-badge overdue">Due Today</div>
+                <h4>Q3 Performance Report</h4>
+                <p>Finalize and submit the quarterly report to leadership</p>
+                <div class="agenda-meta">
+                  <span>Alex Chen</span>
+                  <span>•</span>
+                  <span>High Priority</span>
+                </div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-date">
+                <span class="agenda-day">14</span>
+                <span class="agenda-month">Sep</span>
+              </div>
+              <div class="agenda-content">
+                <div class="agenda-badge upcoming">Upcoming</div>
+                <h4>Design System Review</h4>
+                <p>Review component library updates with the design team</p>
+                <div class="agenda-meta">
+                  <span>Priya Sharma</span>
+                  <span>•</span>
+                  <span>Medium</span>
+                </div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-date">
+                <span class="agenda-day">17</span>
+                <span class="agenda-month">Sep</span>
+              </div>
+              <div class="agenda-content">
+                <div class="agenda-badge meeting">Meeting</div>
+                <h4>Sprint Retrospective</h4>
+                <p>Team retrospective for Sprint 24</p>
+                <div class="agenda-meta">
+                  <span>Entire Team</span>
+                  <span>•</span>
+                  <span>1 hour</span>
+                </div>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-date">
+                <span class="agenda-day">20</span>
+                <span class="agenda-month">Sep</span>
+              </div>
+              <div class="agenda-content">
+                <div class="agenda-badge milestone">Milestone</div>
+                <h4>Beta Launch</h4>
+                <p>Public beta release of the new dashboard</p>
+                <div class="agenda-meta">
+                  <span>Product</span>
+                  <span>•</span>
+                  <span>Critical</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task Scheduling -->
+  <section class="section scheduling" id="scheduling">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Task Scheduling</span>
+        <h2 class="section-title">Schedule work with complete control</h2>
+        <p class="section-desc">Every task carries the details that matter for planning and delivery.</p>
+      </div>
+
+      <div class="scheduling-layout">
+        <div class="scheduling-info animate-on-scroll">
+          <div class="sched-feature">
+            <div class="sched-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div>
+              <h4>Start Date</h4>
+              <p>Define when work begins so capacity and dependencies stay accurate.</p>
+            </div>
+          </div>
+          <div class="sched-feature">
+            <div class="sched-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <h4>Due Date</h4>
+              <p>Hard deadlines that drive prioritization and automated reminders.</p>
+            </div>
+          </div>
+          <div class="sched-feature">
+            <div class="sched-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+            </div>
+            <div>
+              <h4>Task Duration</h4>
+              <p>Estimate effort so the calendar reflects real workload, not just dates.</p>
+            </div>
+          </div>
+          <div class="sched-feature">
+            <div class="sched-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div>
+              <h4>Priority</h4>
+              <p>Low, Medium, High, or Critical — surface the most important work first.</p>
+            </div>
+          </div>
+          <div class="sched-feature">
+            <div class="sched-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <div>
+              <h4>Assignee</h4>
+              <p>Assign ownership so everyone knows who is responsible for delivery.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-card-preview animate-on-scroll">
+          <div class="task-card">
+            <div class="task-card-header">
+              <span class="priority-badge high">High Priority</span>
+              <span class="task-status">In Progress</span>
+            </div>
+            <h3>Redesign onboarding flow</h3>
+            <p class="task-desc">Update the multi-step onboarding experience based on user research findings.</p>
+            <div class="task-details">
+              <div class="detail-row">
+                <span class="detail-label">Start</span>
+                <span class="detail-value">Sep 8, 2026</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Due</span>
+                <span class="detail-value due">Sep 18, 2026</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Duration</span>
+                <span class="detail-value">8 days</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Assignee</span>
+                <span class="detail-value assignee">
+                  <span class="avatar">JS</span>
+                  Jordan Smith
+                </span>
+              </div>
+            </div>
+            <div class="task-progress">
+              <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+              <span>65% complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deadline Management -->
+  <section class="section deadlines" id="deadlines">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Deadline Management</span>
+        <h2 class="section-title">Stay ahead of every deadline</h2>
+        <p class="section-desc">Clear visual status so you instantly know what needs attention.</p>
+      </div>
+
+      <div class="deadline-grid">
+        <div class="deadline-card upcoming animate-on-scroll">
+          <div class="deadline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3>Upcoming</h3>
+          <p>Tasks and milestones approaching their due date. Plan ahead and allocate capacity.</p>
+          <div class="deadline-count">12 items</div>
+        </div>
+        <div class="deadline-card today animate-on-scroll">
+          <div class="deadline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Due Today</h3>
+          <p>Everything that must be finished by end of day. Focus mode activated.</p>
+          <div class="deadline-count">3 items</div>
+        </div>
+        <div class="deadline-card overdue animate-on-scroll">
+          <div class="deadline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h3>Overdue</h3>
+          <p>Past due items that need immediate attention or renegotiation of deadlines.</p>
+          <div class="deadline-count">1 item</div>
+        </div>
+        <div class="deadline-card completed animate-on-scroll">
+          <div class="deadline-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3>Completed</h3>
+          <p>Finished work you can celebrate and archive. Momentum is visible.</p>
+          <div class="deadline-count">47 items</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project & Employee Calendar -->
+  <section class="section dual-calendars">
+    <div class="container">
+      <div class="dual-grid">
+        <div class="dual-card animate-on-scroll">
+          <div class="dual-header">
+            <div class="dual-icon project">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Project Calendar</h3>
+          </div>
+          <p>View every project’s milestones, phase gates, and hard deadlines on a shared timeline. Spot conflicts early and keep stakeholders aligned.</p>
+          <ul class="dual-list">
+            <li>Milestone markers on the calendar</li>
+            <li>Phase start & end dates</li>
+            <li>Cross-project dependency visibility</li>
+            <li>Progress at a glance</li>
+          </ul>
+        </div>
+        <div class="dual-card animate-on-scroll">
+          <div class="dual-header">
+            <div class="dual-icon employee">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Employee Calendar</h3>
+          </div>
+          <p>Individual schedules that combine assigned tasks, meetings, and availability. Perfect for managers and team members alike.</p>
+          <ul class="dual-list">
+            <li>Personal task & meeting view</li>
+            <li>Availability & time-off awareness</li>
+            <li>Workload balance indicators</li>
+            <li>One-click reschedule</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Management -->
+  <section class="section events" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Event Management</span>
+        <h2 class="section-title">Every type of event, managed together</h2>
+        <p class="section-desc">From daily standups to major milestones — all events live in the same calendar.</p>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-type-card animate-on-scroll">
+          <div class="event-type-icon meetings">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Meetings</h4>
+          <p>Standups, 1:1s, client calls, and all-hands with duration and attendees.</p>
+        </div>
+        <div class="event-type-card animate-on-scroll">
+          <div class="event-type-icon reviews">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h4>Reviews</h4>
+          <p>Design reviews, code reviews, and performance checkpoints on the timeline.</p>
+        </div>
+        <div class="event-type-card animate-on-scroll">
+          <div class="event-type-icon milestones">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h4>Project Milestones</h4>
+          <p>Key deliverables and phase completions that mark real progress.</p>
+        </div>
+        <div class="event-type-card animate-on-scroll">
+          <div class="event-type-icon deadlines">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h4>Task Deadlines</h4>
+          <p>Hard due dates for individual tasks with priority and owner context.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Filters -->
+  <section class="section filters" id="filters">
+    <div class="container">
+      <div class="filters-layout">
+        <div class="filters-content animate-on-scroll">
+          <span class="section-tag">Filters</span>
+          <h2 class="section-title">Filter the calendar your way</h2>
+          <p class="section-desc">Narrow the view by the dimensions that matter to you — person, project, department, or event type.</p>
+          <div class="filter-tags">
+            <span class="filter-tag active">Employee</span>
+            <span class="filter-tag">Project</span>
+            <span class="filter-tag">Task</span>
+            <span class="filter-tag">Department</span>
+            <span class="filter-tag">Event</span>
+          </div>
+        </div>
+        <div class="filters-visual animate-on-scroll">
+          <div class="filter-demo">
+            <div class="filter-row">
+              <label>Employee</label>
+              <div class="fake-select">Jordan Smith ▾</div>
+            </div>
+            <div class="filter-row">
+              <label>Project</label>
+              <div class="fake-select">Onboarding Redesign ▾</div>
+            </div>
+            <div class="filter-row">
+              <label>Department</label>
+              <div class="fake-select">Product Design ▾</div>
+            </div>
+            <div class="filter-chips">
+              <span class="chip">Meetings</span>
+              <span class="chip active">Tasks</span>
+              <span class="chip">Milestones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reminders -->
+  <section class="section reminders" id="reminders">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reminders</span>
+        <h2 class="section-title">Never miss what matters</h2>
+        <p class="section-desc">Configurable reminders that keep the whole team on track.</p>
+      </div>
+
+      <div class="reminders-grid">
+        <div class="reminder-card animate-on-scroll">
+          <div class="reminder-icon upcoming-rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+          <h4>Upcoming Deadline</h4>
+          <p>Get notified days or hours before a task is due so you can finish strong.</p>
+        </div>
+        <div class="reminder-card animate-on-scroll">
+          <div class="reminder-icon overdue-rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h4>Overdue Reminder</h4>
+          <p>Immediate alerts when something slips past its due date — for you and your manager.</p>
+        </div>
+        <div class="reminder-card animate-on-scroll">
+          <div class="reminder-icon meeting-rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h4>Meeting Reminder</h4>
+          <p>Pre-meeting pings so everyone shows up prepared and on time.</p>
+        </div>
+        <div class="reminder-card animate-on-scroll">
+          <div class="reminder-icon task-rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          </div>
+          <h4>Task Reminder</h4>
+          <p>Start-of-day or start-of-task notifications that help you begin on schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Benefits</span>
+        <h2 class="section-title">Why teams love Task Flow Calendar</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">01</div>
+          <h3>Zero missed deadlines</h3>
+          <p>Visual status, smart reminders, and a single source of truth eliminate surprises.</p>
+        </div>
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">02</div>
+          <h3>Clear team capacity</h3>
+          <p>See who is overloaded and who has bandwidth before assigning new work.</p>
+        </div>
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">03</div>
+          <h3>Fewer status meetings</h3>
+          <p>Everyone can check the calendar instead of asking “when is this due?”</p>
+        </div>
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">04</div>
+          <h3>Better planning</h3>
+          <p>Start dates, durations, and dependencies make realistic roadmaps possible.</p>
+        </div>
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">05</div>
+          <h3>Cross-team alignment</h3>
+          <p>Shared project and department views keep stakeholders on the same page.</p>
+        </div>
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-num">06</div>
+          <h3>Mobile-ready focus</h3>
+          <p>Full calendar experience on any device so you stay in control anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-card animate-on-scroll">
+        <h2>Ready to bring order to your schedule?</h2>
+        <p>Join teams that plan, track, and deliver with Task Flow Calendar.</p>
+        <div class="cta-actions">
+          <a href="signup.html" class="btn btn-primary btn-lg">Get Started Free</a>
+          <a href="login.html" class="btn btn-white btn-lg">Log In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </span>
+          <span class="logo-text">Task Flow</span>
+        </a>
+        <p>© 2026 Task Flow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports & Analytics | TeamFlow</title>
+  <meta name="description" content="Turn team activity into actionable insights with powerful analytics, custom reports, and productivity dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reports-analytics.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">TF</span>
+        <span class="logo-text">TeamFlow</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#productivity" class="nav-link">Dashboard</a>
+        <a href="#task-analytics" class="nav-link">Tasks</a>
+        <a href="#employee" class="nav-link">People</a>
+        <a href="#custom-reports" class="nav-link">Reports</a>
+        <a href="#cta" class="nav-link cta-nav">Get Started</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text fade-up">
+          <span class="badge">Analytics Platform</span>
+          <h1>Turn Team Activity Into <span class="gradient-text">Actionable Insights</span></h1>
+          <p class="hero-sub">
+            Real-time dashboards, performance trends, and custom reports that help managers and teams make better decisions faster.
+          </p>
+          <div class="hero-actions">
+            <a href="#productivity" class="btn btn-primary">Explore Dashboard</a>
+            <a href="#custom-reports" class="btn btn-ghost">Build a Report</a>
+          </div>
+        </div>
+        <div class="hero-visual fade-up delay-1">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <span>Team Productivity</span>
+              <span class="live-dot">Live</span>
+            </div>
+            <canvas id="heroChart" height="160"></canvas>
+            <div class="hero-stats">
+              <div><strong>94%</strong><span>On-time</span></div>
+              <div><strong>1.2k</strong><span>Tasks</span></div>
+              <div><strong>+18%</strong><span>This month</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Analytics Overview -->
+    <section class="section overview" id="overview">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Analytics Overview</h2>
+          <p>Everything you need to understand how work moves across your organization.</p>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-card fade-up">
+            <div class="icon-wrap blue">📊</div>
+            <h3>Real-time Metrics</h3>
+            <p>Live completion rates, workload balance, and bottleneck detection updated continuously.</p>
+          </div>
+          <div class="overview-card fade-up delay-1">
+            <div class="icon-wrap purple">👥</div>
+            <h3>People & Teams</h3>
+            <p>Individual performance, team comparisons, and capacity insights in one place.</p>
+          </div>
+          <div class="overview-card fade-up delay-2">
+            <div class="icon-wrap teal">📁</div>
+            <h3>Project Health</h3>
+            <p>Progress, milestones, risk indicators, and remaining work at a glance.</p>
+          </div>
+          <div class="overview-card fade-up delay-3">
+            <div class="icon-wrap orange">📈</div>
+            <h3>Trend Intelligence</h3>
+            <p>Daily, weekly, and monthly patterns so you can spot momentum and regressions early.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Productivity Dashboard -->
+    <section class="section productivity" id="productivity">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Productivity Dashboard</h2>
+          <p>Key performance indicators that matter most to leaders and teams.</p>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-card fade-up">
+            <div class="kpi-label">Total Tasks</div>
+            <div class="kpi-value" data-count="1248">0</div>
+            <div class="kpi-trend up">↑ 12% vs last month</div>
+          </div>
+          <div class="kpi-card fade-up delay-1">
+            <div class="kpi-label">Completed</div>
+            <div class="kpi-value" data-count="1024">0</div>
+            <div class="kpi-trend up">↑ 9% vs last month</div>
+          </div>
+          <div class="kpi-card fade-up delay-2">
+            <div class="kpi-label">Pending</div>
+            <div class="kpi-value" data-count="186">0</div>
+            <div class="kpi-trend down">↓ 4% vs last month</div>
+          </div>
+          <div class="kpi-card fade-up delay-3">
+            <div class="kpi-label">Overdue</div>
+            <div class="kpi-value" data-count="38">0</div>
+            <div class="kpi-trend down">↓ 15% vs last month</div>
+          </div>
+          <div class="kpi-card highlight fade-up delay-4">
+            <div class="kpi-label">Completion Rate</div>
+            <div class="kpi-value"><span data-count="82">0</span>%</div>
+            <div class="kpi-trend up">↑ 5 pts this month</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Task Analytics -->
+    <section class="section task-analytics" id="task-analytics">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Task Analytics</h2>
+          <p>Understand completion patterns, status mix, priorities, and overdue risk.</p>
+        </div>
+        <div class="charts-grid">
+          <div class="chart-card fade-up">
+            <h3>Task Completion Trend</h3>
+            <canvas id="completionChart"></canvas>
+          </div>
+          <div class="chart-card fade-up delay-1">
+            <h3>Task Status Distribution</h3>
+            <canvas id="statusChart"></canvas>
+          </div>
+          <div class="chart-card fade-up">
+            <h3>Priority Distribution</h3>
+            <canvas id="priorityChart"></canvas>
+          </div>
+          <div class="chart-card fade-up delay-1">
+            <h3>Overdue Tasks by Week</h3>
+            <canvas id="overdueChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Employee Performance -->
+    <section class="section employee" id="employee">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Employee Performance</h2>
+          <p>Track assignments, completions, rates, and productivity trends per person.</p>
+        </div>
+        <div class="table-wrap fade-up">
+          <table class="perf-table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Assigned</th>
+                <th>Completed</th>
+                <th>Rate</th>
+                <th>Overdue</th>
+                <th>Trend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="avatar" style="background:#6366f1">AK</span>
+                    <span>Aisha Khan</span>
+                  </div>
+                </td>
+                <td>48</td>
+                <td>45</td>
+                <td><span class="rate high">94%</span></td>
+                <td>1</td>
+                <td><span class="spark up">↑</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="avatar" style="background:#8b5cf6">MR</span>
+                    <span>Marcus Reed</span>
+                  </div>
+                </td>
+                <td>52</td>
+                <td>47</td>
+                <td><span class="rate high">90%</span></td>
+                <td>2</td>
+                <td><span class="spark up">↑</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="avatar" style="background:#06b6d4">SL</span>
+                    <span>Sofia Lopez</span>
+                  </div>
+                </td>
+                <td>41</td>
+                <td>34</td>
+                <td><span class="rate mid">83%</span></td>
+                <td>4</td>
+                <td><span class="spark flat">→</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="avatar" style="background:#f59e0b">JP</span>
+                    <span>James Park</span>
+                  </div>
+                </td>
+                <td>39</td>
+                <td>28</td>
+                <td><span class="rate low">72%</span></td>
+                <td>6</td>
+                <td><span class="spark down">↓</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="avatar" style="background:#10b981">EN</span>
+                    <span>Elena Novak</span>
+                  </div>
+                </td>
+                <td>55</td>
+                <td>51</td>
+                <td><span class="rate high">93%</span></td>
+                <td>1</td>
+                <td><span class="spark up">↑</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart-card full fade-up" style="margin-top: 2rem;">
+          <h3>Individual Productivity Trend (Last 8 Weeks)</h3>
+          <canvas id="employeeTrendChart" height="100"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Project Analytics -->
+    <section class="section project-analytics" id="project">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Project Analytics</h2>
+          <p>Progress, milestones, remaining work, and overall project health.</p>
+        </div>
+        <div class="project-grid">
+          <div class="project-card fade-up">
+            <div class="project-top">
+              <h3>Website Redesign</h3>
+              <span class="health good">Healthy</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:78%"></div>
+            </div>
+            <div class="project-meta">
+              <span>78% complete</span>
+              <span>12 / 15 milestones</span>
+            </div>
+            <div class="project-stats">
+              <div><strong>34</strong> pending</div>
+              <div><strong>2</strong> overdue</div>
+            </div>
+          </div>
+          <div class="project-card fade-up delay-1">
+            <div class="project-top">
+              <h3>Mobile App v2</h3>
+              <span class="health warn">At Risk</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill warn" style="width:52%"></div>
+            </div>
+            <div class="project-meta">
+              <span>52% complete</span>
+              <span>6 / 14 milestones</span>
+            </div>
+            <div class="project-stats">
+              <div><strong>41</strong> pending</div>
+              <div><strong>9</strong> overdue</div>
+            </div>
+          </div>
+          <div class="project-card fade-up delay-2">
+            <div class="project-top">
+              <h3>API Platform</h3>
+              <span class="health good">Healthy</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:91%"></div>
+            </div>
+            <div class="project-meta">
+              <span>91% complete</span>
+              <span>18 / 20 milestones</span>
+            </div>
+            <div class="project-stats">
+              <div><strong>11</strong> pending</div>
+              <div><strong>0</strong> overdue</div>
+            </div>
+          </div>
+          <div class="project-card fade-up delay-3">
+            <div class="project-top">
+              <h3>Customer Portal</h3>
+              <span class="health critical">Critical</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill critical" style="width:31%"></div>
+            </div>
+            <div class="project-meta">
+              <span>31% complete</span>
+              <span>3 / 11 milestones</span>
+            </div>
+            <div class="project-stats">
+              <div><strong>58</strong> pending</div>
+              <div><strong>14</strong> overdue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Team Performance -->
+    <section class="section team-perf" id="team">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Team Performance</h2>
+          <p>Compare departments and squads side by side.</p>
+        </div>
+        <div class="chart-card full fade-up">
+          <h3>Completion Rate by Team</h3>
+          <canvas id="teamChart" height="120"></canvas>
+        </div>
+        <div class="team-cards">
+          <div class="team-card fade-up">
+            <h4>Engineering</h4>
+            <div class="big">87%</div>
+            <p>Completion rate · 312 tasks</p>
+          </div>
+          <div class="team-card fade-up delay-1">
+            <h4>Design</h4>
+            <div class="big">91%</div>
+            <p>Completion rate · 148 tasks</p>
+          </div>
+          <div class="team-card fade-up delay-2">
+            <h4>Product</h4>
+            <div class="big">79%</div>
+            <p>Completion rate · 96 tasks</p>
+          </div>
+          <div class="team-card fade-up delay-3">
+            <h4>Marketing</h4>
+            <div class="big">84%</div>
+            <p>Completion rate · 127 tasks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Time & Productivity Trends -->
+    <section class="section trends" id="trends">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Time & Productivity Trends</h2>
+          <p>See how output and focus evolve across daily, weekly, and monthly windows.</p>
+        </div>
+        <div class="trend-tabs fade-up">
+          <button class="trend-tab active" data-range="daily">Daily</button>
+          <button class="trend-tab" data-range="weekly">Weekly</button>
+          <button class="trend-tab" data-range="monthly">Monthly</button>
+        </div>
+        <div class="chart-card full fade-up">
+          <canvas id="trendChart" height="110"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Custom Reports -->
+    <section class="section custom-reports" id="custom-reports">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Custom Reports</h2>
+          <p>Build the exact view you need — metrics, people, projects, and date ranges.</p>
+        </div>
+        <div class="builder fade-up">
+          <div class="builder-form">
+            <div class="form-group">
+              <label>Metrics</label>
+              <div class="chip-group" id="metricChips">
+                <button class="chip active" data-value="completion">Completion Rate</button>
+                <button class="chip" data-value="tasks">Tasks Completed</button>
+                <button class="chip" data-value="overdue">Overdue</button>
+                <button class="chip" data-value="cycle">Cycle Time</button>
+                <button class="chip" data-value="workload">Workload</button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dateRange">Date Range</label>
+                <select id="dateRange">
+                  <option>Last 7 days</option>
+                  <option selected>Last 30 days</option>
+                  <option>Last quarter</option>
+                  <option>Year to date</option>
+                  <option>Custom…</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="employees">Employees</label>
+                <select id="employees">
+                  <option selected>All employees</option>
+                  <option>Aisha Khan</option>
+                  <option>Marcus Reed</option>
+                  <option>Sofia Lopez</option>
+                  <option>James Park</option>
+                  <option>Elena Novak</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="projects">Projects</label>
+                <select id="projects">
+                  <option selected>All projects</option>
+                  <option>Website Redesign</option>
+                  <option>Mobile App v2</option>
+                  <option>API Platform</option>
+                  <option>Customer Portal</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="generateReport">Generate Report</button>
+          </div>
+          <div class="builder-preview" id="reportPreview">
+            <div class="preview-placeholder">
+              <span>Select metrics and filters, then generate a report</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Export Reports -->
+    <section class="section export" id="export">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Export Reports</h2>
+          <p>Share insights with stakeholders in the format they prefer.</p>
+        </div>
+        <div class="export-grid">
+          <div class="export-card fade-up">
+            <div class="export-icon">📄</div>
+            <h3>PDF</h3>
+            <p>Polished, print-ready summaries for leadership reviews and stakeholder decks.</p>
+            <button class="btn btn-outline export-btn" data-format="pdf">Export PDF</button>
+          </div>
+          <div class="export-card fade-up delay-1">
+            <div class="export-icon">📊</div>
+            <h3>Excel</h3>
+            <p>Full data tables with multiple sheets for deeper analysis in spreadsheets.</p>
+            <button class="btn btn-outline export-btn" data-format="excel">Export Excel</button>
+          </div>
+          <div class="export-card fade-up delay-2">
+            <div class="export-icon">📑</div>
+            <h3>CSV</h3>
+            <p>Lightweight raw data for pipelines, BI tools, and custom scripts.</p>
+            <button class="btn btn-outline export-btn" data-format="csv">Export CSV</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Insights -->
+    <section class="section insights" id="insights">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Smart Insights</h2>
+          <p>Automated highlights that surface what needs attention right now.</p>
+        </div>
+        <div class="insights-grid">
+          <div class="insight-card positive fade-up">
+            <div class="insight-icon">✓</div>
+            <p><strong>82%</strong> of assigned tasks were completed this month — up 5 points from last month.</p>
+          </div>
+          <div class="insight-card warning fade-up delay-1">
+            <div class="insight-icon">!</div>
+            <p><strong>12 tasks</strong> are approaching their deadlines in the next 48 hours.</p>
+          </div>
+          <div class="insight-card info fade-up delay-2">
+            <div class="insight-icon">↑</div>
+            <p>Design team completion rate is <strong>91%</strong> — highest among all departments.</p>
+          </div>
+          <div class="insight-card alert fade-up delay-3">
+            <div class="insight-icon">⚠</div>
+            <p>Customer Portal project is marked <strong>Critical</strong> with 14 overdue items.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Benefits -->
+    <section class="section benefits" id="benefits">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Why Teams Love Our Analytics</h2>
+          <p>Built for clarity, speed, and decisions — not just charts.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card fade-up">
+            <h3>Faster decisions</h3>
+            <p>Surface the numbers that matter so leaders act in minutes, not hours of digging.</p>
+          </div>
+          <div class="benefit-card fade-up delay-1">
+            <h3>Transparent performance</h3>
+            <p>Fair, visible metrics that celebrate progress and highlight support needs early.</p>
+          </div>
+          <div class="benefit-card fade-up delay-2">
+            <h3>Proactive risk control</h3>
+            <p>Spot overdue and at-risk work before it becomes a fire drill.</p>
+          </div>
+          <div class="benefit-card fade-up delay-3">
+            <h3>Custom for every role</h3>
+            <p>Managers, PMs, and executives each get the slice of truth they need.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. CTA -->
+    <section class="section cta" id="cta">
+      <div class="container">
+        <div class="cta-box fade-up">
+          <h2>Ready to turn activity into insight?</h2>
+          <p>Start with a free workspace and see your team’s real performance in minutes.</p>
+          <div class="cta-actions">
+            <a href="index.html" class="btn btn-primary btn-lg">Get Started Free</a>
+            <a href="#custom-reports" class="btn btn-ghost btn-lg">Try the Report Builder</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">TF</span>
+          <span class="logo-text">TeamFlow</span>
+        </a>
+        <p>Clarity for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Analytics</a>
+        <a href="#custom-reports">Reports</a>
+        <a href="#cta">Get Started</a>
+      </div>
+      <p class="copyright">© 2026 TeamFlow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/reports-analytics.js"></script>
+</body>
+</html>

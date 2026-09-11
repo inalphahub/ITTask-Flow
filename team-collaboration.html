@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Collaboration | IT TaskFlow</title>
+  <link rel="stylesheet" href="css/team-collaboration.css" />
+  <link rel="stylesheet" href="css/brand.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="it-taskflow-mark"><img src="it-taskflow-logo.svg" alt="IT TaskFlow logo" class="it-taskflow-logo" /></span>
+        <span class="logo-text">IT TaskFlow</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#workspace" class="nav-link">Workspace</a>
+        <a href="#communication" class="nav-link">Communication</a>
+        <a href="#activity" class="nav-link">Activity</a>
+        <a href="#members" class="nav-link">Members</a>
+        <a href="#cta" class="nav-link cta-nav">Get Started</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge fade-in">Team Collaboration</div>
+      <h1 class="fade-in delay-1">Bring Your Team Together<br />in One Workspace</h1>
+      <p class="fade-in delay-2">
+        Empower employees and managers to plan, assign, discuss, and deliver — all in a single collaborative hub designed for modern IT teams.
+      </p>
+      <div class="hero-actions fade-in delay-3">
+        <a href="#workspace" class="btn btn-primary">Explore Workspace</a>
+        <a href="#cta" class="btn btn-secondary">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration Overview -->
+  <section class="section overview" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2>Seamless Collaboration at Every Level</h2>
+        <p>From daily stand-ups to cross-department projects, IT TaskFlow keeps everyone aligned and productive.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card fade-up">
+          <div class="card-icon blue">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Unified Team Hub</h3>
+          <p>All members, projects, tasks, and discussions live in one organized space accessible to the entire team.</p>
+        </div>
+        <div class="overview-card fade-up delay-1">
+          <div class="card-icon purple">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Real-time Communication</h3>
+          <p>Comment, mention, reply, and react instantly so feedback never gets lost in email threads.</p>
+        </div>
+        <div class="overview-card fade-up delay-2">
+          <div class="card-icon teal">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Transparent Progress</h3>
+          <p>Activity feeds and shared workspaces give managers and teammates full visibility into what’s happening.</p>
+        </div>
+        <div class="overview-card fade-up delay-3">
+          <div class="card-icon blue">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Smart Notifications</h3>
+          <p>Stay informed with targeted alerts for assignments, mentions, deadlines, and project updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Workspace -->
+  <section class="section workspace" id="workspace">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Team Workspace</span>
+        <h2>Everything Your Team Needs in One Place</h2>
+        <p>Team members, active projects, tasks, discussions, and live updates — unified and always accessible.</p>
+      </div>
+
+      <div class="workspace-panel fade-up">
+        <div class="workspace-sidebar">
+          <div class="ws-header">
+            <h4>Active Projects</h4>
+            <span class="badge-count">4</span>
+          </div>
+          <ul class="project-list">
+            <li class="project-item active">
+              <span class="dot blue"></span>
+              Website Redesign
+              <span class="task-count">12</span>
+            </li>
+            <li class="project-item">
+              <span class="dot purple"></span>
+              API Integration
+              <span class="task-count">8</span>
+            </li>
+            <li class="project-item">
+              <span class="dot teal"></span>
+              Mobile App v2
+              <span class="task-count">15</span>
+            </li>
+            <li class="project-item">
+              <span class="dot orange"></span>
+              Security Audit
+              <span class="task-count">6</span>
+            </li>
+          </ul>
+          <div class="ws-header mt">
+            <h4>Team Members</h4>
+            <span class="badge-count">6</span>
+          </div>
+          <div class="member-avatars">
+            <div class="avatar" title="John">JD</div>
+            <div class="avatar purple" title="Priya">PS</div>
+            <div class="avatar teal" title="Rahul">RK</div>
+            <div class="avatar orange" title="Anita">AM</div>
+            <div class="avatar blue" title="Sara">SK</div>
+            <div class="avatar more">+2</div>
+          </div>
+        </div>
+
+        <div class="workspace-main">
+          <div class="ws-tabs">
+            <button class="ws-tab active" data-tab="tasks">Tasks</button>
+            <button class="ws-tab" data-tab="discussions">Discussions</button>
+            <button class="ws-tab" data-tab="updates">Updates</button>
+          </div>
+
+          <div class="tab-content active" id="tasks-tab">
+            <div class="task-item">
+              <div class="task-check"><i class="fas fa-check"></i></div>
+              <div class="task-info">
+                <h5>Homepage Design</h5>
+                <span class="task-meta">John · Due today</span>
+              </div>
+              <span class="priority high">High</span>
+            </div>
+            <div class="task-item">
+              <div class="task-check empty"></div>
+              <div class="task-info">
+                <h5>API Endpoint Mapping</h5>
+                <span class="task-meta">Priya · Due in 2 days</span>
+              </div>
+              <span class="priority medium">Medium</span>
+            </div>
+            <div class="task-item">
+              <div class="task-check empty"></div>
+              <div class="task-info">
+                <h5>User Authentication Flow</h5>
+                <span class="task-meta">Rahul · Due in 4 days</span>
+              </div>
+              <span class="priority high">High</span>
+            </div>
+            <div class="task-item">
+              <div class="task-check empty"></div>
+              <div class="task-info">
+                <h5>QA Test Cases</h5>
+                <span class="task-meta">Anita · Due next week</span>
+              </div>
+              <span class="priority low">Low</span>
+            </div>
+          </div>
+
+          <div class="tab-content" id="discussions-tab">
+            <div class="discussion-item">
+              <div class="avatar purple">PS</div>
+              <div class="discussion-body">
+                <div class="discussion-header">
+                  <strong>Priya Sharma</strong>
+                  <span>2h ago</span>
+                </div>
+                <p>Can we finalize the API response schema before tomorrow’s sprint?</p>
+                <div class="discussion-actions">
+                  <span><i class="far fa-comment"></i> 3 replies</span>
+                  <span><i class="far fa-thumbs-up"></i> 5</span>
+                </div>
+              </div>
+            </div>
+            <div class="discussion-item">
+              <div class="avatar">JD</div>
+              <div class="discussion-body">
+                <div class="discussion-header">
+                  <strong>John Doe</strong>
+                  <span>5h ago</span>
+                </div>
+                <p>Homepage mockups are ready for review. Feedback welcome!</p>
+                <div class="discussion-actions">
+                  <span><i class="far fa-comment"></i> 7 replies</span>
+                  <span><i class="far fa-thumbs-up"></i> 12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="updates-tab">
+            <div class="update-item">
+              <div class="update-dot blue"></div>
+              <div>
+                <p><strong>John</strong> completed “Homepage Design”</p>
+                <span class="time">10 min ago</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <div class="update-dot purple"></div>
+              <div>
+                <p><strong>Priya</strong> commented on “API Integration”</p>
+                <span class="time">1 hour ago</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <div class="update-dot teal"></div>
+              <div>
+                <p><strong>Rahul</strong> was assigned a new task</p>
+                <span class="time">3 hours ago</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <div class="update-dot orange"></div>
+              <div>
+                <p><strong>Anita</strong> uploaded a project document</p>
+                <span class="time">Yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Communication -->
+  <section class="section communication" id="communication">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Team Communication</span>
+        <h2>Talk Where the Work Happens</h2>
+        <p>Keep conversations contextual with powerful communication tools built right into every task and project.</p>
+      </div>
+      <div class="comm-grid">
+        <div class="comm-card fade-up">
+          <div class="comm-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>Comments</h3>
+          <p>Leave detailed feedback directly on tasks and documents so context is never lost.</p>
+        </div>
+        <div class="comm-card fade-up delay-1">
+          <div class="comm-icon"><i class="fas fa-at"></i></div>
+          <h3>@Mentions</h3>
+          <p>Notify the right people instantly by mentioning them in comments or discussions.</p>
+        </div>
+        <div class="comm-card fade-up delay-2">
+          <div class="comm-icon"><i class="fas fa-reply"></i></div>
+          <h3>Replies</h3>
+          <p>Keep threads organized with nested replies for focused, easy-to-follow conversations.</p>
+        </div>
+        <div class="comm-card fade-up delay-3">
+          <div class="comm-icon"><i class="fas fa-smile"></i></div>
+          <h3>Reactions</h3>
+          <p>Quickly acknowledge updates with emoji reactions — no need for a full reply every time.</p>
+        </div>
+        <div class="comm-card fade-up delay-4">
+          <div class="comm-icon"><i class="fas fa-paperclip"></i></div>
+          <h3>Attachments</h3>
+          <p>Share files, screenshots, and docs directly in the conversation for seamless collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Activity Feed -->
+  <section class="section activity" id="activity">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Activity Feed</span>
+        <h2>Stay in the Loop in Real Time</h2>
+        <p>A live stream of everything happening across your team — so nothing important slips through the cracks.</p>
+      </div>
+      <div class="activity-feed fade-up">
+        <div class="feed-item">
+          <div class="feed-avatar blue">JD</div>
+          <div class="feed-content">
+            <p><strong>John</strong> completed <span class="highlight">“Homepage Design”</span></p>
+            <span class="feed-time">Just now</span>
+          </div>
+          <div class="feed-action completed"><i class="fas fa-check-circle"></i></div>
+        </div>
+        <div class="feed-item">
+          <div class="feed-avatar purple">PS</div>
+          <div class="feed-content">
+            <p><strong>Priya</strong> commented on <span class="highlight">“API Integration”</span></p>
+            <span class="feed-time">15 min ago</span>
+          </div>
+          <div class="feed-action comment"><i class="fas fa-comment"></i></div>
+        </div>
+        <div class="feed-item">
+          <div class="feed-avatar teal">RK</div>
+          <div class="feed-content">
+            <p><strong>Rahul</strong> was assigned a new task</p>
+            <span class="feed-time">1 hour ago</span>
+          </div>
+          <div class="feed-action assign"><i class="fas fa-user-plus"></i></div>
+        </div>
+        <div class="feed-item">
+          <div class="feed-avatar orange">AM</div>
+          <div class="feed-content">
+            <p><strong>Anita</strong> uploaded a project document</p>
+            <span class="feed-time">3 hours ago</span>
+          </div>
+          <div class="feed-action upload"><i class="fas fa-cloud-upload-alt"></i></div>
+        </div>
+        <div class="feed-item">
+          <div class="feed-avatar blue">SK</div>
+          <div class="feed-content">
+            <p><strong>Sara</strong> mentioned you in <span class="highlight">“Sprint Planning”</span></p>
+            <span class="feed-time">Yesterday</span>
+          </div>
+          <div class="feed-action mention"><i class="fas fa-at"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Members -->
+  <section class="section members" id="members">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Team Members</span>
+        <h2>Meet the Team</h2>
+        <p>See who’s working on what, their current load, and availability at a glance.</p>
+      </div>
+      <div class="members-grid">
+        <div class="member-card fade-up">
+          <div class="member-header">
+            <div class="member-avatar blue">JD</div>
+            <span class="status online"></span>
+          </div>
+          <h3>John Doe</h3>
+          <p class="role">UI/UX Designer</p>
+          <p class="dept">Design</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">5</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value online-text">Available</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card fade-up delay-1">
+          <div class="member-header">
+            <div class="member-avatar purple">PS</div>
+            <span class="status online"></span>
+          </div>
+          <h3>Priya Sharma</h3>
+          <p class="role">Backend Engineer</p>
+          <p class="dept">Engineering</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value online-text">Available</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card fade-up delay-2">
+          <div class="member-header">
+            <div class="member-avatar teal">RK</div>
+            <span class="status busy"></span>
+          </div>
+          <h3>Rahul Kumar</h3>
+          <p class="role">Full Stack Developer</p>
+          <p class="dept">Engineering</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">9</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value busy-text">In Meeting</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card fade-up delay-3">
+          <div class="member-header">
+            <div class="member-avatar orange">AM</div>
+            <span class="status online"></span>
+          </div>
+          <h3>Anita Mehta</h3>
+          <p class="role">QA Lead</p>
+          <p class="dept">Quality Assurance</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value online-text">Available</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card fade-up delay-4">
+          <div class="member-header">
+            <div class="member-avatar blue">SK</div>
+            <span class="status away"></span>
+          </div>
+          <h3>Sara Khan</h3>
+          <p class="role">Product Manager</p>
+          <p class="dept">Product</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value away-text">Away</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card fade-up delay-5">
+          <div class="member-header">
+            <div class="member-avatar purple">VT</div>
+            <span class="status online"></span>
+          </div>
+          <h3>Vikram Trivedi</h3>
+          <p class="role">DevOps Engineer</p>
+          <p class="dept">Infrastructure</p>
+          <div class="member-stats">
+            <div class="stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Active Tasks</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value online-text">Available</span>
+              <span class="stat-label">Status</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Workspace -->
+  <section class="section shared" id="shared">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Shared Workspace</span>
+        <h2>Everything Shared, Nothing Lost</h2>
+        <p>Centralized access to tasks, files, projects, discussions, and calendars for the whole team.</p>
+      </div>
+      <div class="shared-grid">
+        <div class="shared-card fade-up">
+          <i class="fas fa-tasks"></i>
+          <h3>Shared Tasks</h3>
+          <p>Assign and track work across departments with complete transparency.</p>
+        </div>
+        <div class="shared-card fade-up delay-1">
+          <i class="fas fa-folder-open"></i>
+          <h3>Shared Files</h3>
+          <p>Store and version documents, designs, and assets in one secure location.</p>
+        </div>
+        <div class="shared-card fade-up delay-2">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Projects</h3>
+          <p>Organize work into projects with clear owners, timelines, and goals.</p>
+        </div>
+        <div class="shared-card fade-up delay-3">
+          <i class="fas fa-comments"></i>
+          <h3>Discussions</h3>
+          <p>Centralized threads that keep decisions and ideas searchable.</p>
+        </div>
+        <div class="shared-card fade-up delay-4">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Calendar</h3>
+          <p>Shared deadlines, meetings, and milestones visible to the entire team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Notifications -->
+  <section class="section notifications" id="notifications">
+    <div class="container">
+      <div class="notifications-wrapper">
+        <div class="notif-content fade-up">
+          <span class="section-tag">Team Notifications</span>
+          <h2>Never Miss What Matters</h2>
+          <p>Employees receive timely, relevant alerts so they can respond quickly and stay aligned with team goals.</p>
+          <ul class="notif-list">
+            <li><i class="fas fa-check-circle"></i> Task assignments & ownership changes</li>
+            <li><i class="fas fa-check-circle"></i> @Mentions in comments and discussions</li>
+            <li><i class="fas fa-check-circle"></i> New comments and replies on your work</li>
+            <li><i class="fas fa-check-circle"></i> Deadline reminders & approaching due dates</li>
+            <li><i class="fas fa-check-circle"></i> Project updates and status changes</li>
+          </ul>
+        </div>
+        <div class="notif-visual fade-up delay-2">
+          <div class="notif-card">
+            <div class="notif-icon blue"><i class="fas fa-user-plus"></i></div>
+            <div>
+              <strong>New task assigned</strong>
+              <p>You were assigned “API Security Review”</p>
+              <span>2 min ago</span>
+            </div>
+          </div>
+          <div class="notif-card">
+            <div class="notif-icon purple"><i class="fas fa-at"></i></div>
+            <div>
+              <strong>You were mentioned</strong>
+              <p>Priya mentioned you in “Sprint Board”</p>
+              <span>18 min ago</span>
+            </div>
+          </div>
+          <div class="notif-card">
+            <div class="notif-icon teal"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Deadline reminder</strong>
+              <p>“Homepage Design” is due tomorrow</p>
+              <span>1 hour ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration Workflow -->
+  <section class="section workflow" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Collaboration Workflow</span>
+        <h2>From Idea to Done — Together</h2>
+        <p>A simple, repeatable process that keeps teams moving forward without friction.</p>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step fade-up">
+          <div class="step-number">1</div>
+          <h3>Create</h3>
+          <p>Start a task or project and define clear goals and scope.</p>
+        </div>
+        <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="workflow-step fade-up delay-1">
+          <div class="step-number">2</div>
+          <h3>Assign</h3>
+          <p>Delegate ownership to the right team members with due dates.</p>
+        </div>
+        <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="workflow-step fade-up delay-2">
+          <div class="step-number">3</div>
+          <h3>Collaborate</h3>
+          <p>Discuss, share files, and iterate together in real time.</p>
+        </div>
+        <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="workflow-step fade-up delay-3">
+          <div class="step-number">4</div>
+          <h3>Review</h3>
+          <p>Provide feedback, request changes, and approve work.</p>
+        </div>
+        <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="workflow-step fade-up delay-4">
+          <div class="step-number">5</div>
+          <h3>Complete</h3>
+          <p>Mark done, celebrate wins, and move to the next priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Benefits</span>
+        <h2>Why Teams Love Collaborating on IT TaskFlow</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item fade-up">
+          <i class="fas fa-bolt"></i>
+          <div>
+            <h4>Faster Decision Making</h4>
+            <p>Context-rich discussions eliminate back-and-forth and speed up approvals.</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-up delay-1">
+          <i class="fas fa-eye"></i>
+          <div>
+            <h4>Full Visibility</h4>
+            <p>Managers and teammates always know who is working on what and why.</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-up delay-2">
+          <i class="fas fa-users-cog"></i>
+          <div>
+            <h4>Reduced Context Switching</h4>
+            <p>Work, chat, and files live together so focus stays high.</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-up delay-3">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <h4>Secure by Design</h4>
+            <p>Role-based access and audit trails keep sensitive work protected.</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-up delay-4">
+          <i class="fas fa-rocket"></i>
+          <div>
+            <h4>Higher Throughput</h4>
+            <p>Clear ownership and real-time updates help teams ship more, faster.</p>
+          </div>
+        </div>
+        <div class="benefit-item fade-up delay-5">
+          <i class="fas fa-heart"></i>
+          <div>
+            <h4>Happier Teams</h4>
+            <p>Less email, fewer meetings, and more clarity mean better work-life balance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta" id="cta">
+    <div class="container">
+      <div class="cta-box fade-up">
+        <h2>Ready to Transform How Your Team Collaborates?</h2>
+        <p>Join thousands of IT teams already planning, assigning, tracking, and succeeding with IT TaskFlow.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-lg">Start Free Trial</a>
+          <a href="index.html" class="btn btn-outline btn-lg">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo">
+          <span class="it-taskflow-mark"><img src="it-taskflow-logo.svg" alt="IT TaskFlow logo" class="it-taskflow-logo" /></span>
+          <span class="logo-text">IT TaskFlow</span>
+        </a>
+        <p>Plan, Assign, Track, Succeed</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#overview">Overview</a>
+          <a href="#workspace">Workspace</a>
+          <a href="#members">Members</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IT TaskFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/team-collaboration.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Board | IT TaskFlow</title>
+  <link rel="stylesheet" href="css/task-board.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="it-taskflow-mark"><img class="it-taskflow-logo" src="it-taskflow-logo.svg" alt="IT TaskFlow logo"></span>
+        <span>IT TaskFlow</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#board" class="active">Task Board</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-ghost" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn-primary">Get Started</button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#board">Task Board</a>
+    <a href="#features">Features</a>
+    <a href="#benefits">Benefits</a>
+    <button class="btn-primary">Get Started</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">Kanban Workflow</div>
+        <h1>Visualize Your Work With a <span class="gradient-text">Powerful Task Board</span></h1>
+        <p>Organize tasks, track progress, and collaborate seamlessly with an intuitive drag-and-drop Kanban board designed for modern teams.</p>
+        <div class="hero-actions">
+          <a href="#board" class="btn-primary btn-lg">Explore Board</a>
+          <a href="#features" class="btn-outline btn-lg">See Features</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mini-board">
+          <div class="mini-col">
+            <div class="mini-header">To Do</div>
+            <div class="mini-card"></div>
+            <div class="mini-card"></div>
+          </div>
+          <div class="mini-col">
+            <div class="mini-header">In Progress</div>
+            <div class="mini-card active"></div>
+          </div>
+          <div class="mini-col">
+            <div class="mini-header">Done</div>
+            <div class="mini-card done"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board Section -->
+  <section class="board-section" id="board">
+    <div class="container">
+      <div class="section-header">
+        <h2>Interactive Task Board</h2>
+        <p>Drag cards between columns, filter by any criteria, and switch views instantly.</p>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="board-toolbar">
+        <div class="toolbar-left">
+          <div class="view-switcher">
+            <button class="view-btn active" data-view="board" title="Board View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>
+              Board
+            </button>
+            <button class="view-btn" data-view="list" title="List View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              List
+            </button>
+            <button class="view-btn" data-view="timeline" title="Timeline View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              Timeline
+            </button>
+            <button class="view-btn" data-view="calendar" title="Calendar View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Calendar
+            </button>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="searchInput" placeholder="Search tasks..." autocomplete="off">
+          </div>
+          <button class="btn-filter" id="filterToggle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Filters
+            <span class="filter-count" id="filterCount" hidden>0</span>
+          </button>
+          <button class="btn-primary btn-sm" id="addTaskBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Task
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters Panel -->
+      <div class="filters-panel" id="filtersPanel">
+        <div class="filter-group">
+          <label>Assignee</label>
+          <select id="filterAssignee">
+            <option value="">All Assignees</option>
+            <option value="Alex Chen">Alex Chen</option>
+            <option value="Sarah Kim">Sarah Kim</option>
+            <option value="Marcus Lee">Marcus Lee</option>
+            <option value="Priya Patel">Priya Patel</option>
+            <option value="Jordan Blake">Jordan Blake</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Priority</label>
+          <select id="filterPriority">
+            <option value="">All Priorities</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Project</label>
+          <select id="filterProject">
+            <option value="">All Projects</option>
+            <option value="Website Redesign">Website Redesign</option>
+            <option value="Mobile App">Mobile App</option>
+            <option value="Marketing">Marketing</option>
+            <option value="API Integration">API Integration</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Status</label>
+          <select id="filterStatus">
+            <option value="">All Statuses</option>
+            <option value="backlog">Backlog</option>
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="review">Review</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Due Date</label>
+          <select id="filterDue">
+            <option value="">Any Date</option>
+            <option value="overdue">Overdue</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+          </select>
+        </div>
+        <button class="btn-ghost btn-sm" id="clearFilters">Clear All</button>
+      </div>
+
+      <!-- Workload Bar -->
+      <div class="workload-bar" id="workloadBar">
+        <div class="workload-title">Workload</div>
+        <div class="workload-items" id="workloadItems"></div>
+      </div>
+
+      <!-- Board View -->
+      <div class="kanban-board" id="boardView">
+        <div class="kanban-column" data-status="backlog">
+          <div class="column-header">
+            <div class="column-title">
+              <span class="status-dot backlog"></span>
+              Backlog
+              <span class="task-count" data-count="backlog">0</span>
+            </div>
+            <button class="column-add" data-status="backlog" title="Add task">+</button>
+          </div>
+          <div class="column-cards" id="col-backlog"></div>
+        </div>
+        <div class="kanban-column" data-status="todo">
+          <div class="column-header">
+            <div class="column-title">
+              <span class="status-dot todo"></span>
+              To Do
+              <span class="task-count" data-count="todo">0</span>
+            </div>
+            <button class="column-add" data-status="todo" title="Add task">+</button>
+          </div>
+          <div class="column-cards" id="col-todo"></div>
+        </div>
+        <div class="kanban-column" data-status="inprogress">
+          <div class="column-header">
+            <div class="column-title">
+              <span class="status-dot inprogress"></span>
+              In Progress
+              <span class="task-count" data-count="inprogress">0</span>
+            </div>
+            <button class="column-add" data-status="inprogress" title="Add task">+</button>
+          </div>
+          <div class="column-cards" id="col-inprogress"></div>
+        </div>
+        <div class="kanban-column" data-status="review">
+          <div class="column-header">
+            <div class="column-title">
+              <span class="status-dot review"></span>
+              Review
+              <span class="task-count" data-count="review">0</span>
+            </div>
+            <button class="column-add" data-status="review" title="Add task">+</button>
+          </div>
+          <div class="column-cards" id="col-review"></div>
+        </div>
+        <div class="kanban-column" data-status="done">
+          <div class="column-header">
+            <div class="column-title">
+              <span class="status-dot done"></span>
+              Done
+              <span class="task-count" data-count="done">0</span>
+            </div>
+            <button class="column-add" data-status="done" title="Add task">+</button>
+          </div>
+          <div class="column-cards" id="col-done"></div>
+        </div>
+      </div>
+
+      <!-- List View -->
+      <div class="list-view" id="listView" hidden>
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Assignee</th>
+              <th>Priority</th>
+              <th>Project</th>
+              <th>Status</th>
+              <th>Due Date</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody id="listBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Timeline View -->
+      <div class="timeline-view" id="timelineView" hidden>
+        <div class="timeline-container" id="timelineContainer"></div>
+      </div>
+
+      <!-- Calendar View -->
+      <div class="calendar-view" id="calendarView" hidden>
+        <div class="calendar-header">
+          <button id="prevMonth" class="btn-ghost btn-icon">‹</button>
+          <h3 id="calendarMonth"></h3>
+          <button id="nextMonth" class="btn-ghost btn-icon">›</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Board Overview -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything You Need to Manage Work</h2>
+        <p>Powerful features designed for clarity, speed, and collaboration.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Rich Task Cards</h3>
+          <p>Each card shows title, assignee, priority, due date, comments, attachments, and progress at a glance.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3>Drag & Drop</h3>
+          <p>Move tasks between columns effortlessly. Status updates automatically as you drop cards into new stages.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
+          <h3>Smart Filters</h3>
+          <p>Filter by assignee, priority, project, status, or due date. Combine filters to find exactly what you need.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3>Instant Search</h3>
+          <p>Search across all tasks in real time. Find any card by title, description, or assignee instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Multiple Views</h3>
+          <p>Switch between Board, List, Timeline, and Calendar views to see your work the way you prefer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Workload Visibility</h3>
+          <p>See how many tasks each team member has assigned. Balance workload and prevent burnout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Teams Love This Board</h2>
+        <p>Clear visibility, faster decisions, and happier collaboration.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-number">01</div>
+          <h3>Clarity at a Glance</h3>
+          <p>See the entire workflow from backlog to done. Spot bottlenecks before they become problems.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-number">02</div>
+          <h3>Faster Handoffs</h3>
+          <p>Drag a card to Review and the assignee knows instantly. Status changes are automatic and transparent.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-number">03</div>
+          <h3>Balanced Workloads</h3>
+          <p>Workload bars show who is overloaded. Redistribute tasks in seconds to keep the team healthy.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-number">04</div>
+          <h3>Flexible Views</h3>
+          <p>Prefer lists? Need a calendar? Switch views without losing context or filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready to Organize Your Team's Work?</h2>
+        <p>Start using the Task Board today and bring clarity to every project.</p>
+        <div class="cta-actions">
+          <a href="#board" class="btn-primary btn-lg">Try the Board</a>
+          <a href="index.html" class="btn-outline btn-lg">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="it-taskflow-mark"><img class="it-taskflow-logo" src="it-taskflow-logo.svg" alt="IT TaskFlow logo"></span>
+            <span>IT TaskFlow</span>
+          </a>
+          <p>Visual work management for modern teams.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#board">Task Board</a>
+          <a href="#features">Features</a>
+          <a href="#benefits">Benefits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2026 IT TaskFlow. Built for clarity and speed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Task Modal -->
+  <div class="modal-overlay" id="taskModal" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Add Task</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskTitle">Title</label>
+          <input type="text" id="taskTitle" required placeholder="Task title">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="taskAssignee">Assignee</label>
+            <select id="taskAssignee" required>
+              <option value="Alex Chen">Alex Chen</option>
+              <option value="Sarah Kim">Sarah Kim</option>
+              <option value="Marcus Lee">Marcus Lee</option>
+              <option value="Priya Patel">Priya Patel</option>
+              <option value="Jordan Blake">Jordan Blake</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority" required>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="taskProject">Project</label>
+            <select id="taskProject" required>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="Marketing">Marketing</option>
+              <option value="API Integration">API Integration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="taskDue">Due Date</label>
+            <input type="date" id="taskDue" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="taskProgress">Progress (%)</label>
+          <input type="range" id="taskProgress" min="0" max="100" value="0">
+          <span id="progressValue">0%</span>
+        </div>
+        <div class="form-group">
+          <label for="taskStatus">Status</label>
+          <select id="taskStatus">
+            <option value="backlog">Backlog</option>
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="review">Review</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost" id="modalCancel">Cancel</button>
+          <button type="submit" class="btn-primary">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/task-board.js"></script>
+</body>
+</html>

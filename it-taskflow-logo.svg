@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 330" role="img" aria-labelledby="title desc">
+  <title id="title">IT TaskFlow logo</title>
+  <desc id="desc">Blue arrow and T, purple flow shape, and teal completion check</desc>
+  <path fill="#118cf0" stroke="#fff" stroke-width="5" stroke-linejoin="round" d="M12 92 350 92V67l58 47-58 47v-25H160v133l-53-30V136H12z"/>
+  <path fill="#6339d6" stroke="#fff" stroke-width="5" stroke-linejoin="round" d="M178 188c0-43 35-78 78-78h145l-31 48c-12 18-32 29-54 29h-52c-13 0-24 11-24 24v19l-62 51z"/>
+  <path fill="#10cbb6" stroke="#fff" stroke-width="5" stroke-linejoin="round" d="m198 260 23-25 22 22 59-63c9-10 25-11 35-2s11 25 2 35l-77 82c-10 10-26 10-36 0z"/>
+</svg>
