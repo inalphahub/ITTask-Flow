@@ -111,7 +111,7 @@ Task Flow provides a centralized and visually organized task management interfac
 
 The application represents the task lifecycle through a structured workflow:
 
-```text
+
 Task Creation
       ↓
 Task Assignment
@@ -123,7 +123,7 @@ In Progress
 Under Review
       ↓
 Completed
-```
+
 
 JavaScript is used to provide interactive functionality within the browser.
 
@@ -147,17 +147,6 @@ It can display information such as:
 * Active Projects
 * Employee Activity
 * Task Progress
-
-+----------------+----------------+----------------+
-| Total Tasks    | Completed      | In Progress    |
-|      25        |      12        |       7        |
-+----------------+----------------+----------------+
-
-+----------------+----------------+
-| Pending        | Overdue        |
-|       4        |       2        |
-+----------------+----------------+
-
 
 ---
 
@@ -192,7 +181,7 @@ Supported interactions include:
 
 Tasks can move through different stages:
 
-```text
+
 To Do
   ↓
 In Progress
@@ -200,7 +189,7 @@ In Progress
 Under Review
   ↓
 Completed
-```
+
 
 The status is visually represented through badges and interface elements to make task progress easy to understand.
 
@@ -210,12 +199,12 @@ The status is visually represented through badges and interface elements to make
 
 Tasks can be categorized according to their importance.
 
-```text
+
 Critical
 High
 Medium
 Low
-```
+
 
 Priority indicators help users identify which tasks require immediate attention.
 
@@ -227,7 +216,7 @@ The Projects section provides an organized view of projects and their associated
 
 A project can display information such as:
 
-```text
+
 Project Name
 Project Description
 Project Status
@@ -235,19 +224,6 @@ Total Tasks
 Completed Tasks
 Pending Tasks
 Progress
-```
-
-Example:
-
-```text
-E-Commerce Website
-
-Total Tasks     18
-Completed       12
-Pending          6
-
-Progress        67%
-```
 
 ---
 
@@ -350,20 +326,6 @@ The interface avoids unnecessary complexity and provides a clear visual hierarch
 
 The primary application sections are easily accessible through the main navigation.
 
-Example:
-
-```text
-Task Flow
-
-Dashboard
-My Tasks
-Projects
-Employees
-Calendar
-Reports
-Settings
-```
-
 ### Visual Hierarchy
 
 Important information is highlighted using:
@@ -433,7 +395,7 @@ The current version does not use a backend server or database.
 
 The general application workflow is:
 
-```text
+
 User Opens Application
         ↓
 Dashboard
@@ -451,7 +413,7 @@ UI Updates Dynamically
 
 For task management:
 
-```text
+
 Create Task
      ↓
 Assign Task
@@ -475,25 +437,25 @@ The application uses a single main HTML document.
 
 Instead of creating separate HTML pages such as:
 
-```text
+
 dashboard.html
 tasks.html
 projects.html
 employees.html
 reports.html
-```
+
 
 the application can organize the interface within:
 
-```text
+
 index.html
-```
+
 
 JavaScript controls which section is displayed.
 
 For example:
 
-```text
+
 index.html
     │
     ├── Dashboard
@@ -503,7 +465,6 @@ index.html
     ├── Calendar
     ├── Reports
     └── Settings
-```
 
 This provides a smooth application-like experience without requiring a frontend framework.
 
@@ -571,7 +532,6 @@ The project can be developed and maintained using:
 
 The planned repository structure is:
 
-```text
 task-flow/
 │
 ├── index.html
@@ -587,7 +547,7 @@ task-flow/
 │   └── icons/
 │
 └── README.md
-```
+
 
 ### `index.html`
 
@@ -653,7 +613,7 @@ Alternatively, the project can be launched using a local development extension s
 
 Open the application and navigate through:
 
-```text
+
 Dashboard
 Tasks
 Projects
@@ -661,7 +621,6 @@ Employees
 Calendar
 Reports
 Settings
-```
 
 ---
 
@@ -690,20 +649,6 @@ Recommended screenshots:
 6. Calendar
 7. Reports
 8. Responsive Mobile View
-
-Example:
-
-```text
-screenshots/
-│
-├── dashboard.png
-├── tasks.png
-├── kanban.png
-├── projects.png
-├── employees.png
-├── calendar.png
-└── reports.png
-```
 
 ---
 
