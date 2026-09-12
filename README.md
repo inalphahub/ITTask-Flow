@@ -148,9 +148,6 @@ It can display information such as:
 * Employee Activity
 * Task Progress
 
-Example:
-
-```text
 +----------------+----------------+----------------+
 | Total Tasks    | Completed      | In Progress    |
 |      25        |      12        |       7        |
@@ -160,7 +157,7 @@ Example:
 | Pending        | Overdue        |
 |       4        |       2        |
 +----------------+----------------+
-```
+
 
 ---
 
