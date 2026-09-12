@@ -918,3 +918,6 @@ Live Demo
   <strong>Task Flow</strong><br>
   Employee Task Management SaaS-Style Web Application
 </p>
+
+
+Task Board feature development is being maintained in a dedicated feature branch.
