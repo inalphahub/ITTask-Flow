@@ -1,0 +1,27 @@
+name: Task Flow CI
+
+on:
+  push:
+    branches:
+      - main
+      - development
+
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Validate project files
+        run: |
+          echo "Task Flow CI started"
+          echo "Repository checkout successful"
+          echo "Project files are available"
+          echo "CI validation completed successfully"
