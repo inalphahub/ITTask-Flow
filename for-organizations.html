@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>For Organizations | IT Task Flow – One Connected Workspace</title>
+  <meta name="description" content="Bring teams, projects, tasks, people, and organizational insights together in one secure and connected workspace with Task Flow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/for-organizations.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <script src="js/brand.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="navbar">
+    <nav class="navbar container">
+      <a href="index.html#home" class="brand logo">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z" />
+          </svg>
+        </span>
+        <span>Task<span>Flow</span></span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">Features <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="task-management.html">Task Management</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="team-collaboration.html">Team Collaboration</a>
+            <a href="task-board.html">Task Board</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports-analytics.html">Reports & Analytics</a>
+            <a href="notifications.html">Notifications</a>
+          </div>
+        </div>
+
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">Solutions <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="for-employees.html">For Employees</a>
+            <a href="for-team-leads.html">For Team Leads</a>
+            <a href="for-managers.html">For Managers</a>
+            <a href="for-organizations.html">For Organizations</a>
+          </div>
+        </div>
+
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">Resources <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="documentation.html">Documentation</a>
+            <a href="userguide.html">User Guide</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="contactsupport.html">Contact Support</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="mobile-actions">
+          <a href="login.html" class="btn btn-outline login-btn">Login</a>
+          <a href="signup.html" class="btn btn-primary get-started-btn">Get Started</a>
+        </div>
+      </div>
+
+      <div class="desktop-actions">
+        <a href="login.html" class="nav-login login-btn">Login</a>
+        <a href="signup.html" class="btn-primary get-started-btn">Get Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="badge animate-fade-up">For Organizations</div>
+        <h1 class="animate-fade-up delay-1">One Connected Workspace<br>for Your Entire Organization</h1>
+        <p class="hero-sub animate-fade-up delay-2">
+          Bring teams, projects, tasks, people, and organizational insights together in one secure and connected workspace.
+        </p>
+        <div class="hero-ctas animate-fade-up delay-3">
+          <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+          <a href="#overview" class="btn-secondary btn-lg">Explore Platform</a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-fade-up delay-4">
+        <div class="dashboard-card">
+          <div class="dash-header">
+            <span class="dash-title">Organization Overview</span>
+            <span class="dash-badge">Live</span>
+          </div>
+          <div class="dash-metrics">
+            <div class="metric">
+              <span class="metric-value" data-count="8">0</span>
+              <span class="metric-label">Departments</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="24">0</span>
+              <span class="metric-label">Teams</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="42">0</span>
+              <span class="metric-label">Projects</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="486">0</span>
+              <span class="metric-label">Tasks</span>
+            </div>
+          </div>
+          <div class="dash-progress">
+            <div class="progress-label">
+              <span>Organization Progress</span>
+              <span class="progress-pct">84%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="--target: 84%"></div>
+            </div>
+          </div>
+          <div class="dash-depts">
+            <div class="dept-chip">
+              <span class="dept-name">Engineering</span>
+              <span class="dept-pct">92%</span>
+            </div>
+            <div class="dept-chip">
+              <span class="dept-name">QA</span>
+              <span class="dept-pct">87%</span>
+            </div>
+            <div class="dept-chip">
+              <span class="dept-name">Product</span>
+              <span class="dept-pct">89%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATION OVERVIEW ========== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Understand Your Organization at a Glance</h2>
+        <p>High-level metrics that give leadership a clear picture of organizational health.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card" data-animate>
+          <div class="metric-icon">🏛</div>
+          <span class="metric-number" data-count="8">0</span>
+          <span class="metric-name">Departments</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon">👥</div>
+          <span class="metric-number" data-count="24">0</span>
+          <span class="metric-name">Teams</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon">📁</div>
+          <span class="metric-number" data-count="42">0</span>
+          <span class="metric-name">Projects</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon">✓</div>
+          <span class="metric-number" data-count="486">0</span>
+          <span class="metric-name">Active Tasks</span>
+        </div>
+      </div>
+      <div class="status-row" data-animate>
+        <div class="status-item on-track">
+          <span class="status-dot"></span>
+          <span class="status-count">34</span>
+          <span class="status-label">Projects On Track</span>
+        </div>
+        <div class="status-item">
+          <span class="status-dot active-dot"></span>
+          <span class="status-count">22</span>
+          <span class="status-label">Teams Active</span>
+        </div>
+        <div class="status-item">
+          <span class="status-dot completed-dot"></span>
+          <span class="status-count">328</span>
+          <span class="status-label">Tasks Completed</span>
+        </div>
+        <div class="status-item">
+          <span class="status-dot milestone-dot"></span>
+          <span class="status-count">12</span>
+          <span class="status-label">Upcoming Milestones</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATION STRUCTURE ========== -->
+  <section class="section section-alt" id="structure">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Your Organization's Structure</h2>
+        <p>Map departments, teams, roles, and people into a clear hierarchy that reflects how your organization actually works.</p>
+      </div>
+      <div class="org-tree" data-animate>
+        <div class="tree-root">
+          <span class="tree-label">Organization</span>
+        </div>
+        <div class="tree-branches">
+          <div class="tree-dept">
+            <div class="tree-node dept-node">Engineering</div>
+            <div class="tree-children">
+              <div class="tree-node team-node">Development</div>
+              <div class="tree-node team-node">QA</div>
+            </div>
+          </div>
+          <div class="tree-dept">
+            <div class="tree-node dept-node">Product</div>
+            <div class="tree-children">
+              <div class="tree-node team-node">Product Management</div>
+            </div>
+          </div>
+          <div class="tree-dept">
+            <div class="tree-node dept-node">Design</div>
+            <div class="tree-children">
+              <div class="tree-node team-node">UX/UI</div>
+            </div>
+          </div>
+          <div class="tree-dept">
+            <div class="tree-node dept-node">Operations</div>
+            <div class="tree-children">
+              <div class="tree-node team-node">Support</div>
+              <div class="tree-node team-node">Administration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="structure-tags" data-animate>
+        <span class="tag">Departments</span>
+        <span class="tag">Teams</span>
+        <span class="tag">Team Leads</span>
+        <span class="tag">Managers</span>
+        <span class="tag">Employees</span>
+        <span class="tag">Roles</span>
+        <span class="tag">Projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPARTMENTS ========== -->
+  <section class="section" id="departments">
+    <div class="container">
+      <div class="section-header">
+        <h2>Manage Departments From One Place</h2>
+        <p>View every department’s size, projects, and progress without switching contexts.</p>
+      </div>
+      <div class="dept-grid">
+        <div class="dept-card" data-animate>
+          <div class="dept-card-header">
+            <h3>Engineering</h3>
+            <span class="dept-status on-track">On Track</span>
+          </div>
+          <div class="dept-meta">Manager: Alex Rivera</div>
+          <div class="dept-stats">
+            <div class="stat"><span class="stat-val">18</span><span class="stat-lbl">Members</span></div>
+            <div class="stat"><span class="stat-val">8</span><span class="stat-lbl">Projects</span></div>
+            <div class="stat"><span class="stat-val">92%</span><span class="stat-lbl">Progress</span></div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="--target: 92%"></div></div>
+        </div>
+        <div class="dept-card" data-animate>
+          <div class="dept-card-header">
+            <h3>QA</h3>
+            <span class="dept-status on-track">On Track</span>
+          </div>
+          <div class="dept-meta">Manager: Priya Sharma</div>
+          <div class="dept-stats">
+            <div class="stat"><span class="stat-val">10</span><span class="stat-lbl">Members</span></div>
+            <div class="stat"><span class="stat-val">5</span><span class="stat-lbl">Projects</span></div>
+            <div class="stat"><span class="stat-val">87%</span><span class="stat-lbl">Progress</span></div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="--target: 87%"></div></div>
+        </div>
+        <div class="dept-card" data-animate>
+          <div class="dept-card-header">
+            <h3>Product</h3>
+            <span class="dept-status on-track">On Track</span>
+          </div>
+          <div class="dept-meta">Manager: Anita Kapoor</div>
+          <div class="dept-stats">
+            <div class="stat"><span class="stat-val">7</span><span class="stat-lbl">Members</span></div>
+            <div class="stat"><span class="stat-val">6</span><span class="stat-lbl">Projects</span></div>
+            <div class="stat"><span class="stat-val">89%</span><span class="stat-lbl">Progress</span></div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="--target: 89%"></div></div>
+        </div>
+        <div class="dept-card" data-animate>
+          <div class="dept-card-header">
+            <h3>Design</h3>
+            <span class="dept-status attention">Needs Attention</span>
+          </div>
+          <div class="dept-meta">Manager: Rahul Mehta</div>
+          <div class="dept-stats">
+            <div class="stat"><span class="stat-val">6</span><span class="stat-lbl">Members</span></div>
+            <div class="stat"><span class="stat-val">4</span><span class="stat-lbl">Projects</span></div>
+            <div class="stat"><span class="stat-val">82%</span><span class="stat-lbl">Progress</span></div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="--target: 82%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAMS ========== -->
+  <section class="section section-alt" id="teams">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Teams Across the Organization</h2>
+        <p>See how teams sit inside departments and what each one is working on.</p>
+      </div>
+      <div class="teams-org" data-animate>
+        <div class="org-team-group">
+          <h4>Engineering</h4>
+          <div class="org-team-list">
+            <div class="org-team-item">
+              <span class="team-name">Development</span>
+              <span class="team-lead">Lead: Alex Rivera</span>
+              <span class="team-progress">94%</span>
+            </div>
+            <div class="org-team-item">
+              <span class="team-name">QA</span>
+              <span class="team-lead">Lead: Priya Sharma</span>
+              <span class="team-progress">87%</span>
+            </div>
+          </div>
+        </div>
+        <div class="org-team-group">
+          <h4>Product</h4>
+          <div class="org-team-list">
+            <div class="org-team-item">
+              <span class="team-name">Product Management</span>
+              <span class="team-lead">Lead: Anita Kapoor</span>
+              <span class="team-progress">89%</span>
+            </div>
+            <div class="org-team-item">
+              <span class="team-name">Research</span>
+              <span class="team-lead">Lead: Sam Patel</span>
+              <span class="team-progress">76%</span>
+            </div>
+          </div>
+        </div>
+        <div class="org-team-group">
+          <h4>Design</h4>
+          <div class="org-team-list">
+            <div class="org-team-item">
+              <span class="team-name">UX/UI</span>
+              <span class="team-lead">Lead: Rahul Mehta</span>
+              <span class="team-progress">82%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PEOPLE & ROLES ========== -->
+  <section class="section" id="people">
+    <div class="container">
+      <div class="section-header">
+        <h2>Organize People, Roles & Responsibilities</h2>
+        <p>Keep a clear view of who belongs where and what each person is responsible for.</p>
+      </div>
+      <div class="people-grid">
+        <div class="table-wrapper" data-animate>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="user-cell"><div class="avatar">AR</div><span>Alex Rivera</span></div></td>
+                <td>Engineering</td>
+                <td>QA Analyst</td>
+              </tr>
+              <tr>
+                <td><div class="user-cell"><div class="avatar">PS</div><span>Priya Sharma</span></div></td>
+                <td>Product</td>
+                <td>Product Manager</td>
+              </tr>
+              <tr>
+                <td><div class="user-cell"><div class="avatar">RM</div><span>Rahul Mehta</span></div></td>
+                <td>Design</td>
+                <td>UI Designer</td>
+              </tr>
+              <tr>
+                <td><div class="user-cell"><div class="avatar">AK</div><span>Anita Kapoor</span></div></td>
+                <td>Engineering</td>
+                <td>Developer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="role-hierarchy" data-animate>
+          <h4>Role Hierarchy</h4>
+          <div class="role-steps">
+            <div class="role-step"><span class="role-badge admin">Organization Admin</span></div>
+            <div class="role-arrow">↓</div>
+            <div class="role-step"><span class="role-badge manager">Manager</span></div>
+            <div class="role-arrow">↓</div>
+            <div class="role-step"><span class="role-badge lead">Team Lead</span></div>
+            <div class="role-arrow">↓</div>
+            <div class="role-step"><span class="role-badge employee">Employee</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERMISSIONS ========== -->
+  <section class="section section-alt" id="permissions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Control Access With Roles & Permissions</h2>
+        <p>Define who can view, create, edit, and assign across the organization.</p>
+      </div>
+      <div class="permissions-matrix" data-animate>
+        <table class="perm-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>View</th>
+              <th>Create</th>
+              <th>Edit</th>
+              <th>Assign</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Admin</strong></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Manager</strong></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Team Lead</strong></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Employee</strong></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="dash">–</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="dash">–</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="perm-areas" data-animate>
+        <span class="perm-tag">Tasks</span>
+        <span class="perm-tag">Projects</span>
+        <span class="perm-tag">Employees</span>
+        <span class="perm-tag">Reports</span>
+        <span class="perm-tag">Teams</span>
+        <span class="perm-tag">Settings</span>
+        <span class="perm-tag">Administration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT PORTFOLIO ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>See Every Important Project in One View</h2>
+        <p>Organization-wide project portfolio with department and status filters.</p>
+      </div>
+      <div class="filter-bar" data-animate>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="engineering">Engineering</button>
+        <button class="filter-btn" data-filter="product">Product</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="operations">Operations</button>
+      </div>
+      <div class="filter-bar status-filters" data-animate>
+        <button class="filter-btn active" data-status="all">All Status</button>
+        <button class="filter-btn" data-status="on-track">On Track</button>
+        <button class="filter-btn" data-status="attention">Attention</button>
+        <button class="filter-btn" data-status="delayed">Delayed</button>
+        <button class="filter-btn" data-status="completed">Completed</button>
+      </div>
+      <div class="project-list" data-animate>
+        <div class="project-row" data-dept="engineering" data-status="on-track">
+          <div class="project-info">
+            <h4>Website Platform</h4>
+            <span class="project-meta">Engineering</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 82%"></div></div>
+            <span>82%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+        <div class="project-row" data-dept="product" data-status="on-track">
+          <div class="project-info">
+            <h4>Mobile App</h4>
+            <span class="project-meta">Product</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 68%"></div></div>
+            <span>68%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+        <div class="project-row" data-dept="operations" data-status="attention">
+          <div class="project-info">
+            <h4>Automation</h4>
+            <span class="project-meta">Operations</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 47%"></div></div>
+            <span>47%</span>
+          </div>
+          <span class="badge-status attention">Attention</span>
+        </div>
+        <div class="project-row" data-dept="design" data-status="on-track">
+          <div class="project-info">
+            <h4>Design System</h4>
+            <span class="project-meta">Design</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 91%"></div></div>
+            <span>91%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WORKLOAD ========== -->
+  <section class="section section-alt" id="workload">
+    <div class="container">
+      <div class="section-header">
+        <h2>Understand Where Work Is Concentrated</h2>
+        <p>See capacity and load across every department so you can rebalance when needed.</p>
+      </div>
+      <div class="workload-grid">
+        <div class="workload-chart" data-animate>
+          <div class="workload-row">
+            <span class="wl-team">Engineering</span>
+            <div class="wl-bar"><div class="wl-fill high" style="--w: 92%"></div></div>
+            <span class="wl-pct">92%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">QA</span>
+            <div class="wl-bar"><div class="wl-fill" style="--w: 74%"></div></div>
+            <span class="wl-pct">74%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">Product</span>
+            <div class="wl-bar"><div class="wl-fill" style="--w: 66%"></div></div>
+            <span class="wl-pct">66%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">Design</span>
+            <div class="wl-bar"><div class="wl-fill" style="--w: 71%"></div></div>
+            <span class="wl-pct">71%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">Operations</span>
+            <div class="wl-bar"><div class="wl-fill low" style="--w: 54%"></div></div>
+            <span class="wl-pct">54%</span>
+          </div>
+        </div>
+        <div class="capacity-cards" data-animate>
+          <div class="capacity-card">
+            <span class="cap-label">Team Capacity</span>
+            <span class="cap-value">48 Members</span>
+          </div>
+          <div class="capacity-card">
+            <span class="cap-label">Assigned Work</span>
+            <span class="cap-value">486 Tasks</span>
+          </div>
+          <div class="capacity-card">
+            <span class="cap-label">Available Capacity</span>
+            <span class="cap-value">~28%</span>
+          </div>
+          <div class="capacity-card highlight">
+            <span class="cap-label">High Workload</span>
+            <span class="cap-value">1 Dept</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TASK OVERVIEW ========== -->
+  <section class="section" id="tasks">
+    <div class="container">
+      <div class="section-header">
+        <h2>See Work Across Departments</h2>
+        <p>A single view of every task status across the entire organization.</p>
+      </div>
+      <div class="task-overview" data-animate>
+        <div class="task-stats">
+          <div class="task-stat"><span class="ts-num">486</span><span class="ts-lbl">Total Tasks</span></div>
+          <div class="task-stat"><span class="ts-num green">328</span><span class="ts-lbl">Completed</span></div>
+          <div class="task-stat"><span class="ts-num blue">96</span><span class="ts-lbl">In Progress</span></div>
+          <div class="task-stat"><span class="ts-num gray">42</span><span class="ts-lbl">Pending</span></div>
+          <div class="task-stat"><span class="ts-num red">15</span><span class="ts-lbl">Overdue</span></div>
+          <div class="task-stat"><span class="ts-num">5</span><span class="ts-lbl">Blocked</span></div>
+        </div>
+        <div class="trend-chart">
+          <h4>Task Completion Trend</h4>
+          <div class="line-chart">
+            <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              <polyline fill="none" stroke="#4F46E5" stroke-width="3" points="0,80 40,70 80,55 120,50 160,35 200,30 240,22 300,15"/>
+              <polyline fill="url(#orgGrad)" stroke="none" points="0,80 40,70 80,55 120,50 160,35 200,30 240,22 300,15 300,100 0,100"/>
+              <defs>
+                <linearGradient id="orgGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CROSS-DEPARTMENT COLLABORATION ========== -->
+  <section class="section section-alt" id="collaboration">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Work Across Departments</h2>
+        <p>Keep projects moving even when multiple departments are involved.</p>
+      </div>
+      <div class="collab-flow" data-animate>
+        <div class="collab-step">
+          <div class="collab-dept">Product</div>
+          <p>Requirement defined</p>
+        </div>
+        <div class="collab-arrow">↓</div>
+        <div class="collab-step">
+          <div class="collab-dept">Engineering</div>
+          <p>Development in progress</p>
+        </div>
+        <div class="collab-arrow">↓</div>
+        <div class="collab-step">
+          <div class="collab-dept">QA</div>
+          <p>Testing & validation</p>
+        </div>
+        <div class="collab-arrow">↓</div>
+        <div class="collab-step">
+          <div class="collab-dept">Operations</div>
+          <p>Release & support</p>
+        </div>
+      </div>
+      <div class="collab-features" data-animate>
+        <span class="feature-tag">Shared Projects</span>
+        <span class="feature-tag">Comments</span>
+        <span class="feature-tag">Mentions</span>
+        <span class="feature-tag">Task Updates</span>
+        <span class="feature-tag">Attachments</span>
+        <span class="feature-tag">Activity History</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CALENDAR ========== -->
+  <section class="section" id="calendar">
+    <div class="container">
+      <div class="section-header">
+        <h2>Keep Major Dates in View</h2>
+        <p>Milestones, releases, reviews, and organizational events in one calendar.</p>
+      </div>
+      <div class="calendar-filters" data-animate>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Departments</button>
+        <button class="filter-btn">Projects</button>
+        <button class="filter-btn">Teams</button>
+        <button class="filter-btn">Milestones</button>
+        <button class="filter-btn">Deadlines</button>
+      </div>
+      <div class="calendar-view" data-animate>
+        <div class="cal-desktop">
+          <div class="cal-header">
+            <button class="cal-nav">‹</button>
+            <h3>October 2026</h3>
+            <button class="cal-nav">›</button>
+          </div>
+          <div class="cal-grid">
+            <div class="cal-day-name">Mon</div>
+            <div class="cal-day-name">Tue</div>
+            <div class="cal-day-name">Wed</div>
+            <div class="cal-day-name">Thu</div>
+            <div class="cal-day-name">Fri</div>
+            <div class="cal-day-name">Sat</div>
+            <div class="cal-day-name">Sun</div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day"><span>1</span></div>
+            <div class="cal-day"><span>2</span><div class="cal-event milestone">Org Review</div></div>
+            <div class="cal-day"><span>3</span></div>
+            <div class="cal-day"><span>4</span></div>
+            <div class="cal-day"><span>5</span></div>
+            <div class="cal-day"><span>6</span><div class="cal-event meeting">Dept Sync</div></div>
+            <div class="cal-day"><span>7</span></div>
+            <div class="cal-day"><span>8</span><div class="cal-event deadline">Q4 Goals</div></div>
+            <div class="cal-day"><span>9</span></div>
+            <div class="cal-day"><span>10</span></div>
+            <div class="cal-day today"><span>11</span></div>
+            <div class="cal-day"><span>12</span></div>
+            <div class="cal-day"><span>13</span><div class="cal-event release">Platform Release</div></div>
+            <div class="cal-day"><span>14</span></div>
+            <div class="cal-day"><span>15</span></div>
+            <div class="cal-day"><span>16</span></div>
+            <div class="cal-day"><span>17</span></div>
+            <div class="cal-day"><span>18</span></div>
+            <div class="cal-day"><span>19</span></div>
+            <div class="cal-day"><span>20</span></div>
+            <div class="cal-day"><span>21</span></div>
+            <div class="cal-day"><span>22</span></div>
+            <div class="cal-day"><span>23</span></div>
+            <div class="cal-day"><span>24</span></div>
+            <div class="cal-day"><span>25</span></div>
+            <div class="cal-day"><span>26</span></div>
+            <div class="cal-day"><span>27</span></div>
+            <div class="cal-day"><span>28</span></div>
+            <div class="cal-day"><span>29</span></div>
+            <div class="cal-day"><span>30</span></div>
+            <div class="cal-day"><span>31</span></div>
+          </div>
+        </div>
+        <div class="cal-mobile">
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 2</div>
+            <div class="agenda-content">
+              <span class="agenda-type milestone">Milestone</span>
+              <h4>Organization Review</h4>
+              <p>Leadership</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 6</div>
+            <div class="agenda-content">
+              <span class="agenda-type meeting">Meeting</span>
+              <h4>Department Sync</h4>
+              <p>All Departments</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 8</div>
+            <div class="agenda-content">
+              <span class="agenda-type deadline">Deadline</span>
+              <h4>Q4 Goals Finalization</h4>
+              <p>Organization</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 13</div>
+            <div class="agenda-content">
+              <span class="agenda-type release">Release</span>
+              <h4>Platform Release</h4>
+              <p>Engineering + Ops</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOTIFICATIONS ========== -->
+  <section class="section section-alt" id="notifications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Stay Connected to Important Changes</h2>
+        <p>Organization-level alerts so leadership never misses critical updates.</p>
+      </div>
+      <div class="notif-grid">
+        <div class="notif-list" data-animate>
+          <div class="notif-item success">
+            <span class="notif-icon">✓</span>
+            <div>
+              <strong>Project milestone completed</strong>
+              <p>Website Platform · Design phase done</p>
+            </div>
+          </div>
+          <div class="notif-item warning">
+            <span class="notif-icon">⚠</span>
+            <div>
+              <strong>Project deadline approaching</strong>
+              <p>Mobile App · Due in 5 days</p>
+            </div>
+          </div>
+          <div class="notif-item warning">
+            <span class="notif-icon">⚠</span>
+            <div>
+              <strong>Engineering workload increased</strong>
+              <p>92% capacity across department</p>
+            </div>
+          </div>
+          <div class="notif-item success">
+            <span class="notif-icon">✓</span>
+            <div>
+              <strong>New team created</strong>
+              <p>Research team under Product</p>
+            </div>
+          </div>
+          <div class="notif-item mention">
+            <span class="notif-icon">💬</span>
+            <div>
+              <strong>You were mentioned in a project</strong>
+              <p>Automation · Operations</p>
+            </div>
+          </div>
+          <div class="notif-item success">
+            <span class="notif-icon">✓</span>
+            <div>
+              <strong>Department goal updated</strong>
+              <p>Engineering · Reduce release delays</p>
+            </div>
+          </div>
+        </div>
+        <div class="notif-categories" data-animate>
+          <h4>Categories</h4>
+          <ul>
+            <li>Organization</li>
+            <li>Departments</li>
+            <li>Teams</li>
+            <li>Projects</li>
+            <li>Deadlines</li>
+            <li>Mentions</li>
+            <li>System</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GOALS & ALIGNMENT ========== -->
+  <section class="section" id="goals">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect Organizational Goals to Everyday Work</h2>
+        <p>Cascade strategy from business goals all the way down to individual tasks.</p>
+      </div>
+      <div class="goals-hierarchy" data-animate>
+        <div class="goal-level org">
+          <span class="goal-type">Organization Goal</span>
+          <h3>Improve Product Delivery</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-level dept">
+          <span class="goal-type">Department Goal</span>
+          <h3>Reduce Release Delays</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-level team">
+          <span class="goal-type">Team Goal</span>
+          <h3>Release Automation</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-level project">
+          <span class="goal-type">Milestone</span>
+          <h3>CI/CD Implementation</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-tasks">
+          <div class="goal-task">Build Pipeline</div>
+          <div class="goal-task">Test Pipeline</div>
+          <div class="goal-task">Deployment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATIONAL PERFORMANCE ========== -->
+  <section class="section section-alt" id="performance">
+    <div class="container">
+      <div class="section-header">
+        <h2>Understand Organizational Progress</h2>
+        <p>Key performance indicators that show how the organization is delivering.</p>
+      </div>
+      <div class="perf-bars" data-animate>
+        <div class="perf-item">
+          <div class="perf-label"><span>Overall Progress</span><span>84%</span></div>
+          <div class="progress-bar large"><div class="progress-fill" style="--target: 84%"></div></div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label"><span>Project Delivery</span><span>88%</span></div>
+          <div class="progress-bar large"><div class="progress-fill" style="--target: 88%"></div></div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label"><span>Task Completion</span><span>86%</span></div>
+          <div class="progress-bar large"><div class="progress-fill" style="--target: 86%"></div></div>
+        </div>
+        <div class="perf-item">
+          <div class="perf-label"><span>On-Time Delivery</span><span>91%</span></div>
+          <div class="progress-bar large"><div class="progress-fill" style="--target: 91%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REPORTS & ANALYTICS ========== -->
+  <section class="section" id="reports">
+    <div class="container">
+      <div class="section-header">
+        <h2>Turn Organization Activity Into Actionable Insights</h2>
+        <p>Comprehensive reports spanning departments, teams, projects, and progress.</p>
+      </div>
+      <div class="reports-structure" data-animate>
+        <div class="report-tree">
+          <div class="rt-root">Organization Reports</div>
+          <div class="rt-children">
+            <span>Department Reports</span>
+            <span>Team Reports</span>
+            <span>Project Reports</span>
+            <span>Task Reports</span>
+            <span>Workload Reports</span>
+            <span>Progress Reports</span>
+          </div>
+        </div>
+      </div>
+      <div class="reports-dashboard" data-animate>
+        <div class="report-card">
+          <h4>Department Performance</h4>
+          <div class="report-bars">
+            <div class="rb-row"><span>Engineering</span><div class="rb"><div style="--w:92%"></div></div><span>92%</span></div>
+            <div class="rb-row"><span>QA</span><div class="rb"><div style="--w:87%"></div></div><span>87%</span></div>
+            <div class="rb-row"><span>Product</span><div class="rb"><div style="--w:89%"></div></div><span>89%</span></div>
+            <div class="rb-row"><span>Design</span><div class="rb"><div style="--w:82%"></div></div><span>82%</span></div>
+          </div>
+        </div>
+        <div class="report-card">
+          <h4>Export Options</h4>
+          <div class="export-opts">
+            <span class="export-btn">PDF</span>
+            <span class="export-btn">Excel</span>
+            <span class="export-btn">CSV</span>
+          </div>
+          <div class="report-filters">
+            <span>Date Range</span>
+            <span>Department</span>
+            <span>Team</span>
+            <span>Project</span>
+            <span>Status</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GOVERNANCE ========== -->
+  <section class="section section-alt" id="governance">
+    <div class="container">
+      <div class="section-header">
+        <h2>Build Visibility Across Your Organization</h2>
+        <p>Clear answers to the questions that matter for governance and accountability.</p>
+      </div>
+      <div class="gov-flow" data-animate>
+        <div class="gov-step">
+          <span class="gov-num">1</span>
+          <h4>Who can access what?</h4>
+          <p>Roles & permissions control visibility</p>
+        </div>
+        <div class="gov-step">
+          <span class="gov-num">2</span>
+          <h4>Which teams own the work?</h4>
+          <p>Clear ownership at every level</p>
+        </div>
+        <div class="gov-step">
+          <span class="gov-num">3</span>
+          <h4>Where is the work happening?</h4>
+          <p>Department & project visibility</p>
+        </div>
+        <div class="gov-step">
+          <span class="gov-num">4</span>
+          <h4>What is progressing?</h4>
+          <p>Real-time status & milestones</p>
+        </div>
+        <div class="gov-step">
+          <span class="gov-num">5</span>
+          <h4>What needs attention?</h4>
+          <p>Risks, blockers & overload signals</p>
+        </div>
+      </div>
+      <div class="gov-topics" data-animate>
+        <span class="topic-tag">Roles</span>
+        <span class="topic-tag">Permissions</span>
+        <span class="topic-tag">Ownership</span>
+        <span class="topic-tag">Activity Visibility</span>
+        <span class="topic-tag">Project Access</span>
+        <span class="topic-tag">Department Access</span>
+        <span class="topic-tag">Reporting Visibility</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ADMINISTRATION ========== -->
+  <section class="section" id="administration">
+    <div class="container">
+      <div class="section-header">
+        <h2>Centralized Organization Administration</h2>
+        <p>A conceptual view of how organization settings and structure can be managed.</p>
+      </div>
+      <div class="admin-console" data-animate>
+        <div class="admin-header">Organization Settings</div>
+        <div class="admin-list">
+          <div class="admin-item">Organization Profile</div>
+          <div class="admin-item">Departments</div>
+          <div class="admin-item">Teams</div>
+          <div class="admin-item">Employees</div>
+          <div class="admin-item">Roles & Permissions</div>
+          <div class="admin-item">Projects</div>
+          <div class="admin-item">Workflows</div>
+          <div class="admin-item">Notifications</div>
+          <div class="admin-item">Reports</div>
+          <div class="admin-item">Settings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GROWTH ========== -->
+  <section class="section section-alt" id="growth">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built to Grow With Your Organization</h2>
+        <p>A structure that scales from a single team to a multi-department organization.</p>
+      </div>
+      <div class="growth-path" data-animate>
+        <div class="growth-step">
+          <span class="growth-num">1</span>
+          <h4>Small Team</h4>
+        </div>
+        <div class="growth-arrow">→</div>
+        <div class="growth-step">
+          <span class="growth-num">2</span>
+          <h4>Multiple Teams</h4>
+        </div>
+        <div class="growth-arrow">→</div>
+        <div class="growth-step">
+          <span class="growth-num">3</span>
+          <h4>Multiple Departments</h4>
+        </div>
+        <div class="growth-arrow">→</div>
+        <div class="growth-step">
+          <span class="growth-num">4</span>
+          <h4>Growing Organization</h4>
+        </div>
+        <div class="growth-arrow">→</div>
+        <div class="growth-step highlight">
+          <span class="growth-num">5</span>
+          <h4>Organization-Wide Workspace</h4>
+        </div>
+      </div>
+      <div class="growth-tags" data-animate>
+        <span class="tag">Multiple Teams</span>
+        <span class="tag">Multiple Departments</span>
+        <span class="tag">Multiple Projects</span>
+        <span class="tag">Different Roles</span>
+        <span class="tag">Permission Structures</span>
+        <span class="tag">Organization-Wide Reporting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATION WORKFLOW ========== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <h2>From Organization Goals to Execution</h2>
+        <p>A clear loop that keeps strategy connected to delivery across the organization.</p>
+      </div>
+      <div class="workflow-steps" data-animate>
+        <div class="wf-step"><span class="wf-num">1</span><h4>Set Organization Goals</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">2</span><h4>Align Departments</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">3</span><h4>Create Projects</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">4</span><h4>Create Milestones</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">5</span><h4>Assign Teams</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">6</span><h4>Assign Tasks</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">7</span><h4>Track Progress</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">8</span><h4>Review Analytics</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">9</span><h4>Improve & Deliver</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section section-alt" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2>One Connected System for the Organization</h2>
+        <p>Everything organizations need to coordinate work at scale.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">👁</div>
+          <h3>Organization Visibility</h3>
+          <p>Understand work across every department from a single workspace.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">🏗</div>
+          <h3>Structured Management</h3>
+          <p>Organize teams, roles, projects, and responsibilities with clarity.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">🎯</div>
+          <h3>Better Alignment</h3>
+          <p>Connect organizational goals directly to day-to-day execution.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">🔗</div>
+          <h3>Cross-Team Collaboration</h3>
+          <p>Keep departments connected even when work crosses boundaries.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">📊</div>
+          <h3>Centralized Insights</h3>
+          <p>Bring reports and analytics together for leadership decisions.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">📈</div>
+          <h3>Scalable Structure</h3>
+          <p>Create a foundation that grows with your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything organizations need to know about Task Flow.</p>
+      </div>
+      <div class="faq-list" data-animate>
+        <div class="faq-item">
+          <button class="faq-question">
+            What can an organization manage with Task Flow?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Organizations can manage departments, teams, people, roles, projects, goals, workload, collaboration, reporting, and governance—all from one connected workspace.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can Task Flow support multiple departments?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Task Flow is designed to support multiple departments, each with their own teams, projects, and managers, while still providing organization-wide visibility.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations create multiple teams?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Organizations can create as many teams as needed under different departments, each with their own Team Lead, members, and active projects.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations define roles and permissions?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Role and permission management lets organizations control who can view, create, edit, and assign across tasks, projects, reports, and administrative settings.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers and Team Leads have different access?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The role hierarchy (Organization Admin → Manager → Team Lead → Employee) supports different levels of access appropriate to each role.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations monitor projects across departments?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The organization-wide project portfolio shows every important project with department and status filters so leadership can monitor progress across the entire organization.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations view organization-wide reports?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Reports cover department performance, team progress, project delivery, workload, and overall progress—with export options for PDF, Excel, and CSV.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can departments collaborate on the same project?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Cross-department collaboration features include shared projects, comments, mentions, task updates, attachments, and activity history so work stays connected.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations manage employees centrally?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. People & Role Management provides a central view of employees, their departments, roles, and place in the organizational hierarchy.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can organizations configure notifications and workflows?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Organizations can configure notification categories and conceptual workflows that connect goals to projects, milestones, teams, and tasks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <h2>Bring Your Organization's Work Together</h2>
+      <p>Connect people, teams, projects, and goals in one workspace built for organized execution.</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+        <a href="index.html#features" class="btn-secondary btn-lg">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer home-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#home" class="brand footer-logo">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z" />
+              </svg>
+            </span>
+            <span>Task<span>Flow</span></span>
+          </a>
+          <p>Manage work.<br>Empower teams.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="GitHub">◉</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="task-management.html">Features</a>
+          <a href="task-management.html">Task Management</a>
+          <a href="project-management.html">Projects</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports</a>
+        </div>
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <a href="for-employees.html">For Employees</a>
+          <a href="for-team-leads.html">For Team Leads</a>
+          <a href="for-managers.html">For Managers</a>
+          <a href="for-organizations.html">For Organizations</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="documentation.html">Documents</a>
+          <a href="userguide.html">User Guide</a>
+          <a href="faqs.html">FAQ</a>
+          <a href="helpcenter.html">Help Center</a>
+          <a href="contactsupport.html">Contact Support</a>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contactsupport.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 TaskFlow. All Rights Reserved.</span>
+        <span>Built for modern teams.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10L10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/for-organizations.js"></script>
+</body>
+</html>

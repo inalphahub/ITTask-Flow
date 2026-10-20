@@ -4,23 +4,54 @@
   "use strict";
 
   // ---------- Navbar ----------
-  const navbar = document.getElementById("navbar");
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+  const navbar = document.getElementById("siteHeader");
+  const menuToggle = document.getElementById("mobileMenuBtn");
+  const navLinks = document.getElementById("navMenu");
 
   window.addEventListener("scroll", () => {
     navbar.classList.toggle("scrolled", window.scrollY > 20);
   });
 
   menuToggle?.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.toggle("mobile-open");
+    menuToggle.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  const dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach((dropdown) => {
+    dropdown.querySelector(".dropdown-toggle")?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = dropdown.classList.contains("open");
+      dropdowns.forEach((item) => item.classList.remove("open"));
+      if (!isOpen) dropdown.classList.add("open");
+    });
   });
 
   navLinks?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      menuToggle.classList.remove("active");
-      navLinks.classList.remove("open");
+      menuToggle.classList.remove("open");
+      navLinks.classList.remove("mobile-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown")) {
+      dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
+    }
+  });
+
+  document.querySelectorAll(".login-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+  });
+
+  document.querySelectorAll(".get-started-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      window.location.href = "signup.html";
     });
   });
 

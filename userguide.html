@@ -1,0 +1,2459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#f8f8fc">
+  <meta name="description" content="Learn how to use IT TaskFlow to manage tasks, projects, teams, schedules, reports, and account settings.">
+  <title>User Guide | IT TaskFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/userguide.css">
+  <script src="js/userguide.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="index.html#home" aria-label="TaskFlow home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+        </svg>
+      </span>
+      <span>Task<span class="brand-accent">Flow</span></span>
+    </a>
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle"
+      aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="top-nav" id="topNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="documentation.html">Documentation</a>
+      <a class="active" href="userguide.html">User Guide</a>
+      <a href="login.html">Log in</a>
+      <a class="nav-cta" href="signup.html">Get started <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> IT TASKFLOW LEARNING CENTER</div>
+        <h1>Everything you need<br>to <span>work smarter.</span></h1>
+        <p class="hero-description">
+          Your practical guide to managing tasks, organizing projects,
+          collaborating with your team, and getting more done with IT TaskFlow.
+        </p>
+
+        <form class="guide-search" id="guideSearchForm" role="search">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="guideSearch" type="search"
+            placeholder="Search guides, tasks, projects..."
+            aria-label="Search user guides" autocomplete="off">
+          <button type="submit">Search <span>→</span></button>
+        </form>
+
+        <div class="search-suggestions">
+          <span>Popular:</span>
+          <button type="button" data-search-term="create a task">Create a task</button>
+          <button type="button" data-search-term="assign team members">Assign team members</button>
+          <button type="button" data-search-term="notifications">Notifications</button>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Illustration of an organized task workspace">
+        <div class="visual-window">
+          <div class="window-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>My workspace</span>
+            <span class="window-status"><i></i> Organized</span>
+          </div>
+          <div class="mini-dashboard">
+            <div class="mini-sidebar">
+              <span class="mini-logo">TF</span>
+              <span class="mini-nav selected">▦</span>
+              <span class="mini-nav">✓</span>
+              <span class="mini-nav">▤</span>
+              <span class="mini-nav">◷</span>
+            </div>
+            <div class="mini-main">
+              <div class="mini-heading">
+                <div><small>MONDAY, YOUR WORKSPACE</small><strong>Good things are in progress.</strong></div>
+                <span class="mini-avatar">JD</span>
+              </div>
+              <div class="mini-stats">
+                <div><small>My tasks</small><strong>12</strong><span class="stat-purple">In progress</span></div>
+                <div><small>Completed</small><strong>08</strong><span class="stat-green">On track</span></div>
+              </div>
+              <div class="mini-task-heading"><strong>Today's priorities</strong><span>View all ↗</span></div>
+              <div class="mini-task"><i class="task-check checked">✓</i><span>Review project requirements</span><b>Done</b></div>
+              <div class="mini-task"><i class="task-check"></i><span>Prepare testing checklist</span><b class="task-progress">Active</b></div>
+              <div class="mini-task"><i class="task-check"></i><span>Team status update</span><b class="task-upcoming">Next</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-note note-top"><span>✦</span><div><strong>Stay focused</strong><small>Know what comes next</small></div></div>
+        <div class="floating-note note-bottom"><span class="note-check">✓</span><div><strong>Task completed</strong><small>Progress feels good.</small></div></div>
+      </div>
+
+      <div class="hero-bottom">
+        <div><span class="hero-bottom-icon">◎</span><span><strong>Easy to follow</strong><small>Step-by-step instructions</small></span></div>
+        <div><span class="hero-bottom-icon">◇</span><span><strong>Made for teams</strong><small>Work better together</small></span></div>
+        <div><span class="hero-bottom-icon">↗</span><span><strong>Learn at your pace</strong><small>Come back anytime</small></span></div>
+      </div>
+    </section>
+
+    <section class="guide-layout section-shell">
+      <aside class="guide-sidebar" id="guideSidebar" aria-label="Guide categories">
+        <div class="sidebar-heading">
+          <span class="sidebar-kicker">LEARNING PATH</span>
+          <h2>Explore guides</h2>
+          <p>Find the right guide for your next step.</p>
+        </div>
+
+        <button class="category-link active" type="button" data-category="all">
+          <span class="category-icon">▦</span><span>All guides</span><span class="category-count">07</span>
+        </button>
+        <div class="sidebar-divider"></div>
+        <span class="sidebar-label">YOUR WORKSPACE</span>
+        <button class="category-link" type="button" data-category="getting-started"><span class="category-icon">✳</span><span>Getting started</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="workspace"><span class="category-icon">▧</span><span>Your workspace</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="tasks"><span class="category-icon">✓</span><span>Task management</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="projects"><span class="category-icon">◫</span><span>Projects & teams</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="calendar"><span class="category-icon">▦</span><span>Calendar & alerts</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="reports"><span class="category-icon">▥</span><span>Reports & analytics</span><span class="category-arrow">↗</span></button>
+        <button class="category-link" type="button" data-category="security"><span class="category-icon">◇</span><span>Account & security</span><span class="category-arrow">↗</span></button>
+
+        <div class="sidebar-help">
+          <div class="help-spark">✦</div>
+          <strong>Need a little help?</strong>
+          <p>Find answers to common questions in our help center.</p>
+          <a href="helpcenter.html">Visit Help Center <span>→</span></a>
+        </div>
+      </aside>
+
+      <div class="guide-content">
+        <div class="content-heading">
+          <div>
+            <div class="section-kicker">YOUR GUIDEBOOK</div>
+            <h2>Learn the essentials.</h2>
+            <p>Clear explanations to help you get comfortable with your workspace.</p>
+          </div>
+          <span class="guide-count" id="guideCount">07 guides</span>
+        </div>
+
+        <div class="active-filter" id="activeFilter" hidden>
+          <span id="activeFilterText">Showing all guides</span>
+          <button type="button" id="clearFilter">Clear filters ×</button>
+        </div>
+
+        <div class="no-results" id="noResults" hidden>
+          <span>⌕</span>
+          <h3>No guides found</h3>
+          <p>Try another keyword or clear your filters to see all guides.</p>
+          <button type="button" id="resetSearch">Show all guides</button>
+        </div>
+
+        <div class="guide-list" id="guideList">
+
+          <article class="guide-card featured" id="guide-getting-started"
+            data-category="getting-started"
+            data-search="getting started first login account sign up sign in profile onboarding basics navigate">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-start">
+                <div class="start-orbit orbit-one"></div><div class="start-orbit orbit-two"></div>
+                <div class="start-center">✦</div><span class="start-star">✧</span><span class="start-spark">+</span>
+              </div>
+              <div class="guide-meta"><span class="guide-tag tag-purple">START HERE</span><span class="reading-time">5 min read</span></div>
+              <h3>Getting started with IT TaskFlow</h3>
+              <p class="card-intro">Build confidence with the basics before you dive into your daily work.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>IT TaskFlow is designed to help people organize work in one place. Depending on your assigned role and access permissions, you may be able to view tasks, participate in projects, collaborate with teammates, and track progress from your workspace.</p>
+              <p>Start by signing in with the account details provided to you. Take a moment to explore the navigation, your profile, and the areas available to your role. Your workspace may look different from another employee's workspace because access can depend on responsibilities and permissions.</p>
+              <p>Once you understand where your main tools are located, choose one simple activity to practise, such as reviewing a task or checking its due date. Learning the interface gradually makes it easier to use the platform confidently without missing important work.</p>
+              <div class="guide-steps"><strong>Your first steps</strong><ol><li>Open the application and sign in.</li><li>Review your profile and available navigation.</li><li>Open a task or project you have access to.</li><li>Check the task status, owner, and due date.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>Only use the account assigned to you. If a page or feature is missing, ask your organization administrator to check your access.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="true"><span>Hide guide details</span><span class="expand-arrow">↑</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-workspace" data-category="workspace"
+            data-search="workspace navigation profile dashboard notifications preferences home overview">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-workspace"><div class="workspace-tile tile-a">▦</div><div class="workspace-tile tile-b">✓</div><div class="workspace-tile tile-c">◷</div><div class="workspace-line"></div></div>
+              <div class="guide-meta"><span class="guide-tag tag-blue">FUNDAMENTALS</span><span class="reading-time">4 min read</span></div>
+              <h3>Understanding your workspace</h3>
+              <p class="card-intro">Know where to find your work, profile settings, and the tools available to you.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>Your workspace is the starting point for the activities available to your account. Depending on the current application configuration, it may provide shortcuts to tasks, projects, notifications, calendars, reports, or team-related information.</p>
+              <p>Use the main navigation to move between available areas. Some sections may only be visible to managers or administrators, so a missing menu item does not necessarily mean something is broken. Your role and your organization's setup determine which tools you can access.</p>
+              <p>Keep your profile details accurate and review notifications regularly. A quick check at the beginning of your workday can help you identify new assignments, approaching deadlines, and updates that require your attention.</p>
+              <div class="guide-steps"><strong>Get familiar with your workspace</strong><ol><li>Locate the main navigation menu.</li><li>Open your profile and review its details.</li><li>Check your assigned tasks and notifications.</li><li>Bookmark or remember the areas you use most.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>Use the same navigation consistently so you can return to frequently used sections more quickly.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-tasks" data-category="tasks"
+            data-search="task management create task assignment assign employee priority due date status checklist comments attachments">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-tasks"><div class="task-paper"><span>✓</span><i></i><i></i><i></i></div><div class="task-badge">+1</div><div class="task-pencil">↗</div></div>
+              <div class="guide-meta"><span class="guide-tag tag-green">DAILY WORK</span><span class="reading-time">6 min read</span></div>
+              <h3>Managing tasks from start to finish</h3>
+              <p class="card-intro">Learn how tasks are organized, assigned, updated, and completed.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>A task represents a specific piece of work that needs an outcome. A useful task description explains what needs to be done, why it matters, and what completion should look like. Clear details reduce confusion and make it easier for the assigned person to begin.</p>
+              <p>When creating or assigning a task, provide an informative title, relevant instructions, an appropriate priority, and a realistic due date where those fields are available. Assign the task to the correct team member and verify that the person has the necessary context and access before work begins.</p>
+              <p>As work progresses, update the task status to reflect its real condition. Add comments when a decision, blocker, or handover needs to be recorded. Before marking a task complete, verify that the expected work is finished and communicate any remaining follow-up actions.</p>
+              <div class="guide-steps"><strong>Recommended task workflow</strong><ol><li>Create a task with a clear title and description.</li><li>Assign the responsible team member.</li><li>Set priority and due date when applicable.</li><li>Track progress and record important updates.</li><li>Confirm completion and close the task.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>Use one task for one clear outcome. Break large pieces of work into smaller tasks that can be tracked independently.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-projects" data-category="projects"
+            data-search="project management team collaboration team members roles responsibilities milestones project tasks">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-projects"><div class="project-node node-one">P</div><div class="project-node node-two">✓</div><div class="project-node node-three">↗</div><div class="project-connector connector-one"></div><div class="project-connector connector-two"></div></div>
+              <div class="guide-meta"><span class="guide-tag tag-orange">TEAMWORK</span><span class="reading-time">5 min read</span></div>
+              <h3>Projects and team collaboration</h3>
+              <p class="card-intro">Connect related work and make team responsibilities easier to understand.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>A project groups related activities around a shared goal. Instead of treating every task as unrelated work, a project helps team members understand how individual responsibilities contribute to a larger outcome.</p>
+              <p>Project visibility and editing permissions may depend on the role assigned by your organization. Project leads and authorized managers can coordinate responsibilities, while team members focus on the tasks available to them. Check project details before creating duplicate work or changing shared information.</p>
+              <p>Good collaboration depends on timely updates and clear communication. Record decisions in the appropriate task or project discussion, flag dependencies early, and tell the relevant person when a deadline or requirement changes. This creates a useful history for teammates who need to understand the current status.</p>
+              <div class="guide-steps"><strong>Work effectively with your team</strong><ol><li>Open the project you are authorized to access.</li><li>Review its goals and related tasks.</li><li>Confirm owners and responsibilities.</li><li>Share progress and raise blockers early.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>Keep project updates factual and concise. Explain what changed, what is blocked, and what action is needed next.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-calendar" data-category="calendar"
+            data-search="calendar schedule deadlines alerts notifications reminders due dates upcoming tasks">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-calendar"><div class="calendar-page"><div class="calendar-head"></div><div class="calendar-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="calendar-spark">✦</span></div>
+              <div class="guide-meta"><span class="guide-tag tag-pink">STAY ON TRACK</span><span class="reading-time">4 min read</span></div>
+              <h3>Calendar, deadlines, and notifications</h3>
+              <p class="card-intro">Keep upcoming responsibilities visible and avoid missing important updates.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>Due dates and calendar views help you understand when work needs attention. When a calendar is available, use it to review upcoming deadlines and identify days when several responsibilities may overlap.</p>
+              <p>Notifications can draw your attention to new assignments, comments, status changes, or other activity supported by your application. Review each notification and open the related task or project to understand the context before taking action.</p>
+              <p>Notifications are useful reminders, but they should not replace your own planning. Check important deadlines directly, keep task dates current, and contact the task owner if a date appears incorrect. Available notification options may vary depending on the features enabled for your account.</p>
+              <div class="guide-steps"><strong>Build a reliable routine</strong><ol><li>Review upcoming due dates at the start of your day.</li><li>Open new notifications and read their context.</li><li>Update dates when an approved change occurs.</li><li>Review your next day's priorities before signing off.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>When a deadline changes, communicate the reason and update the relevant task if you have permission to do so.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-reports" data-category="reports"
+            data-search="reports analytics progress performance workload task completion project status insights">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-reports"><div class="chart-axis"></div><div class="chart-bar bar-one"></div><div class="chart-bar bar-two"></div><div class="chart-bar bar-three"></div><div class="chart-bar bar-four"></div><div class="chart-line"></div></div>
+              <div class="guide-meta"><span class="guide-tag tag-blue">INSIGHTS</span><span class="reading-time">5 min read</span></div>
+              <h3>Reports and progress tracking</h3>
+              <p class="card-intro">Understand progress indicators and use available reporting tools responsibly.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>Reports and analytics, when enabled, help authorized users understand the state of work across tasks or projects. Depending on the available features, reports may summarize completion, outstanding work, deadlines, or other progress indicators.</p>
+              <p>Read each metric in context. A high number of completed tasks does not necessarily mean a project is on schedule, and a list of overdue items may need to be considered alongside dependencies or recently changed requirements. Confirm the reporting period and filters before drawing conclusions.</p>
+              <p>Use reporting information to identify patterns and decide where follow-up is needed. Managers may use the available information to coordinate workload and resolve blockers, while team members can use their own task information to plan the next steps. Access to reports may be restricted by role.</p>
+              <div class="guide-steps"><strong>Read reports with confidence</strong><ol><li>Open a report available to your role.</li><li>Check its date range and filters.</li><li>Review completed, active, and delayed work.</li><li>Confirm unusual results before acting on them.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>Treat metrics as a starting point for investigation, not the full explanation of a team's performance.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+
+          <article class="guide-card" id="guide-security" data-category="security"
+            data-search="account security password login privacy permissions access profile sign out authentication">
+            <div class="guide-card-top">
+              <div class="guide-illustration illustration-security"><div class="security-shield">✓</div><span class="security-dot dot-one"></span><span class="security-dot dot-two"></span><span class="security-dot dot-three"></span><div class="security-ring"></div></div>
+              <div class="guide-meta"><span class="guide-tag tag-green">ACCOUNT CARE</span><span class="reading-time">4 min read</span></div>
+              <h3>Account settings and security</h3>
+              <p class="card-intro">Protect your account and understand how access permissions work.</p>
+            </div>
+            <div class="guide-card-body">
+              <p>Your account provides access to work information and features assigned to you. Keep your profile information accurate and use only the account provided for your role. If you believe your account details are incorrect, contact the appropriate administrator instead of creating an unapproved duplicate account.</p>
+              <p>Use a strong, unique password and never share it with teammates. Sign out when using a shared device, avoid leaving sensitive work visible to others, and follow your organization's security policies. If you suspect unauthorized access, report it promptly through the approved support channel.</p>
+              <p>Access permissions help ensure people can view and change only the information appropriate to their responsibilities. If you need a feature for legitimate work, request access from your manager or administrator and explain why it is required. Do not try to bypass access controls or use another person's credentials.</p>
+              <div class="guide-steps"><strong>Keep your account protected</strong><ol><li>Use a strong, unique password.</li><li>Keep your login details private.</li><li>Sign out on shared or public devices.</li><li>Report suspicious activity promptly.</li></ol></div>
+              <div class="guide-tip"><span>✦</span><div><strong>Helpful tip</strong><p>If your organization supports multi-factor authentication, enable and use it according to your administrator's instructions.</p></div></div>
+            </div>
+            <button class="guide-expand" type="button" aria-expanded="false"><span>Explore this guide</span><span class="expand-arrow">↓</span></button>
+          </article>
+        </div>
+
+        <section class="recommended-section">
+          <div class="recommended-heading"><div><span class="section-kicker">KEEP LEARNING</span><h2>Continue your journey.</h2></div><span class="recommended-star">✦</span></div>
+          <div class="recommended-grid">
+            <a class="recommended-card" href="documentation.html"><span class="recommended-icon icon-doc">▤</span><span><strong>Documentation</strong><small>Explore platform information and technical references.</small></span><span class="recommended-arrow">↗</span></a>
+            <a class="recommended-card" href="faq.html"><span class="recommended-icon icon-faq">?</span><span><strong>Frequently asked questions</strong><small>Find answers to common questions.</small></span><span class="recommended-arrow">↗</span></a>
+            <a class="recommended-card" href="helpcenter.html"><span class="recommended-icon icon-help">✳</span><span><strong>Help Center</strong><small>Get guidance when something doesn't work as expected.</small></span><span class="recommended-arrow">↗</span></a>
+          </div>
+        </section>
+
+        <section class="support-banner">
+          <div class="support-decoration">✳</div>
+          <div><span class="section-kicker">WE'RE HERE TO HELP</span><h2>Still have a question?</h2><p>Find more guidance or get in touch through the support options available to you.</p></div>
+          <a href="helpcenter.html" class="support-button">Explore Help Center <span>→</span></a>
+        </section>
+
+        <!-- =====================================================
+     IT TASKFLOW USER GUIDE
+     SECTION 1: ORGANIZATION & WORKSPACE SETUP
+     Add inside the existing User Guide content container.
+====================================================== -->
+
+<section
+    class="ug-organization-section"
+    id="ug-organization-setup"
+    aria-labelledby="ug-organization-title"
+>
+    <div class="ug-organization-heading">
+        <span class="ug-organization-eyebrow">
+            USER GUIDE · ORGANIZATION
+        </span>
+
+        <h2 id="ug-organization-title">
+            Organization &amp; Workspace Setup
+        </h2>
+
+        <p>
+            Learn how IT TaskFlow organizes your company,
+            workspaces, team members, and access permissions.
+        </p>
+    </div>
+
+    <div class="ug-organization-grid">
+
+        <article class="ug-organization-card">
+            <span class="ug-organization-number">01</span>
+            <h3>Set Up Your Organization</h3>
+            <p>
+                Understand the organization-level settings that
+                establish your company's workspace in IT TaskFlow.
+            </p>
+            <ul>
+                <li>Organization profile and basic information</li>
+                <li>Workspace configuration</li>
+                <li>Organization-level administration</li>
+            </ul>
+        </article>
+
+        <article class="ug-organization-card">
+            <span class="ug-organization-number">02</span>
+            <h3>Manage Team Members</h3>
+            <p>
+                Learn how authorized administrators can organize
+                team members and their responsibilities.
+            </p>
+            <ul>
+                <li>Employee onboarding</li>
+                <li>Team and department organization</li>
+                <li>Role assignment where supported</li>
+            </ul>
+        </article>
+
+        <article class="ug-organization-card">
+            <span class="ug-organization-number">03</span>
+            <h3>Understand Access Permissions</h3>
+            <p>
+                Understand why different users may see different
+                projects, tools, and management options.
+            </p>
+            <ul>
+                <li>Role-based access</li>
+                <li>Project-specific visibility</li>
+                <li>Administrator-controlled permissions</li>
+            </ul>
+        </article>
+
+        <article class="ug-organization-card">
+            <span class="ug-organization-number">04</span>
+            <h3>Navigate Your Workspace</h3>
+            <p>
+                Learn how the workspace and project navigation
+                help users find the work relevant to their roles.
+            </p>
+            <ul>
+                <li>Workspace and project navigation</li>
+                <li>Project-specific modules</li>
+                <li>Finding assigned work</li>
+            </ul>
+        </article>
+
+    </div>
+
+    <div class="ug-organization-note">
+        <span class="ug-organization-note-icon"
+              aria-hidden="true">i</span>
+
+        <p>
+            <strong>Note:</strong>
+            Available settings and actions depend on your role
+            and the functionality currently implemented in IT TaskFlow.
+        </p>
+    </div>
+</section>
+
+<!-- =====================================================
+     IT TASKFLOW USER GUIDE
+     SECTION 2: PROJECT WORKSPACE & ACCESS
+     Add inside the existing main content container.
+====================================================== -->
+
+<section
+    class="ug-project-workspace-section"
+    id="ug-project-workspace"
+    aria-labelledby="ug-project-workspace-title"
+>
+    <div class="ug-project-workspace-heading">
+        <span class="ug-project-workspace-eyebrow">
+            USER GUIDE · PROJECTS
+        </span>
+
+        <h2 id="ug-project-workspace-title">
+            Project Workspace &amp; Access
+        </h2>
+
+        <p>
+            Learn how IT TaskFlow organizes projects, displays project-specific modules, and helps team members focus on the work relevant to their responsibilities.
+        </p>
+    </div>
+
+    <div class="ug-project-workspace-grid">
+
+        <!-- Card 1 -->
+        <article class="ug-project-workspace-card">
+            <span class="ug-project-workspace-number">01</span>
+
+            <h3>Understand Your Projects</h3>
+
+            <p>
+                Projects group related work, team members, tasks,
+                and project activities in one workspace.
+            </p>
+
+            <ul>
+                <li>View projects you are authorized to access</li>
+                <li>Open a project to explore its workspace</li>
+                <li>Keep work for different projects organized</li>
+            </ul>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="ug-project-workspace-card">
+            <span class="ug-project-workspace-number">02</span>
+
+            <h3>Navigate Project Modules</h3>
+
+            <p>
+                When you select a project, its relevant modules
+                should appear in the project navigation area.
+            </p>
+
+            <ul>
+                <li>Access modules associated with the selected project</li>
+                <li>Navigate between available project tools</li>
+                <li>Avoid unrelated modules from other projects</li>
+            </ul>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="ug-project-workspace-card">
+            <span class="ug-project-workspace-number">03</span>
+
+            <h3>Understand Employee Project Access</h3>
+
+            <p>
+                Employees should see the projects they have been
+                granted access to, rather than every company project.
+            </p>
+
+            <ul>
+                <li>View authorized projects</li>
+                <li>Find tasks assigned to your account</li>
+                <li>Open only the project tools permitted for your role</li>
+            </ul>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="ug-project-workspace-card">
+            <span class="ug-project-workspace-number">04</span>
+
+            <h3>Understand Manager Access</h3>
+
+            <p>
+                Managers and project leads use the projects
+                available to them to coordinate work and team activity.
+            </p>
+
+            <ul>
+                <li>Review projects assigned to your responsibility</li>
+                <li>Access project-management tools where authorized</li>
+                <li>Coordinate tasks according to assigned permissions</li>
+            </ul>
+        </article>
+
+    </div>
+
+    <div class="ug-project-workspace-flow">
+        <div class="ug-project-workspace-flow-heading">
+            <h3>How Project Navigation Works</h3>
+            <p>
+                Follow the intended workflow for finding your work.
+            </p>
+        </div>
+
+        <ol class="ug-project-workspace-steps">
+            <li>
+                <span class="ug-project-workspace-step-number">1</span>
+                <div>
+                    <strong>Sign in</strong>
+                    <p>Access IT TaskFlow using your account.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="ug-project-workspace-step-number">2</span>
+                <div>
+                    <strong>Open an authorized project</strong>
+                    <p>Select a project available to your account.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="ug-project-workspace-step-number">3</span>
+                <div>
+                    <strong>Explore its modules</strong>
+                    <p>Use the project navigation to find relevant tools.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="ug-project-workspace-step-number">4</span>
+                <div>
+                    <strong>Work on your assigned tasks</strong>
+                    <p>Open your tasks and follow their status and deadlines.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="ug-project-workspace-note">
+        <span
+            class="ug-project-workspace-note-icon"
+            aria-hidden="true"
+        >i</span>
+
+        <p>
+            <strong>Important:</strong>
+            This section describes the intended IT TaskFlow workflow.
+            Project filtering and permission enforcement must be
+            implemented and tested in the application before they
+            can be described as fully operational.
+        </p>
+    </div>
+</section>
+
+
+
+<!-- =====================================================
+     IT TASKFLOW USER GUIDE
+     SECTION 3: TASK ASSIGNMENT & LIFECYCLE
+====================================================== -->
+
+<section
+    class="ug-task-lifecycle-section"
+    id="ug-task-lifecycle"
+    aria-labelledby="ug-task-lifecycle-title"
+>
+    <div class="ug-task-lifecycle-heading">
+        <span class="ug-task-lifecycle-eyebrow">
+            USER GUIDE · TASK MANAGEMENT
+        </span>
+
+        <h2 id="ug-task-lifecycle-title">
+            Task Assignment &amp; Lifecycle
+        </h2>
+
+        <p>
+            Learn how tasks move from creation to completion,
+            how responsibilities are assigned, and how team
+            members communicate progress in IT TaskFlow.
+        </p>
+    </div>
+
+    <!-- Task lifecycle overview -->
+    <div class="ug-task-lifecycle-panel">
+        <div class="ug-task-lifecycle-panel-heading">
+            <div>
+                <span class="ug-task-lifecycle-label">THE WORKFLOW</span>
+                <h3>From task creation to completion</h3>
+            </div>
+        </div>
+
+        <ol class="ug-task-lifecycle-flow">
+            <li class="ug-task-lifecycle-step">
+                <span class="ug-task-lifecycle-step-number">01</span>
+                <strong>Create</strong>
+                <p>Describe the work and expected outcome.</p>
+            </li>
+
+            <li class="ug-task-lifecycle-step">
+                <span class="ug-task-lifecycle-step-number">02</span>
+                <strong>Assign</strong>
+                <p>Identify the responsible team member.</p>
+            </li>
+
+            <li class="ug-task-lifecycle-step">
+                <span class="ug-task-lifecycle-step-number">03</span>
+                <strong>Progress</strong>
+                <p>Update the status and communicate changes.</p>
+            </li>
+
+            <li class="ug-task-lifecycle-step">
+                <span class="ug-task-lifecycle-step-number">04</span>
+                <strong>Review</strong>
+                <p>Verify the expected work is complete.</p>
+            </li>
+
+            <li class="ug-task-lifecycle-step">
+                <span class="ug-task-lifecycle-step-number">05</span>
+                <strong>Complete</strong>
+                <p>Record the outcome and close the task.</p>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Task creation -->
+    <div class="ug-task-lifecycle-grid">
+
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">01</span>
+            <h3>Create a Clear Task</h3>
+            <p>
+                A task should explain what needs to be done and
+                how the team will recognize successful completion.
+            </p>
+            <ul>
+                <li>Write a specific, meaningful title.</li>
+                <li>Describe the work and expected result.</li>
+                <li>Add a priority and due date where available.</li>
+                <li>Associate the task with the correct project.</li>
+            </ul>
+        </article>
+
+        <!-- Assignment -->
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">02</span>
+            <h3>Assign Responsibility</h3>
+            <p>
+                Assign tasks to the appropriate authorized team
+                member so ownership is clear.
+            </p>
+            <ul>
+                <li>Choose the intended assignee.</li>
+                <li>Confirm the person has the required context.</li>
+                <li>Check project access and responsibilities.</li>
+                <li>Review assignment details before saving.</li>
+            </ul>
+        </article>
+
+        <!-- Progress -->
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">03</span>
+            <h3>Update Task Progress</h3>
+            <p>
+                Keep the task status aligned with the actual
+                state of the work.
+            </p>
+            <ul>
+                <li>Review the current task status.</li>
+                <li>Update progress when work changes.</li>
+                <li>Record relevant comments or decisions.</li>
+                <li>Communicate delays and dependencies early.</li>
+            </ul>
+        </article>
+
+        <!-- Blockers -->
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">04</span>
+            <h3>Handle Blockers and Changes</h3>
+            <p>
+                Explain problems clearly so the right people
+                can coordinate the next action.
+            </p>
+            <ul>
+                <li>Describe the issue or dependency.</li>
+                <li>Explain what action or decision is needed.</li>
+                <li>Notify the appropriate project lead.</li>
+                <li>Update the task when the issue is resolved.</li>
+            </ul>
+        </article>
+
+        <!-- Completion -->
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">05</span>
+            <h3>Review and Complete</h3>
+            <p>
+                Confirm the expected outcome before marking
+                work as complete.
+            </p>
+            <ul>
+                <li>Check the task requirements.</li>
+                <li>Verify the work or required deliverable.</li>
+                <li>Record outstanding follow-up actions.</li>
+                <li>Mark the task complete when appropriate.</li>
+            </ul>
+        </article>
+
+        <!-- Notifications -->
+        <article class="ug-task-lifecycle-card">
+            <span class="ug-task-lifecycle-number">06</span>
+            <h3>Understand Assignment Notifications</h3>
+            <p>
+                Assignment notifications can help team members
+                identify work that needs their attention.
+            </p>
+            <ul>
+                <li>Review notifications when available.</li>
+                <li>Open the related task for full context.</li>
+                <li>Confirm the task and due date.</li>
+                <li>Ask the task owner if details are unclear.</li>
+            </ul>
+        </article>
+
+    </div>
+
+    <!-- Responsibility guidance -->
+    <div class="ug-task-lifecycle-responsibility">
+        <div class="ug-task-lifecycle-responsibility-heading">
+            <span class="ug-task-lifecycle-label">CLEAR OWNERSHIP</span>
+            <h3>Who does what?</h3>
+            <p>
+                Responsibilities depend on the permissions and
+                workflow configured by the organization.
+            </p>
+        </div>
+
+        <div class="ug-task-lifecycle-roles">
+
+            <div class="ug-task-lifecycle-role">
+                <span class="ug-task-lifecycle-role-icon"
+                      aria-hidden="true">TL</span>
+                <div>
+                    <h4>Task creator or project lead</h4>
+                    <p>
+                        Defines the work, provides context, and
+                        assigns responsibility when authorized.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ug-task-lifecycle-role">
+                <span class="ug-task-lifecycle-role-icon"
+                      aria-hidden="true">EM</span>
+                <div>
+                    <h4>Assigned employee</h4>
+                    <p>
+                        Reviews the task, performs the work,
+                        communicates blockers, and updates progress.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ug-task-lifecycle-role">
+                <span class="ug-task-lifecycle-role-icon"
+                      aria-hidden="true">RV</span>
+                <div>
+                    <h4>Reviewer or authorized manager</h4>
+                    <p>
+                        Reviews the result and confirms completion
+                        when the project workflow requires it.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Best practices -->
+    <div class="ug-task-lifecycle-tip">
+        <span class="ug-task-lifecycle-tip-icon"
+              aria-hidden="true">✦</span>
+        <div>
+            <h3>Task management best practice</h3>
+            <p>
+                Keep every task actionable: one clear outcome,
+                one understood owner, a realistic deadline where
+                applicable, and a current status. If responsibility
+                changes, communicate the handover instead of
+                leaving teammates to guess.
+            </p>
+        </div>
+    </div>
+
+    <!-- Feature availability note -->
+    <div class="ug-task-lifecycle-note">
+        <span class="ug-task-lifecycle-note-icon"
+              aria-hidden="true">i</span>
+        <p>
+            <strong>Feature availability:</strong>
+            Task fields, status options, assignment notifications,
+            review steps, and permissions depend on the functionality
+            currently implemented and enabled in your IT TaskFlow
+            workspace. This guide describes the intended workflow;
+            verify each feature in the running application.
+        </p>
+    </div>
+</section>
+
+
+
+
+<!-- =====================================================
+     IT TASKFLOW USER GUIDE
+     SECTION 4: NOTIFICATIONS & ACTIVITY
+====================================================== -->
+
+<section
+    class="ug-notifications-section"
+    id="ug-notifications-activity"
+    aria-labelledby="ug-notifications-title"
+>
+    <div class="ug-notifications-heading">
+        <span class="ug-notifications-eyebrow">
+            USER GUIDE · TEAM ACTIVITY
+        </span>
+
+        <h2 id="ug-notifications-title">
+            Notifications &amp; Activity
+        </h2>
+
+        <p>
+            Learn how to review task assignments, recognize
+            important updates, follow team activity, and keep
+            your work information up to date.
+        </p>
+    </div>
+
+    <!-- Notification overview -->
+    <div class="ug-notifications-overview">
+        <div class="ug-notifications-overview-copy">
+            <span class="ug-notifications-label">STAY INFORMED</span>
+            <h3>Know what needs your attention</h3>
+            <p>
+                Notifications can help you discover changes that
+                matter to your work. Open the related task or
+                project to understand the full context before
+                taking action.
+            </p>
+        </div>
+
+        <div class="ug-notifications-preview" aria-label="Illustrative notification examples">
+            <div class="ug-notifications-preview-header">
+                <span class="ug-notifications-preview-title">
+                    Notification examples
+                </span>
+                <span class="ug-notifications-preview-mark">
+                    Examples
+                </span>
+            </div>
+
+            <div class="ug-notification-example">
+                <span class="ug-notification-example-icon assignment"
+                      aria-hidden="true">✓</span>
+                <div class="ug-notification-example-copy">
+                    <strong>Task assigned</strong>
+                    <p>A task has been assigned to your account.</p>
+                </div>
+            </div>
+
+            <div class="ug-notification-example">
+                <span class="ug-notification-example-icon update"
+                      aria-hidden="true">↻</span>
+                <div class="ug-notification-example-copy">
+                    <strong>Task updated</strong>
+                    <p>A task status or relevant detail has changed.</p>
+                </div>
+            </div>
+
+            <div class="ug-notification-example">
+                <span class="ug-notification-example-icon comment"
+                      aria-hidden="true">✉</span>
+                <div class="ug-notification-example-copy">
+                    <strong>Team update</strong>
+                    <p>A teammate has shared information about the work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification guidance cards -->
+    <div class="ug-notifications-grid">
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">01</span>
+            <h3>Task Assignment Alerts</h3>
+            <p>
+                Review newly assigned tasks so you understand
+                what work is expected from you.
+            </p>
+            <ul>
+                <li>Open the related task when an alert is available.</li>
+                <li>Confirm the task title and requirements.</li>
+                <li>Check the owner, priority, and due date.</li>
+                <li>Ask the task creator if details are unclear.</li>
+            </ul>
+        </article>
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">02</span>
+            <h3>Status and Detail Changes</h3>
+            <p>
+                Pay attention to changes that may affect your
+                responsibilities or delivery dates.
+            </p>
+            <ul>
+                <li>Review changes to task status.</li>
+                <li>Check updated descriptions or deadlines.</li>
+                <li>Confirm whether an action is required from you.</li>
+                <li>Follow up when a change creates a dependency.</li>
+            </ul>
+        </article>
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">03</span>
+            <h3>Comments and Team Communication</h3>
+            <p>
+                Use available task or project discussion features
+                to understand decisions and share relevant updates.
+            </p>
+            <ul>
+                <li>Read comments in their task or project context.</li>
+                <li>Keep messages clear and work-related.</li>
+                <li>Explain blockers and the help you need.</li>
+                <li>Record important decisions where permitted.</li>
+            </ul>
+        </article>
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">04</span>
+            <h3>Review Activity History</h3>
+            <p>
+                Where an activity history is available, use it
+                to understand how work has changed over time.
+            </p>
+            <ul>
+                <li>Check the task or project being discussed.</li>
+                <li>Review the available change details and timestamps.</li>
+                <li>Confirm the latest status before acting.</li>
+                <li>Contact an authorized owner if information conflicts.</li>
+            </ul>
+        </article>
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">05</span>
+            <h3>Keep Your Notifications Manageable</h3>
+            <p>
+                Build a simple routine for reviewing updates
+                without losing focus on important work.
+            </p>
+            <ul>
+                <li>Review alerts at sensible intervals.</li>
+                <li>Open important updates and identify the next action.</li>
+                <li>Use notification preferences if supported.</li>
+                <li>Avoid ignoring alerts related to urgent work.</li>
+            </ul>
+        </article>
+
+        <article class="ug-notifications-card">
+            <span class="ug-notifications-number">06</span>
+            <h3>Resolve Missing or Unexpected Alerts</h3>
+            <p>
+                Check the related work item and your account access
+                before assuming an alert has been lost.
+            </p>
+            <ul>
+                <li>Confirm that the task was assigned correctly.</li>
+                <li>Refresh the page and review the task directly.</li>
+                <li>Check available notification settings.</li>
+                <li>Ask your administrator for help if needed.</li>
+            </ul>
+        </article>
+
+    </div>
+
+    <!-- Recommended routine -->
+    <div class="ug-notifications-routine">
+        <div class="ug-notifications-routine-heading">
+            <span class="ug-notifications-label">A SIMPLE DAILY ROUTINE</span>
+            <h3>Turn updates into action</h3>
+            <p>
+                Use this checklist as a practical reminder when
+                reviewing your work.
+            </p>
+        </div>
+
+        <ol class="ug-notifications-routine-list">
+            <li>
+                <span class="ug-notifications-routine-number">1</span>
+                <div>
+                    <strong>Review new alerts</strong>
+                    <p>Identify new assignments and important changes.</p>
+                </div>
+            </li>
+            <li>
+                <span class="ug-notifications-routine-number">2</span>
+                <div>
+                    <strong>Open the related work</strong>
+                    <p>Read the task or project details before responding.</p>
+                </div>
+            </li>
+            <li>
+                <span class="ug-notifications-routine-number">3</span>
+                <div>
+                    <strong>Take the required action</strong>
+                    <p>Update progress, respond, or ask for clarification.</p>
+                </div>
+            </li>
+            <li>
+                <span class="ug-notifications-routine-number">4</span>
+                <div>
+                    <strong>Follow up on unresolved items</strong>
+                    <p>Communicate blockers and confirm the next step.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Privacy and accuracy note -->
+    <div class="ug-notifications-note">
+        <span class="ug-notifications-note-icon"
+              aria-hidden="true">i</span>
+        <p>
+            <strong>Feature availability:</strong>
+            The examples above illustrate possible notification
+            and activity events; they are not live notifications.
+            In-app alerts, email alerts, read/unread states, comments,
+            activity history, and notification preferences depend
+            on the features currently implemented in IT TaskFlow.
+            Never treat an example on this guide as a real task update.
+        </p>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     SECTION 5: ROLES, PERMISSIONS & ADMINISTRATION
+     Place after Section 4 inside .guide-content
+====================================================== -->
+<section
+  class="ug-roles-section"
+  id="ug-roles-permissions"
+  aria-labelledby="ug-roles-title"
+>
+  <div class="ug-roles-header">
+    <span class="ug-roles-eyebrow">ACCESS & GOVERNANCE</span>
+
+    <h2 id="ug-roles-title">
+      Roles, Permissions & Administration
+    </h2>
+
+    <p class="ug-roles-intro">
+      Understand the responsibilities of employees, team leads,
+      project managers, HR teams, and organization administrators.
+      Learn how organization-level access differs from the internal
+      IT TaskFlow Business Admin Panel.
+    </p>
+  </div>
+
+  <!-- Important distinction -->
+  <div class="ug-roles-notice">
+    <div class="ug-roles-notice-icon" aria-hidden="true">!</div>
+
+    <div>
+      <h3>Two separate administration levels</h3>
+      <p>
+        <strong>Organization Administration</strong> manages an individual
+        customer's workspace, employees, projects, and permitted settings.
+        The <strong>IT TaskFlow Business Admin Panel</strong> is reserved
+        for authorized internal platform administrators who manage the
+        IT TaskFlow product itself.
+      </p>
+    </div>
+  </div>
+
+  <!-- Role cards -->
+  <div class="ug-roles-subheading">
+    <h3>Understand the organization roles</h3>
+    <p>
+      Each role should receive only the access needed to perform its
+      responsibilities. Exact permissions depend on the organization's
+      configured roles and the functionality implemented in the application.
+    </p>
+  </div>
+
+  <div class="ug-roles-grid">
+
+    <!-- Employee -->
+    <article class="ug-role-card ug-role-employee">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">01</span>
+        <span class="ug-role-access">Individual contributor</span>
+      </div>
+
+      <h4>Employee / Team Member</h4>
+
+      <p class="ug-role-description">
+        Works on assigned tasks and contributes to authorized projects.
+      </p>
+
+      <h5>Typical responsibilities</h5>
+      <ul>
+        <li>View assigned tasks and permitted project information.</li>
+        <li>Update task progress and report blockers.</li>
+        <li>Participate in authorized comments and team discussions.</li>
+        <li>Review relevant notifications and due dates.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Access boundary</strong>
+        <p>
+          Should not automatically see every project or another employee's
+          private or restricted information.
+        </p>
+      </div>
+    </article>
+
+    <!-- Team lead -->
+    <article class="ug-role-card ug-role-lead">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">02</span>
+        <span class="ug-role-access">Team coordination</span>
+      </div>
+
+      <h4>Team Lead</h4>
+
+      <p class="ug-role-description">
+        Coordinates the work of a team and helps maintain delivery quality.
+      </p>
+
+      <h5>Typical responsibilities</h5>
+      <ul>
+        <li>Review team task progress and identify blockers.</li>
+        <li>Coordinate priorities and work dependencies.</li>
+        <li>Support employees with task-related questions.</li>
+        <li>Escalate delays and delivery risks to the project manager.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Access boundary</strong>
+        <p>
+          Team visibility and task-assignment authority should be limited
+          to the teams and projects the lead is authorized to manage.
+        </p>
+      </div>
+    </article>
+
+    <!-- Project manager -->
+    <article class="ug-role-card ug-role-manager">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">03</span>
+        <span class="ug-role-access">Project delivery</span>
+      </div>
+
+      <h4>Project Manager</h4>
+
+      <p class="ug-role-description">
+        Plans and oversees delivery for the projects assigned to them.
+      </p>
+
+      <h5>Typical responsibilities</h5>
+      <ul>
+        <li>Manage authorized project workspaces and priorities.</li>
+        <li>Create tasks and assign work within permitted scope.</li>
+        <li>Monitor deadlines, progress, risks, and dependencies.</li>
+        <li>Review project reports and coordinate team delivery.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Access boundary</strong>
+        <p>
+          Project management access should not automatically grant
+          organization-wide administration or internal platform access.
+        </p>
+      </div>
+    </article>
+
+    <!-- HR -->
+    <article class="ug-role-card ug-role-hr">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">04</span>
+        <span class="ug-role-access">People operations</span>
+      </div>
+
+      <h4>HR Team / HR Manager</h4>
+
+      <p class="ug-role-description">
+        Supports employee lifecycle activities within the HR team's
+        authorized responsibilities.
+      </p>
+
+      <h5>Typical responsibilities</h5>
+      <ul>
+        <li>Maintain permitted employee and designation information.</li>
+        <li>Coordinate onboarding and employee record updates.</li>
+        <li>Work with authorized managers on team information.</li>
+        <li>Support HR workflows where those modules are available.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Access boundary</strong>
+        <p>
+          HR access should be scoped to approved people-related data.
+          HR roles should not automatically receive access to all project,
+          financial, or platform administration settings.
+        </p>
+      </div>
+    </article>
+
+    <!-- Organization admin -->
+    <article class="ug-role-card ug-role-org-admin">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">05</span>
+        <span class="ug-role-access">Organization workspace</span>
+      </div>
+
+      <h4>Organization Administrator</h4>
+
+      <p class="ug-role-description">
+        Administers the customer's IT TaskFlow organization within
+        the permissions granted to that account.
+      </p>
+
+      <h5>Typical responsibilities</h5>
+      <ul>
+        <li>Manage permitted organization and workspace settings.</li>
+        <li>Coordinate employee onboarding and account access.</li>
+        <li>Assign roles where authorized by the permission model.</li>
+        <li>Review organization-level activity and configuration.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Access boundary</strong>
+        <p>
+          Organization administration applies to that customer's workspace,
+          not the internal IT TaskFlow platform or other customer
+          organizations.
+        </p>
+      </div>
+    </article>
+
+    <!-- Business admin -->
+    <article class="ug-role-card ug-role-business-admin">
+      <div class="ug-role-card-top">
+        <span class="ug-role-icon" aria-hidden="true">06</span>
+        <span class="ug-role-access">Internal platform only</span>
+      </div>
+
+      <h4>IT TaskFlow Business Admin</h4>
+
+      <p class="ug-role-description">
+        Manages the IT TaskFlow product and its platform-level configuration
+        from a separate internal administration area.
+      </p>
+
+      <h5>Intended responsibilities</h5>
+      <ul>
+        <li>Configure platform-wide settings and permission policies.</li>
+        <li>Oversee customer organization onboarding.</li>
+        <li>Manage platform role templates and available designations.</li>
+        <li>Administer subscription settings and product configuration.</li>
+        <li>Review authorized platform-level operational information.</li>
+      </ul>
+
+      <div class="ug-role-boundary">
+        <strong>Restricted access</strong>
+        <p>
+          This panel is for explicitly authorized internal administrators.
+          It must not be exposed as a normal customer dashboard or granted
+          to a customer manager simply because they manage a project.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Permission principles -->
+  <div class="ug-roles-principles">
+    <div class="ug-roles-principles-heading">
+      <span class="ug-roles-eyebrow">SECURITY PRINCIPLES</span>
+      <h3>How permissions should work</h3>
+      <p>
+        Role names alone are not enough. Access should be checked against
+        the user's organization, assigned projects, specific permissions,
+        and the action being performed.
+      </p>
+    </div>
+
+    <div class="ug-roles-principles-grid">
+      <article class="ug-roles-principle">
+        <span aria-hidden="true">01</span>
+        <h4>Least privilege</h4>
+        <p>
+          Give each user only the minimum access required for their job.
+        </p>
+      </article>
+
+      <article class="ug-roles-principle">
+        <span aria-hidden="true">02</span>
+        <h4>Organization isolation</h4>
+        <p>
+          Keep each customer's data and workspace separate from other
+          organizations.
+        </p>
+      </article>
+
+      <article class="ug-roles-principle">
+        <span aria-hidden="true">03</span>
+        <h4>Project-level access</h4>
+        <p>
+          Show projects and modules according to the user's assigned
+          projects and authorized permissions.
+        </p>
+      </article>
+
+      <article class="ug-roles-principle">
+        <span aria-hidden="true">04</span>
+        <h4>Protected administration</h4>
+        <p>
+          Separate internal platform controls from customer organization
+          administration.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <!-- Role change workflow -->
+  <div class="ug-roles-workflow">
+    <div class="ug-roles-workflow-heading">
+      <h3>Example: granting a user a new role</h3>
+      <p>
+        Follow the organization's approved access-management process.
+        This workflow describes the intended process; actual screens may
+        differ depending on the implemented features.
+      </p>
+    </div>
+
+    <ol class="ug-roles-steps">
+      <li>
+        <span class="ug-roles-step-number">1</span>
+        <div>
+          <h4>Identify the requirement</h4>
+          <p>
+            Confirm the employee's responsibilities and why additional
+            access is needed.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-roles-step-number">2</span>
+        <div>
+          <h4>Obtain authorization</h4>
+          <p>
+            Follow the organization's approval process before changing
+            roles or permissions.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-roles-step-number">3</span>
+        <div>
+          <h4>Apply the permitted role</h4>
+          <p>
+            An authorized administrator updates the role or relevant
+            permissions through the supported administration interface.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-roles-step-number">4</span>
+        <div>
+          <h4>Verify the resulting access</h4>
+          <p>
+            Confirm that the user can access the intended features and
+            cannot access restricted areas.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Security reminder -->
+  <div class="ug-roles-security-note">
+    <div class="ug-roles-security-symbol" aria-hidden="true">✓</div>
+
+    <div>
+      <h3>Important security reminder</h3>
+      <p>
+        Hiding a menu item in the interface is not sufficient protection.
+        When backend services are introduced, they must also verify
+        authentication, organization membership, role permissions, and
+        resource-level access before returning data or performing actions.
+      </p>
+    </div>
+  </div>
+
+  <p class="ug-roles-disclaimer">
+    <strong>Feature availability:</strong> The role descriptions above
+    explain the intended access model. They do not confirm that every
+    listed administration function or security control is currently
+    implemented in the frontend.
+  </p>
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 6: EMPLOYEE ONBOARDING, ACCOUNTS & TEAM MANAGEMENT
+     Place after Section 5 inside .guide-content
+====================================================== -->
+<section
+  class="ug-employee-onboarding-section"
+  id="ug-employee-onboarding"
+  aria-labelledby="ug-employee-onboarding-title"
+>
+  <!-- Section heading -->
+  <div class="ug-eo-header">
+    <span class="ug-eo-eyebrow">PEOPLE & ACCOUNT MANAGEMENT</span>
+
+    <h2 id="ug-employee-onboarding-title">
+      Employee Onboarding, Accounts & Team Management
+    </h2>
+
+    <p class="ug-eo-intro">
+      Learn how authorized organization users prepare employee records,
+      establish account access, assign roles, organize teams, and connect
+      employees to the projects they are permitted to work on.
+    </p>
+  </div>
+
+  <!-- Important note -->
+  <div class="ug-eo-notice">
+    <div class="ug-eo-notice-icon" aria-hidden="true">i</div>
+
+    <div>
+      <h3>Start with the organization, not just the employee account</h3>
+      <p>
+        An employee account should belong to the correct organization
+        and have an appropriate role before project access is assigned.
+        Creating an employee record alone should not automatically grant
+        access to every project or module.
+      </p>
+    </div>
+  </div>
+
+  <!-- Onboarding workflow -->
+  <div class="ug-eo-workflow">
+    <div class="ug-eo-block-heading">
+      <span class="ug-eo-step-label">THE ONBOARDING JOURNEY</span>
+      <h3>From a new employee to a project-ready team member</h3>
+      <p>
+        Follow the organization's approved onboarding process. The exact
+        screens and actions depend on the features available in your
+        IT TaskFlow deployment.
+      </p>
+    </div>
+
+    <div class="ug-eo-flow-grid">
+
+      <article class="ug-eo-flow-card">
+        <span class="ug-eo-flow-number">01</span>
+        <div class="ug-eo-flow-icon" aria-hidden="true">01</div>
+        <h4>Prepare employee details</h4>
+        <p>
+          Collect the required employee information and confirm the
+          employee's department, designation, reporting manager, and
+          employment status.
+        </p>
+      </article>
+
+      <article class="ug-eo-flow-card">
+        <span class="ug-eo-flow-number">02</span>
+        <div class="ug-eo-flow-icon" aria-hidden="true">02</div>
+        <h4>Create or invite the account</h4>
+        <p>
+          An authorized administrator or HR user initiates account
+          creation or invitation through the supported onboarding process.
+        </p>
+      </article>
+
+      <article class="ug-eo-flow-card">
+        <span class="ug-eo-flow-number">03</span>
+        <div class="ug-eo-flow-icon" aria-hidden="true">03</div>
+        <h4>Assign role and team</h4>
+        <p>
+          Select the appropriate role and associate the employee with
+          the relevant department, team, and reporting structure.
+        </p>
+      </article>
+
+      <article class="ug-eo-flow-card">
+        <span class="ug-eo-flow-number">04</span>
+        <div class="ug-eo-flow-icon" aria-hidden="true">04</div>
+        <h4>Grant project access</h4>
+        <p>
+          Assign only the projects and modules required for the employee's
+          responsibilities, subject to applicable permissions.
+        </p>
+      </article>
+
+      <article class="ug-eo-flow-card">
+        <span class="ug-eo-flow-number">05</span>
+        <div class="ug-eo-flow-icon" aria-hidden="true">05</div>
+        <h4>Verify the first login</h4>
+        <p>
+          Confirm that the employee can authenticate successfully and
+          sees the correct workspace, projects, tasks, and permitted
+          navigation options.
+        </p>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Employee information -->
+  <div class="ug-eo-details">
+    <div class="ug-eo-block-heading">
+      <h3>What information should an employee record contain?</h3>
+      <p>
+        Keep records accurate, collect only necessary information, and
+        restrict sensitive employee details to authorized users.
+      </p>
+    </div>
+
+    <div class="ug-eo-details-grid">
+
+      <article class="ug-eo-detail-card">
+        <div class="ug-eo-detail-icon" aria-hidden="true">A</div>
+        <div>
+          <h4>Basic employee information</h4>
+          <ul>
+            <li>Employee name and unique employee ID.</li>
+            <li>Work email or approved account identifier.</li>
+            <li>Employment status and joining date, if required.</li>
+            <li>Contact information required by the organization.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ug-eo-detail-card">
+        <div class="ug-eo-detail-icon" aria-hidden="true">B</div>
+        <div>
+          <h4>Organization and reporting</h4>
+          <ul>
+            <li>Organization and department.</li>
+            <li>Job title or designation.</li>
+            <li>Reporting manager or team lead.</li>
+            <li>Team membership, where applicable.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ug-eo-detail-card">
+        <div class="ug-eo-detail-icon" aria-hidden="true">C</div>
+        <div>
+          <h4>Account and access information</h4>
+          <ul>
+            <li>Account status and sign-in identifier.</li>
+            <li>Assigned application role.</li>
+            <li>Authorized project and module access.</li>
+            <li>Invitation or activation status, if supported.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ug-eo-detail-card">
+        <div class="ug-eo-detail-icon" aria-hidden="true">D</div>
+        <div>
+          <h4>Work assignment information</h4>
+          <ul>
+            <li>Assigned projects and responsibilities.</li>
+            <li>Team or project allocation.</li>
+            <li>Relevant task assignments.</li>
+            <li>Required onboarding or access approvals.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Responsibility matrix -->
+  <div class="ug-eo-responsibilities">
+    <div class="ug-eo-block-heading">
+      <h3>Who is responsible for each onboarding activity?</h3>
+      <p>
+        Responsibilities vary by company policy. This table provides
+        a suggested division of work rather than a claim about currently
+        implemented IT TaskFlow permissions.
+      </p>
+    </div>
+
+    <div class="ug-eo-table-wrap">
+      <table class="ug-eo-table">
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">HR team</th>
+            <th scope="col">Organization admin</th>
+            <th scope="col">Project manager / lead</th>
+            <th scope="col">Employee</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Prepare employee information</th>
+            <td><span class="ug-eo-resp-primary">Lead / support</span></td>
+            <td>As authorized</td>
+            <td>Provide team requirements</td>
+            <td>Provide required details</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Create or activate an account</th>
+            <td>As authorized</td>
+            <td><span class="ug-eo-resp-primary">Authorized action</span></td>
+            <td>Request access</td>
+            <td>Complete invitation steps</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Assign designation and department</th>
+            <td><span class="ug-eo-resp-primary">Lead / support</span></td>
+            <td>As authorized</td>
+            <td>Provide team context</td>
+            <td>Verify details</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Grant project access</th>
+            <td>As permitted</td>
+            <td>According to policy</td>
+            <td><span class="ug-eo-resp-primary">Project requirement</span></td>
+            <td>Confirm visibility</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Verify first login and assigned work</th>
+            <td>Support if needed</td>
+            <td>Resolve account issues</td>
+            <td>Confirm work access</td>
+            <td><span class="ug-eo-resp-primary">Verify own access</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ug-eo-table-note">
+      <strong>Remember:</strong> HR, organization administrators, and
+      project managers should perform only the actions authorized by
+      the organization's permission model. One role should not
+      automatically inherit all the permissions of another.
+    </p>
+  </div>
+
+  <!-- First login -->
+  <div class="ug-eo-first-login">
+    <div class="ug-eo-first-login-heading">
+      <span class="ug-eo-step-label">EMPLOYEE FIRST LOGIN</span>
+      <h3>What should a new employee see?</h3>
+      <p>
+        After signing in, the employee should see a workspace relevant
+        to their assigned role and authorized work.
+      </p>
+    </div>
+
+    <div class="ug-eo-login-checks">
+
+      <div class="ug-eo-login-check">
+        <span aria-hidden="true">✓</span>
+        <div>
+          <h4>Correct organization</h4>
+          <p>
+            The account opens the employee's intended organization
+            and workspace.
+          </p>
+        </div>
+      </div>
+
+      <div class="ug-eo-login-check">
+        <span aria-hidden="true">✓</span>
+        <div>
+          <h4>Correct projects</h4>
+          <p>
+            Only assigned or otherwise explicitly authorized projects
+            are available.
+          </p>
+        </div>
+      </div>
+
+      <div class="ug-eo-login-check">
+        <span aria-hidden="true">✓</span>
+        <div>
+          <h4>Relevant tasks and notifications</h4>
+          <p>
+            Assigned work and related alerts appear when those features
+            are supported and the employee has access.
+          </p>
+        </div>
+      </div>
+
+      <div class="ug-eo-login-check">
+        <span aria-hidden="true">✓</span>
+        <div>
+          <h4>Role-appropriate navigation</h4>
+          <p>
+            Menus and actions reflect the employee's permissions without
+            exposing restricted administration options.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="ug-eo-troubleshooting">
+    <div class="ug-eo-troubleshooting-heading">
+      <span class="ug-eo-step-label">QUICK TROUBLESHOOTING</span>
+      <h3>Common employee onboarding issues</h3>
+      <p>
+        Check these items before escalating an account or access problem.
+      </p>
+    </div>
+
+    <div class="ug-eo-issue-list">
+
+      <details class="ug-eo-issue">
+        <summary>Employee cannot sign in</summary>
+        <div class="ug-eo-issue-content">
+          <ul>
+            <li>Confirm the employee is using the correct sign-in identifier.</li>
+            <li>Check whether the account has been created or activated.</li>
+            <li>Follow the approved password recovery process if needed.</li>
+            <li>Ask an authorized administrator to investigate account status.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-eo-issue">
+        <summary>Employee cannot see an assigned project</summary>
+        <div class="ug-eo-issue-content">
+          <ul>
+            <li>Verify that the project assignment was saved successfully.</li>
+            <li>Confirm the employee belongs to the correct organization.</li>
+            <li>Check project-level permissions and any access restrictions.</li>
+            <li>Ask the authorized project manager or administrator to review access.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-eo-issue">
+        <summary>Employee sees the wrong role or navigation menu</summary>
+        <div class="ug-eo-issue-content">
+          <ul>
+            <li>Verify the role assigned to the employee's account.</li>
+            <li>Confirm the account is associated with the correct organization.</li>
+            <li>Check whether a recent role change has taken effect.</li>
+            <li>Escalate any unexpected access to an authorized administrator.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-eo-issue">
+        <summary>Employee no longer needs access</summary>
+        <div class="ug-eo-issue-content">
+          <ul>
+            <li>Follow the organization's offboarding or access-change process.</li>
+            <li>Revoke or update access through the supported administrative workflow.</li>
+            <li>Review active project assignments and other granted permissions.</li>
+            <li>Retain or remove records according to organizational policy and applicable requirements.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- Best practices -->
+  <div class="ug-eo-best-practices">
+    <div class="ug-eo-best-icon" aria-hidden="true">✓</div>
+
+    <div>
+      <h3>Employee onboarding best practices</h3>
+      <ul>
+        <li>Use a unique account for each employee; never share login credentials.</li>
+        <li>Assign roles based on actual responsibilities, not convenience.</li>
+        <li>Grant project access only after confirming the business requirement.</li>
+        <li>Review access when employees change teams, roles, or employment status.</li>
+        <li>Use secure account recovery and authentication procedures.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="ug-eo-disclaimer">
+    <strong>Feature availability:</strong> This guide describes the intended
+    onboarding workflow. Employee invitations, account activation, role
+    assignment, access revocation, and related controls must be implemented
+    and verified before they can be considered operational IT TaskFlow features.
+  </p>
+</section>
+
+
+<!-- =====================================================
+     SECTION 7: TEAMS, DEPARTMENTS & REPORTING STRUCTURE
+     Place after Section 6 inside .guide-content
+====================================================== -->
+<section
+  class="ug-team-structure-section"
+  id="ug-team-structure"
+  aria-labelledby="ug-team-structure-title"
+>
+  <!-- Section heading -->
+  <div class="ug-ts-header">
+    <span class="ug-ts-eyebrow">ORGANIZATION & TEAM STRUCTURE</span>
+
+    <h2 id="ug-team-structure-title">
+      Teams, Departments & Reporting Structure
+    </h2>
+
+    <p class="ug-ts-intro">
+      Understand how departments, functional teams, reporting managers,
+      and project teams work together in an IT organization. Learn why
+      an employee's department, reporting manager, and project assignment
+      should be managed as distinct relationships.
+    </p>
+  </div>
+
+  <!-- Core distinction -->
+  <div class="ug-ts-notice">
+    <div class="ug-ts-notice-icon" aria-hidden="true">i</div>
+
+    <div>
+      <h3>One employee can belong to multiple work structures</h3>
+      <p>
+        An employee may belong to one department, report to a functional
+        manager, and contribute to several authorized projects. Department
+        membership does not automatically grant access to every project
+        owned by that department.
+      </p>
+    </div>
+  </div>
+
+  <!-- Organization hierarchy -->
+  <div class="ug-ts-hierarchy">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">STRUCTURE 01</span>
+      <h3>Understand the organizational hierarchy</h3>
+      <p>
+        A typical IT company organizes employees into departments and
+        functional teams. The structure below is an example; actual
+        reporting lines vary between organizations.
+      </p>
+    </div>
+
+    <div class="ug-ts-org-chart" aria-label="Example organization hierarchy">
+      <div class="ug-ts-org-node ug-ts-org-root">
+        <span class="ug-ts-node-label">ORGANIZATION</span>
+        <strong>Company Leadership</strong>
+        <small>Business and operational direction</small>
+      </div>
+
+      <div class="ug-ts-org-connector" aria-hidden="true"></div>
+
+      <div class="ug-ts-department-grid">
+
+        <article class="ug-ts-department">
+          <div class="ug-ts-dept-heading ug-ts-dept-engineering">
+            <span class="ug-ts-dept-code">ENG</span>
+            <div>
+              <h4>Engineering</h4>
+              <p>Software development</p>
+            </div>
+          </div>
+
+          <div class="ug-ts-dept-roles">
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>Engineering Manager</strong>
+                <small>Department delivery and people leadership</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>Technical Lead</strong>
+                <small>Technical direction and code quality</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>Software Developers</strong>
+                <small>Design, build, and maintain software</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ug-ts-department">
+          <div class="ug-ts-dept-heading ug-ts-dept-quality">
+            <span class="ug-ts-dept-code">QA</span>
+            <div>
+              <h4>Quality Assurance</h4>
+              <p>Product quality and testing</p>
+            </div>
+          </div>
+
+          <div class="ug-ts-dept-roles">
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>QA Manager / Lead</strong>
+                <small>Quality strategy and test coordination</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>QA Engineers</strong>
+                <small>Functional, regression, and integration testing</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>Automation Engineers</strong>
+                <small>Automated checks and test maintenance</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ug-ts-department">
+          <div class="ug-ts-dept-heading ug-ts-dept-operations">
+            <span class="ug-ts-dept-code">OPS</span>
+            <div>
+              <h4>DevOps & IT Operations</h4>
+              <p>Delivery infrastructure and reliability</p>
+            </div>
+          </div>
+
+          <div class="ug-ts-dept-roles">
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>DevOps / Platform Lead</strong>
+                <small>Delivery systems and operational standards</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>DevOps Engineers</strong>
+                <small>CI/CD, automation, and deployment workflows</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>IT Support / Operations</strong>
+                <small>Technical operations and issue resolution</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ug-ts-department">
+          <div class="ug-ts-dept-heading ug-ts-dept-people">
+            <span class="ug-ts-dept-code">HR</span>
+            <div>
+              <h4>Human Resources</h4>
+              <p>People operations and employee lifecycle</p>
+            </div>
+          </div>
+
+          <div class="ug-ts-dept-roles">
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>HR Manager</strong>
+                <small>HR operations and team coordination</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>Talent Acquisition</strong>
+                <small>Recruitment and candidate coordination</small>
+              </div>
+            </div>
+
+            <div class="ug-ts-role-row">
+              <span class="ug-ts-role-dot"></span>
+              <div>
+                <strong>HR Operations</strong>
+                <small>Employee records and onboarding support</small>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <p class="ug-ts-chart-note">
+      Other possible departments include Product Management, UI/UX Design,
+      Business Analysis, Information Security, Finance, Sales, Customer
+      Success, and Legal. Organizations can use only the departments
+      relevant to their own structure.
+    </p>
+  </div>
+
+  <!-- Three different relationships -->
+  <div class="ug-ts-relationships">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">STRUCTURE 02</span>
+      <h3>Keep these three relationships separate</h3>
+      <p>
+        This distinction is important when designing employee profiles,
+        reporting lines, project membership, and dashboard visibility.
+      </p>
+    </div>
+
+    <div class="ug-ts-relationship-grid">
+
+      <article class="ug-ts-relationship-card ug-ts-functional">
+        <div class="ug-ts-relationship-symbol" aria-hidden="true">01</div>
+        <span class="ug-ts-relationship-tag">FUNCTIONAL STRUCTURE</span>
+        <h4>Department & Team</h4>
+        <p>
+          Defines the employee's professional function and regular
+          team membership within the organization.
+        </p>
+
+        <div class="ug-ts-example">
+          <span>Example</span>
+          <strong>QA Department → Testing Team</strong>
+        </div>
+
+        <p class="ug-ts-relationship-question">
+          Answers: <strong>Which function or team does the employee belong to?</strong>
+        </p>
+      </article>
+
+      <article class="ug-ts-relationship-card ug-ts-reporting">
+        <div class="ug-ts-relationship-symbol" aria-hidden="true">02</div>
+        <span class="ug-ts-relationship-tag">REPORTING STRUCTURE</span>
+        <h4>Reporting Manager</h4>
+        <p>
+          Identifies the manager or designated lead responsible for
+          the employee's reporting and supervision.
+        </p>
+
+        <div class="ug-ts-example">
+          <span>Example</span>
+          <strong>QA Engineer → QA Team Lead</strong>
+        </div>
+
+        <p class="ug-ts-relationship-question">
+          Answers: <strong>Who does the employee report to?</strong>
+        </p>
+      </article>
+
+      <article class="ug-ts-relationship-card ug-ts-project">
+        <div class="ug-ts-relationship-symbol" aria-hidden="true">03</div>
+        <span class="ug-ts-relationship-tag">DELIVERY STRUCTURE</span>
+        <h4>Project Team</h4>
+        <p>
+          Identifies the employees assigned to a particular project,
+          their project responsibilities, and authorized access.
+        </p>
+
+        <div class="ug-ts-example">
+          <span>Example</span>
+          <strong>QA Engineer → Payments Project</strong>
+        </div>
+
+        <p class="ug-ts-relationship-question">
+          Answers: <strong>Which project is the employee working on?</strong>
+        </p>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Cross-functional project example -->
+  <div class="ug-ts-project-example">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">STRUCTURE 03</span>
+      <h3>Example: a cross-functional software project</h3>
+      <p>
+        A single project may require employees from several departments.
+        Their functional reporting relationships remain separate from
+        their responsibilities on the project.
+      </p>
+    </div>
+
+    <div class="ug-ts-project-board">
+      <div class="ug-ts-project-board-header">
+        <div>
+          <span class="ug-ts-project-status">ILLUSTRATIVE EXAMPLE</span>
+          <h4>Customer Portal Release</h4>
+          <p>One project · Multiple functional teams</p>
+        </div>
+        <div class="ug-ts-project-mark" aria-hidden="true">CP</div>
+      </div>
+
+      <div class="ug-ts-project-team-list">
+
+        <div class="ug-ts-project-team-row">
+          <div class="ug-ts-project-team-icon ug-ts-team-dev" aria-hidden="true">DEV</div>
+          <div class="ug-ts-project-team-info">
+            <h5>Development</h5>
+            <p>Build features and resolve development issues.</p>
+          </div>
+          <span class="ug-ts-project-team-duty">Implementation</span>
+        </div>
+
+        <div class="ug-ts-project-team-row">
+          <div class="ug-ts-project-team-icon ug-ts-team-qa" aria-hidden="true">QA</div>
+          <div class="ug-ts-project-team-info">
+            <h5>Quality Assurance</h5>
+            <p>Validate functionality and report defects.</p>
+          </div>
+          <span class="ug-ts-project-team-duty">Testing</span>
+        </div>
+
+        <div class="ug-ts-project-team-row">
+          <div class="ug-ts-project-team-icon ug-ts-team-ops" aria-hidden="true">OPS</div>
+          <div class="ug-ts-project-team-info">
+            <h5>DevOps</h5>
+            <p>Support build pipelines and deployment readiness.</p>
+          </div>
+          <span class="ug-ts-project-team-duty">Delivery</span>
+        </div>
+
+        <div class="ug-ts-project-team-row">
+          <div class="ug-ts-project-team-icon ug-ts-team-design" aria-hidden="true">UX</div>
+          <div class="ug-ts-project-team-info">
+            <h5>UI/UX Design</h5>
+            <p>Prepare interface flows and design specifications.</p>
+          </div>
+          <span class="ug-ts-project-team-duty">Design</span>
+        </div>
+
+      </div>
+
+      <div class="ug-ts-project-board-footer">
+        <span class="ug-ts-project-footer-icon" aria-hidden="true">i</span>
+        <p>
+          The project manager coordinates project delivery. Functional
+          managers continue to handle their own departmental responsibilities.
+          Project membership and access must be explicitly authorized.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who does what -->
+  <div class="ug-ts-responsibilities">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">STRUCTURE 04</span>
+      <h3>Responsibilities across the organization</h3>
+      <p>
+        These are typical responsibilities. Every company should define
+        its own reporting and approval policies.
+      </p>
+    </div>
+
+    <div class="ug-ts-responsibility-list">
+
+      <article class="ug-ts-responsibility">
+        <div class="ug-ts-resp-number">01</div>
+        <div class="ug-ts-resp-content">
+          <h4>Department Manager</h4>
+          <p>
+            Oversees the functional department, supports staffing and
+            capability planning, and manages department-level priorities.
+          </p>
+        </div>
+        <span class="ug-ts-resp-label">Department</span>
+      </article>
+
+      <article class="ug-ts-responsibility">
+        <div class="ug-ts-resp-number">02</div>
+        <div class="ug-ts-resp-content">
+          <h4>Team Lead</h4>
+          <p>
+            Coordinates day-to-day team work, supports technical or
+            functional decisions, and helps resolve team blockers.
+          </p>
+        </div>
+        <span class="ug-ts-resp-label">Team</span>
+      </article>
+
+      <article class="ug-ts-responsibility">
+        <div class="ug-ts-resp-number">03</div>
+        <div class="ug-ts-resp-content">
+          <h4>Project Manager</h4>
+          <p>
+            Coordinates scope, timelines, dependencies, project assignments,
+            risks, and delivery across the authorized project team.
+          </p>
+        </div>
+        <span class="ug-ts-resp-label">Project</span>
+      </article>
+
+      <article class="ug-ts-responsibility">
+        <div class="ug-ts-resp-number">04</div>
+        <div class="ug-ts-resp-content">
+          <h4>HR Manager / HR Team</h4>
+          <p>
+            Coordinates approved HR processes, employee information,
+            onboarding, and people-related administration.
+          </p>
+        </div>
+        <span class="ug-ts-resp-label">People</span>
+      </article>
+
+      <article class="ug-ts-responsibility">
+        <div class="ug-ts-resp-number">05</div>
+        <div class="ug-ts-resp-content">
+          <h4>Organization Administrator</h4>
+          <p>
+            Manages authorized organization-level configuration and
+            access administration according to company policy.
+          </p>
+        </div>
+        <span class="ug-ts-resp-label">Workspace</span>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Setup workflow -->
+  <div class="ug-ts-setup-workflow">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">STRUCTURE 05</span>
+      <h3>How to organize teams in IT TaskFlow</h3>
+      <p>
+        Use this suggested setup sequence when configuring an organization's
+        structure. Available controls depend on the implementation.
+      </p>
+    </div>
+
+    <ol class="ug-ts-setup-steps">
+      <li>
+        <span class="ug-ts-setup-number">1</span>
+        <div>
+          <h4>Define the departments</h4>
+          <p>
+            Identify the functional departments used by the organization,
+            such as Engineering, QA, HR, and DevOps.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-ts-setup-number">2</span>
+        <div>
+          <h4>Define teams and team leads</h4>
+          <p>
+            Establish team membership and designate the appropriate
+            team lead or functional manager.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-ts-setup-number">3</span>
+        <div>
+          <h4>Associate employee records</h4>
+          <p>
+            Assign each employee to the correct department, team,
+            designation, and reporting manager.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-ts-setup-number">4</span>
+        <div>
+          <h4>Configure project teams separately</h4>
+          <p>
+            Add authorized employees to their project workspaces
+            according to project requirements.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="ug-ts-setup-number">5</span>
+        <div>
+          <h4>Verify visibility and permissions</h4>
+          <p>
+            Check that employees, team leads, and project managers can
+            access the information required for their responsibilities,
+            without exposing unrelated workspaces.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="ug-ts-troubleshooting">
+    <div class="ug-ts-block-heading">
+      <span class="ug-ts-step-label">QUICK TROUBLESHOOTING</span>
+      <h3>Common team structure issues</h3>
+      <p>
+        Review the relevant relationships and permissions before
+        escalating a configuration issue.
+      </p>
+    </div>
+
+    <div class="ug-ts-issue-list">
+
+      <details class="ug-ts-issue">
+        <summary>An employee belongs to the wrong department</summary>
+        <div class="ug-ts-issue-content">
+          <ul>
+            <li>Verify the employee's current department and team.</li>
+            <li>Confirm the intended change with the responsible manager or HR team.</li>
+            <li>Ask an authorized administrator to update the organization record.</li>
+            <li>Check whether any dependent team assignments need review.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-ts-issue">
+        <summary>The employee reports to the wrong manager</summary>
+        <div class="ug-ts-issue-content">
+          <ul>
+            <li>Confirm the correct reporting relationship with the organization.</li>
+            <li>Distinguish the functional manager from the project manager.</li>
+            <li>Update the appropriate reporting field through the supported process.</li>
+            <li>Verify that any related approval or reporting workflows remain correct.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-ts-issue">
+        <summary>A project manager cannot see the correct project team</summary>
+        <div class="ug-ts-issue-content">
+          <ul>
+            <li>Verify that the correct project workspace is selected.</li>
+            <li>Check project membership and the manager's project permissions.</li>
+            <li>Confirm that team members were added to the project separately.</li>
+            <li>Ask an authorized administrator to review the configuration if needed.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="ug-ts-issue">
+        <summary>A team member can see unrelated projects</summary>
+        <div class="ug-ts-issue-content">
+          <ul>
+            <li>Review the employee's project memberships and assigned roles.</li>
+            <li>Check whether organization-wide access was granted unintentionally.</li>
+            <li>Correct excessive permissions through the authorized process.</li>
+            <li>Verify access restrictions for the affected projects.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- Best practices -->
+  <div class="ug-ts-best-practices">
+    <div class="ug-ts-best-icon" aria-hidden="true">✓</div>
+
+    <div>
+      <h3>Best practices for team and reporting management</h3>
+      <ul>
+        <li>Keep department membership separate from project membership.</li>
+        <li>Distinguish functional reporting managers from project managers.</li>
+        <li>Assign one clear primary reporting manager where company policy requires it.</li>
+        <li>Allow cross-functional project teams without unnecessarily changing department membership.</li>
+        <li>Review team and project access when employees move between roles or projects.</li>
+        <li>Restrict organizational charts and employee details according to their sensitivity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="ug-ts-disclaimer">
+    <strong>Feature availability:</strong> The hierarchy and examples on
+    this page are illustrative. Department management, reporting
+    relationships, team membership, and project-specific access must be
+    implemented and tested in IT TaskFlow before they can be treated as
+    live features.
+  </p>
+</section>
+
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span><span>Task<span class="brand-accent">Flow</span></span></a>
+    <p>Bring clarity to your work. One task at a time.</p>
+    <div class="footer-links">
+        <a href="documentation.html">Documentation</a>
+        <a href="userguide.html">User Guide</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="helpcenter.html">Help Center</a>
+        <a href="contactsupport.html">Contact Support</a>
+    </div>
+    <span class="copyright">© 2026 IT TaskFlow. All rights reserved.</span>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>

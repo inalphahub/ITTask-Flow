@@ -1,59 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ===== Mobile Menu Toggle =====
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('navMenu');
 
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('open');
-            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+            const isOpen = mobileMenu.classList.toggle('mobile-open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
         });
 
         // Close menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('open');
-                document.body.style.overflow = '';
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('mobile-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.classList.remove('open'));
             });
         });
 
-        document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const dropdown = toggle.closest('.mobile-dropdown');
-                const isOpen = dropdown.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', isOpen);
-            });
-        });
     }
 
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', event => {
             event.stopPropagation();
-            const dropdown = toggle.closest('.nav-dropdown');
+            const dropdown = toggle.closest('.dropdown');
             const isOpen = dropdown.classList.toggle('open');
             toggle.setAttribute('aria-expanded', isOpen);
-            document.querySelectorAll('.nav-dropdown').forEach(item => {
+            document.querySelectorAll('.dropdown').forEach(item => {
                 if (item !== dropdown) {
                     item.classList.remove('open');
-                    item.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                    item.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
                 }
             });
         });
     });
 
     document.addEventListener('click', event => {
-        if (!event.target.closest('.nav-dropdown')) {
-            document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
                 dropdown.classList.remove('open');
-                dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                dropdown.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
             });
         }
     });
 
+    document.querySelectorAll('.login-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    });
+
+    document.querySelectorAll('.get-started-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            window.location.href = 'signup.html';
+        });
+    });
+
     // ===== Navbar scroll shadow =====
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.site-header');
     if (navbar) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 10) {

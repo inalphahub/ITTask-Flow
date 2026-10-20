@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
   const savedTheme = localStorage.getItem('theme') || 'light';
 
-  if (savedTheme === 'dark') {
+  if (savedTheme === 'dark' && themeToggle) {
     html.setAttribute('data-theme', 'dark');
     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
   }
@@ -25,35 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('theme', 'dark');
       themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
-  });
-
-  // ---------- Navbar Scroll ----------
-  const navbar = document.getElementById('navbar');
-  const handleScroll = () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
-  // ---------- Mobile Menu ----------
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-
-  hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('open');
-  });
-
-  // Close menu on link click
-  navMenu?.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('open');
-    });
   });
 
   // ---------- Smooth Reveal Animations ----------
@@ -335,31 +306,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
-  // ---------- Active Nav Link on Scroll ----------
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}` || 
-              (id === 'hero' && link.getAttribute('href') === 'project-management.html')) {
-            // keep Projects active when on page
-          }
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }, { threshold: 0.25, rootMargin: '-80px 0px -40% 0px' });
-
-  sections.forEach(sec => sectionObserver.observe(sec));
-
-  // Keep "Projects" highlighted as current page
-  const projectsLink = document.querySelector('.nav-link[href="project-management.html"]');
-  if (projectsLink) projectsLink.classList.add('active');
 });
