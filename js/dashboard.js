@@ -13,6 +13,7 @@
 const $ = (selector) => document.querySelector(selector);
 
 const $$ = (selector) => document.querySelectorAll(selector);
+let toastTimer = null;
 
 
 /* =========================================================
@@ -146,6 +147,12 @@ function isManagerRole(role) {
     return ["administrator", "manager", "project manager", "program manager", "programme manager"]
         .includes(String(role || "").trim().toLowerCase());
 }
+
+function getAccountWorkspaceId(account) {
+    return String(account?.workspaceId || "default");
+}
+
+const currentWorkspaceId = getAccountWorkspaceId(currentUser);
 
 function isProjectManager() {
     const role = String(currentUser?.role || "").trim().toLowerCase();
@@ -455,7 +462,7 @@ function renderProjects() {
     if (!grid) return;
     let archivedProjects = [];
     try {
-        archivedProjects = JSON.parse(localStorage.getItem("taskflow_archived_projects") || "[]");
+        archivedProjects = JSON.parse(localStorage.getItem(archivedProjectsStorageKey) || "[]");
     } catch (error) {
         archivedProjects = [];
     }
@@ -485,9 +492,9 @@ $("#projectSummaryGrid")?.addEventListener("click", event => {
     if (!button || !isProjectManager()) return;
     const project = button.dataset.project;
     let archivedProjects = [];
-    try { archivedProjects = JSON.parse(localStorage.getItem("taskflow_archived_projects") || "[]"); } catch (error) { archivedProjects = []; }
+    try { archivedProjects = JSON.parse(localStorage.getItem(archivedProjectsStorageKey) || "[]"); } catch (error) { archivedProjects = []; }
     archivedProjects = archivedProjects.includes(project) ? archivedProjects.filter(item => item !== project) : [...archivedProjects, project];
-    localStorage.setItem("taskflow_archived_projects", JSON.stringify(archivedProjects));
+    localStorage.setItem(archivedProjectsStorageKey, JSON.stringify(archivedProjects));
     renderProjects();
     showToast("Projects Updated", `${project} is now ${archivedProjects.includes(project) ? "archived" : "active"}.`);
 });
@@ -669,10 +676,17 @@ openAccountSettingsButton?.addEventListener("click", () => { profileMenu.classLi
 
 function getAccounts() {
     try {
-        return JSON.parse(localStorage.getItem("taskflowAccounts") || "[]");
+        const accounts = JSON.parse(localStorage.getItem("taskflowAccounts") || "[]");
+        return Array.isArray(accounts) ? accounts : [];
     } catch (error) {
         return [];
     }
+}
+
+function getWorkspaceAccounts() {
+    return getAccounts().filter(account =>
+        getAccountWorkspaceId(account) === currentWorkspaceId
+    );
 }
 
 function saveAccounts(accounts) {
@@ -694,7 +708,7 @@ function renderTeamDirectory() {
     if (!teamDirectory) return;
 
     teamDirectory.replaceChildren();
-    getAccounts().forEach(account => {
+    getWorkspaceAccounts().forEach(account => {
         const name = `${account.firstName || ""} ${account.lastName || ""}`.trim();
         const item = document.createElement("tr");
         item.innerHTML = `
@@ -746,14 +760,16 @@ employeeForm?.addEventListener("submit", event => {
         password: $("#employeePassword").value,
         department: $("#employeeDepartment").value,
         role: $("#employeeRole").value,
+        jobTitle: $("#employeeRole").value,
         accountType: "employee",
+        workspaceId: currentWorkspaceId,
         project: $("#employeeProject").value.trim(),
         userId: `TF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`
     };
 
     if (
         account.role === "Project Manager" &&
-        accounts.some(item => item.role === "Project Manager" && item.userId !== employeeId)
+        getWorkspaceAccounts().some(item => item.role === "Project Manager" && item.userId !== employeeId)
     ) {
         showToast("Project Manager Exists", "Only one Project Manager can be created for the workspace.");
         return;
@@ -761,8 +777,10 @@ employeeForm?.addEventListener("submit", event => {
 
     if (employeeId) {
         const index = accounts.findIndex(item => item.userId === employeeId);
+        if (index < 0 || getAccountWorkspaceId(accounts[index]) !== currentWorkspaceId) return;
         account.userId = employeeId;
         account.password = accounts[index]?.password || account.password;
+        account.workspaceId = getAccountWorkspaceId(accounts[index]);
         accounts[index] = account;
     } else {
         accounts.push(account);
@@ -781,7 +799,7 @@ teamDirectory?.addEventListener("click", event => {
 
     const accounts = getAccounts();
     const index = accounts.findIndex(account => account.userId === button.dataset.teamId);
-    if (index < 0) return;
+    if (index < 0 || getAccountWorkspaceId(accounts[index]) !== currentWorkspaceId) return;
 
     if (button.dataset.teamAction === "view") {
         const account = accounts[index];
@@ -843,15 +861,18 @@ if (taskModuleCreateButton) {
 
 
 const taskStorageKey = "taskflow_tasks_v1";
+const archivedProjectsStorageKey = currentWorkspaceId === "default"
+    ? "taskflow_archived_projects"
+    : `taskflow_archived_projects_${currentWorkspaceId}`;
 
 let tasks = [];
 
 try {
-    tasks = JSON.parse(localStorage.getItem(taskStorageKey) || "[]");
-    tasks = tasks.filter(task =>
+    const storedTasks = JSON.parse(localStorage.getItem(taskStorageKey) || "[]");
+    tasks = storedTasks.filter(task =>
+        getAccountWorkspaceId(task) === currentWorkspaceId &&
         !(Number.isInteger(task.id) && task.id >= 1 && task.id <= 12)
     );
-    const accounts = getAccounts();
     let tasksUpdated = false;
     tasks = tasks.map(task => {
         if (task.project || task.projectName) {
@@ -861,7 +882,7 @@ try {
             }
             return task;
         }
-        const assignee = accounts.find(account => {
+        const assignee = getWorkspaceAccounts().find(account => {
             const name = `${account.firstName || ""} ${account.lastName || ""}`.trim().toLowerCase();
             return name === String(task.assignee || "").trim().toLowerCase();
         });
@@ -875,7 +896,20 @@ try {
 }
 
 function saveTasks() {
-    localStorage.setItem(taskStorageKey, JSON.stringify(tasks));
+    const storedTasks = JSON.parse(localStorage.getItem(taskStorageKey) || "[]");
+    const otherWorkspaceTasks = storedTasks.filter(task =>
+        getAccountWorkspaceId(task) !== currentWorkspaceId
+    );
+    const workspaceTasks = tasks.map(task => ({
+        ...task,
+        workspaceId: currentWorkspaceId
+    }));
+
+    tasks = workspaceTasks;
+    localStorage.setItem(
+        taskStorageKey,
+        JSON.stringify([...otherWorkspaceTasks, ...workspaceTasks])
+    );
 }
 
 function updateAssignedNotifications() {
@@ -926,11 +960,12 @@ function populateEmployeeOptions() {
     const assigneeSelect = $("#taskAssignee");
     if (!assigneeSelect) return;
 
-    let accounts = [];
-    try {
-        accounts = JSON.parse(localStorage.getItem("taskflowAccounts") || "[]");
-    } catch (error) {
-        accounts = [];
+    const accounts = getWorkspaceAccounts();
+
+    if (!accounts.some(account =>
+        String(account.userId || "") === String(currentUser?.userId || "")
+    )) {
+        accounts.push(currentUser);
     }
 
     assigneeSelect.replaceChildren(new Option("Select employee", ""));
@@ -944,13 +979,15 @@ function populateEmployeeOptions() {
         const accountProject = String(account.project || "").trim().toLowerCase();
 
         const accountDepartment = String(account.department || "").trim().toLowerCase();
-        const accountRole = String(account.role || "").trim().toLowerCase();
+        const accountRole = String(account.jobTitle || account.itRole || "")
+            .trim()
+            .toLowerCase();
 
         if (
             name &&
             (!selectedProject || !accountProject || accountProject === selectedProject) &&
             (!selectedDepartment || accountDepartment === selectedDepartment) &&
-            (!selectedRole || accountRole === selectedRole)
+            (!selectedRole || !accountRole || accountRole === selectedRole)
         ) {
             assigneeSelect.appendChild(new Option(name, name));
         }
@@ -1147,7 +1184,9 @@ if (taskBoard) {
     renderTasks();
 }
 
-const bugStorageKey = "taskflow_bugs_v1";
+const bugStorageKey = currentWorkspaceId === "default"
+    ? "taskflow_bugs_v1"
+    : `taskflow_bugs_v1_${currentWorkspaceId}`;
 let bugs = [];
 
 try {
@@ -1228,6 +1267,7 @@ bugForm?.addEventListener("submit", event => {
         title,
         description,
         project,
+        workspaceId: currentWorkspaceId,
         priority: $("#bugPriority").value,
         reporter: currentUserName,
         status: "open",
@@ -1243,7 +1283,8 @@ bugForm?.addEventListener("submit", event => {
 window.addEventListener("storage", event => {
     if (event.key === taskStorageKey) {
         try {
-            tasks = JSON.parse(event.newValue || "[]");
+            tasks = JSON.parse(event.newValue || "[]")
+                .filter(task => getAccountWorkspaceId(task) === currentWorkspaceId);
         } catch (error) {
             tasks = [];
         }
@@ -1669,6 +1710,9 @@ if (createTaskForm) {
                 priority,
                 dueDate,
                 description,
+                workspaceId: currentWorkspaceId,
+                assignedBy: currentUserName,
+                assignedByEmail: currentUser.email,
                 status: "todo",
                 createdAt: Date.now()
             });
@@ -2045,9 +2089,6 @@ if (profileLogout) {
 /* =========================================================
    TOAST
 ========================================================= */
-
-let toastTimer = null;
-
 
 function showToast(title, message) {
 

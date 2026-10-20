@@ -251,6 +251,11 @@ a {
     font-size: 11px;
 }
 
+.assigned-by {
+    margin-top: 7px !important;
+    font-size: 12px;
+}
+
 select,
 button {
     min-height: 40px;

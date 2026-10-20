@@ -26,6 +26,21 @@ const TASK_STORAGE_KEY = (() => {
 
 })();
 
+const TASK_WORKSPACE_ID = (() => {
+    try {
+        const currentUser = JSON.parse(
+            sessionStorage.getItem("taskflowCurrentUser") || "null"
+        );
+        return String(currentUser?.workspaceId || "default");
+    } catch (error) {
+        return "default";
+    }
+})();
+
+function getTaskWorkspaceId(task) {
+    return String(task?.workspaceId || "default");
+}
+
 
 /* ============================================================
    SAMPLE TASK DATA
@@ -391,7 +406,8 @@ window.addEventListener("storage", event => {
     if (event.key !== TASK_STORAGE_KEY) return;
 
     try {
-        tasks = JSON.parse(event.newValue || "[]");
+        tasks = JSON.parse(event.newValue || "[]")
+            .filter(task => getTaskWorkspaceId(task) === TASK_WORKSPACE_ID);
     } catch (error) {
         tasks = [];
     }
@@ -418,6 +434,7 @@ function initializeTasks() {
             if (Array.isArray(parsedTasks)) {
 
                 tasks = parsedTasks.filter(task =>
+                    getTaskWorkspaceId(task) === TASK_WORKSPACE_ID &&
                     !(Number.isInteger(task.id) && task.id >= 1 && task.id <= 12)
                 );
 
@@ -445,10 +462,25 @@ function initializeTasks() {
 ============================================================ */
 
 function saveTasks() {
+    let storedTasks = [];
+    try {
+        const parsedTasks = JSON.parse(localStorage.getItem(TASK_STORAGE_KEY) || "[]");
+        if (Array.isArray(parsedTasks)) storedTasks = parsedTasks;
+    } catch (error) {
+        console.warn("Unable to preserve tasks from other workspaces.");
+    }
 
+    const otherWorkspaceTasks = storedTasks.filter(task =>
+        getTaskWorkspaceId(task) !== TASK_WORKSPACE_ID
+    );
+    const workspaceTasks = tasks.map(task => ({
+        ...task,
+        workspaceId: TASK_WORKSPACE_ID
+    }));
+    tasks = workspaceTasks;
     localStorage.setItem(
         TASK_STORAGE_KEY,
-        JSON.stringify(tasks)
+        JSON.stringify([...otherWorkspaceTasks, ...workspaceTasks])
     );
 
 }
@@ -1410,6 +1442,7 @@ function populateAssigneeOptions() {
     }
 
     const assignees = accounts
+        .filter(account => String(account.workspaceId || "default") === TASK_WORKSPACE_ID)
         .map(account => `${account.firstName || ""} ${account.lastName || ""}`.trim())
         .filter(Boolean);
 
@@ -1717,12 +1750,28 @@ function handleTaskSubmit(event) {
 
     } else {
 
+        let assignedBy = "";
+        let assignedByEmail = "";
+        try {
+            const currentUser = JSON.parse(
+                sessionStorage.getItem("taskflowCurrentUser") || "null"
+            );
+            assignedBy = `${currentUser?.firstName || ""} ${currentUser?.lastName || ""}`.trim()
+                || currentUser?.email?.split("@")[0]
+                || "";
+            assignedByEmail = currentUser?.email || "";
+        } catch (error) {
+            console.warn("Unable to read the current user for task attribution.");
+        }
+
         const newTask = {
 
             id:
                 Date.now(),
 
             ...taskData,
+            assignedBy,
+            assignedByEmail,
 
             createdAt:
                 getTodayDate()
@@ -2686,6 +2735,7 @@ function getAccountForEmployee(name) {
     try {
         const accounts = JSON.parse(localStorage.getItem("taskflowAccounts") || "[]");
         return accounts.find(account =>
+            String(account.workspaceId || "default") === TASK_WORKSPACE_ID &&
             `${account.firstName || ""} ${account.lastName || ""}`.trim() === name
         );
     } catch (error) {

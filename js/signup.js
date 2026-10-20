@@ -946,6 +946,9 @@ if (signupForm) {
                 userId:
                     `TF-${Math.random().toString(36).slice(2, 8).toUpperCase()}`,
 
+                workspaceId:
+                    `workspace-${Math.random().toString(36).slice(2, 10).toUpperCase()}`,
+
                 role: accountRole,
 
                 department: "Software Engineering",

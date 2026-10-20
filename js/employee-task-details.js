@@ -65,12 +65,16 @@ function renderTask(task, user) {
     document.querySelector("#taskDueDate").textContent = formatDate(task.dueDate);
     document.querySelector("#taskDescription").textContent = task.description || "No description available.";
     document.querySelector("#assignedEmployee").textContent = assignedName;
+    document.querySelector("#assignedBy").textContent = task.assignedBy || "Not available";
     document.querySelector("#statusSelect").value = task.status || "todo";
     document.querySelector("#statusDot").style.background = task.status === "completed" ? "var(--success)" : task.status === "in-progress" ? "var(--primary)" : "var(--warning)";
 }
 
 const currentUser = getSessionUser();
-const tasks = readJson(taskStorageKey, []);
+const workspaceId = String(currentUser?.workspaceId || "default");
+const tasks = readJson(taskStorageKey, []).filter(item =>
+    String(item.workspaceId || "default") === workspaceId
+);
 const task = tasks.find(item => String(item.id) === String(taskId));
 
 if (!currentUser?.email || !task) {
@@ -81,7 +85,14 @@ if (!currentUser?.email || !task) {
 
     document.querySelector("#saveStatus").addEventListener("click", () => {
         task.status = document.querySelector("#statusSelect").value;
-        localStorage.setItem(taskStorageKey, JSON.stringify(tasks));
+        const allTasks = readJson(taskStorageKey, []);
+        const otherWorkspaceTasks = allTasks.filter(item =>
+            String(item.workspaceId || "default") !== workspaceId
+        );
+        localStorage.setItem(taskStorageKey, JSON.stringify([
+            ...otherWorkspaceTasks,
+            ...tasks.map(item => ({ ...item, workspaceId }))
+        ]));
         renderTask(task, currentUser);
     });
 }
