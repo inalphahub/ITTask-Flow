@@ -1,28 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Navbar scroll effect
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // Mobile menu toggle
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      mobileToggle.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰';
-    });
-
-    // Close mobile menu when a link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        mobileToggle.textContent = '☰';
-      });
-    });
-  }
-
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -144,24 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = tab.dataset.tab;
       if (tabContent && tabData[key]) {
         tabContent.innerHTML = tabData[key];
-      }
-    });
-  });
-
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const top = section.offsetTop - 100;
-      if (window.scrollY >= top) {
-        current = section.getAttribute('id');
-      }
-    });
-    document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
       }
     });
   });

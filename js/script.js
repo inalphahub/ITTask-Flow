@@ -583,11 +583,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getStartedButtons.forEach(button => {
 
         button.addEventListener("click", () => {
-
-            showToast(
-                "Get Started",
-                "Signup experience would open here."
-            );
+            window.location.href = "signup.html";
 
         });
 

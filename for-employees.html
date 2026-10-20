@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>For Employees — Task Flow</title>
+  <meta name="description" content="Task Flow helps employees work smarter, stay organized, and get more done with a simple workspace for tasks, deadlines, and collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/for-employees.css">
+</head>
+<body>
+  <!-- ========== GLOBAL NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo brand" aria-label="IT TaskFlow Home">
+        <span class="it-taskflow-mark">
+          <img class="it-taskflow-logo" src="it-taskflow-logo.svg" alt="IT TaskFlow logo">
+        </span>
+        <span>IT TaskFlow</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Features
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="task-management.html">Task Management</a>
+          <a href="project-management.html">Project Management</a>
+          <a href="team-collaboration.html">Team Collaboration</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports & Analytics</a>
+          <a href="notifications.html">Notifications</a></div>
+          </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle active" aria-expanded="false">
+            Solutions
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="for-employees.html" class="active">For Employees</a>
+            <a href="for-managers.html">For Managers</a>
+            <a href="for-team-leads.html">For Teams Leads</a>
+            <a href="for-organizations.html">For Organizations</a>
+          </div>
+        </div>
+
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Resources
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="documentation.html">Documentation</a>
+            <a href="userguide.html">User Guides</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="faqs.html">FAQ</a>
+            <a href="contactsupport.html">Contact Support</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+
+        <!-- <a href="#" class="nav-link">Pricing</a> -->
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn-primary">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="index.html" class="mobile-link">Home</a>
+        
+        <div class="mobile-dropdown">
+          <button class="mobile-link mobile-dropdown-toggle">
+            Features
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="task-management.html">Task Management</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="task-board.html">Task Board</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports-analytics.html">Reports & Analytics</a>
+          </div>
+        </div>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-link mobile-dropdown-toggle active">
+            Solutions
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mobile-dropdown-menu open">
+            <a href="for-employees.html" class="active">For Employees</a>
+            <a href="for-managers.html">For Managers</a>
+            <a href="for-team-leads.html">For Team Leads</a>
+            <a href="for-organizations.html">For Organizations</a>
+          </div>
+        </div>
+
+        <a href="how-it-works.html" class="mobile-link">How It Works</a>
+
+        <div class="mobile-dropdown">
+          <button class="mobile-link mobile-dropdown-toggle">
+            Resources
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="documentation.html">Documentation</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="faqs.html">FAQ</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+
+        <!-- <a href="#" class="mobile-link">Pricing</a> -->
+        
+        <div class="mobile-actions">
+          <a href="login.html" class="btn-login-mobile">Login</a>
+          <a href="signup.html" class="btn-primary-mobile">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="overview">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Work Smarter.<br>
+            Stay Organized.<br>
+            Get More Done.
+          </h1>
+          <p class="hero-desc">
+            Task Flow gives employees one simple workspace to manage tasks, track deadlines, collaborate with teammates, and stay connected with their work.
+          </p>
+          <div class="hero-cta">
+            <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+            <a href="#workday" class="btn-secondary btn-lg">See How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero-preview">
+          <div class="dashboard-mockup">
+            <div class="mockup-header">
+              <div class="mockup-greeting">
+                <span class="greeting-text">Good Morning, Alex</span>
+                <span class="greeting-sub">Here's what's on your plate today</span>
+              </div>
+            </div>
+            <div class="mockup-stats">
+              <div class="stat-item">
+                <span class="stat-num">12</span>
+                <span class="stat-label">Tasks</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">5</span>
+                <span class="stat-label">Due Today</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">7</span>
+                <span class="stat-label">Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">2</span>
+                <span class="stat-label">In Progress</span>
+              </div>
+            </div>
+            <div class="mockup-divider"></div>
+            <div class="mockup-tasks">
+              <div class="mockup-task">
+                <div class="task-top">
+                  <span class="task-name">Complete API Testing</span>
+                  <span class="task-badge high">High</span>
+                </div>
+                <div class="task-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%"></div>
+                  </div>
+                  <span class="progress-text">80%</span>
+                </div>
+                <span class="task-due">Due Today</span>
+              </div>
+              <div class="mockup-task">
+                <div class="task-top">
+                  <span class="task-name">Prepare UI Review</span>
+                  <span class="task-badge medium">Medium</span>
+                </div>
+                <div class="task-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 55%"></div>
+                  </div>
+                  <span class="progress-text">55%</span>
+                </div>
+                <span class="task-due">Due Tomorrow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WORKDAY OVERVIEW ========== -->
+    <section class="section workday-section" id="workday">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Everything You Need for Your Workday</h2>
+          <p class="section-desc">One place for tasks, deadlines, projects, and collaboration — designed around how employees actually work.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3>My Tasks</h3>
+            <p>Stay on top of your work with a clear view of everything assigned to you.</p>
+          </div>
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Deadlines</h3>
+            <p>Never miss important due dates with smart reminders and calendar views.</p>
+          </div>
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>Projects</h3>
+            <p>Understand how your work fits into larger projects and team goals.</p>
+          </div>
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Teamwork</h3>
+            <p>Work with your team through comments, mentions, and shared context.</p>
+          </div>
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <h3>Calendar</h3>
+            <p>Organize your schedule around deadlines, milestones, and meetings.</p>
+          </div>
+          <div class="feature-card" data-animate>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            </div>
+            <h3>Alerts</h3>
+            <p>Stay updated with timely notifications so nothing slips through.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MY TASKS ========== -->
+    <section class="section tasks-section" id="my-tasks">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Know Exactly What Needs to Be Done</h2>
+          <p class="section-desc">See all your assigned work in one place — prioritized, filtered, and easy to act on.</p>
+        </div>
+
+        <div class="tasks-preview" data-animate>
+          <div class="tasks-tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Today</button>
+            <button class="tab">Upcoming</button>
+            <button class="tab">Completed</button>
+          </div>
+          <div class="tasks-list">
+            <div class="task-row">
+              <div class="task-info">
+                <span class="task-title">Complete Homepage Testing</span>
+                <div class="task-meta">
+                  <span class="priority high">High</span>
+                  <span class="due">Due Today</span>
+                </div>
+              </div>
+              <div class="task-progress-wrap">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+                <span class="progress-pct">85%</span>
+              </div>
+            </div>
+            <div class="task-row">
+              <div class="task-info">
+                <span class="task-title">Database Validation</span>
+                <div class="task-meta">
+                  <span class="priority medium">Medium</span>
+                  <span class="due">Due Tomorrow</span>
+                </div>
+              </div>
+              <div class="task-progress-wrap">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <span class="progress-pct">60%</span>
+              </div>
+            </div>
+            <div class="task-row">
+              <div class="task-info">
+                <span class="task-title">Prepare Release Notes</span>
+                <div class="task-meta">
+                  <span class="priority low">Low</span>
+                  <span class="due">Due Friday</span>
+                </div>
+              </div>
+              <div class="task-progress-wrap">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 30%"></div>
+                </div>
+                <span class="progress-pct">30%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-item" data-animate>
+            <div class="check-icon">✓</div>
+            <div>
+              <strong>Assigned tasks</strong>
+              <span>Everything assigned to you in one clear list</span>
+            </div>
+          </div>
+          <div class="feature-item" data-animate>
+            <div class="check-icon">✓</div>
+            <div>
+              <strong>Task priority</strong>
+              <span>High, Medium, Low so you know what matters</span>
+            </div>
+          </div>
+          <div class="feature-item" data-animate>
+            <div class="check-icon">✓</div>
+            <div>
+              <strong>Due dates & status</strong>
+              <span>Never lose track of deadlines or progress</span>
+            </div>
+          </div>
+          <div class="feature-item" data-animate>
+            <div class="check-icon">✓</div>
+            <div>
+              <strong>Comments & attachments</strong>
+              <span>All context lives with the task</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TASK DETAILS ========== -->
+    <section class="section task-details-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Everything About a Task, in One Place</h2>
+          <p class="section-desc">Open any task and find description, checklist, activity, comments, and files — without switching tools.</p>
+        </div>
+
+        <div class="task-details-preview" data-animate>
+          <div class="details-header">
+            <h3>Complete Mobile Testing</h3>
+            <div class="details-meta">
+              <span>Assigned by <strong>Project Manager</strong></span>
+              <span class="priority high">High</span>
+              <span>Due: September 25</span>
+            </div>
+          </div>
+          <div class="details-tabs">
+            <button class="dtab active">Task Info</button>
+            <button class="dtab">Activity</button>
+            <button class="dtab">Comments</button>
+            <button class="dtab">Attachments</button>
+            <button class="dtab">Checklist</button>
+          </div>
+          <div class="details-body">
+            <div class="details-desc">
+              <h4>Description</h4>
+              <p>Test the application across supported mobile devices and document issues. Focus on navigation, forms, and responsive layouts.</p>
+            </div>
+            <div class="details-checklist">
+              <h4>Checklist</h4>
+              <label class="check-item"><input type="checkbox" checked disabled> Login testing</label>
+              <label class="check-item"><input type="checkbox" checked disabled> Navigation testing</label>
+              <label class="check-item"><input type="checkbox" disabled> Responsive testing</label>
+              <label class="check-item"><input type="checkbox" disabled> Final report</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MY PROJECTS ========== -->
+    <section class="section projects-section" id="my-projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">See Where Your Work Fits</h2>
+          <p class="section-desc">Individual tasks belong to larger projects. See progress, your role, and team context at a glance.</p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-animate>
+            <div class="project-header">
+              <h3>Website Redesign</h3>
+              <span class="role-badge">Contributor</span>
+            </div>
+            <div class="project-progress">
+              <div class="progress-bar large">
+                <div class="progress-fill" style="width: 82%"></div>
+              </div>
+              <span class="pct">82%</span>
+            </div>
+            <div class="project-meta">
+              <span>12 tasks</span>
+              <span>Due Oct 15</span>
+              <span>8 members</span>
+            </div>
+          </div>
+          <div class="project-card" data-animate>
+            <div class="project-header">
+              <h3>Mobile Application</h3>
+              <span class="role-badge">Owner</span>
+            </div>
+            <div class="project-progress">
+              <div class="progress-bar large">
+                <div class="progress-fill" style="width: 64%"></div>
+              </div>
+              <span class="pct">64%</span>
+            </div>
+            <div class="project-meta">
+              <span>18 tasks</span>
+              <span>Due Nov 2</span>
+              <span>5 members</span>
+            </div>
+          </div>
+          <div class="project-card" data-animate>
+            <div class="project-header">
+              <h3>Internal Automation</h3>
+              <span class="role-badge">Contributor</span>
+            </div>
+            <div class="project-progress">
+              <div class="progress-bar large">
+                <div class="progress-fill" style="width: 42%"></div>
+              </div>
+              <span class="pct">42%</span>
+            </div>
+            <div class="project-meta">
+              <span>9 tasks</span>
+              <span>Due Dec 1</span>
+              <span>4 members</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TASK BOARD ========== -->
+    <section class="section board-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Visualize Your Work</h2>
+          <p class="section-desc">Move tasks across stages with a clear Kanban board. Perfect for understanding status at a glance.</p>
+        </div>
+
+        <div class="kanban-board" data-animate>
+          <div class="kanban-column">
+            <div class="column-header">
+              <span class="column-title">To Do</span>
+              <span class="column-count">4</span>
+            </div>
+            <div class="kanban-cards">
+              <div class="kanban-card">Task 01</div>
+              <div class="kanban-card">Task 02</div>
+            </div>
+          </div>
+          <div class="kanban-column">
+            <div class="column-header">
+              <span class="column-title">In Progress</span>
+              <span class="column-count">3</span>
+            </div>
+            <div class="kanban-cards">
+              <div class="kanban-card active">Task 04</div>
+              <div class="kanban-card">Task 05</div>
+            </div>
+          </div>
+          <div class="kanban-column">
+            <div class="column-header">
+              <span class="column-title">Review</span>
+              <span class="column-count">2</span>
+            </div>
+            <div class="kanban-cards">
+              <div class="kanban-card">Task 07</div>
+              <div class="kanban-card">Task 08</div>
+            </div>
+          </div>
+          <div class="kanban-column">
+            <div class="column-header">
+              <span class="column-title">Done</span>
+              <span class="column-count">5</span>
+            </div>
+            <div class="kanban-cards">
+              <div class="kanban-card done">Task 09</div>
+              <div class="kanban-card done">Task 10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CALENDAR & DEADLINES ========== -->
+    <section class="section calendar-section" id="calendar">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Plan Your Work Around Your Deadlines</h2>
+          <p class="section-desc">See today’s tasks, upcoming deadlines, milestones, and meetings in one modern calendar view.</p>
+        </div>
+
+        <div class="calendar-preview" data-animate>
+          <div class="calendar-filters">
+            <button class="filter-btn active">Today</button>
+            <button class="filter-btn">Week</button>
+            <button class="filter-btn">Month</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-day today">
+              <span class="day-num">20</span>
+              <span class="day-label">Today</span>
+              <div class="day-events">
+                <span class="event high">API Testing</span>
+                <span class="event">Team Sync</span>
+              </div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">21</span>
+              <span class="day-label">Mon</span>
+              <div class="day-events">
+                <span class="event medium">UI Review</span>
+              </div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">22</span>
+              <span class="day-label">Tue</span>
+              <div class="day-events">
+                <span class="event">Milestone</span>
+              </div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">23</span>
+              <span class="day-label">Wed</span>
+              <div class="day-events">
+                <span class="event high">Release Notes</span>
+              </div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">24</span>
+              <span class="day-label">Thu</span>
+              <div class="day-events"></div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">25</span>
+              <span class="day-label">Fri</span>
+              <div class="day-events">
+                <span class="event medium">Mobile Testing</span>
+              </div>
+            </div>
+            <div class="cal-day">
+              <span class="day-num">26</span>
+              <span class="day-label">Sat</span>
+              <div class="day-events"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TEAM COLLABORATION ========== -->
+    <section class="section collab-section" id="collaboration">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Work Together Without Losing Context</h2>
+          <p class="section-desc">Comment, mention teammates, share files, and keep the conversation right where the work happens.</p>
+        </div>
+
+        <div class="collab-preview" data-animate>
+          <div class="comment-thread">
+            <div class="comment">
+              <div class="avatar">A</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <strong>Alex</strong>
+                  <span class="time">2 hours ago</span>
+                </div>
+                <p>I've completed the responsive testing. The tablet layout still needs review.</p>
+                <p class="mention">@Priya can you check the navigation issue?</p>
+                <button class="reply-btn">Reply</button>
+              </div>
+            </div>
+            <div class="comment reply">
+              <div class="avatar priya">P</div>
+              <div class="comment-body">
+                <div class="comment-header">
+                  <strong>Priya</strong>
+                  <span class="time">45 min ago</span>
+                </div>
+                <p>Looking at it now. Will update the checklist once fixed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="collab-features">
+            <div class="collab-item">
+              <span class="collab-icon">💬</span>
+              <div>
+                <strong>Comments</strong>
+                <span>Discuss work in context</span>
+              </div>
+            </div>
+            <div class="collab-item">
+              <span class="collab-icon">@</span>
+              <div>
+                <strong>Mentions</strong>
+                <span>Notify the right people</span>
+              </div>
+            </div>
+            <div class="collab-item">
+              <span class="collab-icon">📎</span>
+              <div>
+                <strong>Attachments</strong>
+                <span>Files stay with the task</span>
+              </div>
+            </div>
+            <div class="collab-item">
+              <span class="collab-icon">📜</span>
+              <div>
+                <strong>Activity</strong>
+                <span>Full timeline of changes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NOTIFICATIONS ========== -->
+    <section class="section notif-section" id="notifications">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Stay Updated Without Constantly Checking</h2>
+          <p class="section-desc">Get notified about assignments, mentions, deadlines, and completions — so you can focus on work.</p>
+        </div>
+
+        <div class="notif-preview" data-animate>
+          <div class="notif-header">
+            <span class="notif-title">🔔 Notifications</span>
+            <button class="mark-read">Mark all read</button>
+          </div>
+          <div class="notif-list">
+            <div class="notif-item unread">
+              <div class="notif-icon assign">+</div>
+              <div class="notif-content">
+                <p><strong>New task assigned</strong> — "Mobile Testing"</p>
+                <span class="notif-time">5 min ago</span>
+              </div>
+            </div>
+            <div class="notif-item unread">
+              <div class="notif-icon mention">@</div>
+              <div class="notif-content">
+                <p><strong>Alex mentioned you</strong> in "Website Redesign"</p>
+                <span class="notif-time">20 min ago</span>
+              </div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-icon deadline">⏰</div>
+              <div class="notif-content">
+                <p><strong>Deadline approaching</strong> — "API Testing"</p>
+                <span class="notif-time">1 hour ago</span>
+              </div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-icon done">✓</div>
+              <div class="notif-content">
+                <p><strong>Task completed</strong> — "Homepage Validation"</p>
+                <span class="notif-time">2 hours ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PERSONAL DASHBOARD ========== -->
+    <section class="section dashboard-section" id="progress">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Your Work at a Glance</h2>
+          <p class="section-desc">A personal dashboard that shows what matters most — your tasks, progress, and focus for the day.</p>
+        </div>
+
+        <div class="dash-stats" data-animate>
+          <div class="dash-stat">
+            <span class="dash-num">24</span>
+            <span class="dash-label">My Tasks</span>
+          </div>
+          <div class="dash-stat">
+            <span class="dash-num">8</span>
+            <span class="dash-label">Completed</span>
+          </div>
+          <div class="dash-stat">
+            <span class="dash-num">5</span>
+            <span class="dash-label">In Progress</span>
+          </div>
+          <div class="dash-stat">
+            <span class="dash-num">2</span>
+            <span class="dash-label">Due Today</span>
+          </div>
+        </div>
+
+        <div class="weekly-progress" data-animate>
+          <h3>Weekly Progress</h3>
+          <div class="week-bars">
+            <div class="week-day">
+              <div class="bar-wrap"><div class="bar" style="height: 60%"></div></div>
+              <span>Mon</span>
+            </div>
+            <div class="week-day">
+              <div class="bar-wrap"><div class="bar" style="height: 85%"></div></div>
+              <span>Tue</span>
+            </div>
+            <div class="week-day">
+              <div class="bar-wrap"><div class="bar" style="height: 45%"></div></div>
+              <span>Wed</span>
+            </div>
+            <div class="week-day">
+              <div class="bar-wrap"><div class="bar" style="height: 90%"></div></div>
+              <span>Thu</span>
+            </div>
+            <div class="week-day">
+              <div class="bar-wrap"><div class="bar" style="height: 70%"></div></div>
+              <span>Fri</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PERSONAL PRODUCTIVITY ========== -->
+    <section class="section productivity-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Understand Your Progress</h2>
+          <p class="section-desc">Helpful insights that support your own organization — not surveillance. See what you’ve completed and what’s ahead.</p>
+        </div>
+
+        <div class="productivity-grid">
+          <div class="prod-card" data-animate>
+            <h4>Tasks Completed</h4>
+            <p class="prod-value">47 this month</p>
+            <span class="prod-trend up">↑ 12% vs last month</span>
+          </div>
+          <div class="prod-card" data-animate>
+            <h4>Tasks Remaining</h4>
+            <p class="prod-value">16 open</p>
+            <span class="prod-trend">On track</span>
+          </div>
+          <div class="prod-card" data-animate>
+            <h4>Completion Rate</h4>
+            <p class="prod-value">78%</p>
+            <span class="prod-trend up">↑ Steady improvement</span>
+          </div>
+          <div class="prod-card" data-animate>
+            <h4>Project Participation</h4>
+            <p class="prod-value">3 active</p>
+            <span class="prod-trend">Website, Mobile, Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WORKDAY FLOW ========== -->
+    <section class="section flow-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">A Simpler Way to Manage Your Day</h2>
+          <p class="section-desc">From morning check-in to end-of-day completion — a clear, calm flow for your work.</p>
+        </div>
+
+        <div class="flow-steps" data-animate>
+          <div class="flow-step">
+            <div class="flow-icon">☀️</div>
+            <span>Morning</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">📋</div>
+            <span>Check Tasks</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">🎯</div>
+            <span>Prioritize</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">⚡</div>
+            <span>Work</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">🤝</div>
+            <span>Collaborate</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">📈</div>
+            <span>Update</span>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-icon">✅</div>
+            <span>Complete</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TASK LIFECYCLE ========== -->
+    <section class="section lifecycle-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">From Assignment to Completion</h2>
+          <p class="section-desc">A clear journey for every task you receive — so nothing gets lost along the way.</p>
+        </div>
+
+        <div class="lifecycle" data-animate>
+          <div class="life-step">
+            <div class="life-num">1</div>
+            <h4>Task Assigned</h4>
+            <p>You receive a clear assignment with context</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">2</div>
+            <h4>Review Details</h4>
+            <p>Open the task and understand requirements</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">3</div>
+            <h4>Start Work</h4>
+            <p>Move it to In Progress and begin</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">4</div>
+            <h4>Update Progress</h4>
+            <p>Keep status and checklist current</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">5</div>
+            <h4>Collaborate</h4>
+            <p>Comment, mention, attach files</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">6</div>
+            <h4>Submit / Review</h4>
+            <p>Hand off for review when ready</p>
+          </div>
+          <div class="life-connector"></div>
+          <div class="life-step">
+            <div class="life-num">7</div>
+            <h4>Completed</h4>
+            <p>Mark done and celebrate progress</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EMPLOYEE BENEFITS ========== -->
+    <section class="section benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Built Around the Employee Experience</h2>
+          <p class="section-desc">Task Flow is designed to reduce friction and help you do your best work every day.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">🎯</div>
+            <h3>Focus</h3>
+            <p>Know what matters now so you can give attention to the right work.</p>
+          </div>
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">🗂️</div>
+            <h3>Organization</h3>
+            <p>Keep tasks, deadlines, and files together in one calm workspace.</p>
+          </div>
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">👁️</div>
+            <h3>Visibility</h3>
+            <p>Understand your workload and how it connects to projects.</p>
+          </div>
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">🤝</div>
+            <h3>Collaboration</h3>
+            <p>Communicate where the work happens — no more lost threads.</p>
+          </div>
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">📊</div>
+            <h3>Accountability</h3>
+            <p>Keep progress visible so everyone stays aligned.</p>
+          </div>
+          <div class="benefit-card" data-animate>
+            <div class="benefit-icon">🌱</div>
+            <h3>Growth</h3>
+            <p>See your completed work and contribution over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Common questions employees ask about Task Flow.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees see all company tasks?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. Employees only see tasks assigned to them or tasks within projects they are members of. Privacy and role-based access keep work focused and secure.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>How are tasks assigned to employees?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Managers or project owners can assign tasks directly. You’ll receive a notification and the task appears in your My Tasks list with full context.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees update task progress?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can update status, progress percentage, checklists, and leave comments so everyone stays informed without extra meetings.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees comment on tasks?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Comments, @mentions, and replies keep conversations tied to the work. You can also attach files directly to the task.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees attach files?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Upload documents, images, and other files to any task so all relevant materials stay in one place.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees see their deadlines in the calendar?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The calendar view shows your tasks, deadlines, milestones, and meetings. Switch between Today, Week, and Month views easily.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Will employees receive task notifications?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You’ll get notifications for new assignments, mentions, approaching deadlines, comments, and task completions — all configurable to your preference.</p>
+            </div>
+          </div>
+          <div class="faq-item" data-animate>
+            <button class="faq-question" aria-expanded="false">
+              <span>Can employees work with multiple projects?</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can be a member of multiple projects at once. Your My Projects view shows progress and your role across all of them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box" data-animate>
+          <h2>Take Control of Your Workday</h2>
+          <p>Organize your tasks, collaborate with your team, and keep your work moving forward with Task Flow.</p>
+          <div class="cta-buttons">
+            <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+            <a href="index.html" class="btn-secondary btn-lg">Explore Task Flow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#4F46E5"/><path d="M8 14L12 18L20 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Task Flow</span>
+        </a>
+        <p>Work smarter. Stay organized. Get more done.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="task-management.html">Task Management</a>
+          <a href="project-management.html">Project Management</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports & Analytics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="for-employees.html">For Employees</a>
+          <a href="for-managers.html">For Managers</a>
+          <a href="for-teams.html">For Teams</a>
+          <a href="for-organizations.html">For Organizations</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="documentation.html">Documentation</a>
+          <a href="userguide.html">User Guide</a>
+          <a href="helpcenter.html">Help Center</a>
+          <a href="faqs.html">FAQ</a>
+          <a href="contactsupport.html">Contact Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contactsupport.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Task Flow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/for-employees.js"></script>
+</body>
+</html>

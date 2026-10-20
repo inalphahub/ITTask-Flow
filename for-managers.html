@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>For Managers | Task Flow – See the Bigger Picture</title>
+  <meta name="description" content="Task Flow gives managers the visibility to monitor teams, projects, workload, performance, and business priorities from one connected workspace.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/for-managers.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <script src="js/brand.js" defer></script>
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html#home" class="logo brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span>
+        <span>Task Flow</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-item">Home</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-item dropdown-toggle" aria-expanded="false">
+            Features
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="task-management.html">Task Management</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="team-collaboration.html">Team Collaboration</a>
+            <a href="task-board.html">Task Board</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports-analytics.html">Reports & Analytics</a>
+            <a href="notifications.html">Notifications</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-item dropdown-toggle" aria-expanded="false">
+            Solutions
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="for-employees.html">For Employees</a>
+            <a href="for-team-leads.html">For Team Leads</a>
+            <a href="for-managers.html" class="active">For Managers</a>
+            <a href="for-organizations.html">For Organizations</a>
+          </div>
+        </div>
+
+        <a href="how-it-works.html" class="nav-item">How It Works</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-item dropdown-toggle" aria-expanded="false">
+            Resources
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="documentation.html">Documents</a>
+            <a href="userguide.html">User Guide</a>
+            <a href="faqs.html">FAQ</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="contactsupport.html">Contact Support</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-item">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn-primary">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle">Features</button>
+        <div class="mobile-dropdown-content">
+          <a href="task-management.html">Task Management</a>
+          <a href="project-management.html">Project Management</a>
+          <a href="team-collaboration.html">Team Collaboration</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports & Analytics</a>
+          <a href="notifications.html">Notifications</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle">Solutions</button>
+        <div class="mobile-dropdown-content">
+          <a href="for-employees.html">For Employees</a>
+          <a href="for-team-leads.html">For Team Leads</a>
+          <a href="for-managers.html" class="active">For Managers</a>
+          <a href="for-organizations.html">For Organizations</a>
+        </div>
+      </div>
+      <a href="index.html#how-it-works">How It Works</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle">Resources</button>
+        <div class="mobile-dropdown-content">
+          <a href="documentation.html">Documentation</a>
+          <a href="userguide.html">User Guide</a>
+          <a href="faqs.html">FAQ</a>
+          <a href="helpcenter.html">Help Center</a>
+          <a href="contactsupport.html">Contact Support</a>
+        </div>
+      </div>
+      <a href="index.html#about">About</a>
+      <div class="mobile-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="badge animate-fade-up">For Managers</div>
+        <h1 class="animate-fade-up delay-1">See the Bigger Picture.<br>Lead With Better Insights.</h1>
+        <p class="hero-sub animate-fade-up delay-2">
+          Task Flow gives managers the visibility they need to monitor teams, projects, workload, performance, deadlines, and business priorities from one connected workspace.
+        </p>
+        <div class="hero-ctas animate-fade-up delay-3">
+          <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+          <a href="#overview" class="btn-secondary btn-lg">Explore Task Flow</a>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-fade-up delay-4">
+        <div class="dashboard-card">
+          <div class="dash-header">
+            <span class="dash-title">Manager Overview</span>
+            <span class="dash-badge">Live</span>
+          </div>
+          <div class="dash-metrics">
+            <div class="metric">
+              <span class="metric-value" data-count="8">0</span>
+              <span class="metric-label">Teams</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="24">0</span>
+              <span class="metric-label">Projects</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="186">0</span>
+              <span class="metric-label">Tasks</span>
+            </div>
+          </div>
+          <div class="dash-progress">
+            <div class="progress-label">
+              <span>Completion Rate</span>
+              <span class="progress-pct">87%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="--target: 87%"></div>
+            </div>
+          </div>
+          <div class="dash-teams">
+            <div class="team-row">
+              <span>Engineering</span>
+              <div class="mini-bar"><div class="mini-fill" style="--w: 91%"></div></div>
+              <span>91%</span>
+            </div>
+            <div class="team-row">
+              <span>QA</span>
+              <div class="mini-bar"><div class="mini-fill" style="--w: 86%"></div></div>
+              <span>86%</span>
+            </div>
+            <div class="team-row">
+              <span>Design</span>
+              <div class="mini-bar"><div class="mini-fill" style="--w: 82%"></div></div>
+              <span>82%</span>
+            </div>
+          </div>
+          <div class="dash-alert">
+            <span class="alert-icon">⚠</span>
+            <span>7 items need attention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANAGEMENT OVERVIEW ========== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything Important, At a Glance</h2>
+        <p>Monitor the health of your organization with key metrics that update in real time.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card" data-animate>
+          <div class="metric-icon teams">👥</div>
+          <span class="metric-number" data-count="8">0</span>
+          <span class="metric-name">Teams</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon projects">📁</div>
+          <span class="metric-number" data-count="24">0</span>
+          <span class="metric-name">Projects</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon tasks">✓</div>
+          <span class="metric-number" data-count="186">0</span>
+          <span class="metric-name">Tasks</span>
+        </div>
+        <div class="metric-card" data-animate>
+          <div class="metric-icon completion">📈</div>
+          <span class="metric-number" data-count="87" data-suffix="%">0</span>
+          <span class="metric-name">Completion</span>
+        </div>
+      </div>
+      <div class="status-row" data-animate>
+        <div class="status-item on-track">
+          <span class="status-dot"></span>
+          <span class="status-count">18</span>
+          <span class="status-label">On Track</span>
+        </div>
+        <div class="status-item at-risk">
+          <span class="status-dot"></span>
+          <span class="status-count">4</span>
+          <span class="status-label">At Risk</span>
+        </div>
+        <div class="status-item delayed">
+          <span class="status-dot"></span>
+          <span class="status-count">2</span>
+          <span class="status-label">Delayed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAMS OVERVIEW ========== -->
+  <section class="section section-alt" id="teams">
+    <div class="container">
+      <div class="section-header">
+        <h2>Understand Every Team You Manage</h2>
+        <p>Get a clear view of each team’s size, progress, and current workload.</p>
+      </div>
+      <div class="teams-grid">
+        <div class="team-card" data-animate>
+          <div class="team-card-header">
+            <h3>Engineering</h3>
+            <span class="team-status on-track">On Track</span>
+          </div>
+          <div class="team-meta">
+            <span>Lead: Alex Rivera</span>
+            <span>18 Members</span>
+          </div>
+          <div class="team-stats">
+            <div class="stat">
+              <span class="stat-val">6</span>
+              <span class="stat-lbl">Active Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">92%</span>
+              <span class="stat-lbl">Completion</span>
+            </div>
+          </div>
+          <div class="team-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 92%"></div></div>
+          </div>
+          <div class="team-workload">
+            <span>Workload</span>
+            <span class="workload-high">91%</span>
+          </div>
+        </div>
+
+        <div class="team-card" data-animate>
+          <div class="team-card-header">
+            <h3>QA</h3>
+            <span class="team-status on-track">On Track</span>
+          </div>
+          <div class="team-meta">
+            <span>Lead: Priya Sharma</span>
+            <span>10 Members</span>
+          </div>
+          <div class="team-stats">
+            <div class="stat">
+              <span class="stat-val">4</span>
+              <span class="stat-lbl">Active Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">86%</span>
+              <span class="stat-lbl">Completion</span>
+            </div>
+          </div>
+          <div class="team-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 86%"></div></div>
+          </div>
+          <div class="team-workload">
+            <span>Workload</span>
+            <span>72%</span>
+          </div>
+        </div>
+
+        <div class="team-card" data-animate>
+          <div class="team-card-header">
+            <h3>Design</h3>
+            <span class="team-status attention">Needs Attention</span>
+          </div>
+          <div class="team-meta">
+            <span>Lead: Rahul Mehta</span>
+            <span>7 Members</span>
+          </div>
+          <div class="team-stats">
+            <div class="stat">
+              <span class="stat-val">3</span>
+              <span class="stat-lbl">Active Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">82%</span>
+              <span class="stat-lbl">Completion</span>
+            </div>
+          </div>
+          <div class="team-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 82%"></div></div>
+          </div>
+          <div class="team-workload">
+            <span>Workload</span>
+            <span>78%</span>
+          </div>
+        </div>
+
+        <div class="team-card" data-animate>
+          <div class="team-card-header">
+            <h3>Product</h3>
+            <span class="team-status on-track">On Track</span>
+          </div>
+          <div class="team-meta">
+            <span>Lead: Anita Kapoor</span>
+            <span>6 Members</span>
+          </div>
+          <div class="team-stats">
+            <div class="stat">
+              <span class="stat-val">5</span>
+              <span class="stat-lbl">Active Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">89%</span>
+              <span class="stat-lbl">Completion</span>
+            </div>
+          </div>
+          <div class="team-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 89%"></div></div>
+          </div>
+          <div class="team-workload">
+            <span>Workload</span>
+            <span>56%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM LEADS ========== -->
+  <section class="section" id="team-leads">
+    <div class="container">
+      <div class="section-header">
+        <h2>Stay Connected With Your Team Leads</h2>
+        <p>Monitor team leads, their teams, and issues that may require escalation.</p>
+      </div>
+      <div class="table-wrapper" data-animate>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Team Lead</th>
+              <th>Team</th>
+              <th>Projects</th>
+              <th>Progress</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="avatar">AR</div>
+                  <span>Alex Rivera</span>
+                </div>
+              </td>
+              <td>Engineering</td>
+              <td>6</td>
+              <td>
+                <div class="table-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="--w: 92%"></div></div>
+                  <span>92%</span>
+                </div>
+              </td>
+              <td><span class="badge-status on-track">On Track</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="avatar">PS</div>
+                  <span>Priya Sharma</span>
+                </div>
+              </td>
+              <td>QA</td>
+              <td>4</td>
+              <td>
+                <div class="table-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="--w: 86%"></div></div>
+                  <span>86%</span>
+                </div>
+              </td>
+              <td><span class="badge-status on-track">On Track</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="avatar">RM</div>
+                  <span>Rahul Mehta</span>
+                </div>
+              </td>
+              <td>Design</td>
+              <td>3</td>
+              <td>
+                <div class="table-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="--w: 82%"></div></div>
+                  <span>82%</span>
+                </div>
+              </td>
+              <td><span class="badge-status attention">Needs Attention</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-cell">
+                  <div class="avatar">AK</div>
+                  <span>Anita Kapoor</span>
+                </div>
+              </td>
+              <td>Product</td>
+              <td>5</td>
+              <td>
+                <div class="table-progress">
+                  <div class="mini-bar"><div class="mini-fill" style="--w: 89%"></div></div>
+                  <span>89%</span>
+                </div>
+              </td>
+              <td><span class="badge-status on-track">On Track</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT PORTFOLIO ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Monitor Your Entire Project Portfolio</h2>
+        <p>Track progress and health across every project without diving into individual tasks.</p>
+      </div>
+      <div class="filter-bar" data-animate>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="on-track">On Track</button>
+        <button class="filter-btn" data-filter="attention">Attention</button>
+        <button class="filter-btn" data-filter="delayed">Delayed</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <div class="project-list" data-animate>
+        <div class="project-row" data-status="on-track">
+          <div class="project-info">
+            <h4>Website Redesign</h4>
+            <span class="project-meta">Engineering · Design</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 82%"></div></div>
+            <span>82%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+        <div class="project-row" data-status="on-track">
+          <div class="project-info">
+            <h4>Mobile Application</h4>
+            <span class="project-meta">Engineering · QA</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 68%"></div></div>
+            <span>68%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+        <div class="project-row" data-status="attention">
+          <div class="project-info">
+            <h4>Automation Platform</h4>
+            <span class="project-meta">Engineering · Product</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 47%"></div></div>
+            <span>47%</span>
+          </div>
+          <span class="badge-status attention">Attention</span>
+        </div>
+        <div class="project-row" data-status="on-track">
+          <div class="project-info">
+            <h4>Internal Portal</h4>
+            <span class="project-meta">Product · Design</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-bar"><div class="progress-fill" style="--target: 94%"></div></div>
+            <span>94%</span>
+          </div>
+          <span class="badge-status on-track">On Track</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT HEALTH ========== -->
+  <section class="section" id="project-health">
+    <div class="container">
+      <div class="section-header">
+        <h2>Know Which Projects Need Attention</h2>
+        <p>A high-level view of project health so you can focus where it matters.</p>
+      </div>
+      <div class="health-visual" data-animate>
+        <div class="health-bars">
+          <div class="health-item">
+            <div class="health-label">On Track</div>
+            <div class="health-bar on-track"><div class="health-fill" style="--w: 75%"></div></div>
+            <span>18</span>
+          </div>
+          <div class="health-item">
+            <div class="health-label">Needs Attention</div>
+            <div class="health-bar attention"><div class="health-fill" style="--w: 17%"></div></div>
+            <span>4</span>
+          </div>
+          <div class="health-item">
+            <div class="health-label">Delayed</div>
+            <div class="health-bar delayed"><div class="health-fill" style="--w: 8%"></div></div>
+            <span>2</span>
+          </div>
+        </div>
+        <div class="health-legend">
+          <div class="legend-item">
+            <span class="legend-dot on-track"></span>
+            <div>
+              <strong>On Track</strong>
+              <p>Project progressing according to plan.</p>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot attention"></span>
+            <div>
+              <strong>Needs Attention</strong>
+              <p>Potential deadline or resource issue.</p>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot delayed"></span>
+            <div>
+              <strong>Delayed</strong>
+              <p>Project has passed an expected milestone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WORKLOAD & RESOURCES ========== -->
+  <section class="section section-alt" id="workload">
+    <div class="container">
+      <div class="section-header">
+        <h2>Balance Resources Across Teams</h2>
+        <p>Identify where work is concentrated and where capacity still exists.</p>
+      </div>
+      <div class="workload-grid">
+        <div class="workload-chart" data-animate>
+          <div class="workload-row">
+            <span class="wl-team">Engineering</span>
+            <div class="wl-bar"><div class="wl-fill high" style="--w: 91%"></div></div>
+            <span class="wl-pct">91%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">QA</span>
+            <div class="wl-bar"><div class="wl-fill" style="--w: 72%"></div></div>
+            <span class="wl-pct">72%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">Design</span>
+            <div class="wl-bar"><div class="wl-fill" style="--w: 78%"></div></div>
+            <span class="wl-pct">78%</span>
+          </div>
+          <div class="workload-row">
+            <span class="wl-team">Product</span>
+            <div class="wl-bar"><div class="wl-fill low" style="--w: 56%"></div></div>
+            <span class="wl-pct">56%</span>
+          </div>
+        </div>
+        <div class="capacity-cards" data-animate>
+          <div class="capacity-card">
+            <span class="cap-label">Capacity</span>
+            <span class="cap-value">41 Members</span>
+          </div>
+          <div class="capacity-card">
+            <span class="cap-label">Assigned Work</span>
+            <span class="cap-value">186 Tasks</span>
+          </div>
+          <div class="capacity-card">
+            <span class="cap-label">Available Capacity</span>
+            <span class="cap-value">~23%</span>
+          </div>
+          <div class="capacity-card highlight">
+            <span class="cap-label">Overloaded Teams</span>
+            <span class="cap-value">1 Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATION TASKS ========== -->
+  <section class="section" id="org-tasks">
+    <div class="container">
+      <div class="section-header">
+        <h2>See Work Across the Organization</h2>
+        <p>A single view of every task status across all teams and projects.</p>
+      </div>
+      <div class="task-overview" data-animate>
+        <div class="task-stats">
+          <div class="task-stat">
+            <span class="ts-num">186</span>
+            <span class="ts-lbl">Total Tasks</span>
+          </div>
+          <div class="task-stat">
+            <span class="ts-num green">128</span>
+            <span class="ts-lbl">Completed</span>
+          </div>
+          <div class="task-stat">
+            <span class="ts-num blue">34</span>
+            <span class="ts-lbl">In Progress</span>
+          </div>
+          <div class="task-stat">
+            <span class="ts-num gray">17</span>
+            <span class="ts-lbl">Pending</span>
+          </div>
+          <div class="task-stat">
+            <span class="ts-num red">7</span>
+            <span class="ts-lbl">Overdue</span>
+          </div>
+          <div class="task-stat">
+            <span class="ts-num">0</span>
+            <span class="ts-lbl">Blocked</span>
+          </div>
+        </div>
+        <div class="trend-chart">
+          <h4>Task Completion Trend</h4>
+          <div class="bars">
+            <div class="bar-col"><div class="bar" style="--h: 55%"></div><span>Mon</span></div>
+            <div class="bar-col"><div class="bar" style="--h: 70%"></div><span>Tue</span></div>
+            <div class="bar-col"><div class="bar" style="--h: 85%"></div><span>Wed</span></div>
+            <div class="bar-col"><div class="bar" style="--h: 75%"></div><span>Thu</span></div>
+            <div class="bar-col"><div class="bar" style="--h: 95%"></div><span>Fri</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERFORMANCE INSIGHTS ========== -->
+  <section class="section section-alt" id="performance">
+    <div class="container">
+      <div class="section-header">
+        <h2>Turn Activity Into Meaningful Insights</h2>
+        <p>Management-level analytics focused on visibility and decision support.</p>
+      </div>
+      <div class="insights-grid">
+        <div class="insight-card" data-animate>
+          <span class="insight-value">87%</span>
+          <span class="insight-label">Task Completion</span>
+        </div>
+        <div class="insight-card" data-animate>
+          <span class="insight-value">91%</span>
+          <span class="insight-label">On-Time Completion</span>
+        </div>
+        <div class="insight-card" data-animate>
+          <span class="insight-value">84%</span>
+          <span class="insight-label">Project Progress</span>
+        </div>
+        <div class="insight-card" data-animate>
+          <span class="insight-value">7</span>
+          <span class="insight-label">Overdue Work</span>
+        </div>
+      </div>
+      <div class="charts-row" data-animate>
+        <div class="chart-card">
+          <h4>Team Performance</h4>
+          <div class="simple-bars">
+            <div class="sb-row"><span>Engineering</span><div class="sb-bar"><div style="--w:91%"></div></div><span>91%</span></div>
+            <div class="sb-row"><span>QA</span><div class="sb-bar"><div style="--w:86%"></div></div><span>86%</span></div>
+            <div class="sb-row"><span>Design</span><div class="sb-bar"><div style="--w:82%"></div></div><span>82%</span></div>
+            <div class="sb-row"><span>Product</span><div class="sb-bar"><div style="--w:89%"></div></div><span>89%</span></div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h4>Workload Distribution</h4>
+          <div class="donut-placeholder">
+            <div class="donut">
+              <span>Balanced</span>
+            </div>
+            <ul class="donut-legend">
+              <li><span class="dot eng"></span> Engineering 38%</li>
+              <li><span class="dot qa"></span> QA 22%</li>
+              <li><span class="dot des"></span> Design 20%</li>
+              <li><span class="dot prod"></span> Product 20%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GOALS & MILESTONES ========== -->
+  <section class="section" id="goals">
+    <div class="container">
+      <div class="section-header">
+        <h2>Keep Teams Aligned With Bigger Goals</h2>
+        <p>Connect business objectives down to individual tasks so everyone stays focused.</p>
+      </div>
+      <div class="goals-hierarchy" data-animate>
+        <div class="goal-level org">
+          <span class="goal-type">Organization Goal</span>
+          <h3>Improve Product Delivery</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-level team">
+          <span class="goal-type">Team Goal</span>
+          <h3>Complete Platform Upgrade</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-level project">
+          <span class="goal-type">Project Milestone</span>
+          <h3>Beta Release</h3>
+        </div>
+        <div class="goal-arrow">↓</div>
+        <div class="goal-tasks">
+          <div class="goal-task">Development</div>
+          <div class="goal-task">Testing</div>
+          <div class="goal-task">Review</div>
+          <div class="goal-task">Deployment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RISKS & ISSUES ========== -->
+  <section class="section section-alt" id="risks">
+    <div class="container">
+      <div class="section-header">
+        <h2>Identify Risks Before They Become Delays</h2>
+        <p>Surface potential problems early so you can act before deadlines slip.</p>
+      </div>
+      <div class="risks-grid">
+        <div class="risk-cards" data-animate>
+          <div class="risk-card">
+            <div class="risk-icon">⚠</div>
+            <div>
+              <h4>Project deadline approaching</h4>
+              <p>Mobile Application · Milestone due in 3 days</p>
+            </div>
+          </div>
+          <div class="risk-card">
+            <div class="risk-icon">⚠</div>
+            <div>
+              <h4>Team workload increasing</h4>
+              <p>Engineering · 92% capacity</p>
+            </div>
+          </div>
+          <div class="risk-card">
+            <div class="risk-icon">⚠</div>
+            <div>
+              <h4>Review pending</h4>
+              <p>Website Redesign · Awaiting approval</p>
+            </div>
+          </div>
+        </div>
+        <div class="risk-process" data-animate>
+          <div class="process-step">
+            <span class="step-num">1</span>
+            <span>Identify</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span class="step-num">2</span>
+            <span>Assess</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span class="step-num">3</span>
+            <span>Assign</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span class="step-num">4</span>
+            <span>Resolve</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span class="step-num">5</span>
+            <span>Monitor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANAGER CALENDAR ========== -->
+  <section class="section" id="calendar">
+    <div class="container">
+      <div class="section-header">
+        <h2>Keep Important Dates in View</h2>
+        <p>Milestones, meetings, reviews, releases, and organizational events in one place.</p>
+      </div>
+      <div class="calendar-filters" data-animate>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Projects</button>
+        <button class="filter-btn">Teams</button>
+        <button class="filter-btn">Meetings</button>
+        <button class="filter-btn">Milestones</button>
+        <button class="filter-btn">Deadlines</button>
+      </div>
+      <div class="calendar-view" data-animate>
+        <div class="cal-desktop">
+          <div class="cal-header">
+            <button class="cal-nav">‹</button>
+            <h3>October 2026</h3>
+            <button class="cal-nav">›</button>
+          </div>
+          <div class="cal-grid">
+            <div class="cal-day-name">Mon</div>
+            <div class="cal-day-name">Tue</div>
+            <div class="cal-day-name">Wed</div>
+            <div class="cal-day-name">Thu</div>
+            <div class="cal-day-name">Fri</div>
+            <div class="cal-day-name">Sat</div>
+            <div class="cal-day-name">Sun</div>
+            <!-- Sample days -->
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day"><span>1</span></div>
+            <div class="cal-day"><span>2</span><div class="cal-event milestone">Beta Review</div></div>
+            <div class="cal-day"><span>3</span></div>
+            <div class="cal-day"><span>4</span></div>
+            <div class="cal-day"><span>5</span></div>
+            <div class="cal-day"><span>6</span><div class="cal-event meeting">Team Sync</div></div>
+            <div class="cal-day"><span>7</span></div>
+            <div class="cal-day"><span>8</span><div class="cal-event deadline">Sprint End</div></div>
+            <div class="cal-day"><span>9</span></div>
+            <div class="cal-day"><span>10</span></div>
+            <div class="cal-day today"><span>11</span></div>
+            <div class="cal-day"><span>12</span></div>
+            <div class="cal-day"><span>13</span><div class="cal-event release">Release</div></div>
+            <div class="cal-day"><span>14</span></div>
+            <div class="cal-day"><span>15</span></div>
+            <div class="cal-day"><span>16</span></div>
+            <div class="cal-day"><span>17</span></div>
+            <div class="cal-day"><span>18</span></div>
+            <div class="cal-day"><span>19</span></div>
+            <div class="cal-day"><span>20</span></div>
+            <div class="cal-day"><span>21</span></div>
+            <div class="cal-day"><span>22</span></div>
+            <div class="cal-day"><span>23</span></div>
+            <div class="cal-day"><span>24</span></div>
+            <div class="cal-day"><span>25</span></div>
+            <div class="cal-day"><span>26</span></div>
+            <div class="cal-day"><span>27</span></div>
+            <div class="cal-day"><span>28</span></div>
+            <div class="cal-day"><span>29</span></div>
+            <div class="cal-day"><span>30</span></div>
+            <div class="cal-day"><span>31</span></div>
+          </div>
+        </div>
+        <div class="cal-mobile">
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 2</div>
+            <div class="agenda-content">
+              <span class="agenda-type milestone">Milestone</span>
+              <h4>Beta Review</h4>
+              <p>Mobile Application</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 6</div>
+            <div class="agenda-content">
+              <span class="agenda-type meeting">Meeting</span>
+              <h4>Team Sync</h4>
+              <p>Engineering + QA</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 8</div>
+            <div class="agenda-content">
+              <span class="agenda-type deadline">Deadline</span>
+              <h4>Sprint End</h4>
+              <p>All Teams</p>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-date">Oct 13</div>
+            <div class="agenda-content">
+              <span class="agenda-type release">Release</span>
+              <h4>Platform Release</h4>
+              <p>Automation Platform</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CROSS-TEAM COLLABORATION ========== -->
+  <section class="section section-alt" id="collaboration">
+    <div class="container">
+      <div class="section-header">
+        <h2>Keep Teams Connected</h2>
+        <p>Comments, mentions, updates, and shared project information across teams.</p>
+      </div>
+      <div class="collab-flow" data-animate>
+        <div class="collab-card">
+          <div class="collab-team">Engineering Team</div>
+          <p>"API integration is ready for QA."</p>
+          <span class="collab-time">2 hours ago</span>
+        </div>
+        <div class="collab-arrow">↓</div>
+        <div class="collab-card">
+          <div class="collab-team">QA Team</div>
+          <p>"Testing started. Will update by EOD."</p>
+          <span class="collab-time">1 hour ago</span>
+        </div>
+        <div class="collab-arrow">↓</div>
+        <div class="collab-card">
+          <div class="collab-team">Product Team</div>
+          <p>"Review scheduled for Friday."</p>
+          <span class="collab-time">30 min ago</span>
+        </div>
+      </div>
+      <div class="collab-features" data-animate>
+        <span class="feature-tag">Comments</span>
+        <span class="feature-tag">Mentions</span>
+        <span class="feature-tag">Team Updates</span>
+        <span class="feature-tag">Shared Projects</span>
+        <span class="feature-tag">Activity History</span>
+        <span class="feature-tag">Cross-Team Chat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOTIFICATIONS ========== -->
+  <section class="section" id="notifications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Know When Something Important Happens</h2>
+        <p>Manager-focused alerts so you never miss a critical update.</p>
+      </div>
+      <div class="notif-grid">
+        <div class="notif-list" data-animate>
+          <div class="notif-item success">
+            <span class="notif-icon">✓</span>
+            <div>
+              <strong>Project milestone completed</strong>
+              <p>Website Redesign · Design phase done</p>
+            </div>
+          </div>
+          <div class="notif-item warning">
+            <span class="notif-icon">⚠</span>
+            <div>
+              <strong>Project deadline approaching</strong>
+              <p>Mobile Application · Due in 3 days</p>
+            </div>
+          </div>
+          <div class="notif-item warning">
+            <span class="notif-icon">⚠</span>
+            <div>
+              <strong>Team workload above threshold</strong>
+              <p>Engineering · 92% capacity</p>
+            </div>
+          </div>
+          <div class="notif-item mention">
+            <span class="notif-icon">💬</span>
+            <div>
+              <strong>You were mentioned</strong>
+              <p>In project discussion · Automation Platform</p>
+            </div>
+          </div>
+          <div class="notif-item success">
+            <span class="notif-icon">✓</span>
+            <div>
+              <strong>Team completed sprint objectives</strong>
+              <p>QA Team · All stories closed</p>
+            </div>
+          </div>
+        </div>
+        <div class="notif-categories" data-animate>
+          <h4>Categories</h4>
+          <ul>
+            <li>Projects</li>
+            <li>Teams</li>
+            <li>Deadlines</li>
+            <li>Milestones</li>
+            <li>Risks</li>
+            <li>Mentions</li>
+            <li>System</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REPORTS & ANALYTICS ========== -->
+  <section class="section section-alt" id="reports">
+    <div class="container">
+      <div class="section-header">
+        <h2>Make Decisions With a Clear View of Your Work</h2>
+        <p>Powerful reports and analytics designed for management decision-making.</p>
+      </div>
+      <div class="reports-dashboard" data-animate>
+        <div class="report-card">
+          <h4>Team Performance</h4>
+          <div class="report-bars">
+            <div class="rb-row"><span>Engineering</span><div class="rb"><div style="--w:91%"></div></div><span>91%</span></div>
+            <div class="rb-row"><span>QA</span><div class="rb"><div style="--w:86%"></div></div><span>86%</span></div>
+            <div class="rb-row"><span>Design</span><div class="rb"><div style="--w:82%"></div></div><span>82%</span></div>
+            <div class="rb-row"><span>Product</span><div class="rb"><div style="--w:89%"></div></div><span>89%</span></div>
+          </div>
+        </div>
+        <div class="report-card">
+          <h4>Project Delivery</h4>
+          <div class="big-progress">
+            <div class="progress-bar large"><div class="progress-fill" style="--target: 84%"></div></div>
+            <span class="big-pct">84%</span>
+          </div>
+          <p class="report-desc">Average project completion across portfolio</p>
+        </div>
+        <div class="report-card wide">
+          <h4>Task Completion Trend</h4>
+          <div class="line-chart">
+            <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              <polyline fill="none" stroke="#4F46E5" stroke-width="3" points="0,80 50,65 100,50 150,40 200,30 250,20 300,15"/>
+              <polyline fill="url(#grad)" stroke="none" points="0,80 50,65 100,50 150,40 200,30 250,20 300,15 300,100 0,100"/>
+              <defs>
+                <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="report-categories" data-animate>
+        <span class="cat-tag">Team Reports</span>
+        <span class="cat-tag">Project Reports</span>
+        <span class="cat-tag">Task Reports</span>
+        <span class="cat-tag">Workload Reports</span>
+        <span class="cat-tag">Completion Reports</span>
+        <span class="cat-tag">Deadline Reports</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANAGEMENT WORKFLOW ========== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <h2>From Strategy to Execution</h2>
+        <p>A clear management loop that keeps strategy connected to day-to-day work.</p>
+      </div>
+      <div class="workflow-steps" data-animate>
+        <div class="wf-step"><span class="wf-num">1</span><h4>Set Priorities</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">2</span><h4>Align Teams</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">3</span><h4>Monitor Projects</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">4</span><h4>Review Progress</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">5</span><h4>Identify Risks</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">6</span><h4>Take Action</h4></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><span class="wf-num">7</span><h4>Measure Results</h4></div>
+      </div>
+
+      <div class="daily-workflow" data-animate>
+        <h3>Manager Daily Workflow</h3>
+        <div class="daily-steps">
+          <div class="daily-step"><span>Morning</span></div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Review Dashboard</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Check Team Health</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Review Project Status</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Identify Issues</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Coordinate With Team Leads</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Monitor Key Deadlines</div>
+          <div class="daily-arrow">↓</div>
+          <div class="daily-step">Review Reports</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section section-alt" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for Better Management Visibility</h2>
+        <p>Everything managers need to lead with confidence and clarity.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">👁</div>
+          <h3>One View</h3>
+          <p>See teams, projects, and work together in a single connected workspace.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">📋</div>
+          <h3>Better Planning</h3>
+          <p>Understand workload and upcoming deadlines before they become problems.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">📊</div>
+          <h3>Clear Progress</h3>
+          <p>Track projects without checking every individual task.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">⚠</div>
+          <h3>Early Risk Detection</h3>
+          <p>Identify issues before they become major delays.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">🔗</div>
+          <h3>Cross-Team Visibility</h3>
+          <p>Understand what’s happening across every team you manage.</p>
+        </div>
+        <div class="benefit-card" data-animate>
+          <div class="benefit-icon">🎯</div>
+          <h3>Informed Decisions</h3>
+          <p>Use reports and insights to guide actions with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything managers need to know about Task Flow.</p>
+      </div>
+      <div class="faq-list" data-animate>
+        <div class="faq-item">
+          <button class="faq-question">
+            What can managers see in Task Flow?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Managers get a complete view of teams, projects, workload, performance metrics, risks, milestones, and organizational progress—all from one dashboard without needing to dig into individual tasks.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers monitor multiple teams?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Task Flow is built for managers who oversee multiple teams. You can view every team’s progress, workload, and status side by side and drill down when needed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers see project progress?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. The Project Portfolio and Project Health views give you high-level progress and status for every project, with filters for On Track, Attention, Delayed, and Completed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers monitor team workload?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The Workload & Resource Management section shows capacity, assigned work, available capacity, and highlights overloaded teams so you can rebalance resources.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers view reports and analytics?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Task Flow provides management-level reports including team performance, project delivery, task trends, workload distribution, completion rates, and deadline reports—ready for decision making.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers see overdue or blocked work?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Overdue, blocked, and at-risk work is highlighted across the organization view, risk alerts, and notifications so nothing slips through the cracks.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers communicate with Team Leads?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Cross-team collaboration features include comments, mentions, team updates, and activity history so managers can stay connected with Team Leads and entire teams.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers manage project milestones?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Managers can view and track milestones across the portfolio, align them with higher-level goals, and receive notifications when milestones are approaching or completed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers receive important project notifications?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Configurable notifications cover project milestones, deadlines, workload thresholds, mentions, and team achievements so managers stay informed without constant checking.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can managers export reports?
+            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Reports and analytics can be exported for sharing with stakeholders, leadership reviews, or further analysis outside Task Flow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <h2>See the Bigger Picture With Task Flow</h2>
+      <p>Connect teams, projects, workload, and progress in one management workspace.</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn-primary btn-lg">Get Started</a>
+        <a href="index.html#features" class="btn-secondary btn-lg">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#home" class="logo brand">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+              </svg>
+            </span>
+            <span>Task Flow</span>
+          </a>
+          <p>The connected workspace for teams that want clarity, focus, and results.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="task-management.html">Task Management</a>
+          <a href="project-management.html">Project Management</a>
+          <a href="team-collaboration.html">Team Collaboration</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports & Analytics</a>
+          <a href="notifications.html">Notifications</a>
+          <!-- <a href="employee-management.html">Employee Management</a> -->
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="for-employees.html">For Employees</a>
+          <a href="for-team-leads.html">For Team Leads</a>
+          <a href="for-managers.html">For Managers</a>
+          <a href="for-organizations.html">For Organizations</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="documentation.html">Documents</a>
+          <a href="userguide.html">User Guide</a>
+          <a href="faqs.html">FAQ</a>
+          <a href="helpcenter.html">Help Center</a>
+          <a href="contactsupport.html">Contact Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contactsupport.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Task Flow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10L10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/for-managers.js"></script>
+</body>
+</html>

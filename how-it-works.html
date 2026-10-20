@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>How It Works — IT Task Flow</title>
+  <meta name="description" content="Discover how Task Flow connects organization setup, teams, projects, tasks, collaboration, tracking and insights into one continuous workflow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/brand.css" />
+  <link rel="stylesheet" href="css/how-it-works.css" />
+  <script src="js/brand.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="index.html#home" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span>
+        <span>Task<span>Flow</span></span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Features <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="task-management.html">Task Management</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="team-collaboration.html">Team Collaboration</a>
+            <a href="task-board.html">Task Board</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="reports-analytics.html">Reports & Analytics</a>
+            <a href="notifications.html">Notifications</a>
+          </div>
+        </div>
+
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Solutions <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="for-employees.html">For Employees</a>
+            <a href="for-team-leads.html">For Team Leads</a>
+            <a href="for-managers.html">For Managers</a>
+            <a href="for-organizations.html">For Organizations</a>
+          </div>
+        </div>
+
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle">Resources <span>⌄</span></button>
+          <div class="dropdown-menu">
+            <a href="documentation.html">Documentation</a>
+            <a href="userguide.html">User Guide</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="contactsupport.html">Contact Support</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="mobile-actions">
+          <button class="btn btn-outline login-btn">Login</button>
+          <button class="btn btn-primary get-started-btn">Get Started</button>
+        </div>
+      </div>
+
+      <div class="desktop-actions">
+        <button class="nav-login login-btn">Login</button>
+        <button class="btn btn-primary get-started-btn">Get Started</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title anim-item">How Task Flow Works</h1>
+          <p class="hero-desc anim-item">
+            From setting up your organization to completing tasks and tracking performance,
+            Task Flow connects every stage of work in one organized workspace.
+          </p>
+          <div class="hero-btns anim-item">
+            <a href="signup.html" class="btn-primary">Get Started</a>
+            <a href="#overview" class="btn-secondary">Explore the Workflow</a>
+          </div>
+        </div>
+
+        <div class="hero-visual anim-item">
+          <div class="workflow-nodes" id="heroWorkflow">
+            <div class="node" data-delay="0">
+              <div class="node-dot"></div>
+              <span>Organization</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="1">
+              <div class="node-dot"></div>
+              <span>Teams</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="2">
+              <div class="node-dot"></div>
+              <span>Projects</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="3">
+              <div class="node-dot"></div>
+              <span>Tasks</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="4">
+              <div class="node-dot"></div>
+              <span>Employees</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="5">
+              <div class="node-dot"></div>
+              <span>Progress</span>
+            </div>
+            <div class="node-line"></div>
+            <div class="node" data-delay="6">
+              <div class="node-dot"></div>
+              <span>Reports</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OVERVIEW ========== -->
+    <section class="section overview" id="overview">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>One Connected Workflow for Every Team</h2>
+          <p>Task Flow brings organization, planning, execution and insight into a single continuous flow.</p>
+        </div>
+
+        <div class="workflow-stages reveal">
+          <div class="stage">
+            <div class="stage-icon">01</div>
+            <span>Set Up</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">02</div>
+            <span>Organize</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">03</div>
+            <span>Plan</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">04</div>
+            <span>Assign</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">05</div>
+            <span>Work</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">06</div>
+            <span>Collaborate</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">07</div>
+            <span>Track</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">08</div>
+            <span>Analyze</span>
+          </div>
+          <div class="stage-arrow">→</div>
+          <div class="stage">
+            <div class="stage-icon">09</div>
+            <span>Improve</span>
+          </div>
+        </div>
+
+        <!-- Mobile vertical timeline -->
+        <div class="workflow-stages-mobile reveal">
+          <div class="m-stage"><span class="m-num">01</span><span>Set Up</span></div>
+          <div class="m-stage"><span class="m-num">02</span><span>Organize</span></div>
+          <div class="m-stage"><span class="m-num">03</span><span>Plan</span></div>
+          <div class="m-stage"><span class="m-num">04</span><span>Assign</span></div>
+          <div class="m-stage"><span class="m-num">05</span><span>Work</span></div>
+          <div class="m-stage"><span class="m-num">06</span><span>Collaborate</span></div>
+          <div class="m-stage"><span class="m-num">07</span><span>Track</span></div>
+          <div class="m-stage"><span class="m-num">08</span><span>Analyze</span></div>
+          <div class="m-stage"><span class="m-num">09</span><span>Improve</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 1 ========== -->
+    <section class="section step" id="step1">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal">
+            <span class="step-num">01</span>
+            <h2>Set Up Your Organization</h2>
+            <p>
+              An organization establishes its workspace before work begins.
+              Define departments, teams, roles and permissions so everyone starts with clear structure.
+            </p>
+            <ul class="feature-list">
+              <li>Company profile & branding</li>
+              <li>Departments and hierarchy</li>
+              <li>Role-based access control</li>
+              <li>User invitations & onboarding</li>
+            </ul>
+            <a href="signup.html" class="btn-link">Start with your organization →</a>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card org-setup">
+              <div class="ui-header">Organization Setup</div>
+              <div class="ui-body">
+                <div class="ui-row"><span>Company Name</span><span class="ui-val">Acme Corp</span></div>
+                <div class="ui-row"><span>Departments</span><span class="ui-val">4</span></div>
+                <div class="ui-row"><span>Teams</span><span class="ui-val">12</span></div>
+                <div class="ui-row"><span>Roles</span><span class="ui-val">Admin, Manager, Lead, Employee</span></div>
+                <div class="ui-row"><span>Users</span><span class="ui-val">86</span></div>
+                <div class="ui-row"><span>Permissions</span><span class="ui-val">Configured</span></div>
+              </div>
+              <div class="tree-preview">
+                <div class="tree-root">Organization</div>
+                <div class="tree-children">
+                  <div class="tree-item">Departments</div>
+                  <div class="tree-item">Teams</div>
+                  <div class="tree-item">Roles</div>
+                  <div class="tree-item">Employees</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 2 ========== -->
+    <section class="section step alt" id="step2">
+      <div class="container">
+        <div class="step-grid reverse">
+          <div class="step-content reveal">
+            <span class="step-num">02</span>
+            <h2>Build Your Teams</h2>
+            <p>
+              Organize employees into departments and teams, then assign the right roles
+              so ownership and responsibility are clear from day one.
+            </p>
+            <ul class="feature-list">
+              <li>Department & team hierarchy</li>
+              <li>Role assignment (Employee, Lead, Manager)</li>
+              <li>Availability & capacity overview</li>
+              <li>Direct link to Employee Management</li>
+            </ul>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card teams-visual">
+              <div class="team-tree">
+                <div class="org-node">Organization</div>
+                <div class="team-row">
+                  <div class="team-card">
+                    <div class="team-name">Team A</div>
+                    <div class="emp-pills">
+                      <span>Alex</span><span>Priya</span><span>+3</span>
+                    </div>
+                  </div>
+                  <div class="team-card">
+                    <div class="team-name">Team B</div>
+                    <div class="emp-pills">
+                      <span>Jordan</span><span>Sam</span>
+                    </div>
+                  </div>
+                  <div class="team-card">
+                    <div class="team-name">Team C</div>
+                    <div class="emp-pills">
+                      <span>Maya</span><span>Chris</span><span>+2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="emp-cards">
+                <div class="emp-card">
+                  <div class="emp-avatar">A</div>
+                  <div>
+                    <div class="emp-name">Alex Rivera</div>
+                    <div class="emp-meta">Lead · Design · Available</div>
+                  </div>
+                </div>
+                <div class="emp-card">
+                  <div class="emp-avatar">P</div>
+                  <div>
+                    <div class="emp-name">Priya Shah</div>
+                    <div class="emp-meta">Employee · Design · Project Alpha</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 3 ========== -->
+    <section class="section step" id="step3">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal">
+            <span class="step-num">03</span>
+            <h2>Create and Organize Projects</h2>
+            <p>
+              Group related work into projects with clear goals, milestones, teams and deadlines.
+              Projects become the container that connects tasks, people and progress.
+            </p>
+            <ul class="feature-list">
+              <li>Goals & milestones</li>
+              <li>Team assignment</li>
+              <li>Task aggregation</li>
+              <li>Deadline tracking</li>
+            </ul>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card project-card">
+              <div class="ui-header">
+                <span>Project Alpha</span>
+                <span class="badge">Active</span>
+              </div>
+              <div class="progress-ring-wrap">
+                <div class="progress-bar-lg">
+                  <div class="progress-fill" data-value="68" style="width:0%"></div>
+                </div>
+                <span class="progress-label"><span class="count-up" data-target="68">0</span>% Progress</span>
+              </div>
+              <div class="stat-row">
+                <div class="stat"><span class="stat-num count-up" data-target="42">0</span><span class="stat-label">Tasks</span></div>
+                <div class="stat"><span class="stat-num count-up" data-target="28">0</span><span class="stat-label">Completed</span></div>
+                <div class="stat"><span class="stat-num count-up" data-target="10">0</span><span class="stat-label">In Progress</span></div>
+                <div class="stat"><span class="stat-num count-up" data-target="4">0</span><span class="stat-label">Remaining</span></div>
+              </div>
+              <p class="demo-note">Illustrative demo data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 4 ========== -->
+    <section class="section step alt" id="step4">
+      <div class="container">
+        <div class="step-grid reverse">
+          <div class="step-content reveal">
+            <span class="step-num">04</span>
+            <h2>Create Tasks and Assign Work</h2>
+            <p>
+              Break work into clear, actionable tasks. Set priority, deadline, assignee and project
+              so every piece of work has an owner and a timeline.
+            </p>
+            <div class="lifecycle-mini">
+              <span>Create</span><span class="arrow">→</span>
+              <span>Priority</span><span class="arrow">→</span>
+              <span>Deadline</span><span class="arrow">→</span>
+              <span>Assign</span><span class="arrow">→</span>
+              <span>Receive</span>
+            </div>
+          </div>
+          <div class="step-visual reveal">
+            <div class="task-card-demo" id="taskCardDemo">
+              <div class="task-status-badge" id="taskStatus">Created</div>
+              <h4>Design Login Screen</h4>
+              <div class="task-meta">
+                <span class="meta-item"><strong>Project:</strong> Website</span>
+                <span class="meta-item priority high"><strong>Priority:</strong> High</span>
+                <span class="meta-item"><strong>Assignee:</strong> Alex Rivera</span>
+                <span class="meta-item"><strong>Due:</strong> Friday</span>
+              </div>
+              <button class="btn-sm-outline">View Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 5 ========== -->
+    <section class="section step" id="step5">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal">
+            <span class="step-num">05</span>
+            <h2>Employees See What Matters to Them</h2>
+            <p>
+              Every employee gets a focused view of their own work — today's tasks,
+              upcoming items, overdue items and the projects they belong to.
+            </p>
+            <p class="emphasis">Employees = My Work</p>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card dashboard-preview">
+              <div class="ui-header">My Dashboard</div>
+              <div class="dash-grid">
+                <div class="dash-tile">Today's Tasks</div>
+                <div class="dash-tile">Upcoming</div>
+                <div class="dash-tile">Overdue</div>
+                <div class="dash-tile">Projects</div>
+                <div class="dash-tile">Notifications</div>
+                <div class="dash-tile">Calendar</div>
+              </div>
+              <div class="task-columns">
+                <div class="tcol"><div class="tcol-h">To Do</div><div class="tcol-item"></div><div class="tcol-item"></div></div>
+                <div class="tcol"><div class="tcol-h">In Progress</div><div class="tcol-item"></div></div>
+                <div class="tcol"><div class="tcol-h">Review</div><div class="tcol-item"></div></div>
+                <div class="tcol"><div class="tcol-h">Completed</div><div class="tcol-item"></div><div class="tcol-item"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 6 ========== -->
+    <section class="section step alt" id="step6">
+      <div class="container">
+        <div class="step-grid reverse">
+          <div class="step-content reveal">
+            <span class="step-num">06</span>
+            <h2>Work Together Without Losing Context</h2>
+            <p>
+              Comments, mentions, replies, attachments and activity live directly on the task.
+              Collaboration stays connected to the work instead of scattered across tools.
+            </p>
+            <ul class="feature-list">
+              <li>Threaded comments & mentions</li>
+              <li>File attachments</li>
+              <li>Activity history</li>
+              <li>Checklists</li>
+            </ul>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card collab-preview">
+              <div class="ui-header">Task Discussion</div>
+              <div class="chat-bubble">
+                <div class="chat-author">Sarah</div>
+                <div class="chat-text">"Updated the design."</div>
+              </div>
+              <div class="chat-bubble">
+                <div class="chat-author">John</div>
+                <div class="chat-text">"Can you also update the mobile version?"</div>
+              </div>
+              <div class="chat-bubble mention">
+                <div class="chat-author">@Sarah</div>
+                <div class="chat-text">Mentioned in thread</div>
+              </div>
+              <div class="collab-icons">
+                <span>Comments</span><span>Mentions</span><span>Replies</span><span>Attachments</span><span>Activity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 7 ========== -->
+    <section class="section step" id="step7">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal">
+            <span class="step-num">07</span>
+            <h2>Track Progress as Work Moves Forward</h2>
+            <p>
+              The Task Board gives everyone a live view of where work stands.
+              Cards move from Backlog → To Do → In Progress → Review → Done.
+            </p>
+            <a href="task-board.html" class="btn-link">Explore Task Board →</a>
+          </div>
+          <div class="step-visual reveal">
+            <div class="kanban-preview">
+              <div class="kanban-col">
+                <div class="kcol-h">BACKLOG</div>
+                <div class="kcard">Task A</div>
+                <div class="kcard">Task B</div>
+              </div>
+              <div class="kanban-col">
+                <div class="kcol-h">TO DO</div>
+                <div class="kcard">Task C</div>
+                <div class="kcard">Task D</div>
+              </div>
+              <div class="kanban-col highlight">
+                <div class="kcol-h">IN PROGRESS</div>
+                <div class="kcard moving">Task E</div>
+                <div class="kcard">Task F</div>
+              </div>
+              <div class="kanban-col">
+                <div class="kcol-h">REVIEW</div>
+                <div class="kcard">Task G</div>
+                <div class="kcard">Task H</div>
+              </div>
+              <div class="kanban-col">
+                <div class="kcol-h">DONE</div>
+                <div class="kcard done">Task J</div>
+                <div class="kcard done">Task K</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 8 ========== -->
+    <section class="section step alt" id="step8">
+      <div class="container">
+        <div class="step-grid reverse">
+          <div class="step-content reveal">
+            <span class="step-num">08</span>
+            <h2>Understand What's Happening Across Your Teams</h2>
+            <p>
+              Managers see project health, team workload, deadlines and blockers
+              without needing to dig through individual tasks.
+            </p>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card monitor-preview">
+              <div class="ui-header">Project Health</div>
+              <div class="health-list">
+                <div class="health-item">
+                  <span>Project A</span>
+                  <div class="bar"><div style="width:82%"></div></div>
+                  <span>82%</span>
+                </div>
+                <div class="health-item">
+                  <span>Project B</span>
+                  <div class="bar"><div style="width:64%"></div></div>
+                  <span>64%</span>
+                </div>
+                <div class="health-item">
+                  <span>Project C</span>
+                  <div class="bar"><div style="width:91%"></div></div>
+                  <span>91%</span>
+                </div>
+              </div>
+              <div class="ui-header" style="margin-top:1.25rem">Team Workload</div>
+              <div class="workload">
+                <div class="wl-item"><span>Team A</span><div class="wl-bar" style="width:90%"></div></div>
+                <div class="wl-item"><span>Team B</span><div class="wl-bar" style="width:55%"></div></div>
+                <div class="wl-item"><span>Team C</span><div class="wl-bar" style="width:75%"></div></div>
+              </div>
+              <p class="demo-note">Illustrative demo data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 9 ========== -->
+    <section class="section step" id="step9">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal">
+            <span class="step-num">09</span>
+            <h2>Turn Work Data Into Useful Insights</h2>
+            <p>
+              Reports surface completion rates, workload distribution, overdue trends
+              and productivity patterns so teams can make informed decisions.
+            </p>
+            <a href="reports.html" class="btn-link">Explore Reports & Analytics →</a>
+          </div>
+          <div class="step-visual reveal">
+            <div class="ui-card reports-preview">
+              <div class="ui-header">Reports & Analytics</div>
+              <div class="report-stats">
+                <div class="rstat">
+                  <span class="rstat-num count-up" data-target="248">0</span>
+                  <span class="rstat-label">Tasks Completed</span>
+                </div>
+                <div class="rstat">
+                  <span class="rstat-num count-up" data-target="12">0</span>
+                  <span class="rstat-label">Projects Active</span>
+                </div>
+                <div class="rstat">
+                  <span class="rstat-num count-up" data-target="8">0</span>
+                  <span class="rstat-label">Overdue Tasks</span>
+                </div>
+                <div class="rstat">
+                  <span class="rstat-num count-up" data-target="86">0</span>
+                  <span class="rstat-label">Completion Rate %</span>
+                </div>
+              </div>
+              <div class="mini-chart">
+                <div class="chart-bar" style="height:40%"></div>
+                <div class="chart-bar" style="height:65%"></div>
+                <div class="chart-bar" style="height:50%"></div>
+                <div class="chart-bar" style="height:80%"></div>
+                <div class="chart-bar" style="height:70%"></div>
+                <div class="chart-bar" style="height:90%"></div>
+                <div class="chart-bar" style="height:75%"></div>
+              </div>
+              <p class="demo-note">Illustrative demo data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEP 10 ========== -->
+    <section class="section step alt" id="step10">
+      <div class="container">
+        <div class="step-grid">
+          <div class="step-content reveal full">
+            <span class="step-num">10</span>
+            <h2>Improve the Way Your Organization Works</h2>
+            <p>
+              Task Flow is not just a task list. It closes the loop:
+              Plan → Execute → Collaborate → Track → Analyze → Improve.
+            </p>
+            <div class="improve-cycle reveal">
+              <div class="cycle-item">Work</div>
+              <div class="cycle-arrow">↓</div>
+              <div class="cycle-item">Measure</div>
+              <div class="cycle-arrow">↓</div>
+              <div class="cycle-item">Understand</div>
+              <div class="cycle-arrow">↓</div>
+              <div class="cycle-item">Improve</div>
+              <div class="cycle-arrow">↓</div>
+              <div class="cycle-item">Repeat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMPLETE TASK LIFECYCLE ========== -->
+    <section class="section lifecycle" id="lifecycle">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>From Task Creation to Completion</h2>
+          <p>Every task follows a clear, visible path from idea to insight.</p>
+        </div>
+
+        <div class="lifecycle-flow reveal">
+          <div class="lc-node">
+            <div class="lc-icon">1</div>
+            <span>Create Task</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">2</div>
+            <span>Assign</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">3</div>
+            <span>Start</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">4</div>
+            <span>Collaborate</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">5</div>
+            <span>Review</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">6</div>
+            <span>Complete</span>
+          </div>
+          <div class="lc-line"></div>
+          <div class="lc-node">
+            <div class="lc-icon">7</div>
+            <span>Report</span>
+          </div>
+        </div>
+
+        <!-- Mobile vertical -->
+        <div class="lifecycle-mobile reveal">
+          <div class="lc-m-item"><span class="lc-m-num">1</span> Create Task</div>
+          <div class="lc-m-item"><span class="lc-m-num">2</span> Assign</div>
+          <div class="lc-m-item"><span class="lc-m-num">3</span> Start</div>
+          <div class="lc-m-item"><span class="lc-m-num">4</span> Collaborate</div>
+          <div class="lc-m-item"><span class="lc-m-num">5</span> Review</div>
+          <div class="lc-m-item"><span class="lc-m-num">6</span> Complete</div>
+          <div class="lc-m-item"><span class="lc-m-num">7</span> Report</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ROLE-BASED WORKFLOW ========== -->
+    <section class="section roles" id="roles">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Everyone Has a Clear Role in the Workflow</h2>
+          <p>Task Flow adapts the experience to each role while keeping the same underlying data.</p>
+        </div>
+
+        <div class="role-cards reveal">
+          <div class="role-card">
+            <div class="role-badge">Employee</div>
+            <h3>My Work</h3>
+            <div class="role-flow">
+              <span>View</span><span>→</span>
+              <span>Work</span><span>→</span>
+              <span>Collaborate</span><span>→</span>
+              <span>Complete</span>
+            </div>
+            <a href="for-employees.html" class="btn-link">Learn More →</a>
+          </div>
+          <div class="role-card">
+            <div class="role-badge">Team Lead</div>
+            <h3>My Team</h3>
+            <div class="role-flow">
+              <span>Assign</span><span>→</span>
+              <span>Monitor</span><span>→</span>
+              <span>Support</span><span>→</span>
+              <span>Deliver</span>
+            </div>
+            <a href="for-team-leads.html" class="btn-link">Learn More →</a>
+          </div>
+          <div class="role-card">
+            <div class="role-badge">Manager</div>
+            <h3>My Teams & Projects</h3>
+            <div class="role-flow">
+              <span>Plan</span><span>→</span>
+              <span>Monitor</span><span>→</span>
+              <span>Analyze</span><span>→</span>
+              <span>Improve</span>
+            </div>
+            <a href="for-managers.html" class="btn-link">Learn More →</a>
+          </div>
+          <div class="role-card">
+            <div class="role-badge">Organization</div>
+            <h3>Entire Organization</h3>
+            <div class="role-flow">
+              <span>Configure</span><span>→</span>
+              <span>Organize</span><span>→</span>
+              <span>Govern</span><span>→</span>
+              <span>Scale</span>
+            </div>
+            <a href="for-organizations.html" class="btn-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DAILY WORKFLOW ========== -->
+    <section class="section daily" id="daily">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>A Typical Day With Task Flow</h2>
+          <p>See how work flows through a normal day from an employee perspective.</p>
+        </div>
+
+        <div class="daily-timeline reveal">
+          <div class="day-item">
+            <div class="day-time">09:00</div>
+            <div class="day-content">
+              <h4>Check Dashboard</h4>
+              <p>See today's priorities and any overnight updates.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">09:15</div>
+            <div class="day-content">
+              <h4>Review Tasks</h4>
+              <p>Scan To Do, In Progress and upcoming deadlines.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">10:00</div>
+            <div class="day-content">
+              <h4>Start Priority Work</h4>
+              <p>Move high-priority cards into In Progress and begin.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">12:00</div>
+            <div class="day-content">
+              <h4>Collaborate With Team</h4>
+              <p>Comment, mention teammates and share updates on tasks.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">14:00</div>
+            <div class="day-content">
+              <h4>Update Progress</h4>
+              <p>Mark checklist items and move cards when status changes.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">16:00</div>
+            <div class="day-content">
+              <h4>Review Deadlines</h4>
+              <p>Check what's due soon and flag any blockers.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-time">17:00</div>
+            <div class="day-content">
+              <h4>Complete & Plan</h4>
+              <p>Finish remaining items and set tomorrow's focus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BEFORE → AFTER ========== -->
+    <section class="section before-after" id="before-after">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Bring Your Work Into One Connected Workflow</h2>
+          <p>A comparison of common workflow characteristics — not a claim about every organization.</p>
+        </div>
+
+        <div class="ba-table reveal">
+          <div class="ba-header">
+            <div class="ba-col">Before</div>
+            <div class="ba-col highlight">With Task Flow</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Scattered tasks</div>
+            <div class="ba-col highlight">Centralized tasks</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Separate updates</div>
+            <div class="ba-col highlight">Connected activity</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Difficult tracking</div>
+            <div class="ba-col highlight">Clear progress</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Manual follow-ups</div>
+            <div class="ba-col highlight">Notifications</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Limited visibility</div>
+            <div class="ba-col highlight">Role-based dashboards</div>
+          </div>
+          <div class="ba-row">
+            <div class="ba-col">Disconnected reports</div>
+            <div class="ba-col highlight">Centralized insights</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY IT WORKS ========== -->
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Why the Workflow Works</h2>
+        </div>
+        <div class="why-grid reveal">
+          <div class="why-card">
+            <div class="why-num">01</div>
+            <h3>Centralized Work</h3>
+            <p>Tasks, projects and collaboration stay connected in one place.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">02</div>
+            <h3>Clear Ownership</h3>
+            <p>Every task can have an assigned owner and a clear deadline.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">03</div>
+            <h3>Visibility</h3>
+            <p>Different roles see the information that is relevant to them.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">04</div>
+            <h3>Connected Progress</h3>
+            <p>Task updates automatically contribute to project visibility.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-num">05</div>
+            <h3>Actionable Insights</h3>
+            <p>Reports help teams understand work patterns and improve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>What is Task Flow?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Task Flow is a work-management platform that connects organization setup, teams, projects, tasks, collaboration, tracking and reporting into one continuous workflow.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Who can use Task Flow?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Task Flow is designed for employees, team leads, managers and organizations of all sizes that want clearer ownership, visibility and continuous improvement.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>How does an organization get started?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Create an organization workspace, invite users, define departments and teams, then set roles and permissions. From there you can create projects and start assigning work.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>How are employees added?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Administrators can invite employees by email, assign them to departments and teams, and give them appropriate roles so they see the right information from day one.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>How are tasks assigned?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>When creating a task you choose an assignee, set priority and deadline, and optionally link it to a project. The employee immediately sees the task in their personal dashboard.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Can employees collaborate on tasks?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Yes. Comments, mentions, replies, attachments and activity all live on the task so discussion stays connected to the work.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Can managers monitor multiple teams?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Managers have visibility across the teams and projects they oversee, including workload, progress, deadlines and blockers.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Can Task Flow manage multiple projects?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Yes. You can create as many projects as needed, each with its own goals, team, tasks and progress tracking.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Does Task Flow provide reports?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Task Flow includes reports and analytics for task completion, project progress, team workload, employee activity, overdue items and productivity trends.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Can organizations configure roles and permissions?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Yes. Organizations can define roles and control what each role can see and do across the platform.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Can Task Flow scale as an organization grows?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>The same workflow scales from small teams to larger organizations by adding departments, teams, projects and users while keeping the same connected structure.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Do I need an account to explore the public website?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>No. You can explore How It Works, Features, Solutions and other public pages without an account. An account is only required to use the product itself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="section final-cta" id="cta">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>Ready to Bring Your Work Into One Connected Workspace?</h2>
+          <p>Start organizing teams, projects and tasks in a single continuous workflow.</p>
+          <div class="cta-btns">
+            <a href="signup.html" class="btn-primary">Get Started</a>
+            <a href="features.html" class="btn-secondary">Explore Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#home" class="brand footer-logo">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+              </svg>
+            </span>
+            <span>Task<span>Flow</span></span>
+          </a>
+          <p>Manage work.<br>Empower teams.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="GitHub">◉</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="index.html#features">Features</a>
+          <a href="task-management.html">Task Management</a>
+          <a href="index.html#features">Projects</a>
+          <a href="task-board.html">Task Board</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="reports-analytics.html">Reports</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <a href="for-employees.html">Employees</a>
+          <a href="for-team-leads.html">Team Leads</a>
+          <a href="for-managers.html">Managers</a>
+          <a href="for-organizations.html">Organizations</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="documentation.html">Documentation</a>
+          <a href="userguide.html">User Guide</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="helpcenter.html">Help Center</a>
+          <a href="contactsupport.html">Contact Support</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contactsupport.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 IT TaskFlow. All Rights Reserved.</span>
+        <span>Built for modern teams.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/how-it-works.js"></script>
+</body>
+</html>

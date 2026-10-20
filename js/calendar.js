@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ----- Navbar scroll effect -----
-  const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('siteHeader');
   const onScroll = () => {
     if (window.scrollY > 20) {
       navbar.classList.add('scrolled');
@@ -17,24 +17,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ----- Mobile menu -----
   const mobileBtn = document.getElementById('mobileMenuBtn');
-  const navLinks = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navMenu');
 
   if (mobileBtn && navLinks) {
     mobileBtn.addEventListener('click', () => {
-      mobileBtn.classList.toggle('active');
-      navLinks.classList.toggle('open');
-      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      const isOpen = navLinks.classList.toggle('mobile-open');
+      mobileBtn.classList.toggle('open', isOpen);
+      mobileBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      dropdown.querySelector('.dropdown-toggle').addEventListener('click', event => {
+        event.stopPropagation();
+        const isOpen = dropdown.classList.contains('open');
+        dropdowns.forEach(item => item.classList.remove('open'));
+        if (!isOpen) dropdown.classList.add('open');
+      });
     });
 
     // Close menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileBtn.classList.remove('active');
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
+        navLinks.classList.remove('mobile-open');
+        mobileBtn.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('open'));
       });
     });
+
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.dropdown')) {
+        dropdowns.forEach(dropdown => dropdown.classList.remove('open'));
+      }
+    });
   }
+
+  document.querySelectorAll('.login-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = 'login.html';
+    });
+  });
+
+  document.querySelectorAll('.get-started-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = 'signup.html';
+    });
+  });
 
   // ----- Calendar view tabs -----
   const viewTabs = document.querySelectorAll('.view-tab');

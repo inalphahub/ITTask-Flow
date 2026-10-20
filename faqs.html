@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#f7f8fc">
+
+  <title>FAQs | IT TaskFlow</title>
+  <meta name="description" content="Find answers to common IT TaskFlow questions about tasks, projects, teams, notifications, accounts, and workspace administration.">
+
+  <link rel="stylesheet" href="css/faqs.css">
+  <script src="js/faqs.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Site navigation -->
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="IT TaskFlow home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>IT TaskFlow</strong>
+          <small>Work, in sync.</small>
+        </span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle"
+        type="button" aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="primaryNavigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-navigation" id="primaryNavigation"
+        aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="userguide.html">User Guide</a>
+        <a class="nav-link-active" href="faqs.html" aria-current="page">FAQs</a>
+        <a class="nav-login" href="login.html">Log in</a>
+        <a class="nav-cta" href="signup.html">Get started <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="faq-hero">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+      <div class="faq-container hero-inner">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          HELP CENTER
+        </div>
+
+        <h1>Questions? Let's find your <span>answers.</span></h1>
+
+        <p class="hero-description">
+          Everything you need to understand IT TaskFlow, manage your work,
+          collaborate with your team, and navigate your workspace.
+        </p>
+
+        <form class="faq-search" id="faqSearchForm" role="search">
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <label class="visually-hidden" for="faqSearchInput">Search frequently asked questions</label>
+          <input id="faqSearchInput" type="search"
+            placeholder="Search questions, tasks, projects..."
+            autocomplete="off">
+          <button class="search-clear" id="clearSearch" type="button"
+            aria-label="Clear search" hidden>×</button>
+          <kbd class="search-shortcut" aria-hidden="true">⌕</kbd>
+        </form>
+
+        <div class="popular-searches">
+          <span>Popular:</span>
+          <button type="button" data-search="assigned tasks">Assigned tasks</button>
+          <button type="button" data-search="notifications">Notifications</button>
+          <button type="button" data-search="permissions">Permissions</button>
+        </div>
+
+        <div class="hero-trust-row">
+          <span><span class="trust-check">✓</span> Quick answers</span>
+          <span><span class="trust-check">✓</span> Organized by topic</span>
+          <span><span class="trust-check">✓</span> Easy to navigate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ content -->
+    <section class="faq-main-section">
+      <div class="faq-container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">THE KNOWLEDGE HUB</span>
+            <h2>How can we help?</h2>
+            <p>Choose a topic or search for a specific question.</p>
+          </div>
+          <div class="answer-status" aria-live="polite">
+            <span class="status-indicator"></span>
+            <span id="resultCount">Loading questions...</span>
+          </div>
+        </div>
+
+        <div class="faq-layout">
+          <!-- Category sidebar -->
+          <aside class="faq-sidebar" aria-label="FAQ categories">
+            <p class="sidebar-label">BROWSE BY TOPIC</p>
+
+            <div class="category-list" id="categoryList">
+              <button class="category-button active" type="button"
+                data-category="all" aria-pressed="true">
+                <span class="category-icon">✦</span>
+                <span>All questions</span>
+                <span class="category-count" data-count-for="all">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="getting-started" aria-pressed="false">
+                <span class="category-icon">↗</span>
+                <span>Getting started</span>
+                <span class="category-count" data-count-for="getting-started">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="tasks" aria-pressed="false">
+                <span class="category-icon">✓</span>
+                <span>Tasks & workflow</span>
+                <span class="category-count" data-count-for="tasks">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="projects" aria-pressed="false">
+                <span class="category-icon">▦</span>
+                <span>Projects & teams</span>
+                <span class="category-count" data-count-for="projects">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="notifications" aria-pressed="false">
+                <span class="category-icon">♧</span>
+                <span>Notifications</span>
+                <span class="category-count" data-count-for="notifications">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="accounts" aria-pressed="false">
+                <span class="category-icon">◎</span>
+                <span>Accounts & security</span>
+                <span class="category-count" data-count-for="accounts">—</span>
+              </button>
+
+              <button class="category-button" type="button"
+                data-category="administration" aria-pressed="false">
+                <span class="category-icon">⚙</span>
+                <span>Administration</span>
+                <span class="category-count" data-count-for="administration">—</span>
+              </button>
+            </div>
+
+            <div class="sidebar-help-card">
+              <span class="help-card-icon" aria-hidden="true">?</span>
+              <h3>Need more guidance?</h3>
+              <p>Explore the step-by-step instructions in our User Guide.</p>
+              <a href="userguide.html">Open User Guide <span aria-hidden="true">→</span></a>
+            </div>
+          </aside>
+
+          <!-- Questions -->
+          <div class="faq-results">
+            <div class="faq-results-top">
+              <div>
+                <span class="results-overline">YOUR ANSWERS</span>
+                <h3 id="activeCategoryTitle">All questions</h3>
+              </div>
+
+              <div class="accordion-controls">
+                <button type="button" id="expandAll">Expand all</button>
+                <span aria-hidden="true">·</span>
+                <button type="button" id="collapseAll">Collapse all</button>
+              </div>
+            </div>
+
+            <div class="faq-list" id="faqList">
+              <!-- Getting started -->
+              <article class="faq-item" data-category="getting-started"
+                data-keywords="login sign in account access credentials">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">01</span>
+                    <span class="question-text">What is IT TaskFlow?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>IT TaskFlow is a task and project workflow platform concept designed to bring work assignment, project coordination, team collaboration, and progress tracking into one workspace.</p>
+                  <p>The tools available to you depend on the features enabled for your organization and the current implementation of the application.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="getting-started"
+                data-keywords="login sign in account access credentials">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">02</span>
+                    <span class="question-text">How do I sign in to IT TaskFlow?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Open the login page and enter the credentials provided for your account. If your organization uses additional verification, complete that step as instructed.</p>
+                  <p>If you cannot sign in, check your credentials and account status, then contact your organization's designated administrator or support contact.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="getting-started"
+                data-keywords="dashboard home workspace role">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">03</span>
+                    <span class="question-text">Why does my dashboard look different from another user's dashboard?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Dashboards may differ because users have different roles, project memberships, permissions, or responsibilities.</p>
+                  <p>For example, an employee may focus on assigned work, while a project manager may need additional project oversight. The actual dashboard depends on the permissions and modules implemented for your organization.</p>
+                </div>
+              </article>
+
+              <!-- Tasks -->
+              <article class="faq-item" data-category="tasks"
+                data-keywords="create task title description deadline priority">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">04</span>
+                    <span class="question-text">What information should a task include?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>A useful task description explains what needs to be done, why it matters, the expected outcome, the responsible person, and the target date.</p>
+                  <p>Where supported, include priority, acceptance criteria, relevant files, dependencies, and any review requirements.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="tasks"
+                data-keywords="assigned task employee assignment visibility">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">05</span>
+                    <span class="question-text">Where can employees find their assigned tasks?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Employees should use the task list or task module available in their authorized project workspace to review assigned work.</p>
+                  <p>IT TaskFlow is intended to show employees the work they are permitted to access. Project membership, task assignment, and visibility rules must be configured and enforced by the application.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="tasks"
+                data-keywords="status progress todo in progress review completed">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">06</span>
+                    <span class="question-text">How should I update task progress?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Open the task, review its current status, and select the appropriate available status. Add a progress note or explain a blocker when relevant.</p>
+                  <p>Use only the status options available in your workspace. Status changes and review transitions depend on the workflow configured for the application.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="tasks"
+                data-keywords="blocked delay deadline overdue task">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">07</span>
+                    <span class="question-text">What should I do if a task is blocked or overdue?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Update the task with a clear explanation of the blocker, identify any dependency, and inform the responsible lead or manager through your approved communication channel.</p>
+                  <p>If the deadline is no longer realistic, request a revised target date rather than leaving the task status unexplained.</p>
+                </div>
+              </article>
+
+              <!-- Projects -->
+              <article class="faq-item" data-category="projects"
+                data-keywords="project access membership employee manager">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">08</span>
+                    <span class="question-text">Why can't I see a project?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>You may not have been added to that project, your role may not permit access, or your account may not be associated with the relevant organization.</p>
+                  <p>Confirm the project name with your project manager or organization administrator. Access should be granted only by an authorized person.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="projects"
+                data-keywords="project modules menu tasks calendar reports">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">09</span>
+                    <span class="question-text">Why do project menus or modules differ?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>The modules shown may depend on the project, your permissions, and which features are enabled. A task-related project may not expose every administrative or reporting feature to every member.</p>
+                  <p>If a required module is missing, ask your project manager or administrator to verify your access.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="projects"
+                data-keywords="team collaboration comments files communication">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">10</span>
+                    <span class="question-text">How should teams coordinate work across departments?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Define ownership for each task, agree on dependencies and deadlines, and keep progress updates in the relevant project or task record where those capabilities are available.</p>
+                  <p>Cross-functional work should have a clear coordinating lead so that handoffs between teams are understood.</p>
+                </div>
+              </article>
+
+              <!-- Notifications -->
+              <article class="faq-item" data-category="notifications"
+                data-keywords="notifications alerts assigned task email in app">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">11</span>
+                    <span class="question-text">Will I receive a notification when a task is assigned to me?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Task assignment alerts are an intended part of the workflow. The delivery method and availability depend on the notification features currently implemented and enabled for your account.</p>
+                  <p>Until you have confirmed that alerts are working, check your task list directly and ask the project lead if an assignment is missing.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="notifications"
+                data-keywords="missing notification alerts browser email">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">12</span>
+                    <span class="question-text">What if I don't receive an expected notification?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>First, check the related task or project directly. Then verify your account, any available notification preferences, and browser permissions if browser notifications are supported.</p>
+                  <p>If the alert is still missing, record the affected task and time, and report the issue to your designated support contact.</p>
+                </div>
+              </article>
+
+              <!-- Accounts -->
+              <article class="faq-item" data-category="accounts"
+                data-keywords="password reset forgot password account security">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">13</span>
+                    <span class="question-text">What should I do if I forget my password?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Use the password-reset option if it is available on your login page. Otherwise, contact your organization's authorized account administrator and follow the approved recovery process.</p>
+                  <p>Never share your password or verification codes with another person.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="accounts"
+                data-keywords="account inactive locked disabled login">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">14</span>
+                    <span class="question-text">Why might my account be unavailable?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Possible causes include incorrect credentials, an inactive account, an access change, or a sign-in issue.</p>
+                  <p>Contact your authorized administrator to verify your account status. Do not try to bypass access restrictions.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="accounts"
+                data-keywords="roles permissions unauthorized access security">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">15</span>
+                    <span class="question-text">Who can change my permissions?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Only an authorized person with the appropriate administrative permissions should change your access. The responsible role depends on your organization's configuration.</p>
+                  <p>Platform-level administration is separate from customer organization administration. Ordinary employees should not need access to internal platform administration tools.</p>
+                </div>
+              </article>
+
+              <!-- Administration -->
+              <article class="faq-item" data-category="administration"
+                data-keywords="organization onboarding setup administrator">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">16</span>
+                    <span class="question-text">Who manages an organization's workspace?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>An authorized organization administrator or another designated role manages the organization's users, access, and available workspace settings, depending on the implemented permissions.</p>
+                  <p>Project managers should manage project work within their granted scope rather than automatically receiving organization-wide or platform-wide privileges.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="administration"
+                data-keywords="employee onboarding invite create user role department">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">17</span>
+                    <span class="question-text">How are employees added to an organization?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Employee onboarding should be handled by an authorized organization representative. The process may include creating an account, assigning a role or department, and granting the appropriate project access.</p>
+                  <p>The exact onboarding steps depend on the account-management functionality available in your version of IT TaskFlow.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="administration"
+                data-keywords="business admin panel platform admin organization">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">18</span>
+                    <span class="question-text">What is the difference between an organization administrator and a platform administrator?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>An organization administrator manages authorized settings and people within their own organization.</p>
+                  <p>A platform administrator operates IT TaskFlow itself, including internal platform configuration and platform-wide administration. This is a separate, restricted responsibility and should not be accessible through ordinary employee or manager permissions.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="administration"
+                data-keywords="reports analytics dashboard data permissions">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">19</span>
+                    <span class="question-text">Why can't I access a report or administration option?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>The option may be restricted to certain roles, unavailable in your current project, or not enabled in the current application version.</p>
+                  <p>Ask the relevant administrator to verify the required permission and whether the feature is available for your workspace.</p>
+                </div>
+              </article>
+
+              <article class="faq-item" data-category="administration"
+                data-keywords="bug error technical issue troubleshooting">
+                <h4>
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="question-number">20</span>
+                    <span class="question-text">How should I report a technical issue?</span>
+                    <span class="question-chevron" aria-hidden="true"></span>
+                  </button>
+                </h4>
+                <div class="faq-answer" hidden>
+                  <p>Describe what you were trying to do, the page or module involved, the steps that caused the issue, and the result you expected versus what happened.</p>
+                  <p>Include the approximate time and a screenshot if permitted by your organization's security policy. Never include passwords, authentication codes, or confidential data unnecessarily.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- No results -->
+            <div class="faq-empty-state" id="faqEmptyState" hidden>
+              <div class="empty-icon" aria-hidden="true">⌕</div>
+              <h3>No matching questions found</h3>
+              <p>Try another search term or choose a different category.</p>
+              <button type="button" id="resetFaqs">Clear filters</button>
+            </div>
+
+            <div class="faq-bottom-note">
+              <span class="note-icon" aria-hidden="true">i</span>
+              <p>
+                Some answers describe intended workflows. Actual options may vary
+                depending on the features implemented and permissions configured
+                for your IT TaskFlow workspace.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help banner -->
+    <section class="faq-contact-section">
+      <div class="faq-container">
+        <div class="faq-contact-card">
+          <div class="contact-decoration contact-decoration-one" aria-hidden="true"></div>
+          <div class="contact-decoration contact-decoration-two" aria-hidden="true"></div>
+
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 12.5A4.5 4.5 0 0 1 12.5 8h23a4.5 4.5 0 0 1 4.5 4.5v17a4.5 4.5 0 0 1-4.5 4.5H22l-10 7v-7.2A4.5 4.5 0 0 1 8 29.5v-17Z"
+                stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M16 19h16M16 25h11" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="contact-copy">
+            <span class="contact-kicker">STILL NEED HELP?</span>
+            <h2>Let's get you moving again.</h2>
+            <p>Explore the User Guide for more detailed instructions, or contact your organization's designated support team.</p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button-primary" href="userguide.html">
+              Explore User Guide <span aria-hidden="true">→</span>
+            </a>
+            <a class="button-secondary" href="documentation.html">
+              Read documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="faq-container footer-inner">
+      <a class="footer-brand" href="index.html">IT TaskFlow<span>®</span></a>
+      <p>Bring your tasks, projects, and teams into sync.</p>
+      <div class="footer-links">
+        <a href="documentation.html">Documentation</a>
+        <a href="userguide.html">User Guide</a>
+        <a href="faqs.html" aria-current="page">FAQs</a>
+        <a href="helpcenter.html">Help Center</a>
+        <a href="contactsupport.html">Contact Support</a>
+      </div>
+      <span class="footer-copyright">© <span id="currentYear"></span> IT TaskFlow</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button"
+    aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+</body>
+</html>

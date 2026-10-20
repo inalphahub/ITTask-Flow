@@ -380,6 +380,98 @@ img {
     display: none;
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+    .site-header .desktop-actions {
+        display: none;
+    }
+
+    .site-header .mobile-menu-btn {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        flex: 0 0 42px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 8px;
+        background: transparent;
+    }
+
+    .site-header .mobile-menu-btn span {
+        width: 21px;
+        height: 2px;
+        background: var(--text);
+        transition: var(--transition);
+    }
+
+    .site-header .mobile-menu-btn.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header .mobile-menu-btn.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .site-header .mobile-menu-btn.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .site-header .nav-menu {
+        position: absolute;
+        top: 72px;
+        left: 14px;
+        right: 14px;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+        display: block;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: var(--transition);
+    }
+
+    .site-header .nav-menu.mobile-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .site-header .nav-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .site-header .dropdown-menu {
+        position: static;
+        display: none;
+        margin: 0 8px 8px;
+        border: 0;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        background: #f7f8fc;
+    }
+
+    .site-header .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .site-header .mobile-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px 4px 4px;
+        border-top: 1px solid var(--border);
+        margin-top: 8px;
+    }
+}
 
 /* =========================================================
    HERO
@@ -1323,6 +1415,18 @@ img {
     margin-top: 22px;
     color: var(--muted);
     font-size: 16px;
+}
+
+.about-page-link {
+    display: inline-block;
+    margin-left: 5px;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-page-link:hover {
+    color: var(--primary-dark);
 }
 
 .benefit-list {
@@ -2299,15 +2403,20 @@ a:focus-visible {
     }
 
     .mobile-menu-btn {
-        width: 42px;
-        height: 42px;
+        position: relative;
+        z-index: 1001;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 5px;
-        border-radius: 8px;
-        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
     }
 
     .mobile-menu-btn span {

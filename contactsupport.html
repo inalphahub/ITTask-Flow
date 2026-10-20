@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Contact IT TaskFlow Support for assistance with your organization, projects, tasks, account access, and technical issues.">
+  <meta name="theme-color" content="#101828">
+  <title>Contact Support | IT TaskFlow</title>
+
+  <link rel="stylesheet" href="css/contactsupport.css">
+  <script src="js/contactsupport.js" defer></script>
+</head>
+<body>
+  <a class="cs-skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="cs-header">
+    <div class="cs-nav container">
+      <a class="cs-brand" href="index.html" aria-label="IT TaskFlow home">
+        <span class="cs-brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span>
+        <span>IT Task<span class="cs-brand-accent">Flow</span></span>
+      </a>
+
+      <button class="cs-menu-toggle" id="csMenuToggle"
+        type="button" aria-label="Open navigation"
+        aria-controls="csNavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="cs-navigation" id="csNavigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="userguide.html">User Guide</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="helpcenter.html">Help Center</a>
+        <a href="documentation.html">Documentation</a>
+        <a class="cs-nav-active" href="contactsupport.html" aria-current="page">Contact Support</a>
+        <a class="cs-nav-login" href="login.html">Log in</a>
+        <a class="cs-nav-cta" href="signup.html">Get Started <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero-orb cs-orb-one"></div>
+      <div class="cs-hero-orb cs-orb-two"></div>
+
+      <div class="container cs-hero-inner">
+        <div class="cs-eyebrow">
+          <span class="cs-eyebrow-dot"></span>
+          IT TASKFLOW SUPPORT
+        </div>
+
+        <h1>We're here to <span>help you move forward.</span></h1>
+        <p class="cs-hero-description">
+          Facing an issue with IT TaskFlow? Tell us what's happening.
+          Our support process is designed to help you report the problem
+          with the right details so it can be investigated.
+        </p>
+
+        <div class="cs-hero-actions">
+          <a class="cs-button cs-button-primary" href="#support-form">
+            Submit a support request <span aria-hidden="true">→</span>
+          </a>
+          <a class="cs-button cs-button-glass" href="helpcenter.html">
+            <span aria-hidden="true">⌕</span> Explore Help Center
+          </a>
+        </div>
+
+        <div class="cs-hero-note">
+          <span aria-hidden="true">✳</span>
+          Platform issues, account access, projects, tasks and more
+        </div>
+      </div>
+    </section>
+
+    <!-- Support categories -->
+    <section class="cs-section cs-categories-section" id="support-categories">
+      <div class="container">
+        <div class="cs-section-heading">
+          <div>
+            <span class="cs-section-kicker">HOW CAN WE HELP?</span>
+            <h2>What do you need help with?</h2>
+            <p>Choose the category that best describes your issue.
+              You can change it in the form below.</p>
+          </div>
+          <span class="cs-section-count">07 SUPPORT CATEGORIES</span>
+        </div>
+
+        <div class="cs-category-grid">
+          <button class="cs-category-card is-selected" type="button"
+            data-category="Account & Login" aria-pressed="true">
+            <span class="cs-category-icon cs-icon-violet">↗</span>
+            <span class="cs-category-title">Account &amp; Login</span>
+            <span class="cs-category-description">Sign-in issues, account access and login errors.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card" type="button"
+            data-category="Organization & Team" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-blue">⌂</span>
+            <span class="cs-category-title">Organization &amp; Team</span>
+            <span class="cs-category-description">Company setup, team members and organization settings.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card" type="button"
+            data-category="Projects & Tasks" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-green">✓</span>
+            <span class="cs-category-title">Projects &amp; Tasks</span>
+            <span class="cs-category-description">Project visibility, task assignments and task errors.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card" type="button"
+            data-category="Notifications & Meetings" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-amber">♧</span>
+            <span class="cs-category-title">Notifications &amp; Meetings</span>
+            <span class="cs-category-description">Missing alerts, meeting access and activity updates.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card" type="button"
+            data-category="Technical Issues & Bugs" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-red">⚙</span>
+            <span class="cs-category-title">Technical Issues &amp; Bugs</span>
+            <span class="cs-category-description">Application errors, broken pages and unexpected behavior.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card" type="button"
+            data-category="Security & Permissions" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-cyan">◇</span>
+            <span class="cs-category-title">Security &amp; Permissions</span>
+            <span class="cs-category-description">Access restrictions and suspected permission problems.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+
+          <button class="cs-category-card cs-category-feedback" type="button"
+            data-category="Suggestions & Feedback" aria-pressed="false">
+            <span class="cs-category-icon cs-icon-pink">♡</span>
+            <span class="cs-category-title">Suggestions &amp; Feedback</span>
+            <span class="cs-category-description">Share an idea or suggest a product improvement.</span>
+            <span class="cs-category-bottom">Select category <span>→</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support request form -->
+    <section class="cs-section cs-form-section" id="support-form">
+      <div class="container cs-form-layout">
+        <aside class="cs-form-aside">
+          <span class="cs-section-kicker">CONTACT OUR TEAM</span>
+          <h2>Let's get your issue sorted.</h2>
+          <p>Share the details below so the support team can understand
+            the problem and investigate it.</p>
+
+          <div class="cs-aside-divider"></div>
+
+          <div class="cs-process-item">
+            <span class="cs-process-number">01</span>
+            <div>
+              <h3>Describe the issue</h3>
+              <p>Explain what happened and which part of the platform is affected.</p>
+            </div>
+          </div>
+
+          <div class="cs-process-item">
+            <span class="cs-process-number">02</span>
+            <div>
+              <h3>Provide useful details</h3>
+              <p>Include the affected module, error message and steps to reproduce it.</p>
+            </div>
+          </div>
+
+          <div class="cs-process-item">
+            <span class="cs-process-number">03</span>
+            <div>
+              <h3>Support investigation</h3>
+              <p>Once connected to the backend, your request can be delivered to the support team.</p>
+            </div>
+          </div>
+
+          <div class="cs-security-note">
+            <span class="cs-security-symbol" aria-hidden="true">!</span>
+            <div>
+              <strong>Keep your information safe</strong>
+              <p>Never include passwords, authentication codes, private keys
+                or other confidential credentials in a support request.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="cs-form-card">
+          <div class="cs-form-card-header">
+            <div>
+              <span class="cs-form-step">SUPPORT REQUEST</span>
+              <h2>Tell us about the issue</h2>
+              <p>Fields marked <span class="cs-required">*</span> are required.</p>
+            </div>
+            <span class="cs-form-icon" aria-hidden="true">✉</span>
+          </div>
+
+          <form id="csSupportForm" novalidate>
+            <div class="cs-form-grid">
+              <div class="cs-field">
+                <label for="csCompany">Company / Organization <span class="cs-required">*</span></label>
+                <input id="csCompany" name="company" type="text"
+                  autocomplete="organization" maxlength="120"
+                  placeholder="Enter your company name" required>
+                <small class="cs-field-error" id="csCompanyError"></small>
+              </div>
+
+              <div class="cs-field">
+                <label for="csName">Contact person <span class="cs-required">*</span></label>
+                <input id="csName" name="contactName" type="text"
+                  autocomplete="name" maxlength="100"
+                  placeholder="Your full name" required>
+                <small class="cs-field-error" id="csNameError"></small>
+              </div>
+
+              <div class="cs-field">
+                <label for="csEmail">Work email address <span class="cs-required">*</span></label>
+                <input id="csEmail" name="email" type="email"
+                  autocomplete="email" maxlength="254"
+                  placeholder="you@company.com" required>
+                <small class="cs-field-hint">We can use this to follow up when email delivery is configured.</small>
+                <small class="cs-field-error" id="csEmailError"></small>
+              </div>
+
+              <div class="cs-field">
+                <label for="csRole">Your role <span class="cs-required">*</span></label>
+                <select id="csRole" name="role" required>
+                  <option value="">Select your role</option>
+                  <option>Employee</option>
+                  <option>Team Lead</option>
+                  <option>Project Manager</option>
+                  <option>HR Manager</option>
+                  <option>Organization Admin</option>
+                  <option>Other</option>
+                </select>
+                <small class="cs-field-error" id="csRoleError"></small>
+              </div>
+
+              <div class="cs-field">
+                <label for="csCategory">Issue category <span class="cs-required">*</span></label>
+                <select id="csCategory" name="category" required>
+                  <option value="Account & Login">Account &amp; Login</option>
+                  <option value="Organization & Team">Organization &amp; Team</option>
+                  <option value="Projects & Tasks">Projects &amp; Tasks</option>
+                  <option value="Notifications & Meetings">Notifications &amp; Meetings</option>
+                  <option value="Technical Issues & Bugs">Technical Issues &amp; Bugs</option>
+                  <option value="Security & Permissions">Security &amp; Permissions</option>
+                  <option value="Suggestions & Feedback">Suggestions &amp; Feedback</option>
+                </select>
+                <small class="cs-field-error" id="csCategoryError"></small>
+              </div>
+
+              <div class="cs-field">
+                <label for="csModule">Affected module</label>
+                <select id="csModule" name="module">
+                  <option value="">Select a module (optional)</option>
+                  <option>Login / Authentication</option>
+                  <option>Organization Workspace</option>
+                  <option>Employee Management</option>
+                  <option>Project Workspace</option>
+                  <option>Task Management</option>
+                  <option>Notifications</option>
+                  <option>Meetings / Calendar</option>
+                  <option>Reports &amp; Analytics</option>
+                  <option>Other / Not sure</option>
+                </select>
+              </div>
+
+              <div class="cs-field cs-field-full">
+                <label for="csSubject">Issue subject <span class="cs-required">*</span></label>
+                <input id="csSubject" name="subject" type="text"
+                  maxlength="160" placeholder="Briefly describe the problem" required>
+                <small class="cs-field-error" id="csSubjectError"></small>
+              </div>
+
+              <div class="cs-field cs-field-full">
+                <label for="csDescription">Describe the issue <span class="cs-required">*</span></label>
+                <textarea id="csDescription" name="description"
+                  rows="6" minlength="20" maxlength="5000" required
+                  placeholder="What happened? What did you expect? Include any error message and the steps to reproduce the problem."></textarea>
+                <div class="cs-textarea-footer">
+                  <small>Minimum 20 characters. Do not include passwords or private credentials.</small>
+                  <span id="csCharacterCount">0 / 5000</span>
+                </div>
+                <small class="cs-field-error" id="csDescriptionError"></small>
+              </div>
+
+              <div class="cs-field cs-field-full">
+                <label for="csPriority">Priority <span class="cs-required">*</span></label>
+                <select id="csPriority" name="priority" required>
+                  <option value="Normal">Normal — standard issue</option>
+                  <option value="Low">Low — minor inconvenience</option>
+                  <option value="High">High — significant impact on work</option>
+                  <option value="Urgent">Urgent — critical business disruption</option>
+                </select>
+                <small class="cs-field-hint">Choose based on the impact on your organization's work. Priority does not guarantee a response time.</small>
+              </div>
+
+              <div class="cs-field cs-field-full">
+                <label for="csAttachment">Screenshots or supporting files (optional)</label>
+                <div class="cs-upload-area">
+                  <input id="csAttachment" name="attachment" type="file"
+                    accept=".png,.jpg,.jpeg,.webp,.pdf,.txt,.log">
+                  <span class="cs-upload-icon" aria-hidden="true">↑</span>
+                  <span class="cs-upload-copy">
+                    <strong>Choose files from your device</strong>
+                    <small>PNG, JPG, WEBP, PDF, TXT or LOG · Up to 5 MB per file · Maximum 3 files</small>
+                  </span>
+                </div>
+                <small class="cs-field-error" id="csAttachmentError"></small>
+                <small class="cs-field-hint">Files are only selected in your browser at this stage. Upload and email attachment handling will be implemented with the backend.</small>
+              </div>
+
+              <div class="cs-field cs-field-full">
+                <label class="cs-consent">
+                  <input id="csPrivacyConsent" name="privacyConsent" type="checkbox" required>
+                  <span>I confirm that the information provided is relevant to this support request and does not contain passwords, private keys or authentication codes. <span class="cs-required">*</span></span>
+                </label>
+                <small class="cs-field-error" id="csConsentError"></small>
+              </div>
+            </div>
+
+            <div class="cs-form-bottom">
+              <p><span aria-hidden="true">🔒</span> Your details should be handled securely.</p>
+              <button class="cs-button cs-button-primary cs-submit-button" id="csSubmitButton" type="submit">
+                Validate support request <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <div class="cs-form-status" id="csFormStatus"
+              role="status" aria-live="polite" tabindex="-1" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- What happens next -->
+    <section class="cs-section cs-next-section">
+      <div class="container">
+        <div class="cs-section-heading cs-heading-centered">
+          <div>
+            <span class="cs-section-kicker">THE SUPPORT JOURNEY</span>
+            <h2>What happens after you report an issue?</h2>
+            <p>This is the intended support workflow. Actual request tracking will be added with the backend.</p>
+          </div>
+        </div>
+
+        <div class="cs-journey-grid">
+          <article class="cs-journey-card">
+            <span class="cs-journey-number">01</span>
+            <span class="cs-journey-icon">↗</span>
+            <h3>Request submitted</h3>
+            <p>You provide the details needed to describe the issue.</p>
+          </article>
+          <article class="cs-journey-card">
+            <span class="cs-journey-number">02</span>
+            <span class="cs-journey-icon">⌕</span>
+            <h3>Issue reviewed</h3>
+            <p>The support team reviews the request once it is received.</p>
+          </article>
+          <article class="cs-journey-card">
+            <span class="cs-journey-number">03</span>
+            <span class="cs-journey-icon">⚙</span>
+            <h3>Investigation</h3>
+            <p>The issue is investigated and may require additional details.</p>
+          </article>
+          <article class="cs-journey-card">
+            <span class="cs-journey-number">04</span>
+            <span class="cs-journey-icon">✓</span>
+            <h3>Resolution</h3>
+            <p>The team provides a resolution or next steps when available.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help resources -->
+    <section class="cs-section cs-resources-section">
+      <div class="container cs-resources-panel">
+        <div>
+          <span class="cs-section-kicker">NEED A QUICK ANSWER?</span>
+          <h2>Explore our help resources.</h2>
+          <p>You may find an answer before raising a support request.</p>
+        </div>
+        <div class="cs-resource-links">
+          <a href="helpcenter.html">Help Center <span>↗</span></a>
+          <a href="faqs.html">Frequently Asked Questions <span>↗</span></a>
+          <a href="userguide.html">User Guide <span>↗</span></a>
+          <a href="documentation.html">Documentation <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="cs-footer">
+    <div class="container cs-footer-main">
+      <a class="cs-brand cs-footer-brand" href="index.html">
+        <span class="cs-brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 4h14v4H5zM5 10h9v4H5zM5 16h14v4H5z"/>
+          </svg>
+        </span>
+        <span>IT Task<span class="cs-brand-accent">Flow</span></span>
+      </a>
+      <p>Helping teams work better, one task at a time.</p>
+      <nav class="cs-footer-links" aria-label="Footer navigation">
+        <a href="helpcenter.html">Help Center</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="userguide.html">User Guide</a>
+        <a href="contactsupport.html">Contact Support</a>
+      </nav>
+    </div>
+    <div class="container cs-footer-bottom">
+      <span>© <span id="csCurrentYear"></span> IT TaskFlow. All rights reserved.</span>
+      <span>Built for better teamwork.</span>
+    </div>
+  </footer>
+
+  <button class="cs-back-to-top" id="csBackToTop"
+    type="button" aria-label="Back to top">↑</button>
+</body>
+</html>
